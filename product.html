@@ -1,0 +1,2771 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Product — Sera | AI Call Coverage Platform for Healthcare</title>
+<meta name="description" content="See how Sera handles every call — from instant answering to structured summaries. AI-powered intake, smart routing, and automated scheduling.">
+<meta property="og:title" content="Product — Sera | The Complete AI Call Coverage Platform">
+<meta property="og:description" content="From patient call to staff follow-up — Sera handles everything. See the complete platform.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://joinsera.us/product">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://joinsera.us/product">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@400,500,700,800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+<style>
+:root {
+  --green: #16A34A;
+  --green-hover: #15803D;
+  --green-light: #DCFCE7;
+  --green-dark: #064E3B;
+  --teal: #0D9488;
+  --text-heading: #111111;
+  --text-body: #52525B;
+  --text-muted: #A1A1AA;
+  --border: #E4E4E7;
+  --bg-warm: #FAFAF9;
+  --bg-green-tint: #F0FDF4;
+  --font-heading: 'Cabinet Grotesk', system-ui, sans-serif;
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+  --radius-pill: 100px;
+  --radius-card: 20px;
+  --shadow-sm: 0 2px 4px rgba(0,0,0,0.02);
+  --shadow-md: 0 8px 16px rgba(0,0,0,0.04);
+  --shadow-lg: 0 20px 40px rgba(0,0,0,0.06);
+  --shadow-card: 0 1px 2px rgba(0,0,0,0.03), 0 4px 12px rgba(0,0,0,0.04), 0 16px 40px rgba(0,0,0,0.06);
+  --shadow-card-hover: 0 2px 4px rgba(0,0,0,0.04), 0 8px 24px rgba(0,0,0,0.06), 0 24px 48px rgba(0,0,0,0.08);
+}
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+h1,h2,h3,h4,h5,h6 { font-family: var(--font-heading); }
+
+body {
+  font-family: var(--font-sans);
+  color: var(--text-body);
+  line-height: 1.65;
+  letter-spacing: -0.01em;
+  background: #fff;
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  opacity: 0.018;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 256px 256px;
+}
+
+/* Scroll progress bar */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: linear-gradient(90deg, var(--green), var(--teal), var(--green));
+  background-size: 200% 100%;
+  animation: gradientShift 3s ease infinite;
+  z-index: 9999;
+  transition: width 0.05s linear;
+}
+
+/* Top gradient bar */
+.top-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--green), var(--teal), var(--green), var(--teal));
+  background-size: 300% 100%;
+  animation: gradientShift 4s ease infinite;
+  z-index: 200;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* NAV */
+.nav {
+  position: sticky;
+  top: 3px;
+  background: rgba(255,255,255,0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid transparent;
+  z-index: 100;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.nav.scrolled {
+  border-bottom-color: var(--border);
+  box-shadow: 0 1px 12px rgba(0,0,0,0.06);
+}
+
+.nav-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-logo {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--green);
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  align-items: center;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-body);
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: color 0.2s;
+  padding-bottom: 2px;
+}
+
+.nav-links a:hover { color: var(--text-heading); }
+
+.nav-links a.active {
+  color: var(--green);
+  font-weight: 700;
+  border-bottom: 2px solid var(--green);
+  padding-bottom: 2px;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.nav-login {
+  text-decoration: none;
+  color: var(--text-body);
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: var(--green);
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.5rem;
+  border-radius: var(--radius-pill);
+  font-size: 0.95rem;
+  font-weight: 600;
+  font-family: 'DM Sans', sans-serif;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.15s;
+}
+
+.btn-primary:hover { background: var(--green-hover); transform: translateY(-1px); }
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: transparent;
+  color: var(--text-heading);
+  border: 1.5px solid var(--border);
+  padding: 0.6rem 1.5rem;
+  border-radius: var(--radius-pill);
+  font-size: 0.95rem;
+  font-weight: 600;
+  font-family: 'DM Sans', sans-serif;
+  cursor: pointer;
+  text-decoration: none;
+  transition: border-color 0.2s, transform 0.15s;
+}
+
+.btn-outline:hover { border-color: var(--green); color: var(--green); transform: translateY(-1px); }
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 4px;
+}
+
+.hamburger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--text-heading);
+  border-radius: 2px;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 67px;
+  left: 0;
+  right: 0;
+  background: #fff;
+  border-bottom: 1px solid var(--border);
+  padding: 1.5rem 2rem;
+  z-index: 140;
+  box-shadow: var(--shadow-md);
+}
+
+.mobile-menu.open { display: block; }
+
+.mobile-menu a {
+  display: block;
+  padding: 0.75rem 0;
+  text-decoration: none;
+  color: var(--text-body);
+  font-weight: 500;
+  font-size: 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.mobile-menu a.active { color: var(--green); font-weight: 700; }
+
+.mobile-menu a:last-child { border-bottom: none; }
+
+/* CONTAINER */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* HERO */
+.hero {
+  background: #fff;
+  padding: 6rem 0 4rem;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-inner {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+.hero-text {
+  flex: 0 0 55%;
+}
+
+.hero-eyebrow {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--green);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+}
+
+.hero-headline {
+  font-family: var(--font-heading);
+  font-size: clamp(2.8rem, 5vw, 4rem);
+  font-weight: 800;
+  color: var(--text-heading);
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+  margin-bottom: 1.25rem;
+}
+
+.hero-sub {
+  font-size: 1.15rem;
+  color: var(--text-body);
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  max-width: 520px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.hero-visual {
+  flex: 0 0 45%;
+}
+
+/* Browser Mockup */
+.browser-mockup {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm), var(--shadow-md), var(--shadow-lg);
+  border: 1px solid var(--border);
+  background: #fff;
+}
+
+.browser-chrome {
+  background: #f4f4f5;
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 1px solid var(--border);
+}
+
+.browser-dots {
+  display: flex;
+  gap: 6px;
+}
+
+.browser-dots span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.browser-dots span:nth-child(1) { background: #FF5F57; }
+.browser-dots span:nth-child(2) { background: #FEBC2E; }
+.browser-dots span:nth-child(3) { background: #28C840; }
+
+.browser-url {
+  flex: 1;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 4px 12px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.7rem;
+  color: var(--text-muted);
+}
+
+.browser-body {
+  display: flex;
+  min-height: 320px;
+}
+
+.dash-sidebar {
+  width: 180px;
+  background: #1a1a2e;
+  padding: 1.25rem 0;
+  flex-shrink: 0;
+}
+
+.dash-sidebar-logo {
+  color: var(--green);
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 0 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.dash-sidebar-nav {
+  list-style: none;
+}
+
+.dash-sidebar-nav li {
+  padding: 0.5rem 1rem;
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.5);
+  cursor: default;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background 0.2s;
+}
+
+.dash-sidebar-nav li.active {
+  background: rgba(255,255,255,0.08);
+  color: #fff;
+  font-weight: 600;
+}
+
+.dash-sidebar-nav li .nav-icon {
+  width: 14px;
+  height: 14px;
+  border-radius: 3px;
+  background: rgba(255,255,255,0.12);
+  flex-shrink: 0;
+}
+
+.dash-sidebar-nav li.active .nav-icon {
+  background: var(--green);
+}
+
+.dash-main {
+  flex: 1;
+  padding: 1.25rem;
+  background: #fff;
+  overflow: hidden;
+}
+
+.dash-header {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-heading);
+  margin-bottom: 0.75rem;
+}
+
+.dash-subheader {
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+.call-row {
+  display: flex;
+  align-items: center;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  margin-bottom: 0.5rem;
+  font-size: 0.7rem;
+  gap: 0.6rem;
+  transition: border-color 0.2s;
+  cursor: default;
+}
+
+.call-row.expanded {
+  flex-wrap: wrap;
+  border-color: var(--green);
+  background: var(--bg-green-tint);
+}
+
+.call-avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--green-light);
+  color: var(--green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.6rem;
+  flex-shrink: 0;
+}
+
+.call-info { flex: 1; min-width: 0; }
+
+.call-name {
+  font-weight: 600;
+  color: var(--text-heading);
+  font-size: 0.7rem;
+}
+
+.call-type {
+  display: inline-block;
+  padding: 1px 6px;
+  border-radius: 100px;
+  font-size: 0.55rem;
+  font-weight: 600;
+  margin-left: 4px;
+}
+
+.call-type.new { background: var(--green-light); color: var(--green-dark); }
+.call-type.followup { background: #EEF2FF; color: #4338CA; }
+.call-type.insurance { background: #FEF3C7; color: #92400E; }
+
+.call-time {
+  font-size: 0.6rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.call-expanded-details {
+  width: 100%;
+  padding: 0.5rem 0.75rem 0.25rem;
+  font-size: 0.6rem;
+  color: var(--text-body);
+  border-top: 1px solid rgba(22,163,74,0.15);
+  margin-top: 0.35rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.call-detail-item {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.call-detail-label {
+  font-size: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.call-detail-value {
+  font-weight: 500;
+  color: var(--text-heading);
+}
+
+/* HOW SERA WORKS */
+.section { padding: 6rem 0; position: relative; z-index: 1; }
+.section-warm { background: var(--bg-warm); }
+.section-green-tint { background: var(--bg-green-tint); }
+
+.section-eyebrow {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--green);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+  margin-bottom: 0.75rem;
+}
+
+.section-headline {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 800;
+  color: var(--text-heading);
+  text-align: center;
+  margin-bottom: 1rem;
+  line-height: 1.15;
+}
+
+.section-sub {
+  font-size: 1.1rem;
+  color: var(--text-body);
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto 3.5rem;
+  line-height: 1.7;
+}
+
+/* Steps */
+.step-row {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  margin-bottom: 5rem;
+}
+
+.step-row:last-child { margin-bottom: 0; }
+
+.step-row.reverse { flex-direction: row-reverse; }
+
+.step-text { flex: 1; }
+.step-visual { flex: 1; }
+
+.step-number {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--green);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.step-title {
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--text-heading);
+  margin-bottom: 0.75rem;
+}
+
+.step-desc {
+  font-size: 1rem;
+  color: var(--text-body);
+  line-height: 1.7;
+  max-width: 480px;
+}
+
+/* Step 1 Phone Mockup */
+.phone-mockup {
+  width: 280px;
+  margin: 0 auto;
+  background: #1a1a2e;
+  border-radius: 28px;
+  padding: 2rem 1.5rem;
+  box-shadow: var(--shadow-lg);
+  text-align: center;
+  color: #fff;
+}
+
+.phone-label {
+  font-size: 0.7rem;
+  color: rgba(255,255,255,0.5);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 1.5rem;
+}
+
+.phone-clinic {
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.7);
+  margin-bottom: 0.25rem;
+}
+
+.phone-caller {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.phone-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.phone-btn {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  cursor: default;
+}
+
+.phone-btn.decline { background: #EF4444; }
+.phone-btn.answer { background: var(--green); animation: phonePulse 2s ease infinite; }
+
+@keyframes phonePulse {
+  0% { box-shadow: 0 0 0 0 rgba(22,163,74,0.4); }
+  70% { box-shadow: 0 0 0 14px rgba(22,163,74,0); }
+  100% { box-shadow: 0 0 0 0 rgba(22,163,74,0); }
+}
+
+.phone-status {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.7rem;
+  color: var(--green);
+}
+
+/* Step 2 Chat Mockup */
+.chat-mockup {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm), var(--shadow-md);
+  max-width: 380px;
+  margin: 0 auto;
+}
+
+.chat-header {
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: var(--text-heading);
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.chat-bubble {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+  align-items: flex-start;
+}
+
+.chat-bubble.patient { flex-direction: row-reverse; }
+
+.chat-avatar {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.6rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.chat-avatar.sera { background: var(--green); color: #fff; }
+.chat-avatar.pat { background: #E4E4E7; color: var(--text-body); }
+
+.chat-msg {
+  padding: 0.5rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.72rem;
+  line-height: 1.5;
+  max-width: 240px;
+}
+
+.chat-bubble:not(.patient) .chat-msg {
+  background: var(--bg-green-tint);
+  color: var(--text-heading);
+}
+
+.chat-bubble.patient .chat-msg {
+  background: #f4f4f5;
+  color: var(--text-heading);
+}
+
+/* Step 3 Summary Card */
+.summary-mockup {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm), var(--shadow-md);
+  border: 1px solid var(--border);
+  background: #fff;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.summary-chrome {
+  background: #f4f4f5;
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-bottom: 1px solid var(--border);
+}
+
+.summary-dots { display: flex; gap: 5px; }
+.summary-dots span { width: 8px; height: 8px; border-radius: 50%; }
+.summary-dots span:nth-child(1) { background: #FF5F57; }
+.summary-dots span:nth-child(2) { background: #FEBC2E; }
+.summary-dots span:nth-child(3) { background: #28C840; }
+
+.summary-body {
+  padding: 1.25rem;
+}
+
+.summary-title {
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: var(--text-heading);
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.summary-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 100px;
+  font-size: 0.55rem;
+  font-weight: 600;
+  background: var(--green-light);
+  color: var(--green-dark);
+}
+
+.summary-field {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.4rem 0;
+  border-bottom: 1px solid #f4f4f5;
+  font-size: 0.7rem;
+}
+
+.summary-field:last-child { border-bottom: none; }
+
+.summary-field-label {
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.summary-field-value {
+  color: var(--text-heading);
+  font-weight: 500;
+  text-align: right;
+  max-width: 55%;
+}
+
+/* Step 4 Notification Mockup */
+.notif-mockup {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm), var(--shadow-md);
+  max-width: 380px;
+  margin: 0 auto;
+}
+
+.notif-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.notif-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: var(--green-light);
+  color: var(--green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+}
+
+.notif-title-block {}
+
+.notif-title {
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: var(--text-heading);
+}
+
+.notif-time {
+  font-size: 0.65rem;
+  color: var(--text-muted);
+}
+
+.notif-preview {
+  font-size: 0.72rem;
+  color: var(--text-body);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.notif-preview-item {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.3rem;
+}
+
+.notif-preview-label { color: var(--text-muted); font-weight: 500; }
+.notif-preview-value { color: var(--text-heading); font-weight: 500; }
+
+.notif-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  background: var(--green);
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-pill);
+  font-size: 0.75rem;
+  font-weight: 600;
+  font-family: 'DM Sans', sans-serif;
+  cursor: pointer;
+}
+
+/* FEATURE CARDS */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.feature-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card-hover);
+}
+
+.feature-card-visual {
+  height: 200px;
+  background: var(--bg-green-tint);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.feature-card-body {
+  padding: 1.25rem;
+}
+
+.feature-card-title {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--text-heading);
+  margin-bottom: 0.4rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.feature-card-desc {
+  font-size: 0.88rem;
+  color: var(--text-body);
+  line-height: 1.6;
+}
+
+.badge-soon {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 100px;
+  font-size: 0.6rem;
+  font-weight: 600;
+  background: #FEF3C7;
+  color: #92400E;
+}
+
+/* Mini mockups inside feature cards */
+.mini-phone {
+  width: 120px;
+  background: #1a1a2e;
+  border-radius: 14px;
+  padding: 1rem;
+  text-align: center;
+  color: #fff;
+}
+
+.mini-phone .mp-label { font-size: 0.45rem; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.5rem; }
+.mini-phone .mp-name { font-size: 0.7rem; font-weight: 700; margin-bottom: 0.5rem; }
+.mini-phone .mp-btns { display: flex; justify-content: center; gap: 1rem; }
+.mini-phone .mp-btn { width: 24px; height: 24px; border-radius: 50%; }
+.mini-phone .mp-btn.red { background: #EF4444; }
+.mini-phone .mp-btn.grn { background: var(--green); }
+
+.mini-flow {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.mini-flow-step {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.4rem 0.6rem;
+  font-size: 0.55rem;
+  font-weight: 600;
+  color: var(--text-heading);
+  text-align: center;
+}
+
+.mini-flow-arrow { color: var(--green); font-size: 0.7rem; }
+
+.mini-chat {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 0.75rem;
+  width: 200px;
+}
+
+.mini-chat-line {
+  display: flex;
+  gap: 0.35rem;
+  margin-bottom: 0.35rem;
+  align-items: flex-start;
+}
+
+.mini-chat-dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.4rem;
+  font-weight: 700;
+}
+
+.mini-chat-dot.s { background: var(--green); color: #fff; }
+.mini-chat-dot.p { background: #E4E4E7; color: var(--text-body); }
+
+.mini-chat-text {
+  background: #f4f4f5;
+  border-radius: 6px;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.5rem;
+  line-height: 1.4;
+  color: var(--text-body);
+}
+
+.mini-chat-line.sera .mini-chat-text { background: var(--bg-green-tint); }
+
+.mini-calendar {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 0.75rem;
+  width: 200px;
+}
+
+.mini-cal-header {
+  font-size: 0.6rem;
+  font-weight: 700;
+  color: var(--text-heading);
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.mini-cal-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 2px;
+  text-align: center;
+}
+
+.mini-cal-day {
+  font-size: 0.45rem;
+  padding: 3px;
+  border-radius: 4px;
+  color: var(--text-muted);
+}
+
+.mini-cal-day.active {
+  background: var(--green);
+  color: #fff;
+  font-weight: 700;
+}
+
+.mini-cal-day.header {
+  font-weight: 700;
+  color: var(--text-heading);
+}
+
+.mini-summary {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 0.75rem;
+  width: 200px;
+}
+
+.mini-summary-line {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.5rem;
+  padding: 0.2rem 0;
+  border-bottom: 1px solid #f4f4f5;
+}
+
+.mini-summary-line:last-child { border-bottom: none; }
+.mini-summary-label { color: var(--text-muted); }
+.mini-summary-value { color: var(--text-heading); font-weight: 500; }
+
+.mini-notif {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 0.75rem;
+  width: 200px;
+}
+
+.mini-notif-header {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.mini-notif-icon {
+  width: 20px;
+  height: 20px;
+  border-radius: 6px;
+  background: var(--green-light);
+  color: var(--green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.55rem;
+}
+
+.mini-notif-title {
+  font-size: 0.55rem;
+  font-weight: 700;
+  color: var(--text-heading);
+}
+
+.mini-notif-line {
+  font-size: 0.48rem;
+  color: var(--text-body);
+  margin-bottom: 0.2rem;
+}
+
+.mini-notif-btn {
+  display: inline-block;
+  margin-top: 0.35rem;
+  padding: 2px 8px;
+  border-radius: 100px;
+  background: var(--green);
+  color: #fff;
+  font-size: 0.45rem;
+  font-weight: 600;
+}
+
+/* FLOW SECTION */
+.flow-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 3rem;
+}
+
+.flow-tab {
+  padding: 0.6rem 1.5rem;
+  border-radius: var(--radius-pill);
+  border: 1.5px solid var(--border);
+  background: #fff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  font-family: 'DM Sans', sans-serif;
+  cursor: pointer;
+  color: var(--text-body);
+  transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.flow-tab.active {
+  background: var(--green);
+  color: #fff;
+  border-color: var(--green);
+}
+
+.flow-tab .tab-badge {
+  font-size: 0.55rem;
+  padding: 1px 6px;
+  border-radius: 100px;
+  background: #FEF3C7;
+  color: #92400E;
+  font-weight: 600;
+}
+
+.flow-panel { display: none; }
+.flow-panel.active { display: block; }
+
+.flow-columns {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.flow-column {
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: #fff;
+}
+
+.flow-column-header {
+  font-family: var(--font-heading);
+  background: var(--green-dark);
+  color: #fff;
+  padding: 1rem 1.25rem;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.flow-column-body {
+  padding: 1.25rem;
+}
+
+.flow-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.flow-step:last-child { margin-bottom: 0; }
+
+.flow-step-line {
+  width: 2px;
+  position: absolute;
+  left: 11px;
+  top: 26px;
+  bottom: -12px;
+  background: var(--border);
+}
+
+.flow-step:last-child .flow-step-line { display: none; }
+
+.flow-step-dot {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--bg-green-tint);
+  border: 2px solid var(--green);
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.flow-step-content {
+  flex: 1;
+}
+
+.flow-step-title {
+  font-weight: 600;
+  font-size: 0.82rem;
+  color: var(--text-heading);
+  margin-bottom: 0.15rem;
+}
+
+.flow-step-desc {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.flow-result {
+  margin-top: 1rem;
+  padding: 0.5rem 0.75rem;
+  background: var(--green-light);
+  border-radius: 10px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--green-dark);
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+/* DEEP DIVE SECTION */
+.deepdive-inner {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+.deepdive-text { flex: 1; }
+.deepdive-visual { flex: 1; }
+
+.deepdive-headline {
+  font-family: var(--font-heading);
+  font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+  font-weight: 800;
+  color: var(--text-heading);
+  margin-bottom: 1rem;
+  line-height: 1.15;
+}
+
+.deepdive-desc {
+  font-size: 1rem;
+  color: var(--text-body);
+  line-height: 1.7;
+}
+
+.deep-summary {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm), var(--shadow-md);
+}
+
+.deep-summary-header {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.deep-summary-title {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--text-heading);
+}
+
+.deep-summary-body {
+  padding: 1.5rem;
+}
+
+.deep-field {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.65rem 0;
+  border-bottom: 1px solid #f4f4f5;
+  font-size: 0.85rem;
+  gap: 1rem;
+}
+
+.deep-field:last-child { border-bottom: none; }
+
+.deep-field-label {
+  color: var(--text-muted);
+  font-weight: 500;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.deep-field-value {
+  color: var(--text-heading);
+  font-weight: 500;
+  text-align: right;
+}
+
+.deep-field-value .check { color: var(--green); }
+
+/* COMPARISON TABLE */
+.comparison-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.comparison-table thead th {
+  padding: 1.25rem 1.5rem;
+  text-align: left;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--text-heading);
+  background: var(--bg-warm);
+  border-bottom: 1px solid var(--border);
+}
+
+.comparison-table thead th:first-child { width: 35%; }
+.comparison-table thead th:nth-child(2) { color: var(--green); }
+
+.comparison-table tbody td {
+  padding: 1rem 1.5rem;
+  font-size: 0.9rem;
+  border-bottom: 1px solid #f4f4f5;
+  vertical-align: top;
+}
+
+.comparison-table tbody tr:last-child td { border-bottom: none; }
+
+.comparison-table tbody td:first-child {
+  font-weight: 600;
+  color: var(--text-heading);
+}
+
+.comparison-table .check-green { color: var(--green); font-weight: 600; }
+.comparison-table .check-red { color: #EF4444; }
+
+/* INTEGRATION MARQUEE */
+.marquee-section {
+  padding: 4rem 0;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+.marquee-label {
+  text-align: center;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+}
+
+.marquee-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.marquee-wrapper::before,
+.marquee-wrapper::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 120px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.marquee-wrapper::before {
+  left: 0;
+  background: linear-gradient(90deg, #fff, transparent);
+}
+
+.marquee-wrapper::after {
+  right: 0;
+  background: linear-gradient(-90deg, #fff, transparent);
+}
+
+.marquee-track {
+  display: flex;
+  gap: 4rem;
+  animation: marquee 30s linear infinite;
+  width: max-content;
+}
+
+.marquee-wrapper:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.marquee-item {
+  font-size: 1.3rem;
+  font-weight: 700;
+  white-space: nowrap;
+  flex-shrink: 0;
+  padding: 0.5rem 0;
+}
+
+.marquee-item.athena { color: var(--teal); font-style: italic; }
+.marquee-item.modmed { color: #2563EB; font-weight: 700; }
+.marquee-item.nextgen { color: #EA580C; font-weight: 700; }
+.marquee-item.eclinical { color: #1E3A5F; font-style: italic; }
+.marquee-item.advancedmd { color: #1E3A5F; }
+.marquee-item.salesforce { color: #0EA5E9; }
+.marquee-item.hubspot { color: #EA580C; font-weight: 700; }
+.marquee-item.drchrono { color: var(--green); }
+
+/* DARK CTA */
+.dark-cta {
+  background: linear-gradient(135deg, #064E3B, #065F46, #047857);
+  padding: 6rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.dark-cta::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(255,255,255,0.06) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.dark-cta::after {
+  content: '';
+  position: absolute;
+  inset: -50%;
+  background: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 80px,
+    rgba(255,255,255,0.015) 80px,
+    rgba(255,255,255,0.015) 82px
+  );
+  animation: diagonalMove 20s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes diagonalMove {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(80px, 80px); }
+}
+
+.dark-cta-headline {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 1;
+  line-height: 1.15;
+}
+
+.dark-cta-sub {
+  font-size: 1.1rem;
+  color: rgba(255,255,255,0.7);
+  margin-bottom: 2.5rem;
+  position: relative;
+  z-index: 1;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.dark-cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
+}
+
+.btn-white {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: #fff;
+  color: var(--green-dark);
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: var(--radius-pill);
+  font-size: 1rem;
+  font-weight: 700;
+  font-family: 'DM Sans', sans-serif;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.15s, box-shadow 0.2s;
+}
+
+.btn-white:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+}
+
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: transparent;
+  color: #fff;
+  border: 1.5px solid rgba(255,255,255,0.3);
+  padding: 0.75rem 2rem;
+  border-radius: var(--radius-pill);
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: 'DM Sans', sans-serif;
+  cursor: pointer;
+  text-decoration: none;
+  transition: border-color 0.2s, transform 0.15s;
+}
+
+.btn-ghost:hover {
+  border-color: rgba(255,255,255,0.6);
+  transform: translateY(-2px);
+}
+
+/* FOOTER */
+.footer {
+  background: #fff;
+  border-top: 1px solid var(--border);
+  padding: 4rem 0 0;
+  position: relative;
+  z-index: 1;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+.footer-brand-desc {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+}
+
+.footer-hipaa {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: var(--bg-green-tint);
+  border-radius: 10px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--green-dark);
+}
+
+.footer-col-title {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--text-heading);
+  margin-bottom: 1.25rem;
+}
+
+.footer-links {
+  list-style: none;
+}
+
+.footer-links li { margin-bottom: 0.65rem; }
+
+.footer-links a {
+  text-decoration: none;
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  transition: color 0.2s;
+}
+
+.footer-links a:hover { color: var(--green); }
+
+.footer-bottom {
+  border-top: 1px solid var(--border);
+  padding: 1.5rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.footer-copy {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+.footer-contact {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+.footer-contact a {
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-contact a:hover { color: var(--green); }
+
+/* SCROLL REVEAL */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .nav-login { display: none; }
+  .nav-right .btn-primary { display: none; }
+  .hamburger { display: flex; }
+
+  .hero { padding: 4rem 0 3rem; text-align: center; }
+  .hero-inner { flex-direction: column; gap: 2.5rem; }
+  .hero-text { text-align: center; }
+  .hero-buttons { justify-content: center; }
+  .hero-text { flex: 1; }
+  .hero-visual { flex: 1; width: 100%; }
+
+  .browser-body { flex-direction: column; }
+  .dash-sidebar { width: 100%; padding: 0.75rem; }
+  .dash-sidebar-nav { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+  .dash-sidebar-nav li { padding: 0.35rem 0.6rem; font-size: 0.65rem; }
+
+  .step-row, .step-row.reverse {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .flow-columns {
+    grid-template-columns: 1fr;
+  }
+
+  .deepdive-inner {
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+
+  .comparison-table {
+    font-size: 0.8rem;
+  }
+
+  .comparison-table thead th,
+  .comparison-table tbody td {
+    padding: 0.75rem;
+  }
+
+  .footer-grid,
+  .footer div[style*="grid-template-columns"] {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 2rem !important;
+  }
+
+  .footer-bottom,
+  .footer div[style*="justify-content:space-between"] {
+    flex-direction: column !important;
+    gap: 0.5rem !important;
+    text-align: center !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-grid,
+  .footer div[style*="grid-template-columns"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .hero-buttons .btn-primary,
+  .hero-buttons .btn-outline {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .dark-cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .flow-tabs {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- Scroll Progress Bar -->
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- Top Gradient Bar -->
+<div class="top-bar"></div>
+
+<!-- NAV -->
+<nav class="nav" id="nav"><div class="nav__inner">
+  <a href="index.html" class="nav__logo">sera</a>
+  <div class="nav__links">
+    <div class="nav__dropdown">
+      <a href="product.html" class="nav__link active">Product</a>
+      <div class="nav__dropdown-menu">
+        <a href="product.html#features" class="nav__dropdown-item">AI Call Coverage</a>
+        <a href="product.html#features" class="nav__dropdown-item">Voice AI Booking</a>
+        <a href="product.html#features" class="nav__dropdown-item">Call Summaries & Transcripts</a>
+        <a href="product.html#features" class="nav__dropdown-item">Missed Call Text-Back</a>
+        <a href="product.html#features" class="nav__dropdown-item">CRM & Patient Pipeline</a>
+        <a href="product.html#features" class="nav__dropdown-item">After-Hours Coverage</a>
+      </div>
+    </div>
+    <div class="nav__dropdown">
+      <a href="solutions.html" class="nav__link">Solutions</a>
+      <div class="nav__dropdown-menu">
+        <a href="solutions.html#industry-1" class="nav__dropdown-item">Physical Therapy</a>
+        <a href="solutions.html#industry-2" class="nav__dropdown-item">Dental Practices</a>
+        <a href="solutions.html#industry-3" class="nav__dropdown-item">Med Spas & Aesthetics</a>
+        <a href="solutions.html#industry-4" class="nav__dropdown-item">Chiropractors</a>
+        <a href="solutions.html#industry-5" class="nav__dropdown-item">Home Services</a>
+        <a href="solutions.html#industry-6" class="nav__dropdown-item">Real Estate</a>
+      </div>
+    </div>
+    <a href="pricing.html" class="nav__link">Pricing</a>
+    <a href="security.html" class="nav__link">Security</a>
+  </div>
+  <div class="nav__right"><a href="#" class="nav__login">Login</a><a href="#" class="nav__cta">Book a Demo &rarr;</a></div>
+  <button class="nav__hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+</div>
+<div class="nav__mobile-menu" id="mobileMenu">
+  <a href="product.html" class="active">Product</a>
+  <a href="solutions.html">Solutions</a>
+  <a href="pricing.html">Pricing</a>
+  <a href="security.html">Security</a>
+  <a href="#">Login</a>
+  <a href="#" class="btn btn--primary" style="text-align:center;justify-content:center">Book a Demo &rarr;</a>
+</div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-inner">
+      <div class="hero-text reveal">
+        <div class="hero-eyebrow">THE PLATFORM</div>
+        <h1 class="hero-headline">The Complete AI Call Coverage Platform</h1>
+        <p class="hero-sub">From the moment a patient calls to the moment your staff follows up &mdash; Sera handles everything automatically.</p>
+        <div class="hero-buttons">
+          <a href="#" class="btn-primary">Book a Demo &rarr;</a>
+          <a href="pricing.html" class="btn-outline">See Pricing</a>
+        </div>
+      </div>
+      <div class="hero-visual reveal">
+        <div class="browser-mockup">
+          <div class="browser-chrome">
+            <div class="browser-dots"><span></span><span></span><span></span></div>
+            <div class="browser-url">app.joinsera.us/dashboard</div>
+          </div>
+          <div class="browser-body">
+            <div class="dash-sidebar">
+              <div class="dash-sidebar-logo">sera</div>
+              <ul class="dash-sidebar-nav">
+                <li class="active"><span class="nav-icon"></span> Dashboard</li>
+                <li><span class="nav-icon"></span> Calls</li>
+                <li><span class="nav-icon"></span> Inbox</li>
+                <li><span class="nav-icon"></span> Patients</li>
+                <li><span class="nav-icon"></span> Settings</li>
+              </ul>
+            </div>
+            <div class="dash-main">
+              <div class="dash-header">Recent Calls</div>
+              <div class="dash-subheader">Today &mdash; 4 new calls</div>
+
+              <!-- Expanded Row -->
+              <div class="call-row expanded">
+                <div class="call-avatar">MG</div>
+                <div class="call-info">
+                  <span class="call-name">Maria Garcia</span>
+                  <span class="call-type new">New Patient</span>
+                </div>
+                <span class="call-time">Just now</span>
+                <div class="call-expanded-details">
+                  <div class="call-detail-item">
+                    <span class="call-detail-label">Reason</span>
+                    <span class="call-detail-value">Knee pain evaluation</span>
+                  </div>
+                  <div class="call-detail-item">
+                    <span class="call-detail-label">Insurance</span>
+                    <span class="call-detail-value">BCBS PPO</span>
+                  </div>
+                  <div class="call-detail-item">
+                    <span class="call-detail-label">Preferred</span>
+                    <span class="call-detail-value">Mon-Wed AM</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="call-row">
+                <div class="call-avatar">JL</div>
+                <div class="call-info">
+                  <span class="call-name">James Lee</span>
+                  <span class="call-type followup">Follow-up</span>
+                </div>
+                <span class="call-time">12 min ago</span>
+              </div>
+
+              <div class="call-row">
+                <div class="call-avatar">ST</div>
+                <div class="call-info">
+                  <span class="call-name">Sarah Thompson</span>
+                  <span class="call-type new">New Patient</span>
+                </div>
+                <span class="call-time">34 min ago</span>
+              </div>
+
+              <div class="call-row">
+                <div class="call-avatar">RK</div>
+                <div class="call-info">
+                  <span class="call-name">Robert Kim</span>
+                  <span class="call-type insurance">Insurance Q</span>
+                </div>
+                <span class="call-time">1 hr ago</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 1: How Sera Works -->
+<section class="section" id="how-it-works">
+  <div class="container">
+    <div class="section-eyebrow reveal">STEP BY STEP</div>
+    <h2 class="section-headline reveal">How Sera Works</h2>
+    <p class="section-sub reveal">Four simple steps from incoming call to booked appointment. No training required, no complex setup.</p>
+
+    <!-- Step 1 -->
+    <div class="step-row reveal">
+      <div class="step-text">
+        <div class="step-number">1</div>
+        <h3 class="step-title">Sera Answers Instantly</h3>
+        <p class="step-desc">When a patient calls your practice, Sera picks up within seconds &mdash; day or night. No hold times, no voicemail maze, no busy signals. The AI greets the caller naturally and begins the conversation immediately, just like a trained receptionist would.</p>
+      </div>
+      <div class="step-visual">
+        <div class="phone-mockup">
+          <div class="phone-label">Incoming Call</div>
+          <div class="phone-clinic">Summit Physical Therapy</div>
+          <div class="phone-caller">Maria Garcia</div>
+          <div class="phone-buttons">
+            <div class="phone-btn decline">&#x2715;</div>
+            <div class="phone-btn answer">&#x2713;</div>
+          </div>
+          <div class="phone-status">Sera answering in 2s...</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Step 2 -->
+    <div class="step-row reverse reveal">
+      <div class="step-text">
+        <div class="step-number">2</div>
+        <h3 class="step-title">Smart, Natural Intake</h3>
+        <p class="step-desc">Sera conducts a structured intake conversation &mdash; asking about the reason for calling, insurance information, preferred appointment times, and any special notes. The conversation feels natural and professional. Patients consistently report they can't tell they're speaking with AI.</p>
+      </div>
+      <div class="step-visual">
+        <div class="chat-mockup">
+          <div class="chat-header">Live Conversation</div>
+          <div class="chat-bubble">
+            <div class="chat-avatar sera">S</div>
+            <div class="chat-msg">Hi, thank you for calling Summit Physical Therapy! How can I help you today?</div>
+          </div>
+          <div class="chat-bubble patient">
+            <div class="chat-avatar pat">P</div>
+            <div class="chat-msg">Hi, I'd like to schedule an appointment for knee pain.</div>
+          </div>
+          <div class="chat-bubble">
+            <div class="chat-avatar sera">S</div>
+            <div class="chat-msg">I'd be happy to help with that. Are you a new or returning patient?</div>
+          </div>
+          <div class="chat-bubble patient">
+            <div class="chat-avatar pat">P</div>
+            <div class="chat-msg">New patient. I have Blue Cross Blue Shield.</div>
+          </div>
+          <div class="chat-bubble">
+            <div class="chat-avatar sera">S</div>
+            <div class="chat-msg">Great, we accept BCBS. What mornings or afternoons work best for you?</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Step 3 -->
+    <div class="step-row reveal">
+      <div class="step-text">
+        <div class="step-number">3</div>
+        <h3 class="step-title">Instant Summary Generation</h3>
+        <p class="step-desc">The moment the call ends, Sera generates a structured summary with every detail captured: patient name, contact info, reason for calling, insurance details, appointment preferences, and any notes. The summary is formatted and ready for your team to act on.</p>
+      </div>
+      <div class="step-visual">
+        <div class="summary-mockup">
+          <div class="summary-chrome">
+            <div class="summary-dots"><span></span><span></span><span></span></div>
+            <span style="font-size:0.65rem;color:var(--text-muted);font-family:'IBM Plex Mono',monospace;">Call Summary</span>
+          </div>
+          <div class="summary-body">
+            <div class="summary-title">Maria Garcia <span class="summary-badge">New Patient</span></div>
+            <div class="summary-field">
+              <span class="summary-field-label">Phone</span>
+              <span class="summary-field-value">(555) 234-5678</span>
+            </div>
+            <div class="summary-field">
+              <span class="summary-field-label">Reason</span>
+              <span class="summary-field-value">Knee pain evaluation</span>
+            </div>
+            <div class="summary-field">
+              <span class="summary-field-label">Insurance</span>
+              <span class="summary-field-value">BCBS PPO</span>
+            </div>
+            <div class="summary-field">
+              <span class="summary-field-label">Preferred</span>
+              <span class="summary-field-value">Mon-Wed mornings</span>
+            </div>
+            <div class="summary-field">
+              <span class="summary-field-label">Duration</span>
+              <span class="summary-field-value">2m 34s</span>
+            </div>
+            <div class="summary-field">
+              <span class="summary-field-label">Notes</span>
+              <span class="summary-field-value">Previous ACL surgery 2022</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Step 4 -->
+    <div class="step-row reverse reveal">
+      <div class="step-text">
+        <div class="step-number">4</div>
+        <h3 class="step-title">Your Team Gets Notified</h3>
+        <p class="step-desc">Summaries are delivered instantly via email, SMS, or directly into your Sera portal. Your staff sees exactly what they need to follow up and book the appointment &mdash; no phone tag, no deciphering voicemails, no manual data entry.</p>
+      </div>
+      <div class="step-visual">
+        <div class="notif-mockup">
+          <div class="notif-header">
+            <div class="notif-icon">&#9993;</div>
+            <div class="notif-title-block">
+              <div class="notif-title">New Call Summary</div>
+              <div class="notif-time">Just now &bull; via Email</div>
+            </div>
+          </div>
+          <div class="notif-preview">
+            <div class="notif-preview-item">
+              <span class="notif-preview-label">Patient:</span>
+              <span class="notif-preview-value">Maria Garcia</span>
+            </div>
+            <div class="notif-preview-item">
+              <span class="notif-preview-label">Reason:</span>
+              <span class="notif-preview-value">Knee pain evaluation</span>
+            </div>
+            <div class="notif-preview-item">
+              <span class="notif-preview-label">Insurance:</span>
+              <span class="notif-preview-value">BCBS PPO</span>
+            </div>
+            <div class="notif-preview-item">
+              <span class="notif-preview-label">Preferred:</span>
+              <span class="notif-preview-value">Mon-Wed mornings</span>
+            </div>
+          </div>
+          <button class="notif-btn">View Full Summary &rarr;</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 2: Every Feature -->
+<section class="section section-warm" id="features">
+  <div class="container">
+    <div class="section-eyebrow reveal">CAPABILITIES</div>
+    <h2 class="section-headline reveal">Every Feature Your Practice Needs</h2>
+    <p class="section-sub reveal">Built specifically for healthcare. Every feature designed to save time, capture patients, and reduce staff burden.</p>
+
+    <div class="features-grid">
+      <!-- Card 1: Phone Call UI -->
+      <div class="feature-card reveal">
+        <div class="feature-card-visual">
+          <div class="mini-phone">
+            <div class="mp-label">Incoming Call</div>
+            <div class="mp-name">Maria Garcia</div>
+            <div class="mp-btns">
+              <div class="mp-btn red"></div>
+              <div class="mp-btn grn"></div>
+            </div>
+          </div>
+        </div>
+        <div class="feature-card-body">
+          <div class="feature-card-title">Instant Call Answering</div>
+          <p class="feature-card-desc">Sera picks up every call within seconds, 24/7. No hold music, no voicemail, no missed opportunities.</p>
+        </div>
+      </div>
+
+      <!-- Card 2: Flow Diagram -->
+      <div class="feature-card reveal">
+        <div class="feature-card-visual">
+          <div class="mini-flow">
+            <div class="mini-flow-step">Call In</div>
+            <div class="mini-flow-arrow">&rarr;</div>
+            <div class="mini-flow-step">AI Intake</div>
+            <div class="mini-flow-arrow">&rarr;</div>
+            <div class="mini-flow-step">Summary</div>
+            <div class="mini-flow-arrow">&rarr;</div>
+            <div class="mini-flow-step">Notify</div>
+          </div>
+        </div>
+        <div class="feature-card-body">
+          <div class="feature-card-title">Intelligent Routing</div>
+          <p class="feature-card-desc">Automatically routes calls through the right workflow based on caller intent &mdash; new patient, follow-up, or urgent.</p>
+        </div>
+      </div>
+
+      <!-- Card 3: Chat -->
+      <div class="feature-card reveal">
+        <div class="feature-card-visual">
+          <div class="mini-chat">
+            <div class="mini-chat-line sera">
+              <div class="mini-chat-dot s">S</div>
+              <div class="mini-chat-text">How can I help you today?</div>
+            </div>
+            <div class="mini-chat-line">
+              <div class="mini-chat-dot p">P</div>
+              <div class="mini-chat-text">I need to schedule a follow-up.</div>
+            </div>
+            <div class="mini-chat-line sera">
+              <div class="mini-chat-dot s">S</div>
+              <div class="mini-chat-text">Of course! Let me pull up availability.</div>
+            </div>
+          </div>
+        </div>
+        <div class="feature-card-body">
+          <div class="feature-card-title">Natural AI Conversations</div>
+          <p class="feature-card-desc">Patients can't tell they're speaking with AI. Sera handles complex questions naturally and professionally.</p>
+        </div>
+      </div>
+
+      <!-- Card 4: Calendar -->
+      <div class="feature-card reveal">
+        <div class="feature-card-visual">
+          <div class="mini-calendar">
+            <div class="mini-cal-header">March 2026</div>
+            <div class="mini-cal-grid">
+              <div class="mini-cal-day header">M</div>
+              <div class="mini-cal-day header">T</div>
+              <div class="mini-cal-day header">W</div>
+              <div class="mini-cal-day header">T</div>
+              <div class="mini-cal-day header">F</div>
+              <div class="mini-cal-day header">S</div>
+              <div class="mini-cal-day header">S</div>
+              <div class="mini-cal-day"></div>
+              <div class="mini-cal-day"></div>
+              <div class="mini-cal-day"></div>
+              <div class="mini-cal-day"></div>
+              <div class="mini-cal-day"></div>
+              <div class="mini-cal-day"></div>
+              <div class="mini-cal-day">1</div>
+              <div class="mini-cal-day">2</div>
+              <div class="mini-cal-day">3</div>
+              <div class="mini-cal-day active">4</div>
+              <div class="mini-cal-day">5</div>
+              <div class="mini-cal-day">6</div>
+              <div class="mini-cal-day">7</div>
+              <div class="mini-cal-day">8</div>
+              <div class="mini-cal-day active">9</div>
+              <div class="mini-cal-day">10</div>
+              <div class="mini-cal-day active">11</div>
+              <div class="mini-cal-day">12</div>
+              <div class="mini-cal-day">13</div>
+              <div class="mini-cal-day">14</div>
+              <div class="mini-cal-day">15</div>
+            </div>
+          </div>
+        </div>
+        <div class="feature-card-body">
+          <div class="feature-card-title">Scheduling Preferences</div>
+          <p class="feature-card-desc">Captures preferred days, times, and urgency so your team can book instantly without back-and-forth.</p>
+        </div>
+      </div>
+
+      <!-- Card 5: Summary -->
+      <div class="feature-card reveal">
+        <div class="feature-card-visual">
+          <div class="mini-summary">
+            <div style="font-size:0.6rem;font-weight:700;color:var(--text-heading);margin-bottom:0.5rem;">Call Summary</div>
+            <div class="mini-summary-line">
+              <span class="mini-summary-label">Patient</span>
+              <span class="mini-summary-value">Maria Garcia</span>
+            </div>
+            <div class="mini-summary-line">
+              <span class="mini-summary-label">Reason</span>
+              <span class="mini-summary-value">Knee pain</span>
+            </div>
+            <div class="mini-summary-line">
+              <span class="mini-summary-label">Insurance</span>
+              <span class="mini-summary-value">BCBS PPO</span>
+            </div>
+            <div class="mini-summary-line">
+              <span class="mini-summary-label">Duration</span>
+              <span class="mini-summary-value">2m 34s</span>
+            </div>
+          </div>
+        </div>
+        <div class="feature-card-body">
+          <div class="feature-card-title">Structured Summaries</div>
+          <p class="feature-card-desc">Every call produces a clean, structured summary with patient details, reason, insurance, and notes.</p>
+        </div>
+      </div>
+
+      <!-- Card 6: Outbound Notification (Coming Soon) -->
+      <div class="feature-card reveal">
+        <div class="feature-card-visual">
+          <div class="mini-notif">
+            <div class="mini-notif-header">
+              <div class="mini-notif-icon">&#8599;</div>
+              <div class="mini-notif-title">Outbound Call</div>
+            </div>
+            <div class="mini-notif-line">Reminder: Appt tomorrow 9am</div>
+            <div class="mini-notif-line">Patient: James Lee</div>
+            <div class="mini-notif-line">Status: Confirmed &#10003;</div>
+            <div class="mini-notif-btn">View Details</div>
+          </div>
+        </div>
+        <div class="feature-card-body">
+          <div class="feature-card-title">Outbound Calls <span class="badge-soon">Coming Soon</span></div>
+          <p class="feature-card-desc">Sera will proactively call patients for reminders, rescheduling, and waitlist notifications.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 3: Flow Diagram -->
+<section class="section" id="scenarios">
+  <div class="container">
+    <div class="section-eyebrow reveal">WORKFLOWS</div>
+    <h2 class="section-headline reveal">How Sera Handles Every Scenario</h2>
+    <p class="section-sub reveal">Intelligent workflows for every type of call your practice receives.</p>
+
+    <div class="flow-tabs reveal">
+      <button class="flow-tab active" data-tab="inbound">Inbound Calls</button>
+      <button class="flow-tab" data-tab="outbound">Outbound Calls <span class="tab-badge">Soon</span></button>
+    </div>
+
+    <!-- Inbound Panel -->
+    <div class="flow-panel active" id="panel-inbound">
+      <div class="flow-columns">
+        <!-- Appointment -->
+        <div class="flow-column reveal">
+          <div class="flow-column-header">Appointment Request</div>
+          <div class="flow-column-body">
+            <div class="flow-step">
+              <div class="flow-step-dot"></div>
+              <div class="flow-step-line"></div>
+              <div class="flow-step-content">
+                <div class="flow-step-title">Patient calls in</div>
+                <div class="flow-step-desc">Sera answers within seconds</div>
+              </div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-step-dot"></div>
+              <div class="flow-step-line"></div>
+              <div class="flow-step-content">
+                <div class="flow-step-title">Identify intent</div>
+                <div class="flow-step-desc">New patient or follow-up detected</div>
+              </div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-step-dot"></div>
+              <div class="flow-step-line"></div>
+              <div class="flow-step-content">
+                <div class="flow-step-title">Collect details</div>
+                <div class="flow-step-desc">Name, insurance, preferences captured</div>
+              </div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-step-dot"></div>
+              <div class="flow-step-content">
+                <div class="flow-step-title">Generate summary</div>
+                <div class="flow-step-desc">Structured data sent to team</div>
+              </div>
+            </div>
+            <div class="flow-result">&#10003; Appointment booked</div>
+          </div>
+        </div>
+
+        <!-- Inquiry -->
+        <div class="flow-column reveal">
+          <div class="flow-column-header">General Inquiry</div>
+          <div class="flow-column-body">
+            <div class="flow-step">
+              <div class="flow-step-dot"></div>
+              <div class="flow-step-line"></div>
+              <div class="flow-step-content">
+                <div class="flow-step-title">Patient calls in</div>
+                <div class="flow-step-desc">Sera answers within seconds</div>
+              </div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-step-dot"></div>
+              <div class="flow-step-line"></div>
+              <div class="flow-step-content">
+                <div class="flow-step-title">Understand question</div>
+                <div class="flow-step-desc">Insurance, hours, services, etc.</div>
+              </div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-step-dot"></div>
+              <div class="flow-step-line"></div>
+              <div class="flow-step-content">
+                <div class="flow-step-title">Provide answer</div>
+                <div class="flow-step-desc">Responds with practice information</div>
+              </div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-step-dot"></div>
+              <div class="flow-step-content">
+                <div class="flow-step-title">Offer next step</div>
+                <div class="flow-step-desc">Schedule visit or transfer to staff</div>
+              </div>
+            </div>
+            <div class="flow-result">&#10003; Inquiry resolved</div>
+          </div>
+        </div>
+
+        <!-- Urgent -->
+        <div class="flow-column reveal">
+          <div class="flow-column-header">Urgent Call</div>
+          <div class="flow-column-body">
+            <div class="flow-step">
+              <div class="flow-step-dot"></div>
+              <div class="flow-step-line"></div>
+              <div class="flow-step-content">
+                <div class="flow-step-title">Patient calls in</div>
+                <div class="flow-step-desc">Sera answers within seconds</div>
+              </div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-step-dot"></div>
+              <div class="flow-step-line"></div>
+              <div class="flow-step-content">
+                <div class="flow-step-title">Detect urgency</div>
+                <div class="flow-step-desc">AI identifies urgent keywords</div>
+              </div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-step-dot"></div>
+              <div class="flow-step-line"></div>
+              <div class="flow-step-content">
+                <div class="flow-step-title">Escalate immediately</div>
+                <div class="flow-step-desc">Routes to on-call provider</div>
+              </div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-step-dot"></div>
+              <div class="flow-step-content">
+                <div class="flow-step-title">Log &amp; notify</div>
+                <div class="flow-step-desc">Full record sent to team</div>
+              </div>
+            </div>
+            <div class="flow-result">&#10003; Patient connected</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Outbound Panel -->
+    <div class="flow-panel" id="panel-outbound">
+      <div class="flow-columns">
+        <!-- Reminder -->
+        <div class="flow-column reveal">
+          <div class="flow-column-header">Appointment Reminder</div>
+          <div class="flow-column-body">
+            <div class="flow-step">
+              <div class="flow-step-dot"></div>
+              <div class="flow-step-line"></div>
+              <div class="flow-step-content">
+                <div class="flow-step-title">Trigger reminder</div>
+                <div class="flow-step-desc">24-48 hrs before appointment</div>
+              </div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-step-dot"></div>
+              <div class="flow-step-line"></div>
+              <div class="flow-step-content">
+                <div class="flow-step-title">Sera calls patient</div>
+                <div class="flow-step-desc">Natural confirmation call</div>
+              </div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-step-dot"></div>
+              <div class="flow-step-line"></div>
+              <div class="flow-step-content">
+                <div class="flow-step-title">Confirm or reschedule</div>
+                <div class="flow-step-desc">Handles changes automatically</div>
+              </div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-step-dot"></div>
+              <div class="flow-step-content">
+                <div class="flow-step-title">Update calendar</div>
+                <div class="flow-step-desc">Real-time schedule updates</div>
+              </div>
+            </div>
+            <div class="flow-result">&#10003; Appointment confirmed</div>
+          </div>
+        </div>
+
+        <!-- Reschedule -->
+        <div class="flow-column reveal">
+          <div class="flow-column-header">Reschedule Outreach</div>
+          <div class="flow-column-body">
+            <div class="flow-step">
+              <div class="flow-step-dot"></div>
+              <div class="flow-step-line"></div>
+              <div class="flow-step-content">
+                <div class="flow-step-title">No-show detected</div>
+                <div class="flow-step-desc">Patient missed appointment</div>
+              </div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-step-dot"></div>
+              <div class="flow-step-line"></div>
+              <div class="flow-step-content">
+                <div class="flow-step-title">Sera reaches out</div>
+                <div class="flow-step-desc">Friendly follow-up call</div>
+              </div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-step-dot"></div>
+              <div class="flow-step-line"></div>
+              <div class="flow-step-content">
+                <div class="flow-step-title">Offer new times</div>
+                <div class="flow-step-desc">Flexible scheduling options</div>
+              </div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-step-dot"></div>
+              <div class="flow-step-content">
+                <div class="flow-step-title">Book new slot</div>
+                <div class="flow-step-desc">Rescheduled and confirmed</div>
+              </div>
+            </div>
+            <div class="flow-result">&#10003; Rescheduled</div>
+          </div>
+        </div>
+
+        <!-- Waitlist -->
+        <div class="flow-column reveal">
+          <div class="flow-column-header">Waitlist Notification</div>
+          <div class="flow-column-body">
+            <div class="flow-step">
+              <div class="flow-step-dot"></div>
+              <div class="flow-step-line"></div>
+              <div class="flow-step-content">
+                <div class="flow-step-title">Slot opens up</div>
+                <div class="flow-step-desc">Cancellation creates opening</div>
+              </div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-step-dot"></div>
+              <div class="flow-step-line"></div>
+              <div class="flow-step-content">
+                <div class="flow-step-title">Notify waitlist</div>
+                <div class="flow-step-desc">Sera calls patients in order</div>
+              </div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-step-dot"></div>
+              <div class="flow-step-line"></div>
+              <div class="flow-step-content">
+                <div class="flow-step-title">First to confirm wins</div>
+                <div class="flow-step-desc">Fair, first-come-first-served</div>
+              </div>
+            </div>
+            <div class="flow-step">
+              <div class="flow-step-dot"></div>
+              <div class="flow-step-content">
+                <div class="flow-step-title">Slot filled</div>
+                <div class="flow-step-desc">Zero revenue lost</div>
+              </div>
+            </div>
+            <div class="flow-result">&#10003; Slot filled</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 4: Call Summary Deep Dive -->
+<section class="section section-green-tint" id="deep-dive">
+  <div class="container">
+    <div class="deepdive-inner">
+      <div class="deepdive-text reveal">
+        <div class="section-eyebrow" style="text-align:left;">DEEP DIVE</div>
+        <h2 class="deepdive-headline">Everything Captured. Nothing Missed.</h2>
+        <p class="deepdive-desc">Every call produces a comprehensive, structured summary that captures every detail your team needs to follow up. No more listening to voicemails, no more incomplete notes, no more guessing what the patient said. Sera captures it all &mdash; automatically, accurately, and instantly.</p>
+      </div>
+      <div class="deepdive-visual reveal">
+        <div class="deep-summary">
+          <div class="deep-summary-header">
+            <div class="deep-summary-title">Call Summary</div>
+            <span class="summary-badge">New Patient Intake</span>
+          </div>
+          <div class="deep-summary-body">
+            <div class="deep-field">
+              <span class="deep-field-label">Patient Name</span>
+              <span class="deep-field-value">Maria Garcia</span>
+            </div>
+            <div class="deep-field">
+              <span class="deep-field-label">Phone</span>
+              <span class="deep-field-value">(555) 234-5678</span>
+            </div>
+            <div class="deep-field">
+              <span class="deep-field-label">Reason</span>
+              <span class="deep-field-value">Knee pain evaluation &mdash; new patient</span>
+            </div>
+            <div class="deep-field">
+              <span class="deep-field-label">Insurance</span>
+              <span class="deep-field-value">Blue Cross Blue Shield (PPO)</span>
+            </div>
+            <div class="deep-field">
+              <span class="deep-field-label">Preferred</span>
+              <span class="deep-field-value">Mornings Mon-Wed, earliest available</span>
+            </div>
+            <div class="deep-field">
+              <span class="deep-field-label">Notes</span>
+              <span class="deep-field-value">Previous ACL surgery 2022. Works early mornings, prefers before 9am. Asked about parking.</span>
+            </div>
+            <div class="deep-field">
+              <span class="deep-field-label">Call Duration</span>
+              <span class="deep-field-value">2m 34s</span>
+            </div>
+            <div class="deep-field">
+              <span class="deep-field-label">Disposition</span>
+              <span class="deep-field-value">New patient intake &mdash; appointment requested</span>
+            </div>
+            <div class="deep-field">
+              <span class="deep-field-label">Recording</span>
+              <span class="deep-field-value">Available <span class="check">&#10003;</span></span>
+            </div>
+            <div class="deep-field">
+              <span class="deep-field-label">Transcript</span>
+              <span class="deep-field-value">Available <span class="check">&#10003;</span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 5: Comparison Table -->
+<section class="section" id="comparison">
+  <div class="container">
+    <div class="section-eyebrow reveal">COMPARISON</div>
+    <h2 class="section-headline reveal">Sera vs. Traditional Solutions</h2>
+    <p class="section-sub reveal">See how Sera stacks up against legacy answering services and voicemail systems.</p>
+
+    <div class="reveal">
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>Feature</th>
+            <th>Sera AI</th>
+            <th>Traditional Solutions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Answer Speed</td>
+            <td class="check-green">Under 3 seconds, every call</td>
+            <td class="check-red">30-90 second hold times typical</td>
+          </tr>
+          <tr>
+            <td>Availability</td>
+            <td class="check-green">24/7/365 &mdash; no exceptions</td>
+            <td class="check-red">Business hours only, voicemail after</td>
+          </tr>
+          <tr>
+            <td>Data Capture</td>
+            <td class="check-green">Structured summary, every field</td>
+            <td class="check-red">Handwritten notes, often incomplete</td>
+          </tr>
+          <tr>
+            <td>Cost Per Call</td>
+            <td class="check-green">Pennies per call, flat monthly</td>
+            <td class="check-red">$4-8 per call, overages common</td>
+          </tr>
+          <tr>
+            <td>HIPAA Compliance</td>
+            <td class="check-green">Fully compliant, BAA included</td>
+            <td class="check-red">Varies, often unclear</td>
+          </tr>
+          <tr>
+            <td>Setup Time</td>
+            <td class="check-green">Under 15 minutes</td>
+            <td class="check-red">Days to weeks of training</td>
+          </tr>
+          <tr>
+            <td>Consistency</td>
+            <td class="check-green">100% consistent, every call</td>
+            <td class="check-red">Varies by agent and shift</td>
+          </tr>
+          <tr>
+            <td>Scalability</td>
+            <td class="check-green">Unlimited concurrent calls</td>
+            <td class="check-red">Limited by staff headcount</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 6: Integration Logos -->
+<section class="marquee-section">
+  <div class="marquee-label reveal">Integrates with your existing tools</div>
+  <div class="marquee-wrapper">
+    <div class="marquee-track">
+      <span class="marquee-item athena">athenahealth</span>
+      <span class="marquee-item modmed">ModMed</span>
+      <span class="marquee-item nextgen">NextGen</span>
+      <span class="marquee-item eclinical">eClinicalWorks</span>
+      <span class="marquee-item advancedmd">AdvancedMD</span>
+      <span class="marquee-item salesforce">Salesforce</span>
+      <span class="marquee-item hubspot">HubSpot</span>
+      <span class="marquee-item drchrono">DrChrono</span>
+      <!-- Duplicate for seamless loop -->
+      <span class="marquee-item athena">athenahealth</span>
+      <span class="marquee-item modmed">ModMed</span>
+      <span class="marquee-item nextgen">NextGen</span>
+      <span class="marquee-item eclinical">eClinicalWorks</span>
+      <span class="marquee-item advancedmd">AdvancedMD</span>
+      <span class="marquee-item salesforce">Salesforce</span>
+      <span class="marquee-item hubspot">HubSpot</span>
+      <span class="marquee-item drchrono">DrChrono</span>
+    </div>
+  </div>
+</section>
+
+<!-- DARK CTA -->
+<section class="dark-cta">
+  <div class="container">
+    <h2 class="dark-cta-headline">AI That Picks Up So Your Team Doesn't Have To</h2>
+    <p class="dark-cta-sub">Book a 15-minute demo and see how Sera can transform your practice's call handling overnight.</p>
+    <div class="dark-cta-buttons">
+      <a href="#" class="btn-white">Get Started &rarr;</a>
+      <a href="#" class="btn-ghost">Watch Demo</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer__inner">
+    <div>
+      <a href="index.html" class="footer__logo">sera</a>
+      <p class="footer__brand-desc">AI-powered call coverage that answers every patient call, captures intake data, and delivers structured summaries — 24/7.</p>
+      <div class="footer__hipaa"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>HIPAA-Compliant Infrastructure</div>
+      <div class="footer__social">
+        <a href="#" aria-label="Twitter"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+        <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452z"/></svg></a>
+        <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+      </div>
+    </div>
+    <div>
+      <div class="footer__col-title">Product</div>
+      <div class="footer__col-links"><a href="product.html">AI Call Coverage</a><a href="product.html">Voice AI Booking</a><a href="product.html">Call Summaries</a><a href="product.html">CRM Integration</a><a href="product.html">After-Hours Coverage</a></div>
+    </div>
+    <div>
+      <div class="footer__col-title">Industries</div>
+      <div class="footer__col-links"><a href="solutions.html">Physical Therapy</a><a href="solutions.html">Dental Practices</a><a href="solutions.html">Med Spas</a><a href="solutions.html">Chiropractors</a><a href="solutions.html">Home Services</a></div>
+    </div>
+    <div>
+      <div class="footer__col-title">Company</div>
+      <div class="footer__col-links"><a href="#">About</a><a href="#">Contact</a><a href="pricing.html">Pricing</a><a href="security.html">Security</a><a href="#">Privacy Policy</a><a href="#">Terms</a></div>
+    </div>
+  </div>
+  <div class="footer__bottom"><p>&copy; 2026 Sera AI. All rights reserved.</p><p>hello@joinsera.us &middot; (347) 653-1170</p></div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+(function() {
+  // Nav scroll shadow
+  const nav = document.getElementById('nav');
+  const scrollThreshold = 60;
+
+  // Scroll progress bar
+  const scrollProgress = document.getElementById('scrollProgress');
+
+  function onScroll() {
+    // Nav shadow
+    if (window.scrollY > scrollThreshold) {
+      nav.classList.add('scrolled');
+    } else {
+      nav.classList.remove('scrolled');
+    }
+
+    // Scroll progress
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const scrolled = (window.scrollY / docHeight) * 100;
+    scrollProgress.style.width = scrolled + '%';
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  // Mobile hamburger
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  hamburger.addEventListener('click', function() {
+    mobileMenu.classList.toggle('open');
+    const spans = hamburger.querySelectorAll('span');
+    if (mobileMenu.classList.contains('open')) {
+      spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+      spans[1].style.opacity = '0';
+      spans[2].style.transform = 'rotate(-45deg) translate(5px, -5px)';
+    } else {
+      spans[0].style.transform = '';
+      spans[1].style.opacity = '';
+      spans[2].style.transform = '';
+    }
+  });
+
+  // Scroll reveal with IntersectionObserver
+  const revealElements = document.querySelectorAll('.reveal');
+  const revealObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry, index) {
+      if (entry.isIntersecting) {
+        // Stagger for grid children
+        const parent = entry.target.parentElement;
+        const siblings = parent ? parent.querySelectorAll('.reveal') : [];
+        let staggerIndex = 0;
+        for (let i = 0; i < siblings.length; i++) {
+          if (siblings[i] === entry.target) {
+            staggerIndex = i;
+            break;
+          }
+        }
+        const delay = staggerIndex * 50; // 0.05s stagger
+        setTimeout(function() {
+          entry.target.classList.add('visible');
+        }, delay);
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  revealElements.forEach(function(el) {
+    revealObserver.observe(el);
+  });
+
+  // Flow tab switching
+  const flowTabs = document.querySelectorAll('.flow-tab');
+  const flowPanels = document.querySelectorAll('.flow-panel');
+
+  flowTabs.forEach(function(tab) {
+    tab.addEventListener('click', function() {
+      const targetTab = this.getAttribute('data-tab');
+
+      flowTabs.forEach(function(t) { t.classList.remove('active'); });
+      flowPanels.forEach(function(p) { p.classList.remove('active'); });
+
+      this.classList.add('active');
+      document.getElementById('panel-' + targetTab).classList.add('active');
+    });
+  });
+
+  // Smooth scroll for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+    anchor.addEventListener('click', function(e) {
+      const target = this.getAttribute('href');
+      if (target && target !== '#') {
+        const el = document.querySelector(target);
+        if (el) {
+          e.preventDefault();
+          el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }
+    });
+  });
+})();
+</script>
+</body>
+</html>

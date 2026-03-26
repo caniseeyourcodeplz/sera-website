@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Security — Sera | HIPAA-Compliant AI Call Coverage</title>
+<meta name="description" content="Enterprise-grade security for healthcare. HIPAA compliant, SOC 2 Type II, end-to-end encrypted, BAA included with every plan.">
+<meta property="og:title" content="Security — Sera | HIPAA-Compliant AI Call Coverage">
+<meta property="og:description" content="Enterprise-grade security for healthcare. HIPAA compliant, SOC 2 Type II certified.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://joinsera.us/security">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://joinsera.us/security">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@400,500,700,800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+<style>
+/* ============================================================
+   SECURITY PAGE — page-specific styles
+   ============================================================ */
+
+/* Hero */
+.sec-hero { padding: 10rem 0 6rem; position: relative; overflow: hidden; }
+.sec-hero::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse 60% 50% at 50% 40%, rgba(13,155,106,0.12) 0%, transparent 70%); pointer-events:none; }
+.sec-hero::after { content:''; position:absolute; inset:0; background-image:radial-gradient(circle, rgba(255,255,255,0.03) 1px, transparent 1px); background-size:24px 24px; pointer-events:none; }
+.sec-hero__inner { position:relative; z-index:1; text-align:center; max-width:820px; margin:0 auto; }
+.sec-hero__badges { display:flex; justify-content:center; flex-wrap:wrap; gap:0.6rem; margin-bottom:2rem; }
+.sec-hero__badge { display:inline-flex; align-items:center; gap:0.45rem; border:1px solid rgba(255,255,255,0.25); color:rgba(255,255,255,0.85); border-radius:var(--radius-pill); padding:0.4rem 1rem; font-size:0.75rem; font-weight:600; backdrop-filter:blur(4px); }
+.sec-hero__badge svg { flex-shrink:0; }
+.sec-hero__headline { font-family:var(--font-heading); font-size:clamp(2.4rem,5vw,3.6rem); line-height:1.08; font-weight:800; color:#fff; letter-spacing:-0.035em; margin-bottom:1.2rem; }
+.sec-hero__sub { color:rgba(255,255,255,0.65); font-size:1.1rem; line-height:1.75; max-width:600px; margin:0 auto 2.5rem; }
+.sec-hero__buttons { display:flex; justify-content:center; gap:0.8rem; flex-wrap:wrap; }
+
+/* Stat cards row */
+.sec-stats { display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem; max-width:900px; margin:0 auto; }
+.sec-stat-card { background:var(--bg-white); border:1px solid var(--border); border-radius:var(--radius-lg); padding:2rem 1.5rem; text-align:center; box-shadow:var(--shadow-sm); transition:all 0.3s; }
+.sec-stat-card:hover { transform:translateY(-3px); box-shadow:var(--shadow-md); }
+.sec-stat__icon { width:48px; height:48px; border-radius:50%; background:var(--green-light); display:flex; align-items:center; justify-content:center; margin:0 auto 1rem; }
+.sec-stat__number { font-family:var(--font-heading); font-size:2.2rem; font-weight:800; color:var(--green); line-height:1.1; }
+.sec-stat__label { font-size:0.9rem; color:var(--text-secondary); font-weight:500; margin-top:0.3rem; }
+
+/* Two-column layout */
+.sec-two-col { display:grid; grid-template-columns:1fr 1fr; gap:3rem; align-items:start; }
+.sec-two-col__text h3 { font-family:var(--font-heading); font-size:1.5rem; font-weight:700; color:var(--text-primary); margin-bottom:1rem; }
+.sec-two-col__text p { color:var(--text-secondary); line-height:1.75; margin-bottom:1rem; }
+.sec-two-col__list { list-style:none; padding:0; margin:0; }
+.sec-two-col__list li { padding:0.5rem 0; padding-left:1.6rem; position:relative; color:var(--text-secondary); font-size:0.95rem; line-height:1.65; }
+.sec-two-col__list li::before { content:''; position:absolute; left:0; top:0.85rem; width:8px; height:8px; border-radius:50%; background:var(--green); }
+
+/* HIPAA card */
+.hipaa-card { background:var(--bg-white); border:1px solid var(--border); border-radius:var(--radius-lg); padding:2rem; box-shadow:var(--shadow-md); }
+.hipaa-card__header { display:flex; align-items:center; gap:0.6rem; margin-bottom:1.5rem; padding-bottom:1rem; border-bottom:1px solid var(--border-light); }
+.hipaa-card__header svg { color:var(--green); }
+.hipaa-card__header h4 { font-family:var(--font-heading); font-weight:700; font-size:1.1rem; }
+.hipaa-card__group { margin-bottom:1.2rem; }
+.hipaa-card__group:last-child { margin-bottom:0; }
+.hipaa-card__group-title { font-size:0.8rem; font-weight:600; text-transform:uppercase; letter-spacing:0.08em; color:var(--green); margin-bottom:0.5rem; }
+.hipaa-card__item { display:flex; align-items:center; gap:0.5rem; padding:0.4rem 0; font-size:0.88rem; color:var(--text-secondary); }
+.hipaa-card__item svg { flex-shrink:0; color:var(--green); }
+
+/* Encryption cards */
+.sec-enc-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem; }
+.sec-enc-card { background:var(--bg-white); border:1px solid var(--border); border-radius:var(--radius-lg); padding:2rem; transition:all 0.3s; }
+.sec-enc-card:hover { transform:translateY(-3px); box-shadow:var(--shadow-md); }
+.sec-enc-card__icon { width:52px; height:52px; border-radius:var(--radius-md); background:var(--green-light); display:flex; align-items:center; justify-content:center; margin-bottom:1.2rem; }
+.sec-enc-card__title { font-family:var(--font-heading); font-weight:700; font-size:1.15rem; margin-bottom:0.5rem; }
+.sec-enc-card__protocol { display:inline-block; font-family:var(--font-mono); font-size:0.75rem; font-weight:500; background:var(--green-light); color:var(--green); padding:0.2rem 0.6rem; border-radius:var(--radius-pill); margin-bottom:0.8rem; }
+.sec-enc-card__desc { font-size:0.9rem; color:var(--text-secondary); line-height:1.65; }
+
+/* Call flow */
+.sec-flow { display:grid; grid-template-columns:repeat(4,1fr); gap:0.5rem; position:relative; }
+.sec-flow__step { background:var(--bg-white); border:1px solid var(--border); border-radius:var(--radius-lg); padding:1.8rem 1.2rem; text-align:center; position:relative; transition:all 0.3s; }
+.sec-flow__step:hover { transform:translateY(-3px); box-shadow:var(--shadow-md); }
+.sec-flow__num { width:32px; height:32px; border-radius:50%; background:var(--green); color:#fff; font-size:0.8rem; font-weight:700; display:flex; align-items:center; justify-content:center; margin:0 auto 1rem; }
+.sec-flow__step-title { font-family:var(--font-heading); font-weight:700; font-size:1rem; margin-bottom:0.5rem; }
+.sec-flow__step-desc { font-size:0.82rem; color:var(--text-secondary); line-height:1.6; margin-bottom:0.8rem; }
+.sec-flow__step-security { font-size:0.72rem; font-family:var(--font-mono); color:var(--green); background:var(--green-light); padding:0.3rem 0.7rem; border-radius:var(--radius-pill); display:inline-block; }
+.sec-flow__arrow { display:flex; align-items:center; justify-content:center; color:var(--green); font-size:1.2rem; align-self:center; }
+
+/* Infra grid */
+.sec-infra-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:1.5rem; }
+.sec-infra-card { background:var(--bg-white); border:1px solid var(--border); border-radius:var(--radius-lg); padding:2rem; transition:all 0.3s; }
+.sec-infra-card:hover { transform:translateY(-3px); box-shadow:var(--shadow-md); }
+.sec-infra-card__icon { width:48px; height:48px; border-radius:var(--radius-md); background:var(--green-light); display:flex; align-items:center; justify-content:center; margin-bottom:1rem; }
+.sec-infra-card__title { font-family:var(--font-heading); font-weight:700; font-size:1.15rem; margin-bottom:0.5rem; }
+.sec-infra-card__desc { font-size:0.9rem; color:var(--text-secondary); line-height:1.65; margin-bottom:1rem; }
+.sec-infra-card__tags { display:flex; flex-wrap:wrap; gap:0.4rem; }
+.sec-infra-card__tag { font-size:0.7rem; font-weight:600; padding:0.2rem 0.6rem; border-radius:var(--radius-pill); background:var(--bg-off-white); color:var(--text-secondary); border:1px solid var(--border-light); }
+
+/* Data privacy columns */
+.sec-privacy-grid { display:grid; grid-template-columns:1fr 1fr; gap:2rem; }
+.sec-privacy-col { border-radius:var(--radius-lg); padding:2.5rem; }
+.sec-privacy-col--do { background:rgba(13,155,106,0.08); border:1px solid rgba(13,155,106,0.15); }
+.sec-privacy-col--never { background:rgba(220,38,38,0.05); border:1px solid rgba(220,38,38,0.1); }
+.sec-privacy-col h3 { font-family:var(--font-heading); font-weight:700; font-size:1.3rem; margin-bottom:1.5rem; }
+.sec-privacy-col--do h3 { color:var(--green); }
+.sec-privacy-col--never h3 { color:var(--negative); }
+.sec-privacy-item { display:flex; align-items:flex-start; gap:0.6rem; padding:0.6rem 0; }
+.sec-privacy-item svg { flex-shrink:0; margin-top:0.15rem; }
+.sec-privacy-item span { font-size:0.95rem; color:rgba(255,255,255,0.8); line-height:1.6; }
+
+/* Docs table */
+.sec-docs-table { width:100%; border-collapse:collapse; }
+.sec-docs-table thead th { text-align:left; padding:0.8rem 1rem; font-size:0.75rem; font-weight:600; text-transform:uppercase; letter-spacing:0.08em; color:var(--text-muted); border-bottom:2px solid var(--border); }
+.sec-docs-table tbody tr { border-bottom:1px solid var(--border-light); transition:background 0.2s; }
+.sec-docs-table tbody tr:hover { background:var(--green-light); }
+.sec-docs-table td { padding:1rem; font-size:0.9rem; color:var(--text-secondary); vertical-align:middle; }
+.sec-docs-table td:first-child { font-weight:600; color:var(--text-primary); }
+.sec-docs__badge { display:inline-block; font-size:0.7rem; font-weight:600; padding:0.2rem 0.6rem; border-radius:var(--radius-pill); }
+.sec-docs__badge--available { background:var(--green-light); color:var(--green); }
+.sec-docs__badge--request { background:#FEF3C7; color:#D97706; }
+
+/* FAQ */
+.sec-faq-list { max-width:800px; margin:0 auto; }
+.sec-faq-item { border:1px solid var(--border); border-radius:var(--radius-md); margin-bottom:0.8rem; overflow:hidden; transition:all 0.3s; }
+.sec-faq-item:hover { box-shadow:var(--shadow-sm); }
+.sec-faq-item.open { box-shadow:var(--shadow-md); border-color:var(--green); }
+.sec-faq-q { display:flex; align-items:center; justify-content:space-between; padding:1.2rem 1.5rem; cursor:pointer; font-weight:600; font-size:0.95rem; color:var(--text-primary); background:var(--bg-white); transition:all 0.2s; gap:1rem; }
+.sec-faq-q:hover { background:var(--bg-off-white); }
+.sec-faq-q svg { flex-shrink:0; transition:transform 0.3s; color:var(--text-muted); }
+.sec-faq-item.open .sec-faq-q svg { transform:rotate(180deg); color:var(--green); }
+.sec-faq-a { padding:0 1.5rem; max-height:0; overflow:hidden; transition:max-height 0.4s ease, padding 0.3s ease; }
+.sec-faq-item.open .sec-faq-a { max-height:600px; padding:0 1.5rem 1.5rem; }
+.sec-faq-a p { font-size:0.9rem; color:var(--text-secondary); line-height:1.75; }
+
+/* Contact cards */
+.sec-contact-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem; margin-bottom:2.5rem; }
+.sec-contact-card { background:var(--bg-off-white); border:1px solid var(--border); border-radius:var(--radius-lg); padding:2rem; text-align:center; transition:all 0.3s; }
+.sec-contact-card:hover { transform:translateY(-3px); box-shadow:var(--shadow-md); border-color:var(--green); }
+.sec-contact-card__icon { width:48px; height:48px; border-radius:50%; background:var(--green-light); display:flex; align-items:center; justify-content:center; margin:0 auto 1rem; }
+.sec-contact-card__title { font-family:var(--font-heading); font-weight:700; font-size:1rem; margin-bottom:0.3rem; }
+.sec-contact-card__detail { font-size:0.88rem; color:var(--green); font-weight:600; }
+
+/* Dark CTA */
+.dark-cta { background:var(--dark-gradient); padding:6rem 0; text-align:center; position:relative; overflow:hidden; }
+.dark-cta::before { content:''; position:absolute; top:50%; left:50%; width:600px; height:600px; transform:translate(-50%,-50%); background:radial-gradient(circle,rgba(13,155,106,0.15) 0%,transparent 70%); pointer-events:none; }
+.dark-cta::after { content:''; position:absolute; inset:0; background-image:radial-gradient(circle,rgba(255,255,255,0.02) 1px,transparent 1px); background-size:20px 20px; pointer-events:none; }
+.dark-cta__content { position:relative; z-index:1; }
+.dark-cta__headline { font-family:var(--font-heading); font-size:clamp(2rem,4vw,3rem); font-weight:800; color:#fff; letter-spacing:-0.03em; line-height:1.1; margin-bottom:1rem; }
+.dark-cta__sub { color:rgba(255,255,255,0.7); font-size:1.05rem; max-width:540px; margin:0 auto 2.5rem; line-height:1.75; }
+.dark-cta__buttons { display:flex; justify-content:center; gap:0.8rem; flex-wrap:wrap; }
+
+/* Responsive */
+@media (max-width:768px) {
+  .sec-hero { padding:8rem 0 4rem; }
+  .sec-stats { grid-template-columns:1fr; max-width:400px; }
+  .sec-two-col { grid-template-columns:1fr; }
+  .sec-enc-grid { grid-template-columns:1fr; }
+  .sec-flow { grid-template-columns:1fr 1fr; }
+  .sec-flow__arrow { display:none; }
+  .sec-infra-grid { grid-template-columns:1fr; }
+  .sec-privacy-grid { grid-template-columns:1fr; }
+  .sec-contact-grid { grid-template-columns:1fr; }
+  .sec-docs-table { font-size:0.8rem; }
+  .sec-docs-table td, .sec-docs-table th { padding:0.6rem 0.5rem; }
+}
+
+@media (max-width:480px) {
+  .sec-flow { grid-template-columns:1fr; }
+  .sec-hero__buttons { flex-direction:column; align-items:center; }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================================
+     NAVIGATION
+     ============================================================ -->
+<nav class="nav" id="nav"><div class="nav__inner">
+  <a href="index.html" class="nav__logo">sera</a>
+  <div class="nav__links">
+    <div class="nav__dropdown">
+      <a href="product.html" class="nav__link">Product</a>
+      <div class="nav__dropdown-menu">
+        <a href="product.html#features" class="nav__dropdown-item">AI Call Coverage</a>
+        <a href="product.html#features" class="nav__dropdown-item">Voice AI Booking</a>
+        <a href="product.html#features" class="nav__dropdown-item">Call Summaries & Transcripts</a>
+        <a href="product.html#features" class="nav__dropdown-item">Missed Call Text-Back</a>
+        <a href="product.html#features" class="nav__dropdown-item">CRM & Patient Pipeline</a>
+        <a href="product.html#features" class="nav__dropdown-item">After-Hours Coverage</a>
+      </div>
+    </div>
+    <div class="nav__dropdown">
+      <a href="solutions.html" class="nav__link">Solutions</a>
+      <div class="nav__dropdown-menu">
+        <a href="solutions.html#industry-1" class="nav__dropdown-item">Physical Therapy</a>
+        <a href="solutions.html#industry-2" class="nav__dropdown-item">Dental Practices</a>
+        <a href="solutions.html#industry-3" class="nav__dropdown-item">Med Spas & Aesthetics</a>
+        <a href="solutions.html#industry-4" class="nav__dropdown-item">Chiropractors</a>
+        <a href="solutions.html#industry-5" class="nav__dropdown-item">Home Services</a>
+        <a href="solutions.html#industry-6" class="nav__dropdown-item">Real Estate</a>
+      </div>
+    </div>
+    <a href="pricing.html" class="nav__link">Pricing</a>
+    <a href="security.html" class="nav__link active">Security</a>
+  </div>
+  <div class="nav__right"><a href="#" class="nav__login">Login</a><a href="#contact-security" class="nav__cta">Book a Demo &rarr;</a></div>
+  <button class="nav__hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+</div>
+<div class="nav__mobile-menu" id="mobileMenu">
+  <a href="product.html">Product</a>
+  <a href="solutions.html">Solutions</a>
+  <a href="pricing.html">Pricing</a>
+  <a href="security.html" class="active">Security</a>
+  <a href="#">Login</a>
+  <a href="#contact-security" class="btn btn--primary" style="text-align:center;justify-content:center">Book a Demo &rarr;</a>
+</div>
+</nav>
+
+<!-- ============================================================
+     1. HERO — DARK
+     ============================================================ -->
+<section class="section--dark sec-hero">
+  <div class="container">
+    <div class="sec-hero__inner reveal">
+      <div class="sec-hero__badges">
+        <span class="sec-hero__badge">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          HIPAA Compliant
+        </span>
+        <span class="sec-hero__badge">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          SOC 2 Type II
+        </span>
+        <span class="sec-hero__badge">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          End-to-End Encrypted
+        </span>
+        <span class="sec-hero__badge">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          BAA Included
+        </span>
+      </div>
+      <h1 class="sec-hero__headline">Your Patients' Data Is Sacred.<br>We Treat It That Way.</h1>
+      <p class="sec-hero__sub">Sera was built from day one for healthcare. Every call, every transcript, every piece of patient data is protected by enterprise-grade security and full HIPAA compliance.</p>
+      <div class="sec-hero__buttons">
+        <a href="#contact-security" class="btn btn--white">Request Security Review &rarr;</a>
+        <a href="#compliance-docs" class="btn btn--ghost">View Compliance Docs</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     2. CONFIDENCE STATEMENT + STATS
+     ============================================================ -->
+<section class="section" id="confidence">
+  <div class="container">
+    <div class="text-center reveal" style="max-width:700px;margin:0 auto 3rem;">
+      <p class="eyebrow">Our Commitment</p>
+      <h2 class="section-headline">Security Isn't a Feature. It's Our Foundation.</h2>
+      <p class="section-sub mx-auto">We built Sera specifically for healthcare practices that handle sensitive patient information every day. Security, privacy, and compliance are embedded in every layer of our platform — not bolted on as an afterthought.</p>
+    </div>
+    <div class="sec-stats reveal">
+      <div class="sec-stat-card">
+        <div class="sec-stat__icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div class="sec-stat__number">0</div>
+        <div class="sec-stat__label">Data Breaches — Ever</div>
+      </div>
+      <div class="sec-stat-card">
+        <div class="sec-stat__icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        </div>
+        <div class="sec-stat__number">100%</div>
+        <div class="sec-stat__label">Calls Encrypted End-to-End</div>
+      </div>
+      <div class="sec-stat-card">
+        <div class="sec-stat__icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        </div>
+        <div class="sec-stat__number">BAA</div>
+        <div class="sec-stat__label">Included with Every Plan</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     3. HIPAA DEEP DIVE
+     ============================================================ -->
+<section class="section section--off-white" id="hipaa">
+  <div class="container">
+    <div class="sec-two-col reveal">
+      <div class="sec-two-col__text">
+        <p class="eyebrow">HIPAA Compliance</p>
+        <h2 class="section-headline">Full HIPAA Compliance, Not Partial.</h2>
+        <p style="margin-top:1.25rem;">Many AI tools claim to be "HIPAA-friendly." Sera is fully HIPAA compliant, covering every requirement across administrative, physical, and technical safeguards. We sign a Business Associate Agreement (BAA) with every client, and our infrastructure is audited annually.</p>
+        <h3 style="font-size:1.1rem;margin-top:1.5rem;margin-bottom:0.8rem;">What This Means for Your Practice:</h3>
+        <ul class="sec-two-col__list">
+          <li>Every call recording and transcript is treated as Protected Health Information (PHI)</li>
+          <li>Access to patient data is role-based and logged with complete audit trails</li>
+          <li>Data is encrypted in transit, at rest, and during processing</li>
+          <li>We conduct annual HIPAA risk assessments and remediation</li>
+          <li>Workforce training on PHI handling is mandatory for all Sera employees</li>
+          <li>Breach notification procedures follow HIPAA requirements</li>
+        </ul>
+      </div>
+      <div>
+        <div class="hipaa-card">
+          <div class="hipaa-card__header">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <h4>HIPAA Safeguard Framework</h4>
+          </div>
+          <div class="hipaa-card__group">
+            <div class="hipaa-card__group-title">Administrative Safeguards</div>
+            <div class="hipaa-card__item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Security Officer & privacy team designated
+            </div>
+            <div class="hipaa-card__item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Workforce training & security awareness programs
+            </div>
+            <div class="hipaa-card__item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Annual risk analysis & management process
+            </div>
+            <div class="hipaa-card__item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Incident response & breach notification plan
+            </div>
+          </div>
+          <div class="hipaa-card__group">
+            <div class="hipaa-card__group-title">Physical Safeguards</div>
+            <div class="hipaa-card__item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              SOC 2 certified data center facilities
+            </div>
+            <div class="hipaa-card__item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Workstation & device management policies
+            </div>
+            <div class="hipaa-card__item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Media disposal & re-use procedures
+            </div>
+          </div>
+          <div class="hipaa-card__group">
+            <div class="hipaa-card__group-title">Technical Safeguards</div>
+            <div class="hipaa-card__item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Unique user identification & MFA
+            </div>
+            <div class="hipaa-card__item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Automatic session timeout & access controls
+            </div>
+            <div class="hipaa-card__item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Encryption of all ePHI (AES-256, TLS 1.3)
+            </div>
+            <div class="hipaa-card__item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Complete audit logging & integrity controls
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     4. ENCRYPTION
+     ============================================================ -->
+<section class="section" id="encryption">
+  <div class="container">
+    <div class="text-center reveal" style="max-width:650px;margin:0 auto 3rem;">
+      <p class="eyebrow">Encryption</p>
+      <h2 class="section-headline">Triple-Layer Encryption for Every Byte</h2>
+      <p class="section-sub mx-auto">Patient data is encrypted at every stage — from the moment a call connects to when your team reviews the summary.</p>
+    </div>
+    <div class="sec-enc-grid reveal">
+      <div class="sec-enc-card">
+        <div class="sec-enc-card__icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+        </div>
+        <h3 class="sec-enc-card__title">Data in Transit</h3>
+        <span class="sec-enc-card__protocol">TLS 1.3</span>
+        <p class="sec-enc-card__desc">All data moving between callers, our servers, and your dashboard is encrypted with TLS 1.3 — the latest transport-layer security protocol. No exceptions, no fallbacks.</p>
+      </div>
+      <div class="sec-enc-card">
+        <div class="sec-enc-card__icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        </div>
+        <h3 class="sec-enc-card__title">Data at Rest</h3>
+        <span class="sec-enc-card__protocol">AES-256</span>
+        <p class="sec-enc-card__desc">Call recordings, transcripts, and patient data stored in our databases are encrypted with AES-256, the same standard used by banks and government agencies.</p>
+      </div>
+      <div class="sec-enc-card">
+        <div class="sec-enc-card__icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        </div>
+        <h3 class="sec-enc-card__title">Data in Processing</h3>
+        <span class="sec-enc-card__protocol">Isolated Ephemeral Compute</span>
+        <p class="sec-enc-card__desc">AI processing runs in isolated, ephemeral compute environments. Audio data is processed in memory, never written to disk, and the environment is destroyed after each call.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     5. SECURE CALL FLOW
+     ============================================================ -->
+<section class="section section--off-white" id="call-flow">
+  <div class="container">
+    <div class="text-center reveal" style="max-width:650px;margin:0 auto 3rem;">
+      <p class="eyebrow">How It Works</p>
+      <h2 class="section-headline">Security at Every Step of the Call</h2>
+      <p class="section-sub mx-auto">From the moment a patient dials your number to when your team gets the summary, every step is secured and audited.</p>
+    </div>
+    <div class="sec-flow reveal">
+      <div class="sec-flow__step">
+        <div class="sec-flow__num">1</div>
+        <h3 class="sec-flow__step-title">Call Received</h3>
+        <p class="sec-flow__step-desc">Patient calls your practice number. Call routes through encrypted HIPAA-compliant telephony infrastructure.</p>
+        <span class="sec-flow__step-security">TLS 1.3 + SRTP</span>
+      </div>
+      <div class="sec-flow__arrow">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+      </div>
+      <div class="sec-flow__step">
+        <div class="sec-flow__num">2</div>
+        <h3 class="sec-flow__step-title">AI Processing</h3>
+        <p class="sec-flow__step-desc">Sera's AI processes the call in an isolated ephemeral environment. No data is persisted beyond what's needed.</p>
+        <span class="sec-flow__step-security">Ephemeral Compute</span>
+      </div>
+      <div class="sec-flow__arrow">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+      </div>
+      <div class="sec-flow__step">
+        <div class="sec-flow__num">3</div>
+        <h3 class="sec-flow__step-title">Summary Generated</h3>
+        <p class="sec-flow__step-desc">Structured call summary is created and encrypted with AES-256 before being stored in our secure database.</p>
+        <span class="sec-flow__step-security">AES-256 Encrypted</span>
+      </div>
+      <div class="sec-flow__arrow">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+      </div>
+      <div class="sec-flow__step">
+        <div class="sec-flow__num">4</div>
+        <h3 class="sec-flow__step-title">Team Notified</h3>
+        <p class="sec-flow__step-desc">Your team receives a notification through secure, authenticated channels. Dashboard access requires MFA.</p>
+        <span class="sec-flow__step-security">MFA + RBAC</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     6. INFRASTRUCTURE & CERTIFICATIONS
+     ============================================================ -->
+<section class="section" id="infrastructure">
+  <div class="container">
+    <div class="text-center reveal" style="max-width:650px;margin:0 auto 3rem;">
+      <p class="eyebrow">Infrastructure</p>
+      <h2 class="section-headline">Built on Enterprise-Grade Infrastructure</h2>
+      <p class="section-sub mx-auto">Our security posture is validated by independent auditors and built on industry-leading cloud infrastructure.</p>
+    </div>
+    <div class="sec-infra-grid reveal">
+      <div class="sec-infra-card">
+        <div class="sec-infra-card__icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        </div>
+        <h3 class="sec-infra-card__title">SOC 2 Type II Certified</h3>
+        <p class="sec-infra-card__desc">Independently audited for security, availability, processing integrity, confidentiality, and privacy. Our SOC 2 Type II report is available upon request under NDA.</p>
+        <div class="sec-infra-card__tags">
+          <span class="sec-infra-card__tag">Annual Audit</span>
+          <span class="sec-infra-card__tag">5 Trust Principles</span>
+          <span class="sec-infra-card__tag">Available Under NDA</span>
+        </div>
+      </div>
+      <div class="sec-infra-card">
+        <div class="sec-infra-card__icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        </div>
+        <h3 class="sec-infra-card__title">End-to-End Encryption</h3>
+        <p class="sec-infra-card__desc">Every piece of data is encrypted using TLS 1.3 in transit and AES-256 at rest. Encryption keys are managed through a dedicated key management service with automatic rotation.</p>
+        <div class="sec-infra-card__tags">
+          <span class="sec-infra-card__tag">TLS 1.3</span>
+          <span class="sec-infra-card__tag">AES-256</span>
+          <span class="sec-infra-card__tag">Auto Key Rotation</span>
+        </div>
+      </div>
+      <div class="sec-infra-card">
+        <div class="sec-infra-card__icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
+        </div>
+        <h3 class="sec-infra-card__title">Cloud Infrastructure</h3>
+        <p class="sec-infra-card__desc">Hosted on HIPAA-eligible cloud infrastructure with geographic redundancy, automated backups, and 99.99% uptime SLA. All data resides in US-based data centers.</p>
+        <div class="sec-infra-card__tags">
+          <span class="sec-infra-card__tag">US Data Centers</span>
+          <span class="sec-infra-card__tag">99.99% Uptime</span>
+          <span class="sec-infra-card__tag">Auto Backups</span>
+        </div>
+      </div>
+      <div class="sec-infra-card">
+        <div class="sec-infra-card__icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <h3 class="sec-infra-card__title">Access Controls & Audit Logging</h3>
+        <p class="sec-infra-card__desc">Role-based access control (RBAC) ensures team members only see what they need. Every access event, data query, and configuration change is logged with immutable audit trails.</p>
+        <div class="sec-infra-card__tags">
+          <span class="sec-infra-card__tag">RBAC</span>
+          <span class="sec-infra-card__tag">MFA Required</span>
+          <span class="sec-infra-card__tag">Immutable Logs</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     7. DATA PRIVACY — DARK
+     ============================================================ -->
+<section class="section section--dark" id="data-privacy">
+  <div class="container">
+    <div class="text-center reveal" style="max-width:650px;margin:0 auto 3rem;">
+      <p class="eyebrow">Data Privacy</p>
+      <h2 class="section-headline" style="color:#fff">What We Do — and What We Never Do — with Your Data</h2>
+      <p class="section-sub mx-auto">Transparency is non-negotiable. Here is exactly how we handle your patients' data.</p>
+    </div>
+    <div class="sec-privacy-grid reveal">
+      <div class="sec-privacy-col sec-privacy-col--do">
+        <h3>We DO</h3>
+        <div class="sec-privacy-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0D9B6A" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          <span>Encrypt all patient data with AES-256 and TLS 1.3</span>
+        </div>
+        <div class="sec-privacy-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0D9B6A" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          <span>Sign a BAA with every client before handling any PHI</span>
+        </div>
+        <div class="sec-privacy-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0D9B6A" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          <span>Limit data access to authorized personnel only</span>
+        </div>
+        <div class="sec-privacy-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0D9B6A" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          <span>Maintain complete audit logs of all data access</span>
+        </div>
+        <div class="sec-privacy-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0D9B6A" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          <span>Delete your data upon request, with written confirmation</span>
+        </div>
+        <div class="sec-privacy-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0D9B6A" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          <span>Conduct annual third-party security audits</span>
+        </div>
+        <div class="sec-privacy-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0D9B6A" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          <span>Store all data exclusively in US-based data centers</span>
+        </div>
+      </div>
+      <div class="sec-privacy-col sec-privacy-col--never">
+        <h3>We NEVER</h3>
+        <div class="sec-privacy-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#DC2626" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          <span>Sell, share, or monetize patient data — period</span>
+        </div>
+        <div class="sec-privacy-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#DC2626" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          <span>Use your patient data to train our AI models</span>
+        </div>
+        <div class="sec-privacy-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#DC2626" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          <span>Store data outside of the United States</span>
+        </div>
+        <div class="sec-privacy-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#DC2626" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          <span>Access patient data without explicit authorization</span>
+        </div>
+        <div class="sec-privacy-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#DC2626" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          <span>Retain data beyond the agreed retention period</span>
+        </div>
+        <div class="sec-privacy-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#DC2626" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          <span>Share data with third parties without your consent</span>
+        </div>
+        <div class="sec-privacy-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#DC2626" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          <span>Use unencrypted channels for any PHI transmission</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     8. COMPLIANCE DOCUMENTATION
+     ============================================================ -->
+<section class="section section--off-white" id="compliance-docs">
+  <div class="container">
+    <div class="text-center reveal" style="max-width:650px;margin:0 auto 3rem;">
+      <p class="eyebrow">Documentation</p>
+      <h2 class="section-headline">Compliance Documentation</h2>
+      <p class="section-sub mx-auto">We maintain comprehensive documentation to support your compliance requirements. Available documents can be requested from our security team.</p>
+    </div>
+    <div class="reveal" style="overflow-x:auto;">
+      <table class="sec-docs-table">
+        <thead>
+          <tr>
+            <th>Document</th>
+            <th>Description</th>
+            <th>Availability</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Business Associate Agreement (BAA)</td>
+            <td>HIPAA-required agreement covering PHI handling, signed before any data processing begins.</td>
+            <td><span class="sec-docs__badge sec-docs__badge--available">Included with Every Plan</span></td>
+          </tr>
+          <tr>
+            <td>SOC 2 Type II Report</td>
+            <td>Independent auditor's report covering security, availability, and confidentiality trust service criteria.</td>
+            <td><span class="sec-docs__badge sec-docs__badge--request">Available Under NDA</span></td>
+          </tr>
+          <tr>
+            <td>HIPAA Compliance Attestation</td>
+            <td>Letter of attestation confirming Sera's compliance with HIPAA Privacy, Security, and Breach Notification Rules.</td>
+            <td><span class="sec-docs__badge sec-docs__badge--available">Available on Request</span></td>
+          </tr>
+          <tr>
+            <td>Penetration Test Summary</td>
+            <td>Executive summary of our most recent third-party penetration test results and remediation actions.</td>
+            <td><span class="sec-docs__badge sec-docs__badge--request">Available Under NDA</span></td>
+          </tr>
+          <tr>
+            <td>Data Processing Agreement (DPA)</td>
+            <td>Agreement outlining data processing terms, sub-processors, data transfers, and retention policies.</td>
+            <td><span class="sec-docs__badge sec-docs__badge--available">Available on Request</span></td>
+          </tr>
+          <tr>
+            <td>Incident Response Plan</td>
+            <td>Overview of our security incident detection, response, containment, and notification procedures.</td>
+            <td><span class="sec-docs__badge sec-docs__badge--request">Available Under NDA</span></td>
+          </tr>
+          <tr>
+            <td>Subprocessor List</td>
+            <td>Complete list of third-party subprocessors that may process data on behalf of Sera, with security details.</td>
+            <td><span class="sec-docs__badge sec-docs__badge--available">Available on Request</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     9. SECURITY FAQ
+     ============================================================ -->
+<section class="section" id="security-faq">
+  <div class="container">
+    <div class="text-center reveal" style="max-width:650px;margin:0 auto 3rem;">
+      <p class="eyebrow">FAQ</p>
+      <h2 class="section-headline">Security Questions, Answered</h2>
+      <p class="section-sub mx-auto">Common questions from healthcare practices evaluating Sera's security posture.</p>
+    </div>
+    <div class="sec-faq-list reveal">
+
+      <div class="sec-faq-item open">
+        <div class="sec-faq-q" onclick="toggleFaq(this)">
+          Is Sera fully HIPAA compliant?
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="sec-faq-a">
+          <p>Yes. Sera is fully HIPAA compliant across all three safeguard categories: administrative, physical, and technical. We sign a Business Associate Agreement (BAA) with every client, conduct annual risk assessments, maintain comprehensive policies and procedures, and undergo independent third-party audits. Our entire infrastructure, from telephony to data storage, is designed to meet or exceed HIPAA requirements.</p>
+        </div>
+      </div>
+
+      <div class="sec-faq-item">
+        <div class="sec-faq-q" onclick="toggleFaq(this)">
+          Do you provide a BAA? Is it included in every plan?
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="sec-faq-a">
+          <p>Yes. A Business Associate Agreement is included with every Sera plan at no additional cost. We execute the BAA before any patient data is processed. We will never handle PHI without a signed BAA in place. You can request a copy of our standard BAA for legal review at any time.</p>
+        </div>
+      </div>
+
+      <div class="sec-faq-item">
+        <div class="sec-faq-q" onclick="toggleFaq(this)">
+          Where is patient data stored?
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="sec-faq-a">
+          <p>All patient data is stored exclusively in US-based data centers on HIPAA-eligible cloud infrastructure. Data is encrypted at rest using AES-256 encryption. We maintain geographic redundancy for disaster recovery, but all replicas remain within the United States. We never transfer or store patient data outside of the US.</p>
+        </div>
+      </div>
+
+      <div class="sec-faq-item">
+        <div class="sec-faq-q" onclick="toggleFaq(this)">
+          Is patient data used to train your AI models?
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="sec-faq-a">
+          <p>No. We never use patient data, call recordings, transcripts, or any PHI to train, fine-tune, or improve our AI models. Your patients' data is used solely to provide the service you have contracted for — answering calls, generating summaries, and delivering them to your team. This is a contractual commitment in our BAA and DPA.</p>
+        </div>
+      </div>
+
+      <div class="sec-faq-item">
+        <div class="sec-faq-q" onclick="toggleFaq(this)">
+          What happens if there is a security incident?
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="sec-faq-a">
+          <p>We maintain a comprehensive incident response plan that follows HIPAA Breach Notification Rule requirements. In the event of a security incident, we will: (1) contain and investigate the incident immediately, (2) notify affected clients within 24 hours of discovery, (3) provide detailed breach reports per HIPAA requirements, (4) work with clients on any required regulatory notifications, and (5) conduct a post-incident review and implement corrective actions.</p>
+        </div>
+      </div>
+
+      <div class="sec-faq-item">
+        <div class="sec-faq-q" onclick="toggleFaq(this)">
+          What access controls are in place?
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="sec-faq-a">
+          <p>Sera implements role-based access control (RBAC) at every level. Your team members only see the data relevant to their role. Multi-factor authentication (MFA) is required for all dashboard access. On the Sera side, access to production systems and patient data requires MFA, VPN, and explicit approval from our security team. All access events are logged in immutable audit trails.</p>
+        </div>
+      </div>
+
+      <div class="sec-faq-item">
+        <div class="sec-faq-q" onclick="toggleFaq(this)">
+          Can I request deletion of all my practice's data?
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="sec-faq-a">
+          <p>Yes. You can request complete deletion of all your practice's data at any time. Upon receiving a written deletion request, we will permanently remove all PHI, call recordings, transcripts, and associated data within 30 days. We will provide written confirmation once the deletion is complete. Backup copies are purged within 90 days per our retention policy.</p>
+        </div>
+      </div>
+
+      <div class="sec-faq-item">
+        <div class="sec-faq-q" onclick="toggleFaq(this)">
+          What is SOC 2 Type II and why does it matter?
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="sec-faq-a">
+          <p>SOC 2 Type II is an independent audit conducted by a certified third-party firm that evaluates our security controls over a sustained period (typically 6-12 months). Unlike Type I, which only evaluates the design of controls at a point in time, Type II verifies that our controls are operating effectively over time. Our SOC 2 Type II report covers all five trust service criteria: security, availability, processing integrity, confidentiality, and privacy.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     10. CONTACT SECURITY TEAM
+     ============================================================ -->
+<section class="section section--off-white" id="contact-security">
+  <div class="container">
+    <div class="text-center reveal" style="max-width:650px;margin:0 auto 3rem;">
+      <p class="eyebrow">Get in Touch</p>
+      <h2 class="section-headline">Talk to Our Security Team</h2>
+      <p class="section-sub mx-auto">Have questions about our security posture, need compliance documentation, or want a detailed security review? We are here to help.</p>
+    </div>
+    <div class="sec-contact-grid reveal">
+      <div class="sec-contact-card">
+        <div class="sec-contact-card__icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </div>
+        <h3 class="sec-contact-card__title">Email Security Team</h3>
+        <p class="sec-contact-card__detail">security@joinsera.us</p>
+      </div>
+      <div class="sec-contact-card">
+        <div class="sec-contact-card__icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        </div>
+        <h3 class="sec-contact-card__title">Call Us Directly</h3>
+        <p class="sec-contact-card__detail">(347) 653-1170</p>
+      </div>
+      <div class="sec-contact-card">
+        <div class="sec-contact-card__icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        </div>
+        <h3 class="sec-contact-card__title">Book a Security Review</h3>
+        <p class="sec-contact-card__detail">30-min deep dive</p>
+      </div>
+    </div>
+    <div class="text-center reveal">
+      <a href="#" class="btn btn--primary">Book a Security Review &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     11. DARK CTA
+     ============================================================ -->
+<section class="dark-cta" id="dark-cta"><div class="container"><div class="dark-cta__content reveal">
+  <h2 class="dark-cta__headline">Your Staff Handles Patients.<br>Sera Handles the Phones.</h2>
+  <p class="dark-cta__sub">Book a 15-minute demo and hear Sera handle real patient calls through your clinic's workflow.</p>
+  <p style="color:rgba(255,255,255,0.5);font-size:0.88rem;margin-bottom:2rem">Or try it now: <a href="tel:3476531170" style="color:var(--teal);font-weight:600">(347) 653-1170</a></p>
+  <div class="dark-cta__buttons"><a href="#" class="btn btn--white">Get Started &rarr;</a><a href="#security-faq" class="btn btn--ghost">Security FAQ</a></div>
+</div></div></section>
+
+<!-- ============================================================
+     12. FOOTER
+     ============================================================ -->
+<footer class="footer">
+  <div class="footer__inner">
+    <div>
+      <a href="index.html" class="footer__logo">sera</a>
+      <p class="footer__brand-desc">AI-powered call coverage that answers every patient call, captures intake data, and delivers structured summaries — 24/7.</p>
+      <div class="footer__hipaa"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>HIPAA-Compliant Infrastructure</div>
+      <div class="footer__social">
+        <a href="#" aria-label="Twitter"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+        <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452z"/></svg></a>
+        <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+      </div>
+    </div>
+    <div>
+      <div class="footer__col-title">Product</div>
+      <div class="footer__col-links">
+        <a href="product.html">AI Call Coverage</a>
+        <a href="product.html">Voice AI Booking</a>
+        <a href="product.html">Call Summaries</a>
+        <a href="product.html">CRM Integration</a>
+        <a href="product.html">After-Hours Coverage</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer__col-title">Industries</div>
+      <div class="footer__col-links">
+        <a href="solutions.html">Physical Therapy</a>
+        <a href="solutions.html">Dental Practices</a>
+        <a href="solutions.html">Med Spas</a>
+        <a href="solutions.html">Chiropractors</a>
+        <a href="solutions.html">Home Services</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer__col-title">Company</div>
+      <div class="footer__col-links">
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="security.html">Security</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <p>&copy; 2026 Sera AI. All rights reserved.</p>
+    <p>hello@joinsera.us &middot; (347) 653-1170</p>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+// FAQ toggle
+function toggleFaq(el) {
+  const item = el.parentElement;
+  const wasOpen = item.classList.contains('open');
+  // Close all
+  document.querySelectorAll('.sec-faq-item').forEach(i => i.classList.remove('open'));
+  // Toggle clicked
+  if (!wasOpen) item.classList.add('open');
+}
+</script>
+</body>
+</html>

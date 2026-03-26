@@ -1,0 +1,1471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Solutions — Sera | AI Call Answering for PT, Dental, Med Spa & More</title>
+<meta name="description" content="Sera adapts to your specialty. Custom intake flows for physical therapy, dental, med spa, chiropractic, home services, and real estate.">
+<meta property="og:title" content="Solutions by Industry — Sera | AI Call Coverage">
+<meta property="og:description" content="AI call coverage configured for your exact workflow — PT, dental, dermatology, and more.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://joinsera.us/solutions">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://joinsera.us/solutions">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@400,500,700,800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+<style>
+:root {
+  --green: #16A34A;
+  --green-hover: #15803D;
+  --green-light: #DCFCE7;
+  --green-dark: #064E3B;
+  --teal: #0D9488;
+  --text-heading: #111111;
+  --text-body: #52525B;
+  --text-muted: #A1A1AA;
+  --border: #E4E4E7;
+  --bg-warm: #FAFAF9;
+  --bg-green-tint: #F0FDF4;
+  --font-heading: 'Cabinet Grotesk', system-ui, sans-serif;
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+  --shadow-card: 0 1px 2px rgba(0,0,0,0.03), 0 4px 12px rgba(0,0,0,0.04), 0 16px 40px rgba(0,0,0,0.06);
+  --shadow-card-hover: 0 2px 4px rgba(0,0,0,0.04), 0 8px 24px rgba(0,0,0,0.06), 0 24px 48px rgba(0,0,0,0.08);
+  --radius-card: 20px;
+  --radius-pill: 100px;
+}
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+h1,h2,h3,h4,h5,h6 { font-family: var(--font-heading); }
+
+body {
+  font-family: var(--font-sans);
+  color: var(--text-body);
+  line-height: 1.65;
+  letter-spacing: -0.01em;
+  background-color: #fff;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.018'/%3E%3C/svg%3E");
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Scroll Progress Bar */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: linear-gradient(90deg, var(--green), var(--teal), var(--green));
+  background-size: 200% 100%;
+  animation: gradientShift 3s ease infinite;
+  z-index: 201;
+  transition: width 0.05s linear;
+}
+
+/* Top gradient bar */
+.top-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--green), var(--teal), var(--green), var(--teal));
+  background-size: 300% 100%;
+  animation: gradientShift 4s ease infinite;
+  z-index: 200;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* NAV */
+.nav {
+  position: sticky;
+  top: 3px;
+  background: rgba(255,255,255,0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid transparent;
+  z-index: 100;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.nav.scrolled {
+  border-bottom-color: var(--border);
+  box-shadow: 0 1px 12px rgba(0,0,0,0.06);
+}
+
+.nav-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-logo {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--green);
+  text-decoration: none;
+  letter-spacing: -0.5px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-body);
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: color 0.2s;
+  position: relative;
+  padding-bottom: 4px;
+}
+
+.nav-links a:hover { color: var(--text-heading); }
+
+.nav-links a.active {
+  color: var(--green);
+  font-weight: 700;
+}
+
+.nav-links a.active::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--green);
+  border-radius: 2px;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav-login {
+  text-decoration: none;
+  color: var(--text-body);
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.nav-login:hover { color: var(--text-heading); }
+
+.btn-demo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  background: var(--green);
+  color: #fff;
+  padding: 0.55rem 1.4rem;
+  border-radius: 100px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: background 0.2s, transform 0.15s;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-demo:hover {
+  background: var(--green-hover);
+  transform: translateY(-1px);
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.hamburger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--text-heading);
+  border-radius: 2px;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 67px;
+  left: 0;
+  right: 0;
+  background: #fff;
+  border-bottom: 1px solid var(--border);
+  padding: 1.5rem 2rem;
+  z-index: 99;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+
+.mobile-menu.open { display: block; }
+
+.mobile-menu a {
+  display: block;
+  padding: 0.75rem 0;
+  color: var(--text-body);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.mobile-menu a.active { color: var(--green); font-weight: 700; }
+
+.mobile-menu a:last-child { border-bottom: none; }
+
+.mobile-menu .btn-demo {
+  display: inline-flex;
+  margin-top: 1rem;
+}
+
+/* HERO */
+.hero {
+  background: #fff;
+  padding: 6rem 0 4rem;
+  text-align: center;
+}
+
+.hero-inner {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.eyebrow {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--green);
+  margin-bottom: 1rem;
+}
+
+.hero h1 {
+  font-size: clamp(2.8rem, 5vw, 4rem);
+  font-weight: 800;
+  color: var(--text-heading);
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  letter-spacing: -1px;
+}
+
+.hero-sub {
+  max-width: 620px;
+  margin: 0 auto 2.5rem;
+  font-size: 1.15rem;
+  color: var(--text-body);
+  line-height: 1.7;
+}
+
+.hero-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: var(--green);
+  color: #fff;
+  padding: 0.75rem 2rem;
+  border-radius: 100px;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background 0.2s, transform 0.15s;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background: var(--green-hover);
+  transform: translateY(-1px);
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: transparent;
+  color: var(--text-heading);
+  padding: 0.75rem 2rem;
+  border-radius: 100px;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 600;
+  border: 2px solid var(--border);
+  transition: border-color 0.2s, transform 0.15s;
+  cursor: pointer;
+}
+
+.btn-outline:hover {
+  border-color: var(--text-muted);
+  transform: translateY(-1px);
+}
+
+/* INDUSTRY SECTIONS */
+.industry-section {
+  padding: 5rem 0;
+}
+
+.industry-section.alt-bg {
+  background: var(--bg-warm);
+}
+
+.industry-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.industry-inner.reversed {
+  flex-direction: row-reverse;
+}
+
+.industry-text {
+  flex: 0 0 55%;
+  max-width: 55%;
+}
+
+.industry-mockup {
+  flex: 0 0 45%;
+  max-width: 45%;
+}
+
+.industry-icon {
+  width: 44px;
+  height: 44px;
+  background: var(--bg-green-tint);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.industry-text h2 {
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--text-heading);
+  margin-bottom: 1rem;
+  letter-spacing: -0.5px;
+}
+
+.industry-text p {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: var(--text-body);
+  margin-bottom: 1.5rem;
+}
+
+.benefit-list {
+  list-style: none;
+  margin-bottom: 1.5rem;
+}
+
+.benefit-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  margin-bottom: 0.65rem;
+  font-size: 0.98rem;
+  color: var(--text-body);
+}
+
+.benefit-check {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  margin-top: 2px;
+}
+
+.learn-more {
+  color: var(--green);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.98rem;
+  transition: color 0.2s;
+}
+
+.learn-more:hover { color: var(--green-hover); }
+
+/* Browser Chrome Mockup */
+.browser-chrome {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.browser-chrome:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card-hover);
+}
+
+.browser-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  background: #FAFAFA;
+  border-bottom: 1px solid var(--border);
+}
+
+.browser-dots {
+  display: flex;
+  gap: 6px;
+}
+
+.browser-dots span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.browser-dots span:nth-child(1) { background: #FF5F57; }
+.browser-dots span:nth-child(2) { background: #FFBD2E; }
+.browser-dots span:nth-child(3) { background: #27C93F; }
+
+.browser-url {
+  flex: 1;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.3rem 0.75rem;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+.call-summary {
+  padding: 1.5rem;
+}
+
+.summary-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.summary-dot {
+  width: 8px;
+  height: 8px;
+  background: var(--green);
+  border-radius: 50%;
+}
+
+.summary-title {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--green);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.summary-time {
+  margin-left: auto;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.7rem;
+  color: var(--text-muted);
+}
+
+.summary-row {
+  display: flex;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid #F4F4F5;
+}
+
+.summary-row:last-of-type { border-bottom: none; }
+
+.summary-label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  min-width: 100px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.summary-value {
+  font-size: 0.9rem;
+  color: var(--text-heading);
+  font-weight: 500;
+}
+
+.summary-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 100px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+.badge-green {
+  background: var(--green-light);
+  color: var(--green-dark);
+}
+
+.badge-teal {
+  background: #CCFBF1;
+  color: #134E4A;
+}
+
+/* TECH STACK MARQUEE */
+.tech-stack {
+  background: #fff;
+  padding: 5rem 0 4rem;
+  text-align: center;
+  overflow: hidden;
+}
+
+.tech-stack .eyebrow { margin-bottom: 0.5rem; }
+
+.tech-stack h2 {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--text-heading);
+  margin-bottom: 3rem;
+  letter-spacing: -0.5px;
+}
+
+.marquee-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: 1.5rem 0;
+}
+
+.marquee-container::before,
+.marquee-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 120px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.marquee-container::before {
+  left: 0;
+  background: linear-gradient(to right, #fff, transparent);
+}
+
+.marquee-container::after {
+  right: 0;
+  background: linear-gradient(to left, #fff, transparent);
+}
+
+.marquee-track {
+  display: flex;
+  gap: 3rem;
+  animation: marqueeScroll 30s linear infinite;
+  width: max-content;
+}
+
+.marquee-container:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+@keyframes marqueeScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.marquee-item {
+  font-size: 1.3rem;
+  font-weight: 700;
+  white-space: nowrap;
+  padding: 0.6rem 1.5rem;
+  border-radius: 12px;
+  background: #F9F9F9;
+  border: 1px solid var(--border);
+  transition: transform 0.2s;
+}
+
+.marquee-item:hover { transform: scale(1.05); }
+
+.tech-note {
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+/* TESTIMONIALS */
+.testimonials {
+  background: #0F766E;
+  padding: 5rem 0;
+}
+
+.testimonials-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.testimonials .eyebrow {
+  color: rgba(255,255,255,0.7);
+}
+
+.testimonials h2 {
+  font-family: var(--font-heading);
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 3rem;
+  letter-spacing: -0.5px;
+}
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.testimonial-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 2rem;
+  position: relative;
+  box-shadow: var(--shadow-card);
+  transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.testimonial-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card-hover);
+}
+
+.testimonial-quote-mark {
+  position: absolute;
+  top: 1rem;
+  left: 1.5rem;
+  font-size: 4rem;
+  font-weight: 800;
+  color: var(--green-light);
+  line-height: 1;
+  font-family: Georgia, serif;
+}
+
+.testimonial-stars {
+  display: flex;
+  gap: 2px;
+  margin-bottom: 1rem;
+  margin-top: 1.5rem;
+}
+
+.testimonial-stars svg {
+  width: 18px;
+  height: 18px;
+  fill: #FBBF24;
+}
+
+.testimonial-text {
+  font-size: 0.98rem;
+  line-height: 1.7;
+  color: var(--text-body);
+  font-style: italic;
+  margin-bottom: 1.5rem;
+}
+
+.testimonial-author {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--text-heading);
+  font-size: 0.95rem;
+}
+
+.testimonial-role {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* DARK CTA */
+.dark-cta {
+  background: linear-gradient(135deg, #064E3B, #065F46, #047857);
+  padding: 6rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.dark-cta::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 600px;
+  height: 600px;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle, rgba(16,163,74,0.15) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.dark-cta::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    135deg,
+    transparent,
+    transparent 40px,
+    rgba(255,255,255,0.015) 40px,
+    rgba(255,255,255,0.015) 80px
+  );
+  animation: diagonalMove 12s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes diagonalMove {
+  0% { transform: translateX(0) translateY(0); }
+  100% { transform: translateX(80px) translateY(80px); }
+}
+
+.dark-cta-inner {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.dark-cta h2 {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 1rem;
+  letter-spacing: -0.5px;
+  line-height: 1.15;
+}
+
+.dark-cta p {
+  color: rgba(255,255,255,0.7);
+  font-size: 1.1rem;
+  margin-bottom: 2.5rem;
+  line-height: 1.7;
+}
+
+.dark-cta-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn-white {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: #fff;
+  color: var(--green-dark);
+  padding: 0.8rem 2rem;
+  border-radius: 100px;
+  text-decoration: none;
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 700;
+  transition: transform 0.15s, box-shadow 0.2s;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-white:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+}
+
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: transparent;
+  color: #fff;
+  padding: 0.8rem 2rem;
+  border-radius: 100px;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 600;
+  border: 2px solid rgba(255,255,255,0.3);
+  transition: border-color 0.2s, transform 0.15s;
+  cursor: pointer;
+}
+
+.btn-ghost:hover {
+  border-color: rgba(255,255,255,0.6);
+  transform: translateY(-1px);
+}
+
+/* FOOTER */
+.footer {
+  background: var(--text-heading);
+  color: #fff;
+  padding: 4rem 0 2rem;
+}
+
+.footer-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+.footer-brand .nav-logo {
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.footer-brand p {
+  color: rgba(255,255,255,0.6);
+  font-size: 0.9rem;
+  line-height: 1.7;
+  max-width: 260px;
+}
+
+.footer-col h4 {
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1.25rem;
+  color: rgba(255,255,255,0.5);
+}
+
+.footer-col a {
+  display: block;
+  color: rgba(255,255,255,0.8);
+  text-decoration: none;
+  font-size: 0.92rem;
+  margin-bottom: 0.7rem;
+  transition: color 0.2s;
+}
+
+.footer-col a:hover { color: #fff; }
+
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.footer-bottom p {
+  color: rgba(255,255,255,0.4);
+  font-size: 0.85rem;
+}
+
+.footer-bottom-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.footer-bottom-links a {
+  color: rgba(255,255,255,0.4);
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: color 0.2s;
+}
+
+.footer-bottom-links a:hover { color: rgba(255,255,255,0.7); }
+
+/* SCROLL REVEAL */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.5s cubic-bezier(0.22, 1, 0.36, 1), transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .nav-login { display: none; }
+  .nav-right .btn-demo { display: none; }
+  .hamburger { display: flex; }
+
+  .hero { padding: 4rem 0 3rem; }
+  .hero h1 { font-size: 2.2rem; }
+
+  .industry-inner,
+  .industry-inner.reversed {
+    flex-direction: column;
+  }
+
+  .industry-text,
+  .industry-mockup {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .testimonial-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-grid,
+  .footer div[style*="grid-template-columns"] {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 2rem !important;
+  }
+
+  .footer div[style*="justify-content:space-between"] {
+    flex-direction: column !important;
+    gap: 0.5rem !important;
+    text-align: center !important;
+  }
+
+  .dark-cta h2 { font-size: 1.8rem; }
+}
+
+@media (max-width: 480px) {
+  .footer-grid,
+  .footer div[style*="grid-template-columns"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .dark-cta-buttons {
+    flex-direction: column;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- Scroll Progress -->
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- Top Bar -->
+<div class="top-bar"></div>
+
+<!-- NAV -->
+<nav class="nav" id="nav"><div class="nav__inner">
+  <a href="index.html" class="nav__logo">sera</a>
+  <div class="nav__links">
+    <div class="nav__dropdown">
+      <a href="product.html" class="nav__link">Product</a>
+      <div class="nav__dropdown-menu">
+        <a href="product.html#features" class="nav__dropdown-item">AI Call Coverage</a>
+        <a href="product.html#features" class="nav__dropdown-item">Voice AI Booking</a>
+        <a href="product.html#features" class="nav__dropdown-item">Call Summaries & Transcripts</a>
+        <a href="product.html#features" class="nav__dropdown-item">Missed Call Text-Back</a>
+        <a href="product.html#features" class="nav__dropdown-item">CRM & Patient Pipeline</a>
+        <a href="product.html#features" class="nav__dropdown-item">After-Hours Coverage</a>
+      </div>
+    </div>
+    <div class="nav__dropdown">
+      <a href="solutions.html" class="nav__link active">Solutions</a>
+      <div class="nav__dropdown-menu">
+        <a href="solutions.html#industry-1" class="nav__dropdown-item">Physical Therapy</a>
+        <a href="solutions.html#industry-2" class="nav__dropdown-item">Dental Practices</a>
+        <a href="solutions.html#industry-3" class="nav__dropdown-item">Med Spas & Aesthetics</a>
+        <a href="solutions.html#industry-4" class="nav__dropdown-item">Chiropractors</a>
+        <a href="solutions.html#industry-5" class="nav__dropdown-item">Home Services</a>
+        <a href="solutions.html#industry-6" class="nav__dropdown-item">Real Estate</a>
+      </div>
+    </div>
+    <a href="pricing.html" class="nav__link">Pricing</a>
+    <a href="security.html" class="nav__link">Security</a>
+  </div>
+  <div class="nav__right"><a href="#" class="nav__login">Login</a><a href="#" class="nav__cta">Book a Demo &rarr;</a></div>
+  <button class="nav__hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+</div>
+<div class="nav__mobile-menu" id="mobileMenu">
+  <a href="product.html">Product</a>
+  <a href="solutions.html" class="active">Solutions</a>
+  <a href="pricing.html">Pricing</a>
+  <a href="security.html">Security</a>
+  <a href="#">Login</a>
+  <a href="#" class="btn btn--primary" style="text-align:center;justify-content:center">Book a Demo &rarr;</a>
+</div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="eyebrow reveal">SOLUTIONS BY INDUSTRY</div>
+    <h1 class="reveal">Built for Businesses Where Every Call Matters</h1>
+    <p class="hero-sub reveal">Sera adapts to your specialty. Whether you're a PT clinic, dental practice, or home service business &mdash; we configure the intake, the voice, and the summaries for your exact workflow.</p>
+    <div class="hero-buttons reveal">
+      <a href="#industry-1" class="btn-primary">Find Your Solution &darr;</a>
+      <a href="#" class="btn-outline">Book a Demo</a>
+    </div>
+  </div>
+</section>
+
+<!-- INDUSTRY 1: Physical Therapy -->
+<section class="industry-section" id="industry-1">
+  <div class="industry-inner">
+    <div class="industry-text reveal">
+      <div class="industry-icon">&#x1F9B4;</div>
+      <h2>Physical Therapy Clinics</h2>
+      <p>PT clinics see high call volumes &mdash; new patient inquiries, insurance verifications, appointment changes, and referral follow-ups. Sera handles all of it. Every call is answered, every patient's data is captured, and your front desk gets a structured summary they can act on immediately. Reduce front-desk workload by 15-20 hours per week.</p>
+      <ul class="benefit-list">
+        <li><svg class="benefit-check" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#DCFCE7"/><path d="M6 10.5l2.5 2.5 5.5-5.5" stroke="#16A34A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Automated insurance verification capture</li>
+        <li><svg class="benefit-check" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#DCFCE7"/><path d="M6 10.5l2.5 2.5 5.5-5.5" stroke="#16A34A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Referral intake and routing</li>
+        <li><svg class="benefit-check" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#DCFCE7"/><path d="M6 10.5l2.5 2.5 5.5-5.5" stroke="#16A34A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Appointment scheduling and rescheduling</li>
+        <li><svg class="benefit-check" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#DCFCE7"/><path d="M6 10.5l2.5 2.5 5.5-5.5" stroke="#16A34A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>After-hours coverage for every call</li>
+      </ul>
+      <a href="#" class="learn-more">Learn More &rarr;</a>
+    </div>
+    <div class="industry-mockup reveal">
+      <div class="browser-chrome">
+        <div class="browser-bar">
+          <div class="browser-dots"><span></span><span></span><span></span></div>
+          <div class="browser-url">app.joinsera.us/call/pt-8824</div>
+        </div>
+        <div class="call-summary">
+          <div class="summary-header">
+            <div class="summary-dot"></div>
+            <span class="summary-title">Call Summary</span>
+            <span class="summary-time">Today, 2:14 PM</span>
+          </div>
+          <div class="summary-row"><span class="summary-label">Patient</span><span class="summary-value">Tom R.</span></div>
+          <div class="summary-row"><span class="summary-label">Reason</span><span class="summary-value">Shoulder rehab &mdash; referral from Dr. Chen</span></div>
+          <div class="summary-row"><span class="summary-label">Insurance</span><span class="summary-value">United Healthcare (PPO)</span></div>
+          <div class="summary-row"><span class="summary-label">Preferred</span><span class="summary-value">Afternoons, Thu/Fri</span></div>
+          <div class="summary-badges">
+            <span class="badge badge-green">New Patient</span>
+            <span class="badge badge-teal">Referral</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INDUSTRY 2: Dental -->
+<section class="industry-section alt-bg" id="industry-2">
+  <div class="industry-inner reversed">
+    <div class="industry-text reveal">
+      <div class="industry-icon">&#x1F9B7;</div>
+      <h2>Dental Practices</h2>
+      <p>New patient calls are the lifeblood of dental practices. Miss one, and they call the next dentist on Google. Sera ensures every call is answered in seconds &mdash; day or night. Capture emergency dental calls after hours, schedule hygiene appointments, and never lose a new patient to voicemail again.</p>
+      <ul class="benefit-list">
+        <li><svg class="benefit-check" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#DCFCE7"/><path d="M6 10.5l2.5 2.5 5.5-5.5" stroke="#16A34A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Emergency call triage after hours</li>
+        <li><svg class="benefit-check" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#DCFCE7"/><path d="M6 10.5l2.5 2.5 5.5-5.5" stroke="#16A34A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>New patient scheduling 24/7</li>
+        <li><svg class="benefit-check" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#DCFCE7"/><path d="M6 10.5l2.5 2.5 5.5-5.5" stroke="#16A34A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Missed call text-back</li>
+        <li><svg class="benefit-check" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#DCFCE7"/><path d="M6 10.5l2.5 2.5 5.5-5.5" stroke="#16A34A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Insurance pre-verification</li>
+      </ul>
+      <a href="#" class="learn-more">Learn More &rarr;</a>
+    </div>
+    <div class="industry-mockup reveal">
+      <div class="browser-chrome">
+        <div class="browser-bar">
+          <div class="browser-dots"><span></span><span></span><span></span></div>
+          <div class="browser-url">app.joinsera.us/call/dnt-3351</div>
+        </div>
+        <div class="call-summary">
+          <div class="summary-header">
+            <div class="summary-dot"></div>
+            <span class="summary-title">Call Summary</span>
+            <span class="summary-time">Today, 9:42 AM</span>
+          </div>
+          <div class="summary-row"><span class="summary-label">Patient</span><span class="summary-value">Sarah M.</span></div>
+          <div class="summary-row"><span class="summary-label">Reason</span><span class="summary-value">Tooth pain &mdash; possible cavity</span></div>
+          <div class="summary-row"><span class="summary-label">Insurance</span><span class="summary-value">Delta Dental (PPO)</span></div>
+          <div class="summary-row"><span class="summary-label">Preferred</span><span class="summary-value">Mornings, ASAP</span></div>
+          <div class="summary-badges">
+            <span class="badge badge-green">New Patient</span>
+            <span class="badge badge-teal">Urgent</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INDUSTRY 3: Med Spas -->
+<section class="industry-section" id="industry-3">
+  <div class="industry-inner">
+    <div class="industry-text reveal">
+      <div class="industry-icon">&#x2728;</div>
+      <h2>Med Spas &amp; Aesthetics</h2>
+      <p>Med spa consultations start with a phone call. If that call goes to voicemail, the potential client moves on. Sera captures every inquiry &mdash; Botox consultations, filler appointments, body contouring questions &mdash; and delivers a complete intake summary so your team can follow up and convert. Handle after-hours inquiries when most consultations are booked.</p>
+      <ul class="benefit-list">
+        <li><svg class="benefit-check" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#DCFCE7"/><path d="M6 10.5l2.5 2.5 5.5-5.5" stroke="#16A34A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Consultation booking for all services</li>
+        <li><svg class="benefit-check" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#DCFCE7"/><path d="M6 10.5l2.5 2.5 5.5-5.5" stroke="#16A34A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Lead capture and qualification</li>
+        <li><svg class="benefit-check" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#DCFCE7"/><path d="M6 10.5l2.5 2.5 5.5-5.5" stroke="#16A34A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Automated follow-up sequences</li>
+        <li><svg class="benefit-check" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#DCFCE7"/><path d="M6 10.5l2.5 2.5 5.5-5.5" stroke="#16A34A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>After-hours and weekend coverage</li>
+      </ul>
+      <a href="#" class="learn-more">Learn More &rarr;</a>
+    </div>
+    <div class="industry-mockup reveal">
+      <div class="browser-chrome">
+        <div class="browser-bar">
+          <div class="browser-dots"><span></span><span></span><span></span></div>
+          <div class="browser-url">app.joinsera.us/call/spa-7710</div>
+        </div>
+        <div class="call-summary">
+          <div class="summary-header">
+            <div class="summary-dot"></div>
+            <span class="summary-title">Call Summary</span>
+            <span class="summary-time">Today, 6:38 PM</span>
+          </div>
+          <div class="summary-row"><span class="summary-label">Patient</span><span class="summary-value">Jennifer L.</span></div>
+          <div class="summary-row"><span class="summary-label">Reason</span><span class="summary-value">Botox consultation &mdash; first time</span></div>
+          <div class="summary-row"><span class="summary-label">Insurance</span><span class="summary-value">N/A (self-pay)</span></div>
+          <div class="summary-row"><span class="summary-label">Preferred</span><span class="summary-value">Evenings or weekends</span></div>
+          <div class="summary-badges">
+            <span class="badge badge-green">Consultation</span>
+            <span class="badge badge-teal">New Lead</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INDUSTRY 4: Chiropractic -->
+<section class="industry-section alt-bg" id="industry-4">
+  <div class="industry-inner reversed">
+    <div class="industry-text reveal">
+      <div class="industry-icon">&#x1F527;</div>
+      <h2>Chiropractic Clinics</h2>
+      <p>Chiropractic practices handle high volumes of both new patient calls and existing patient rescheduling. During peak hours, calls pile up and staff can't keep up. Sera answers every call instantly, captures the intake information, and delivers it to your team &mdash; so no patient falls through the cracks and your staff focuses on in-office care.</p>
+      <ul class="benefit-list">
+        <li><svg class="benefit-check" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#DCFCE7"/><path d="M6 10.5l2.5 2.5 5.5-5.5" stroke="#16A34A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>New patient intake with insurance capture</li>
+        <li><svg class="benefit-check" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#DCFCE7"/><path d="M6 10.5l2.5 2.5 5.5-5.5" stroke="#16A34A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Recurring appointment management</li>
+        <li><svg class="benefit-check" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#DCFCE7"/><path d="M6 10.5l2.5 2.5 5.5-5.5" stroke="#16A34A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>No-show follow-up and rebooking</li>
+        <li><svg class="benefit-check" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#DCFCE7"/><path d="M6 10.5l2.5 2.5 5.5-5.5" stroke="#16A34A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Peak hour call overflow handling</li>
+      </ul>
+      <a href="#" class="learn-more">Learn More &rarr;</a>
+    </div>
+    <div class="industry-mockup reveal">
+      <div class="browser-chrome">
+        <div class="browser-bar">
+          <div class="browser-dots"><span></span><span></span><span></span></div>
+          <div class="browser-url">app.joinsera.us/call/chiro-4492</div>
+        </div>
+        <div class="call-summary">
+          <div class="summary-header">
+            <div class="summary-dot"></div>
+            <span class="summary-title">Call Summary</span>
+            <span class="summary-time">Today, 11:05 AM</span>
+          </div>
+          <div class="summary-row"><span class="summary-label">Patient</span><span class="summary-value">David K.</span></div>
+          <div class="summary-row"><span class="summary-label">Reason</span><span class="summary-value">Lower back pain &mdash; new patient</span></div>
+          <div class="summary-row"><span class="summary-label">Insurance</span><span class="summary-value">Cigna</span></div>
+          <div class="summary-row"><span class="summary-label">Preferred</span><span class="summary-value">Any morning slot</span></div>
+          <div class="summary-badges">
+            <span class="badge badge-green">New Patient</span>
+            <span class="badge badge-teal">Insurance Verified</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INDUSTRY 5: Home Services -->
+<section class="industry-section" id="industry-5">
+  <div class="industry-inner">
+    <div class="industry-text reveal">
+      <div class="industry-icon">&#x1F3E0;</div>
+      <h2>Home Services &amp; Contractors</h2>
+      <p>Every missed call is a lost job. Homeowners calling for HVAC repair, plumbing emergencies, or roofing estimates won't leave a voicemail &mdash; they call the next contractor. Sera answers instantly, captures the job details, urgency, and contact info, and routes it to your team so you can respond first and win the job.</p>
+      <ul class="benefit-list">
+        <li><svg class="benefit-check" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#DCFCE7"/><path d="M6 10.5l2.5 2.5 5.5-5.5" stroke="#16A34A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Emergency and after-hours job capture</li>
+        <li><svg class="benefit-check" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#DCFCE7"/><path d="M6 10.5l2.5 2.5 5.5-5.5" stroke="#16A34A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Service type and urgency classification</li>
+        <li><svg class="benefit-check" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#DCFCE7"/><path d="M6 10.5l2.5 2.5 5.5-5.5" stroke="#16A34A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Estimate scheduling</li>
+        <li><svg class="benefit-check" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#DCFCE7"/><path d="M6 10.5l2.5 2.5 5.5-5.5" stroke="#16A34A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Lead routing to available technicians</li>
+      </ul>
+      <a href="#" class="learn-more">Learn More &rarr;</a>
+    </div>
+    <div class="industry-mockup reveal">
+      <div class="browser-chrome">
+        <div class="browser-bar">
+          <div class="browser-dots"><span></span><span></span><span></span></div>
+          <div class="browser-url">app.joinsera.us/call/hvac-5503</div>
+        </div>
+        <div class="call-summary">
+          <div class="summary-header">
+            <div class="summary-dot"></div>
+            <span class="summary-title">Call Summary</span>
+            <span class="summary-time">Today, 3:52 PM</span>
+          </div>
+          <div class="summary-row"><span class="summary-label">Caller</span><span class="summary-value">Mike T.</span></div>
+          <div class="summary-row"><span class="summary-label">Reason</span><span class="summary-value">AC not cooling &mdash; urgent</span></div>
+          <div class="summary-row"><span class="summary-label">Service</span><span class="summary-value">HVAC Repair</span></div>
+          <div class="summary-row"><span class="summary-label">Preferred</span><span class="summary-value">Today or tomorrow AM</span></div>
+          <div class="summary-badges">
+            <span class="badge badge-green">Emergency</span>
+            <span class="badge badge-teal">HVAC</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INDUSTRY 6: Real Estate -->
+<section class="industry-section alt-bg" id="industry-6">
+  <div class="industry-inner reversed">
+    <div class="industry-text reveal">
+      <div class="industry-icon">&#x1F3E2;</div>
+      <h2>Real Estate Brokerages</h2>
+      <p>In real estate, speed to lead is everything. When a potential buyer or seller calls, they expect an immediate response. Sera answers every call, captures the lead's details and property interests, and routes the information to the right agent instantly &mdash; even at nights and on weekends when most inquiries come in.</p>
+      <ul class="benefit-list">
+        <li><svg class="benefit-check" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#DCFCE7"/><path d="M6 10.5l2.5 2.5 5.5-5.5" stroke="#16A34A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Lead capture with property interest details</li>
+        <li><svg class="benefit-check" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#DCFCE7"/><path d="M6 10.5l2.5 2.5 5.5-5.5" stroke="#16A34A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Agent routing and notification</li>
+        <li><svg class="benefit-check" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#DCFCE7"/><path d="M6 10.5l2.5 2.5 5.5-5.5" stroke="#16A34A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Open house follow-up handling</li>
+        <li><svg class="benefit-check" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#DCFCE7"/><path d="M6 10.5l2.5 2.5 5.5-5.5" stroke="#16A34A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>24/7 coverage for buyer/seller inquiries</li>
+      </ul>
+      <a href="#" class="learn-more">Learn More &rarr;</a>
+    </div>
+    <div class="industry-mockup reveal">
+      <div class="browser-chrome">
+        <div class="browser-bar">
+          <div class="browser-dots"><span></span><span></span><span></span></div>
+          <div class="browser-url">app.joinsera.us/call/re-9217</div>
+        </div>
+        <div class="call-summary">
+          <div class="summary-header">
+            <div class="summary-dot"></div>
+            <span class="summary-title">Call Summary</span>
+            <span class="summary-time">Today, 7:15 PM</span>
+          </div>
+          <div class="summary-row"><span class="summary-label">Caller</span><span class="summary-value">Lisa P.</span></div>
+          <div class="summary-row"><span class="summary-label">Reason</span><span class="summary-value">Interested in 142 Oak Street listing</span></div>
+          <div class="summary-row"><span class="summary-label">Type</span><span class="summary-value">Buyer inquiry</span></div>
+          <div class="summary-row"><span class="summary-label">Preferred</span><span class="summary-value">Weekday evenings</span></div>
+          <div class="summary-badges">
+            <span class="badge badge-green">Buyer Lead</span>
+            <span class="badge badge-teal">High Intent</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TECH STACK MARQUEE -->
+<section class="tech-stack">
+  <div class="eyebrow reveal">INTEGRATIONS</div>
+  <h2 class="reveal">Works Across Your Tech Stack</h2>
+  <div class="marquee-container">
+    <div class="marquee-track">
+      <span class="marquee-item" style="color:#00857C;font-style:italic;">athenahealth</span>
+      <span class="marquee-item" style="color:#2B6CB0;font-weight:700;">ModMed</span>
+      <span class="marquee-item" style="color:#E97025;font-weight:700;">NextGen</span>
+      <span class="marquee-item" style="color:#1A365D;font-style:italic;">eClinicalWorks</span>
+      <span class="marquee-item" style="color:#1A365D;">AdvancedMD</span>
+      <span class="marquee-item" style="color:#00A1E0;">Salesforce</span>
+      <span class="marquee-item" style="color:#FF7A59;font-weight:700;">HubSpot</span>
+      <span class="marquee-item" style="color:#16A34A;">DrChrono</span>
+      <!-- Duplicate for seamless loop -->
+      <span class="marquee-item" style="color:#00857C;font-style:italic;">athenahealth</span>
+      <span class="marquee-item" style="color:#2B6CB0;font-weight:700;">ModMed</span>
+      <span class="marquee-item" style="color:#E97025;font-weight:700;">NextGen</span>
+      <span class="marquee-item" style="color:#1A365D;font-style:italic;">eClinicalWorks</span>
+      <span class="marquee-item" style="color:#1A365D;">AdvancedMD</span>
+      <span class="marquee-item" style="color:#00A1E0;">Salesforce</span>
+      <span class="marquee-item" style="color:#FF7A59;font-weight:700;">HubSpot</span>
+      <span class="marquee-item" style="color:#16A34A;">DrChrono</span>
+    </div>
+  </div>
+  <p class="tech-note reveal">Don't see your system? We integrate with 50+ platforms. <a href="#" style="color:var(--green);text-decoration:none;font-weight:600;">Contact us</a></p>
+</section>
+
+<!-- DARK CTA -->
+<section class="dark-cta">
+  <div class="dark-cta-inner reveal">
+    <h2>AI That Picks Up So Your Team Doesn't Have To</h2>
+    <p>Book a 15-minute demo and see how Sera answers, captures, and routes every call &mdash; configured for your specialty, live in under 48 hours.</p>
+    <div class="dark-cta-buttons">
+      <a href="#" class="btn-white">Get Started &rarr;</a>
+      <a href="#" class="btn-ghost">Watch Demo</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer__inner">
+    <div>
+      <a href="index.html" class="footer__logo">sera</a>
+      <p class="footer__brand-desc">AI-powered call coverage that answers every patient call, captures intake data, and delivers structured summaries — 24/7.</p>
+      <div class="footer__hipaa"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>HIPAA-Compliant Infrastructure</div>
+      <div class="footer__social">
+        <a href="#" aria-label="Twitter"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+        <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452z"/></svg></a>
+        <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+      </div>
+    </div>
+    <div>
+      <div class="footer__col-title">Product</div>
+      <div class="footer__col-links">
+        <a href="product.html">AI Call Coverage</a>
+        <a href="product.html">Voice AI Booking</a>
+        <a href="product.html">Call Summaries</a>
+        <a href="product.html">CRM Integration</a>
+        <a href="product.html">After-Hours Coverage</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer__col-title">Industries</div>
+      <div class="footer__col-links">
+        <a href="solutions.html">Physical Therapy</a>
+        <a href="solutions.html">Dental Practices</a>
+        <a href="solutions.html">Med Spas</a>
+        <a href="solutions.html">Chiropractors</a>
+        <a href="solutions.html">Home Services</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer__col-title">Company</div>
+      <div class="footer__col-links">
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="security.html">Security</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <p>&copy; 2026 Sera AI. All rights reserved.</p>
+    <p>hello@joinsera.us &middot; (347) 653-1170</p>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+// Nav scroll shadow
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 10);
+});
+
+// Scroll progress bar
+const scrollProgress = document.getElementById('scrollProgress');
+window.addEventListener('scroll', () => {
+  const scrollTop = window.scrollY;
+  const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+  const scrollPercent = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+  scrollProgress.style.width = scrollPercent + '%';
+});
+
+// Hamburger menu
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+hamburger.addEventListener('click', () => {
+  mobileMenu.classList.toggle('open');
+  const spans = hamburger.querySelectorAll('span');
+  if (mobileMenu.classList.contains('open')) {
+    spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+    spans[1].style.opacity = '0';
+    spans[2].style.transform = 'rotate(-45deg) translate(5px, -5px)';
+  } else {
+    spans[0].style.transform = 'none';
+    spans[1].style.opacity = '1';
+    spans[2].style.transform = 'none';
+  }
+});
+
+// Scroll reveal with IntersectionObserver
+const revealElements = document.querySelectorAll('.reveal');
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry, index) => {
+    if (entry.isIntersecting) {
+      const siblings = entry.target.parentElement.querySelectorAll('.reveal');
+      let staggerIndex = 0;
+      siblings.forEach((sib, i) => {
+        if (sib === entry.target) staggerIndex = i;
+      });
+      setTimeout(() => {
+        entry.target.classList.add('visible');
+      }, staggerIndex * 50);
+      revealObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.1 });
+
+revealElements.forEach(el => revealObserver.observe(el));
+
+// Smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    const href = this.getAttribute('href');
+    if (href === '#') return;
+    e.preventDefault();
+    const target = document.querySelector(href);
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+});
+</script>
+</body>
+</html>

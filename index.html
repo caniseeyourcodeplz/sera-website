@@ -1,0 +1,1115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sera — AI Call Coverage for Healthcare | Never Miss a Patient Call</title>
+<meta name="description" content="Sera answers patient calls instantly, captures intake data, and delivers structured summaries to your staff. HIPAA-compliant, 24/7, from $497/mo.">
+<meta property="og:title" content="Sera — AI Call Coverage for Healthcare | Never Miss a Patient Call">
+<meta property="og:description" content="Never miss another patient call. Sera answers instantly, books appointments, and sends structured summaries to your team — 24/7.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://joinsera.us">
+<meta property="og:image" content="https://joinsera.us/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Sera — AI Call Coverage for Healthcare">
+<meta name="twitter:description" content="Never miss another patient call. AI-powered call coverage, 24/7.">
+<link rel="canonical" href="https://joinsera.us/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@400,500,700,800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+<style>
+/* Page-specific overrides — shared styles in css/styles.css */
+:root{
+  --card-bg:#FFFFFF;
+  --font-sans:var(--font-body);
+  --shadow-card:var(--shadow-sm);
+  --shadow-card-hover:var(--shadow-md);
+  --radius-card:var(--radius-lg);
+}
+
+/* Scroll progress */
+.scroll-progress{height:3px;position:fixed;top:0;left:0;z-index:9999;background:linear-gradient(90deg,var(--green),var(--teal));width:0%;transition:width 0.05s linear;pointer-events:none}
+/* Wave dividers */
+.wave-divider{width:100%;overflow:hidden;line-height:0;position:relative;z-index:1}
+.wave-divider svg{display:block;width:100%;height:24px}
+
+/* ========== 2. HERO ========== */
+.hero{background:var(--bg-white);padding:6rem 0 4rem;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 70% 30%,rgba(13,155,106,0.06) 0%,transparent 70%),radial-gradient(ellipse 50% 50% at 20% 80%,rgba(236,253,245,0.5) 0%,transparent 60%);pointer-events:none}
+.hero::after{content:'';position:absolute;inset:0;background-image:radial-gradient(circle,rgba(0,0,0,0.04) 1px,transparent 1px);background-size:24px 24px;pointer-events:none;opacity:0.5}
+.hero__blob{position:absolute;top:-80px;right:-120px;width:600px;height:600px;background:radial-gradient(circle,rgba(220,252,231,0.5) 0%,rgba(240,253,244,0.2) 50%,transparent 70%);filter:blur(80px);pointer-events:none}
+.hero__inner{display:flex;align-items:center;gap:3rem;position:relative;z-index:1}
+.hero__text{flex:0 0 55%}.hero__visual{flex:0 0 45%;display:flex;justify-content:center;position:relative}
+.hero__badge{display:inline-flex;align-items:center;gap:0.5rem;background:var(--green-light);color:var(--green);border-radius:var(--radius-pill);padding:0.35rem 1rem;font-size:0.75rem;font-weight:600;margin-bottom:1.5rem}
+.hero__badge-dot{width:8px;height:8px;background:var(--green);border-radius:50%;animation:pulseDot 2s ease-in-out infinite}
+@keyframes pulseDot{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.6;transform:scale(1.3)}}
+.hero__headline{font-family:var(--font-heading);font-size:clamp(3.2rem,6vw,4.8rem);line-height:1.08;letter-spacing:-0.035em;font-weight:800;color:var(--text-primary);margin-bottom:1.2rem}
+.hero__headline .green{background:linear-gradient(135deg,#0D9B6A,#10B981);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+@keyframes greenShift{0%{background-position:0% center}50%{background-position:100% center}100%{background-position:0% center}}
+.hero__sub{color:var(--text-body);font-size:1.1rem;line-height:1.75;max-width:520px;margin-bottom:2rem}
+.hero__buttons{display:flex;gap:0.8rem;flex-wrap:wrap;margin-bottom:1.8rem}
+.hero__trust{display:flex;flex-wrap:wrap;gap:1.2rem;margin-bottom:2.2rem}
+.hero__trust-item{display:flex;align-items:center;gap:0.4rem;font-size:0.8rem;color:var(--text-body)}
+.hero__trust-item svg{flex-shrink:0}
+.hero__social-proof{padding-top:0.5rem;border-top:1px solid var(--border-light)}
+.hero__social-proof-text{font-size:0.78rem;color:var(--text-muted);margin-bottom:0.5rem;font-weight:500}
+.hero__social-proof-logos{font-size:0.88rem;color:var(--text-muted);opacity:0.6;font-weight:500;line-height:1.8}
+
+/* Hero card stack */
+.hero-card-stack{position:relative;width:340px;animation:float 4s ease-in-out infinite;transform:perspective(1200px) rotateY(-3deg)}
+.hero-card-bg-3{position:absolute;top:20px;left:8px;right:-8px;bottom:-10px;background:var(--card-bg);border-radius:var(--radius-card);border:1px solid var(--border);transform:rotate(-2deg) scale(0.9);opacity:0.2}
+.hero-card-bg-2{position:absolute;top:10px;left:-6px;right:6px;bottom:-5px;background:var(--card-bg);border-radius:var(--radius-card);border:1px solid var(--border);transform:rotate(4deg) scale(0.95);opacity:0.35;box-shadow:0 4px 12px rgba(0,0,0,0.04)}
+.hero-card{position:relative;z-index:2;background:var(--card-bg);border-radius:var(--radius-card);border:1px solid var(--border);box-shadow:var(--shadow-lg),0 0 60px rgba(13,155,106,0.08);overflow:hidden}
+.hero-card__chrome{display:flex;align-items:center;gap:6px;padding:0.6rem 1rem;background:var(--bg-warm);border-bottom:1px solid var(--border-light)}
+.chrome-dot{width:8px;height:8px;border-radius:50%}
+.chrome-dot--r{background:#FF5F57}.chrome-dot--y{background:#FEBC2E}.chrome-dot--g{background:#28C840}
+.chrome-label{margin-left:auto;font-size:0.6rem;font-family:var(--font-mono);color:var(--text-muted)}
+.hero-card__body{padding:1.4rem}
+.hero-card__header{display:flex;align-items:center;gap:0.5rem;margin-bottom:1rem}
+.hero-card__dot{width:8px;height:8px;background:var(--green);border-radius:50%;animation:pulseDot 2s ease-in-out infinite}
+.hero-card__label{font-size:0.7rem;font-weight:600;text-transform:uppercase;letter-spacing:0.06em;color:var(--green)}
+.hero-card__time{margin-left:auto;font-size:0.7rem;color:var(--text-muted);font-family:var(--font-mono)}
+.hero-card__row{display:flex;justify-content:space-between;align-items:center;padding:0.55rem 0;border-bottom:1px solid var(--border-light)}
+.hero-card__row:last-of-type{border-bottom:none}
+.hero-card__row-label{font-size:0.78rem;color:var(--text-muted);font-weight:500}
+.hero-card__row-value{font-size:0.82rem;color:var(--text-heading);font-weight:600;font-family:var(--font-mono)}
+.hero-card__badges{display:flex;gap:0.5rem;margin-top:1rem}
+
+/* ========== 3. AUDIO DEMO (dark green bg) ========== */
+.audio-demo{background:linear-gradient(135deg,#064E3B,#065F46);padding:6rem 0;color:#fff}
+.audio-demo .eyebrow{color:var(--green-light)}
+.audio-demo .section-headline{color:#fff}
+.audio-demo .section-sub{color:rgba(255,255,255,0.7)}
+.audio-demo__inner{display:flex;gap:3rem;align-items:flex-start}
+.audio-demo__left{flex:0 0 55%}.audio-demo__right{flex:0 0 45%}
+.audio-demo__tabs{display:flex;gap:0.5rem;flex-wrap:wrap;margin:2rem 0 1.5rem}
+.audio-tab{font-size:0.85rem;padding:0.5rem 1.2rem;border-radius:var(--radius-pill);border:1px solid rgba(255,255,255,0.25);background:transparent;color:rgba(255,255,255,0.8);font-weight:500;transition:all 0.3s}
+.audio-tab.active{background:#fff;color:var(--green);border-color:#fff;box-shadow:0 2px 8px rgba(0,0,0,0.15)}
+.audio-player{background:#fff;border-radius:16px;border:1px solid var(--border);box-shadow:var(--shadow-card);padding:1.2rem 1.5rem;display:flex;align-items:center;gap:1rem}
+.audio-player__btn-wrap{position:relative;flex-shrink:0}
+.audio-player__btn{width:60px;height:60px;border-radius:50%;background:linear-gradient(135deg,var(--green),var(--green-hover));display:flex;align-items:center;justify-content:center;transition:all 0.2s;box-shadow:0 4px 12px rgba(22,163,74,0.3);position:relative;z-index:2}
+.audio-player__btn:hover{box-shadow:0 6px 20px rgba(22,163,74,0.4);transform:scale(1.04)}
+.audio-player__btn svg{width:20px;height:20px;fill:#fff}
+@keyframes pulseRing{0%{transform:scale(1);opacity:0.5}100%{transform:scale(1.5);opacity:0}}
+.audio-player__pulse{position:absolute;top:0;left:0;width:60px;height:60px;border-radius:50%;border:2px solid var(--green);opacity:0;z-index:1;pointer-events:none}
+.audio-player__pulse.active{animation:pulseRing 1.5s ease-out infinite}
+.audio-player__middle{flex:1;display:flex;flex-direction:column;gap:0.5rem}
+.audio-player__progress-row{display:flex;align-items:center;gap:0.8rem}
+.audio-player__progress{flex:1;height:6px;background:var(--border);border-radius:3px;overflow:hidden;cursor:pointer}
+.audio-player__fill{height:100%;background:linear-gradient(90deg,var(--green),var(--teal));border-radius:3px;width:0%;transition:width 0.1s linear}
+.audio-player__time{font-family:var(--font-mono);font-size:0.78rem;color:var(--text-muted);white-space:nowrap;min-width:80px;text-align:right}
+.audio-waveform{display:flex;align-items:center;gap:3px;height:24px}
+.audio-waveform__bar{width:3px;border-radius:2px;background:var(--green);height:4px;transition:height 0.15s}
+.audio-waveform__bar.active{animation:waveBar 0.8s ease-in-out infinite}
+@keyframes waveBar{0%,100%{height:4px}50%{height:var(--max-h,16px)}}
+.audio-player__note{font-size:0.78rem;color:var(--text-muted)}
+.audio-demo__callout-box{background:rgba(255,255,255,0.1);border-left-color:var(--green-light)}
+.audio-demo__callout-box p{color:rgba(255,255,255,0.8)}
+.audio-demo__callout-box a{color:var(--green-light)}
+.live-summary{background:#fff;border-radius:16px;border:1px solid var(--border);padding:1.2rem;margin-top:1.5rem;box-shadow:0 4px 15px rgba(0,0,0,0.04)}
+.live-summary__header{font-family:var(--font-mono);font-size:0.78rem;color:var(--text-muted);margin-bottom:0.8rem}
+@keyframes shimmer{0%{background-position:-200% 0}100%{background-position:200% 0}}
+.skeleton-row{display:flex;justify-content:space-between;padding:0.6rem 0;border-bottom:1px solid var(--border-light)}
+.skeleton-bar{height:12px;border-radius:4px;background:linear-gradient(90deg,#f0f0f0 25%,#e0e0e0 50%,#f0f0f0 75%);background-size:200% 100%;animation:shimmer 1.5s ease infinite}
+.skeleton-bar--label{width:60px}.skeleton-bar--value{width:100px}
+.live-summary__row{display:flex;justify-content:space-between;align-items:center;padding:0.6rem 0;border-bottom:1px solid var(--border-light);opacity:0;transform:translateY(10px);transition:opacity 0.5s,transform 0.5s}
+.live-summary__row.visible{opacity:1;transform:translateY(0)}
+.live-summary__row.complete{background:var(--bg-green-tint);border-radius:8px;padding:0.6rem 0.8rem;border-bottom:none;margin-top:0.4rem}
+.live-summary__row-label{font-size:0.78rem;color:var(--text-muted);font-weight:500}
+.live-summary__row-value{font-size:0.82rem;color:var(--text-heading);font-weight:600;font-family:var(--font-mono)}
+.typing-dots{display:inline-flex;gap:3px}.typing-dots span{width:5px;height:5px;border-radius:50%;background:var(--green);animation:bounce 1.2s ease-in-out infinite}
+.typing-dots span:nth-child(2){animation-delay:.15s}.typing-dots span:nth-child(3){animation-delay:.3s}
+@keyframes bounce{0%,60%,100%{transform:translateY(0)}30%{transform:translateY(-6px)}}
+.confetti-container{position:relative;overflow:visible}
+.confetti-dot{position:absolute;width:6px;height:6px;border-radius:50%;background:var(--green);opacity:0;pointer-events:none}
+
+/* Fake browser */
+.fake-browser{background:var(--card-bg);border-radius:var(--radius-card);overflow:hidden;box-shadow:var(--shadow-card);border:1px solid var(--border)}
+.fake-browser__chrome{display:flex;align-items:center;gap:6px;padding:0.55rem 0.8rem;background:#F7F7F8;border-bottom:1px solid var(--border)}
+.fake-browser__dot{width:9px;height:9px;border-radius:50%}
+.fake-browser__dot--r{background:#FF5F57}.fake-browser__dot--y{background:#FEBC2E}.fake-browser__dot--g{background:#28C840}
+.fake-browser__url{margin-left:0.8rem;flex:1;background:#fff;border-radius:6px;padding:0.25rem 0.6rem;font-family:var(--font-mono);font-size:0.65rem;color:var(--text-muted);border:1px solid var(--border-light)}
+.fake-browser__content{display:flex;min-height:320px}
+.fake-sidebar{width:180px;background:#1a1a2e;color:rgba(255,255,255,0.6);padding:1rem 0;flex-shrink:0;font-size:0.72rem}
+.fake-sidebar__logo{padding:0 0.8rem 1rem;font-weight:700;color:var(--green);font-size:0.9rem}
+.fake-sidebar__item{padding:0.45rem 0.8rem;display:flex;align-items:center;gap:0.5rem;font-weight:500;transition:all 0.2s}
+.fake-sidebar__item.active{background:rgba(255,255,255,0.08);color:#fff}
+.fake-sidebar__item-icon{font-size:0.8rem;width:16px;text-align:center;opacity:0.7}
+.fake-main{flex:1;padding:1rem;background:#fff;overflow:hidden}
+.fake-main__header{font-size:0.75rem;font-weight:700;color:var(--text-heading);margin-bottom:0.6rem;display:flex;justify-content:space-between;align-items:center}
+.fake-main__badge{font-size:0.55rem;background:var(--green-light);color:var(--green);padding:0.15rem 0.5rem;border-radius:var(--radius-pill);font-weight:600}
+.fake-call-row{display:flex;align-items:center;gap:0.5rem;padding:0.4rem 0.5rem;border-radius:8px;font-size:0.65rem;border-bottom:1px solid var(--border-light);transition:all 0.2s}
+.fake-call-row.expanded{background:var(--bg-green-tint);border:1px solid var(--green-light);flex-wrap:wrap}
+.fake-call-dot{width:6px;height:6px;border-radius:50%;background:var(--green);flex-shrink:0}
+.fake-call-name{font-weight:600;color:var(--text-heading);min-width:80px}
+.fake-call-type{font-size:0.55rem;background:var(--green-light);color:var(--green);padding:0.1rem 0.4rem;border-radius:var(--radius-pill);font-weight:600}
+.fake-call-time{margin-left:auto;color:var(--text-muted);font-family:var(--font-mono);font-size:0.6rem}
+.fake-call-dur{color:var(--text-muted);font-family:var(--font-mono);font-size:0.6rem}
+.fake-call-expanded{width:100%;margin-top:0.4rem;padding-top:0.4rem;border-top:1px solid var(--green-light);display:grid;grid-template-columns:1fr 1fr;gap:0.25rem;font-size:0.6rem}
+.fake-call-expanded dt{color:var(--text-muted);font-weight:500}
+.fake-call-expanded dd{color:var(--text-heading);font-weight:600;font-family:var(--font-mono);font-size:0.58rem}
+.audio-demo__callout-box{margin-top:1.5rem;background:#fff;border-left:4px solid var(--green);border-radius:0 12px 12px 0;padding:1rem 1.2rem;display:flex;align-items:center;gap:0.8rem;box-shadow:0 2px 8px rgba(0,0,0,0.04)}
+.audio-demo__callout-box p{font-size:0.85rem;color:var(--text-body)}
+.audio-demo__callout-box a{color:var(--green);font-weight:700}
+
+/* ========== 4. STATS ========== */
+.stats{background:#FFFBEB;padding:4rem 0 2rem}
+.stats__grid{display:flex;gap:1.2rem;max-width:1000px;margin:0 auto;flex-wrap:wrap;justify-content:center}
+.stat-card{flex:1;min-width:200px;background:var(--card-bg);border-radius:var(--radius-card);border:1px solid var(--border);border-top:3px solid var(--green);padding:1.8rem 1.5rem;text-align:center;box-shadow:0 4px 15px rgba(0,0,0,0.04);transition:all 0.3s}
+.stat-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-card-hover)}
+.stat__number{font-family:var(--font-heading);font-size:3rem;font-weight:800;background:linear-gradient(135deg,var(--green),var(--teal));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1.1}
+.stat__label{font-size:0.88rem;color:var(--text-body);font-weight:600;margin-top:0.3rem}
+.stat__desc{font-size:0.75rem;color:var(--text-muted);margin-top:0.25rem}
+.trust-pills{display:flex;justify-content:center;flex-wrap:wrap;gap:0.8rem;margin-top:2.5rem;padding:0 1rem}
+.trust-pill{display:inline-flex;align-items:center;gap:0.4rem;background:var(--green-light);color:var(--green);font-size:0.72rem;font-weight:600;padding:0.35rem 0.9rem;border-radius:var(--radius-pill)}
+.trust-pill svg{flex-shrink:0}
+
+/* ========== 5. INTEGRATIONS — SCROLLING MARQUEE ========== */
+.integrations{background:var(--bg-white);padding:3rem 0;border-top:1px solid var(--border-light)}
+.integrations__title{text-align:center;font-size:0.85rem;font-weight:600;color:var(--text-muted);margin-bottom:1.5rem}
+.marquee-wrap{position:relative;overflow:hidden;-webkit-mask-image:linear-gradient(to right,transparent,#000 10%,#000 90%,transparent);mask-image:linear-gradient(to right,transparent,#000 10%,#000 90%,transparent)}
+.marquee-wrap:hover .marquee-track{animation-play-state:paused}
+.marquee-track{display:flex;gap:3rem;align-items:center;white-space:nowrap;animation:marqueeScroll 30s linear infinite;width:max-content}
+@keyframes marqueeScroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.marquee-logo{white-space:nowrap;user-select:none}
+.integrations__note{text-align:center;font-size:0.78rem;color:var(--text-muted);margin-top:1.2rem}
+
+/* ========== 6. HOW IT WORKS ========== */
+.how-it-works{background:var(--bg-white);padding:6rem 0;position:relative}
+.how-it-works::before{content:'';position:absolute;top:50%;left:50%;width:800px;height:400px;transform:translate(-50%,-50%);background:radial-gradient(ellipse,rgba(240,253,244,0.6) 0%,transparent 70%);pointer-events:none}
+.how-it-works__header{text-align:center;max-width:650px;margin:0 auto 3.5rem;position:relative;z-index:1}
+.how-it-works__steps{display:flex;gap:0.6rem;max-width:1050px;margin:0 auto;position:relative;z-index:1}
+.step-card{flex:1;background:var(--card-bg);border:1px solid var(--border);border-radius:16px;padding:2rem 1.5rem 1.8rem;text-align:center;transition:all 0.3s;position:relative}
+.step-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-card-hover)}
+.step-card__num{position:absolute;top:-14px;left:-10px;width:32px;height:32px;border-radius:50%;background:var(--green);color:#fff;font-size:0.75rem;font-weight:700;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 8px rgba(22,163,74,0.3);z-index:2}
+.step-card__icon{width:48px;height:48px;border-radius:50%;background:var(--bg-green-tint);display:flex;align-items:center;justify-content:center;font-size:1.3rem;margin:0 auto 1rem}
+.step-card__title{font-family:var(--font-heading);font-weight:700;color:var(--text-heading);font-size:1rem;margin-bottom:0.5rem}
+.step-card__desc{font-size:0.85rem;color:var(--text-body);line-height:1.6;margin-bottom:1rem}
+.step-badge{display:inline-block;font-size:0.72rem;padding:0.25rem 0.8rem;border-radius:var(--radius-pill);font-weight:600;opacity:0;transform:scale(0.8);transition:all 0.5s}
+.step-badge.visible{opacity:1;transform:scale(1)}
+.step-badge--gray{background:#F4F4F5;color:var(--text-muted)}
+.step-badge--blue{background:#DBEAFE;color:#3B82F6}
+.step-badge--green{background:var(--green-light);color:var(--green)}
+.step-connector{display:flex;align-items:center;flex-shrink:0;width:30px;position:relative}
+.step-connector__line{height:2px;flex:1;background:var(--border);position:relative;overflow:visible}
+.step-connector__arrow{width:0;height:0;border-top:5px solid transparent;border-bottom:5px solid transparent;border-left:7px solid var(--green);flex-shrink:0}
+.step-connector__dot{position:absolute;top:-3px;left:0;width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 6px rgba(22,163,74,0.5);opacity:0}
+.step-connector__dot.animate{animation:travelDot 1.2s ease forwards}
+@keyframes travelDot{0%{left:0;opacity:1}100%{left:calc(100% - 8px);opacity:1}}
+.how-it-works__link{text-align:center;margin-top:2.5rem;position:relative;z-index:1}
+
+/* ========== 7. CALL FLOW DIAGRAM ========== */
+.call-flow{background:var(--bg-warm);padding:5rem 0}
+.call-flow__header{text-align:center;max-width:650px;margin:0 auto 2rem}
+.call-flow__tabs{display:flex;justify-content:center;gap:0.5rem;margin-bottom:2.5rem}
+.flow-tab{font-size:0.88rem;padding:0.6rem 1.5rem;border-radius:var(--radius-pill);border:1px solid var(--border);background:#fff;color:var(--text-body);font-weight:600;transition:all 0.3s;position:relative}
+.flow-tab.active{background:var(--green);color:#fff;border-color:var(--green)}
+.flow-tab__soon{position:absolute;top:-8px;right:-8px;font-size:0.5rem;background:var(--yellow);color:#000;padding:0.15rem 0.4rem;border-radius:var(--radius-pill);font-weight:700;text-transform:uppercase}
+.call-flow__grid{display:flex;gap:1.5rem;max-width:1000px;margin:0 auto}
+.flow-column{flex:1;background:var(--card-bg);border-radius:16px;border:1px solid var(--border);overflow:hidden;box-shadow:0 4px 15px rgba(0,0,0,0.04)}
+.flow-column__header{background:var(--green-dark);color:#fff;padding:0.8rem 1.2rem;font-size:0.82rem;font-weight:700;display:flex;align-items:center;gap:0.5rem}
+.flow-column__header-icon{font-size:1rem}
+.flow-column__body{padding:1.5rem}
+.flow-step{text-align:center;font-size:0.82rem;color:var(--text-body);line-height:1.5;padding:0.6rem 0}
+.flow-arrow{text-align:center;color:var(--green);font-size:1.2rem;padding:0.3rem 0;opacity:0.5}
+.flow-result{text-align:center;margin-top:0.5rem}
+.flow-result .badge{font-size:0.72rem}
+
+/* ========== 8. FEATURE CARDS WITH UI MOCKUPS ========== */
+.features{background:var(--bg-white);padding:6rem 0}
+.features__header{text-align:center;max-width:600px;margin:0 auto 3rem}
+.features__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;max-width:1100px;margin:0 auto}
+.feature-card{background:var(--card-bg);border:1px solid var(--border);border-radius:var(--radius-card);overflow:hidden;transition:all 0.3s}
+.feature-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-card-hover)}
+.feature-card__mockup{background:#F8FAFC;padding:1.2rem;min-height:220px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.feature-card__text{padding:1.5rem}
+.feature-card__title{font-family:var(--font-heading);font-weight:700;color:var(--text-heading);font-size:1.05rem;margin-bottom:0.4rem}
+.feature-card__desc{font-size:0.85rem;color:var(--text-body);line-height:1.6}
+.feature-card__soon{position:absolute;top:0.8rem;right:0.8rem;background:var(--yellow);color:#000;font-size:0.55rem;font-weight:700;padding:0.2rem 0.6rem;border-radius:var(--radius-pill);text-transform:uppercase;animation:pulseSoon 2s ease-in-out infinite}
+@keyframes pulseSoon{0%,100%{opacity:1}50%{opacity:0.7}}
+
+/* Mockup 1: Phone call UI */
+.mockup-phone{width:180px;background:#1a1a2e;border-radius:20px;padding:1.5rem 1rem;text-align:center;color:#fff;box-shadow:0 8px 24px rgba(0,0,0,0.15)}
+.mockup-phone__label{font-size:0.6rem;color:rgba(255,255,255,0.5);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:0.3rem}
+.mockup-phone__clinic{font-size:0.75rem;font-weight:700;margin-bottom:0.2rem}
+.mockup-phone__caller{font-size:0.65rem;color:rgba(255,255,255,0.6);margin-bottom:1rem}
+.mockup-phone__buttons{display:flex;justify-content:center;gap:1rem;margin-bottom:0.6rem}
+.mockup-phone__btn{width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.8rem}
+.mockup-phone__btn--decline{background:#DC2626}.mockup-phone__btn--answer{background:var(--green);animation:pulseAnswer 2s ease-in-out infinite}
+@keyframes pulseAnswer{0%,100%{box-shadow:0 0 0 0 rgba(22,163,74,0.4)}50%{box-shadow:0 0 0 8px rgba(22,163,74,0)}}
+.mockup-phone__status{font-size:0.55rem;color:var(--green);font-weight:600}
+
+/* Mockup 2: Flow diagram */
+.mockup-flow{width:200px;font-size:0.6rem}
+.mockup-flow__box{background:#fff;border:1px solid var(--border);border-radius:6px;padding:0.35rem 0.6rem;text-align:center;font-weight:600;color:var(--text-heading);margin:0 auto;width:fit-content}
+.mockup-flow__arrow{text-align:center;color:var(--green);font-size:0.7rem;padding:0.15rem 0}
+.mockup-flow__diamond{width:fit-content;margin:0 auto;padding:0.3rem 0.6rem;background:#fff;border:1px solid var(--green);border-radius:4px;transform:rotate(0deg);font-weight:600;color:var(--green);text-align:center;font-size:0.55rem}
+.mockup-flow__branches{display:flex;justify-content:space-between;gap:0.5rem;margin-top:0.2rem}
+.mockup-flow__branch{font-size:0.52rem;color:var(--text-body);text-align:center;background:var(--bg-green-tint);padding:0.25rem 0.4rem;border-radius:4px;flex:1}
+
+/* Mockup 3: Chat */
+.mockup-chat{width:220px;display:flex;flex-direction:column;gap:0.4rem}
+.chat-bubble{padding:0.4rem 0.7rem;border-radius:10px;font-size:0.6rem;line-height:1.4;max-width:85%}
+.chat-bubble--sera{background:var(--bg-green-tint);color:var(--text-heading);align-self:flex-start;border-bottom-left-radius:3px;border-left:2px solid var(--green)}
+.chat-bubble--patient{background:#F4F4F5;color:var(--text-heading);align-self:flex-end;border-bottom-right-radius:3px}
+
+/* Mockup 4: Calendar */
+.mockup-cal{width:220px;background:#fff;border-radius:10px;border:1px solid var(--border);overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.06)}
+.mockup-cal__header{display:flex;font-size:0.5rem;font-weight:700;color:var(--text-muted);text-transform:uppercase;border-bottom:1px solid var(--border-light)}
+.mockup-cal__header span{flex:1;text-align:center;padding:0.3rem 0}
+.mockup-cal__grid{display:grid;grid-template-columns:repeat(5,1fr);gap:2px;padding:0.3rem}
+.mockup-cal__slot{height:18px;border-radius:3px;background:var(--border-light)}
+.mockup-cal__slot--busy{background:#DBEAFE}
+.mockup-cal__slot--new{background:var(--green);position:relative}
+.mockup-cal__slot--new::after{content:'Maria G.';position:absolute;top:-1px;left:0;right:0;font-size:0.35rem;color:#fff;text-align:center;font-weight:600;line-height:18px}
+.mockup-cal__booked{font-size:0.5rem;text-align:center;padding:0.3rem;color:var(--green);font-weight:600}
+
+/* Mockup 5: Mini summary */
+.mockup-summary{width:200px;background:#fff;border-radius:10px;border:1px solid var(--border);padding:0.7rem;box-shadow:0 2px 8px rgba(0,0,0,0.06)}
+.mockup-summary__row{display:flex;justify-content:space-between;font-size:0.55rem;padding:0.2rem 0;border-bottom:1px solid var(--border-light)}
+.mockup-summary__row:last-child{border-bottom:none}
+.mockup-summary__label{color:var(--text-muted)}.mockup-summary__val{color:var(--text-heading);font-weight:600;font-family:var(--font-mono);font-size:0.52rem}
+
+/* Mockup 6: Outbound notification */
+.mockup-notify{width:220px;background:#fff;border-radius:12px;border:1px solid var(--border);padding:0.8rem;box-shadow:0 4px 12px rgba(0,0,0,0.06)}
+.mockup-notify__header{font-size:0.6rem;font-weight:700;color:var(--text-heading);margin-bottom:0.5rem;display:flex;align-items:center;gap:0.3rem}
+.mockup-notify__msg{font-size:0.58rem;color:var(--text-body);line-height:1.5;margin-bottom:0.6rem;background:var(--bg-warm);padding:0.5rem;border-radius:8px}
+.mockup-notify__actions{display:flex;gap:0.3rem;margin-bottom:0.5rem}
+.mockup-notify__action{flex:1;font-size:0.5rem;font-weight:600;padding:0.3rem;border-radius:6px;text-align:center;border:1px solid var(--border)}
+.mockup-notify__action--confirm{background:var(--green-light);color:var(--green);border-color:var(--green-light)}
+.mockup-notify__action--reschedule{color:var(--text-body)}
+.mockup-notify__action--cancel{color:var(--negative)}
+.mockup-notify__status{font-size:0.55rem;color:var(--green);font-weight:700;text-align:center}
+
+/* ========== 9. COMPARISON TABLE ========== */
+.comparison-table{background:var(--bg-white);padding:6rem 0}
+.comparison-table__header{text-align:center;max-width:600px;margin:0 auto 3rem}
+.comp-table{max-width:900px;margin:0 auto;border:1px solid var(--border);border-radius:16px;overflow:hidden}
+.comp-table__head{display:flex}
+.comp-table__head-cell{padding:1rem 1.5rem;font-weight:700;font-size:0.88rem}
+.comp-table__head-cell:first-child{flex:0 0 40%;background:var(--bg-warm);color:var(--text-heading)}
+.comp-table__head-cell:nth-child(2){flex:0 0 30%;background:var(--green);color:#fff;text-align:center}
+.comp-table__head-cell:nth-child(3){flex:0 0 30%;background:#F4F4F5;color:var(--text-muted);text-align:center}
+.comp-table__row{display:flex;border-top:1px solid var(--border)}
+.comp-table__row:nth-child(even){background:var(--bg-warm)}
+.comp-table__cell{padding:0.9rem 1.5rem;font-size:0.85rem;display:flex;align-items:flex-start;gap:0.5rem;line-height:1.5}
+.comp-table__cell:first-child{flex:0 0 40%;font-weight:600;color:var(--text-heading)}
+.comp-table__cell:nth-child(2){flex:0 0 30%;color:var(--text-heading)}
+.comp-table__cell:nth-child(3){flex:0 0 30%;color:var(--text-muted);font-size:0.82rem}
+.comp-check{color:var(--green);font-weight:700;flex-shrink:0;font-size:1rem;line-height:1.3}
+.comp-x{color:var(--text-muted);font-weight:700;flex-shrink:0;font-size:1rem;line-height:1.3}
+
+/* ========== 10. SHOWCASE ========== */
+.showcase{background:var(--bg-green-tint);padding:6rem 0}
+.showcase__inner{display:flex;gap:3rem;align-items:center}
+.showcase__left{flex:1}.showcase__right{flex:1;display:flex;justify-content:center}
+.showcase__checklist{margin:2rem 0;display:flex;flex-direction:column;gap:0.8rem}
+.showcase__check-item{display:flex;align-items:center;gap:0.6rem;font-size:0.95rem;color:var(--text-heading);font-weight:500}
+.showcase__check-item svg{flex-shrink:0}
+.showcase-browser{max-width:440px;width:100%}
+.summary-card{padding:1.5rem}
+.summary-card__header{display:flex;align-items:center;gap:0.5rem;margin-bottom:1.2rem}
+.summary-card__dot{width:8px;height:8px;background:var(--green);border-radius:50%}
+.summary-card__label{font-size:0.7rem;font-weight:600;text-transform:uppercase;letter-spacing:0.06em;color:var(--green)}
+.summary-card__time{margin-left:auto;font-size:0.7rem;color:var(--text-muted);font-family:var(--font-mono)}
+.summary-card__row{display:flex;justify-content:space-between;align-items:flex-start;padding:0.55rem 0;border-bottom:1px solid var(--border-light);opacity:0;transform:translateX(20px);transition:opacity 0.4s,transform 0.4s}
+.summary-card__row.visible{opacity:1;transform:translateX(0)}
+.summary-card__row:last-of-type{border-bottom:none}
+.summary-card__row-label{font-size:0.78rem;color:var(--text-muted);font-weight:500;flex-shrink:0;margin-right:1rem}
+.summary-card__row-value{font-size:0.82rem;color:var(--text-heading);font-weight:600;text-align:right;font-family:var(--font-mono)}
+.summary-card__row-value.notes{font-weight:400;font-size:0.78rem;color:var(--text-body);font-style:italic;max-width:220px;line-height:1.5;font-family:var(--font-sans)}
+.mini-waveform{display:inline-flex;align-items:center;gap:2px;margin-left:0.4rem;vertical-align:middle}
+.mini-waveform__bar{width:2px;border-radius:1px;background:var(--green);display:inline-block}
+.mini-waveform__bar.active{animation:miniWave 0.7s ease-in-out infinite}
+@keyframes miniWave{0%,100%{height:4px}50%{height:var(--h,10px)}}
+.summary-card__badges{display:flex;gap:0.5rem;margin-top:1rem}
+
+/* ========== 11. TRUST BAR ========== */
+.trust-bar{background:var(--bg-white);padding:2.5rem 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.trust-bar__inner{display:flex;justify-content:center;gap:3rem;flex-wrap:wrap;max-width:1000px;margin:0 auto}
+.trust-item{display:flex;align-items:center;gap:0.5rem;font-size:0.85rem;color:var(--text-body);font-weight:500}
+.trust-item svg{flex-shrink:0}
+
+/* ========== 12. INDUSTRIES ========== */
+.industries{background:var(--bg-warm);padding:6rem 0}
+.industries__header{text-align:center;max-width:600px;margin:0 auto 3rem}
+.industries__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;max-width:1100px;margin:0 auto}
+.industry-card{background:var(--card-bg);border:1px solid var(--border);border-radius:18px;padding:1.8rem;transition:all 0.3s}
+.industry-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-card-hover)}
+.industry-card__icon{width:44px;height:44px;border-radius:50%;background:var(--bg-green-tint);display:flex;align-items:center;justify-content:center;font-size:1.15rem;margin-bottom:1rem}
+.industry-card__title{font-family:var(--font-heading);font-weight:700;color:var(--text-heading);font-size:1.05rem;margin-bottom:0.5rem}
+.industry-card__desc{font-size:0.88rem;color:var(--text-body);line-height:1.65}
+
+/* ========== 13. TESTIMONIALS (teal bg) ========== */
+.testimonials{background:#0F766E;padding:6rem 0;color:#fff}
+.testimonials .eyebrow{color:rgba(255,255,255,0.6)}
+.testimonials .section-headline{color:#fff}
+.testimonials__header{text-align:center;margin-bottom:3rem}
+.testimonials__grid{display:flex;gap:1.5rem;max-width:1100px;margin:0 auto}
+.testimonial-card{flex:1;background:var(--card-bg);border-radius:var(--radius-card);border:1px solid var(--border);padding:2rem;transition:all 0.3s;position:relative;box-shadow:0 4px 15px rgba(0,0,0,0.04)}
+.testimonial-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-card-hover)}
+.testimonial-card__quote-mark{font-size:4rem;line-height:1;color:rgba(22,163,74,0.15);font-weight:800;position:absolute;top:0.5rem;left:1.2rem;font-family:Georgia,serif}
+.testimonial-card__stars{display:flex;gap:2px;margin-bottom:0.8rem;position:relative;z-index:1}
+.testimonial-card__star{width:16px;height:16px}
+.testimonial-card__text{font-size:0.95rem;line-height:1.7;color:var(--text-body);font-style:italic;position:relative;z-index:1;margin-bottom:1.2rem}
+.testimonial-card__author{font-size:0.82rem;font-weight:600;color:var(--text-heading)}
+.testimonial-card__role{font-size:0.78rem;color:var(--text-muted);margin-top:0.1rem}
+
+/* ========== 14. CASE STUDIES ========== */
+.case-studies{background:var(--bg-warm);padding:6rem 0}
+.case-studies__header{text-align:center;margin-bottom:3rem}
+.case-studies__grid{display:flex;gap:1.5rem;max-width:1100px;margin:0 auto}
+.case-card{flex:1;background:var(--card-bg);border-radius:var(--radius-card);border:1px solid var(--border);overflow:hidden;transition:all 0.3s}
+.case-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-card-hover)}
+.case-card__image{height:200px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.case-card__image--blue{background:linear-gradient(135deg,#DBEAFE,#EFF6FF)}
+.case-card__image--green{background:linear-gradient(135deg,var(--green-light),var(--bg-green-tint))}
+.case-card__image--purple{background:linear-gradient(135deg,#EDE9FE,#F5F3FF)}
+.case-card__image-mockup{transform:scale(0.85);opacity:0.9}
+.case-card__body{padding:1.5rem}
+.case-card__tags{display:flex;gap:0.4rem;margin-bottom:0.8rem}
+.case-card__tag{font-size:0.55rem;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;padding:0.2rem 0.5rem;border-radius:var(--radius-pill);background:var(--bg-warm);color:var(--text-muted)}
+.case-card__title{font-family:var(--font-heading);font-size:1rem;font-weight:700;color:var(--text-heading);line-height:1.4;margin-bottom:0.8rem}
+
+/* ========== 15. BEFORE & AFTER ========== */
+.comparison{background:var(--bg-white);padding:6rem 0}
+.comparison__header{text-align:center;margin-bottom:3rem}
+.comparison__grid{display:flex;gap:1.5rem;max-width:900px;margin:0 auto;position:relative}
+.comparison__vs{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:5;width:44px;height:44px;border-radius:50%;background:#fff;border:2px solid var(--green);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:0.75rem;color:var(--green);box-shadow:0 4px 12px rgba(0,0,0,0.1)}
+.comparison__card{flex:1;border-radius:var(--radius-card);padding:2rem}
+.comparison__card--without{background:#FEF2F2;border:1px solid #FECACA;border-left:4px solid var(--negative)}
+.comparison__card--with{background:var(--bg-green-tint);border:1px solid #BBF7D0;border-left:4px solid var(--positive)}
+.comparison__card-title{display:flex;align-items:center;gap:0.5rem;font-family:var(--font-heading);font-size:1.15rem;font-weight:700;margin-bottom:1.5rem}
+.comparison__card--without .comparison__card-title{color:var(--negative)}
+.comparison__card--with .comparison__card-title{color:var(--positive)}
+.comparison__item{margin-bottom:1.2rem}
+.comparison__item-main{display:flex;align-items:flex-start;gap:0.5rem;font-weight:600;font-size:0.92rem;color:var(--text-heading)}
+.comparison__item-main svg{flex-shrink:0;margin-top:2px}
+.comparison__item-sub{font-size:0.82rem;color:var(--text-body);margin-left:1.5rem;margin-top:0.2rem;line-height:1.5}
+
+/* ========== 16. PRICING ========== */
+.pricing{background:var(--bg-warm);padding:6rem 0}
+.pricing__header{text-align:center;max-width:600px;margin:0 auto 3rem}
+.pricing__grid{display:flex;gap:1.5rem;max-width:1000px;margin:0 auto;align-items:flex-start}
+.pricing-card{flex:1;background:var(--card-bg);border:1px solid var(--border);border-radius:var(--radius-card);padding:2.2rem;position:relative;transition:all 0.3s;overflow:hidden}
+.pricing-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-card-hover)}
+.pricing-card--pro{border:2px solid var(--green);transform:scale(1.04);box-shadow:0 8px 30px rgba(22,163,74,0.12);z-index:2}
+.pricing-card--pro:hover{transform:scale(1.04) translateY(-3px)}
+.pricing-card--pro::before{content:'';position:absolute;top:0;left:0;right:0;height:60px;background:linear-gradient(180deg,rgba(22,163,74,0.08) 0%,transparent 100%);pointer-events:none}
+.pricing-card__badge-rec{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--green);color:#fff;font-size:0.68rem;font-weight:700;padding:0.3rem 1rem;border-radius:var(--radius-pill);text-transform:uppercase;white-space:nowrap}
+.pricing-card__name{font-family:var(--font-heading);font-size:1.3rem;font-weight:700;color:var(--text-heading)}
+.pricing-card__subtitle{font-size:0.82rem;color:var(--text-muted);margin-bottom:1rem}
+.pricing-card__price{font-family:var(--font-heading);font-size:2.5rem;font-weight:800;color:var(--text-heading);margin-bottom:0.2rem}
+.pricing-card__price span{font-size:1rem;font-weight:400;color:var(--text-muted)}
+.pricing-card__save{font-size:0.75rem;color:var(--green);font-weight:600;margin-bottom:0.8rem;display:block}
+.pricing-card__desc{font-size:0.88rem;color:var(--text-body);line-height:1.6;margin-bottom:1.5rem}
+.pricing-card__features{margin-bottom:1.8rem;display:flex;flex-direction:column;gap:0.7rem}
+.pricing-card__feature{display:flex;align-items:center;gap:0.5rem;font-size:0.88rem;color:var(--text-body)}
+.pricing-card__feature svg{flex-shrink:0}
+
+/* ========== 17. FAQ ========== */
+.faq{background:var(--bg-white);padding:6rem 0}
+.faq__header{text-align:center;margin-bottom:3rem}
+.faq__list{max-width:700px;margin:0 auto}
+.faq-item{border-bottom:1px solid var(--border);padding:1.5rem 0}
+.faq-item__question{display:flex;justify-content:space-between;align-items:center;cursor:pointer;gap:1rem;width:100%;text-align:left}
+.faq-item__question-text{font-family:var(--font-heading);font-weight:600;color:var(--text-heading);font-size:1rem}
+.faq-item__chevron{transition:transform 0.3s;flex-shrink:0;color:var(--text-muted);font-size:0.8rem}
+.faq-item.open .faq-item__chevron{transform:rotate(180deg)}
+.faq-item__answer{max-height:0;overflow:hidden;transition:max-height 0.3s}
+.faq-item.open .faq-item__answer{max-height:300px}
+.faq-item__answer-text{padding-top:0.8rem;color:var(--text-body);font-size:0.92rem;line-height:1.7}
+.faq__link{text-align:center;margin-top:2.5rem}
+
+/* ========== 18. DARK CTA ========== */
+.dark-cta{
+  background:var(--dark-gradient);
+  position:relative;overflow:hidden;padding:6.5rem 0;text-align:center;
+}
+.dark-cta::before{content:'';position:absolute;top:50%;left:50%;width:600px;height:600px;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(13,155,106,0.15) 0%,transparent 70%);pointer-events:none}
+/* Animated diagonal lines */
+.dark-cta::after{
+  content:'';position:absolute;inset:0;
+  background:repeating-linear-gradient(45deg,transparent,transparent 40px,rgba(255,255,255,0.015) 40px,rgba(255,255,255,0.015) 41px);
+  animation:diagonalShift 20s linear infinite;pointer-events:none;
+}
+@keyframes diagonalShift{0%{transform:translateX(0)}100%{transform:translateX(57px)}}
+.dark-cta__content{position:relative;z-index:1}
+.dark-cta__headline{font-family:var(--font-heading);font-size:clamp(2rem,4vw,3rem);font-weight:800;color:#fff;letter-spacing:-0.03em;line-height:1.1;margin-bottom:1rem}
+.dark-cta__sub{color:rgba(255,255,255,0.7);font-size:1.05rem;max-width:540px;margin:0 auto 2.5rem;line-height:1.75}
+.dark-cta__buttons{display:flex;justify-content:center;gap:0.8rem;flex-wrap:wrap}
+
+/* Footer uses shared css/styles.css */
+
+/* Floating CTA */
+.floating-cta{position:fixed;bottom:1.5rem;right:1.5rem;z-index:90;background:var(--green);color:#fff;border-radius:var(--radius-pill);padding:0.7rem 1.5rem;font-weight:600;font-size:0.85rem;box-shadow:0 4px 20px rgba(22,163,74,0.35);transition:all 0.4s cubic-bezier(0.22,1,0.36,1);opacity:0;transform:translateX(100px);pointer-events:none}
+.floating-cta.show{opacity:1;transform:translateX(0);pointer-events:auto}
+.floating-cta:hover{background:var(--green-hover);transform:translateY(-2px);box-shadow:0 6px 24px rgba(22,163,74,0.45)}
+
+/* ========== RESPONSIVE ========== */
+@media(max-width:768px){
+  .hero{padding:5rem 0 3rem}.hero__inner{flex-direction:column;text-align:center}.hero__sub{margin-left:auto;margin-right:auto}
+  .hero__buttons{justify-content:center}.hero__trust{justify-content:center}.hero__visual{margin-top:2rem}.hero-card-stack{width:300px;transform:none}
+  .audio-demo__inner{flex-direction:column}.audio-demo__left,.audio-demo__right{flex:1}
+  .fake-sidebar{width:140px;font-size:0.65rem}.fake-browser__content{min-height:260px}
+  .stats__grid{flex-direction:column;max-width:400px}
+  .how-it-works__steps{flex-direction:column;max-width:400px;margin-left:auto;margin-right:auto}.step-connector{display:none}
+  .call-flow__grid{flex-direction:column;max-width:400px;margin-left:auto;margin-right:auto}
+  .features__grid{grid-template-columns:1fr;max-width:400px;margin-left:auto;margin-right:auto}
+  .comp-table__head,.comp-table__row{flex-wrap:wrap}
+  .comp-table__head-cell,.comp-table__cell{flex:1 1 100%!important;text-align:left!important}
+  .comp-table__head-cell:first-child,.comp-table__cell:first-child{font-weight:700;border-bottom:1px solid var(--border)}
+  .showcase__inner{flex-direction:column}
+  .testimonials__grid{flex-direction:column;max-width:400px;margin-left:auto;margin-right:auto}
+  .case-studies__grid{flex-direction:column;max-width:400px;margin-left:auto;margin-right:auto}
+  .industries__grid{grid-template-columns:1fr}
+  .comparison__grid{flex-direction:column}.comparison__vs{display:none}
+  .pricing__grid{flex-direction:column;align-items:center}.pricing-card{max-width:400px;width:100%}.pricing-card--pro{transform:none}.pricing-card--pro:hover{transform:translateY(-3px)}
+}
+@media(max-width:480px){
+  .audio-demo__tabs{flex-direction:column}.audio-tab{text-align:center}.hero-card-stack{width:280px}
+  .trust-bar__inner{gap:1.5rem}
+}
+</style>
+</head>
+<body>
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- NAV -->
+<nav class="nav" id="nav"><div class="nav__inner">
+  <a href="index.html" class="nav__logo">sera</a>
+  <div class="nav__links">
+    <div class="nav__dropdown">
+      <a href="product.html" class="nav__link">Product</a>
+      <div class="nav__dropdown-menu">
+        <a href="product.html#features" class="nav__dropdown-item">AI Call Coverage</a>
+        <a href="product.html#features" class="nav__dropdown-item">Voice AI Booking</a>
+        <a href="product.html#features" class="nav__dropdown-item">Call Summaries & Transcripts</a>
+        <a href="product.html#features" class="nav__dropdown-item">Missed Call Text-Back</a>
+        <a href="product.html#features" class="nav__dropdown-item">CRM & Patient Pipeline</a>
+        <a href="product.html#features" class="nav__dropdown-item">After-Hours Coverage</a>
+      </div>
+    </div>
+    <div class="nav__dropdown">
+      <a href="solutions.html" class="nav__link">Solutions</a>
+      <div class="nav__dropdown-menu">
+        <a href="solutions.html#industry-1" class="nav__dropdown-item">Physical Therapy</a>
+        <a href="solutions.html#industry-2" class="nav__dropdown-item">Dental Practices</a>
+        <a href="solutions.html#industry-3" class="nav__dropdown-item">Med Spas & Aesthetics</a>
+        <a href="solutions.html#industry-4" class="nav__dropdown-item">Chiropractors</a>
+        <a href="solutions.html#industry-5" class="nav__dropdown-item">Home Services</a>
+        <a href="solutions.html#industry-6" class="nav__dropdown-item">Real Estate</a>
+      </div>
+    </div>
+    <a href="pricing.html" class="nav__link">Pricing</a>
+    <a href="security.html" class="nav__link">Security</a>
+  </div>
+  <div class="nav__right"><a href="#" class="nav__login">Login</a><a href="#dark-cta" class="nav__cta">Book a Demo &rarr;</a></div>
+  <button class="nav__hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+</div>
+<div class="nav__mobile-menu" id="mobileMenu">
+  <a href="product.html">Product</a>
+  <a href="solutions.html">Solutions</a>
+  <a href="pricing.html">Pricing</a>
+  <a href="security.html">Security</a>
+  <a href="#">Login</a>
+  <a href="#dark-cta" class="btn btn--primary" style="text-align:center;justify-content:center">Book a Demo &rarr;</a>
+</div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" style="padding-top:7rem"><div class="hero__blob"></div><div class="container"><div class="hero__inner">
+  <div class="hero__text reveal">
+    <div class="hero__badge"><span class="hero__badge-dot"></span> HIPAA-Compliant Platform</div>
+    <h1 class="hero__headline">Never Miss Another <span class="green">Patient's Call</span> Again</h1>
+    <p class="hero__sub">Sera answers calls instantly, books into your system, works when you're closed, and never misses a lead — all automatically. Your front desk stays focused on in-office care.</p>
+    <div class="hero__buttons"><a href="#dark-cta" class="btn btn--primary">Book a Demo &rarr;</a><a href="tel:3476531170" class="btn btn--outline">&#x1F4DE; Try It Now: (347) 653-1170</a></div>
+    <div class="hero__trust">
+      <div class="hero__trust-item"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="#DCFCE7"/><path d="M5 8l2 2 4-4" stroke="#16A34A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Answers Calls Instantly</div>
+      <div class="hero__trust-item"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="#DCFCE7"/><path d="M5 8l2 2 4-4" stroke="#16A34A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Books Into Your System</div>
+      <div class="hero__trust-item"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="#DCFCE7"/><path d="M5 8l2 2 4-4" stroke="#16A34A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Works When You're Closed</div>
+      <div class="hero__trust-item"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="#DCFCE7"/><path d="M5 8l2 2 4-4" stroke="#16A34A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Never Misses a Lead</div>
+    </div>
+    <div class="hero__social-proof"><p class="hero__social-proof-text">Trusted by 50+ healthcare practices</p><p class="hero__social-proof-logos">Summit Physical Therapy <span style="color:var(--green);opacity:1">&middot;</span> Bright Smile Dental <span style="color:var(--green);opacity:1">&middot;</span> Valley Chiropractic <span style="color:var(--green);opacity:1">&middot;</span> Westside Med Spa <span style="color:var(--green);opacity:1">&middot;</span> Peak Health Partners</p></div>
+  </div>
+  <div class="hero__visual reveal"><div class="hero-card-stack">
+    <div class="hero-card-bg-3"></div><div class="hero-card-bg-2"></div>
+    <div class="hero-card">
+      <div class="hero-card__chrome"><span class="chrome-dot chrome-dot--r"></span><span class="chrome-dot chrome-dot--y"></span><span class="chrome-dot chrome-dot--g"></span><span class="chrome-label">app.joinsera.us</span></div>
+      <div class="hero-card__body">
+        <div class="hero-card__header"><span class="hero-card__dot"></span><span class="hero-card__label">LIVE CALL SUMMARY</span><span class="hero-card__time">Just now</span></div>
+        <div class="hero-card__row"><span class="hero-card__row-label">Caller</span><span class="hero-card__row-value">Sarah M.</span></div>
+        <div class="hero-card__row"><span class="hero-card__row-label">Call Type</span><span class="hero-card__row-value">New Patient</span></div>
+        <div class="hero-card__row"><span class="hero-card__row-label">Reason</span><span class="hero-card__row-value">Back Pain</span></div>
+        <div class="hero-card__row"><span class="hero-card__row-label">Insurance</span><span class="hero-card__row-value">Aetna</span></div>
+        <div class="hero-card__row"><span class="hero-card__row-label">Preferred Time</span><span class="hero-card__row-value">Afternoons</span></div>
+        <div class="hero-card__badges"><span class="badge badge--green">&check; Captured</span><span class="badge badge--teal">&check; Delivered to Staff</span></div>
+      </div>
+    </div>
+  </div></div>
+</div></div></section>
+
+<div class="wave-divider"><svg viewBox="0 0 1200 24" preserveAspectRatio="none"><path d="M0 24C300 0 900 0 1200 24L1200 24 0 24Z" fill="#064E3B"/></svg></div>
+
+<!-- 3. AUDIO DEMO -->
+<section class="audio-demo" id="audio-demo"><div class="container"><div class="audio-demo__inner">
+  <div class="audio-demo__left reveal">
+    <p class="eyebrow">HEAR IT LIVE</p>
+    <h2 class="section-headline">Listen to Sera Handle a Real Patient Call</h2>
+    <p class="section-sub">This is what your patients hear when they call your clinic and Sera picks up. Natural, professional, and captures every detail.</p>
+    <div class="audio-demo__tabs">
+      <button class="audio-tab active" data-tab="dental">&#x1F9B7; Dental Office</button>
+      <button class="audio-tab" data-tab="pt">&#x1F9B4; PT Clinic</button>
+      <button class="audio-tab" data-tab="chiro">&#x1F527; Chiropractor</button>
+    </div>
+    <div class="audio-player" id="audioPlayer">
+      <div class="audio-player__btn-wrap">
+        <div class="audio-player__pulse" id="pulseRing"></div>
+        <button class="audio-player__btn" id="playPauseBtn" aria-label="Play audio demo">
+          <svg id="playIcon" viewBox="0 0 24 24"><polygon points="6,3 20,12 6,21"/></svg>
+          <svg id="pauseIcon" viewBox="0 0 24 24" style="display:none"><rect x="5" y="3" width="4" height="18"/><rect x="15" y="3" width="4" height="18"/></svg>
+        </button>
+      </div>
+      <div class="audio-player__middle">
+        <div class="audio-player__progress-row">
+          <div class="audio-player__progress" id="progressBar"><div class="audio-player__fill" id="progressFill"></div></div>
+          <div class="audio-waveform" id="waveform">
+            <div class="audio-waveform__bar" style="--max-h:14px"></div><div class="audio-waveform__bar" style="--max-h:22px"></div><div class="audio-waveform__bar" style="--max-h:10px"></div><div class="audio-waveform__bar" style="--max-h:18px"></div><div class="audio-waveform__bar" style="--max-h:24px"></div><div class="audio-waveform__bar" style="--max-h:12px"></div><div class="audio-waveform__bar" style="--max-h:20px"></div><div class="audio-waveform__bar" style="--max-h:8px"></div>
+          </div>
+          <span class="audio-player__time" id="timeDisplay">0:00 / 0:47</span>
+        </div>
+        <p class="audio-player__note">&#x1F3A7; Real AI conversation &middot; Not scripted &middot; Not edited</p>
+      </div>
+    </div>
+    <div class="live-summary confetti-container" id="liveSummary"><div class="live-summary__header">&#x1F4CB; Call Summary &mdash; Building Live...</div><div id="summaryRows"></div></div>
+  </div>
+  <div class="audio-demo__right reveal">
+    <div class="fake-browser" id="fakeBrowser">
+      <div class="fake-browser__chrome"><span class="fake-browser__dot fake-browser__dot--r"></span><span class="fake-browser__dot fake-browser__dot--y"></span><span class="fake-browser__dot fake-browser__dot--g"></span><span class="fake-browser__url">app.joinsera.us/dashboard</span></div>
+      <div class="fake-browser__content">
+        <div class="fake-sidebar"><div class="fake-sidebar__logo">sera</div><div class="fake-sidebar__item active"><span class="fake-sidebar__item-icon">&#x1F4CA;</span> Dashboard</div><div class="fake-sidebar__item"><span class="fake-sidebar__item-icon">&#x1F4DE;</span> Calls</div><div class="fake-sidebar__item"><span class="fake-sidebar__item-icon">&#x1F4E5;</span> Inbox</div><div class="fake-sidebar__item"><span class="fake-sidebar__item-icon">&#x1F465;</span> Patients</div><div class="fake-sidebar__item"><span class="fake-sidebar__item-icon">&#x2699;</span> Settings</div></div>
+        <div class="fake-main" id="fakeMain"></div>
+      </div>
+    </div>
+    <div class="audio-demo__callout-box"><span style="font-size:1.2rem;flex-shrink:0">&#x1F4DE;</span><p>Want to try it yourself? Call <a href="tel:3476531170">(347) 653-1170</a> and talk to Sera live.</p></div>
+  </div>
+</div></div></section>
+
+<div class="wave-divider" style="background:#065F46"><svg viewBox="0 0 1200 24" preserveAspectRatio="none"><path d="M0 0C300 24 900 24 1200 0L1200 24 0 24Z" fill="#FFFBEB"/></svg></div>
+
+<!-- 4. STATS -->
+<section class="stats reveal" id="stats"><div class="container">
+  <div class="stats__grid">
+    <div class="stat-card reveal"><div class="stat__number" data-target="0">0</div><div class="stat__label">Missed Calls While Live</div><div class="stat__desc">Every call answered, every time</div></div>
+    <div class="stat-card reveal"><div class="stat__number" data-target="30" data-prefix="<" data-suffix="s">&lt;30s</div><div class="stat__label">Average Answer Time</div><div class="stat__desc">Faster than any front desk</div></div>
+    <div class="stat-card reveal"><div class="stat__number" data-target="20" data-prefix="15-" data-suffix=" hrs">15-20 hrs</div><div class="stat__label">Saved Weekly</div><div class="stat__desc">Reclaimed for patient care</div></div>
+    <div class="stat-card reveal"><div class="stat__number" data-display="24/7">24/7</div><div class="stat__label">Coverage Active</div><div class="stat__desc">Nights, weekends, holidays</div></div>
+  </div>
+  <div class="trust-pills reveal">
+    <span class="trust-pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>HIPAA Compliant</span>
+    <span class="trust-pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>SOC 2 Type II</span>
+    <span class="trust-pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>End-to-End Encrypted</span>
+    <span class="trust-pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>BAA Included</span>
+  </div>
+</div></section>
+
+<!-- 5. INTEGRATIONS — Branded cards -->
+<section class="integrations reveal" id="integrations">
+  <p class="integrations__title">Works With Your Existing Systems</p>
+  <div class="marquee-wrap">
+    <div class="marquee-track">
+      <span class="marquee-logo" style="font-style:italic;color:#00857C;font-size:1.1rem">&#x2726; athenahealth</span>
+      <span class="marquee-logo" style="font-weight:700;color:#2B6CB0;font-size:1.1rem">ModMed</span>
+      <span class="marquee-logo" style="font-weight:700;color:#E97025;font-size:1.1rem">NextGen</span>
+      <span class="marquee-logo" style="font-style:italic;font-weight:500;color:#1A365D;font-size:1rem">eClinicalWorks</span>
+      <span class="marquee-logo" style="font-weight:600;color:#1A365D;font-size:1rem">AdvancedMD</span>
+      <span class="marquee-logo" style="color:#00A1E0;font-size:1.1rem">Salesforce</span>
+      <span class="marquee-logo" style="font-weight:700;color:#FF7A59;font-size:1.1rem">HubSpot</span>
+      <span class="marquee-logo" style="font-weight:600;color:#16A34A;font-size:1.1rem">DrChrono</span>
+      <span class="marquee-logo" style="font-style:italic;color:#00857C;font-size:1.1rem">&#x2726; athenahealth</span>
+      <span class="marquee-logo" style="font-weight:700;color:#2B6CB0;font-size:1.1rem">ModMed</span>
+      <span class="marquee-logo" style="font-weight:700;color:#E97025;font-size:1.1rem">NextGen</span>
+      <span class="marquee-logo" style="font-style:italic;font-weight:500;color:#1A365D;font-size:1rem">eClinicalWorks</span>
+      <span class="marquee-logo" style="font-weight:600;color:#1A365D;font-size:1rem">AdvancedMD</span>
+      <span class="marquee-logo" style="color:#00A1E0;font-size:1.1rem">Salesforce</span>
+      <span class="marquee-logo" style="font-weight:700;color:#FF7A59;font-size:1.1rem">HubSpot</span>
+      <span class="marquee-logo" style="font-weight:600;color:#16A34A;font-size:1.1rem">DrChrono</span>
+    </div>
+  </div>
+  <p class="integrations__note">Don't see your system? We integrate with any EMR via API.</p>
+</section>
+
+<!-- 6. HOW IT WORKS -->
+<section class="how-it-works" id="how-it-works"><div class="container">
+  <div class="how-it-works__header reveal"><p class="eyebrow">HOW IT WORKS</p><h2 class="section-headline">A System That Works While Your Staff Works</h2><p class="section-sub mx-auto">When your team is busy or your clinic is closed, Sera answers incoming calls, asks the right intake questions, and delivers structured summaries to your staff.</p></div>
+  <div class="how-it-works__steps" id="stepsContainer">
+    <div class="step-card reveal"><span class="step-card__num">1</span><div class="step-card__icon">&#x1F4DE;</div><div class="step-card__title">Call Received</div><div class="step-card__desc">A patient calls your clinic. Sera picks up instantly — no rings, no hold music, no voicemail.</div><span class="step-badge step-badge--gray" data-step="0">Receiving</span></div>
+    <div class="step-connector"><div class="step-connector__line"><div class="step-connector__dot" data-connector="0"></div></div><div class="step-connector__arrow"></div></div>
+    <div class="step-card reveal"><span class="step-card__num">2</span><div class="step-card__icon">&#x1F4AC;</div><div class="step-card__title">Intake Questions</div><div class="step-card__desc">Sera asks about the reason for calling, insurance info, and preferred appointment times.</div><span class="step-badge step-badge--blue" data-step="1">Processing</span></div>
+    <div class="step-connector"><div class="step-connector__line"><div class="step-connector__dot" data-connector="1"></div></div><div class="step-connector__arrow"></div></div>
+    <div class="step-card reveal"><span class="step-card__num">3</span><div class="step-card__icon">&#x1F4CB;</div><div class="step-card__title">Summary Generated</div><div class="step-card__desc">A structured summary is created with all the patient data your team needs to follow up.</div><span class="step-badge step-badge--green" data-step="2">&check; Captured</span></div>
+    <div class="step-connector"><div class="step-connector__line"><div class="step-connector__dot" data-connector="2"></div></div><div class="step-connector__arrow"></div></div>
+    <div class="step-card reveal"><span class="step-card__num">4</span><div class="step-card__icon">&#x1F514;</div><div class="step-card__title">Staff Notified</div><div class="step-card__desc">Your team gets the summary via email, SMS, or the portal — ready to book the patient.</div><span class="step-badge step-badge--green" data-step="3">&check; Sent</span></div>
+  </div>
+  <div class="how-it-works__link reveal"><a href="#" class="green-link">See the full process &rarr;</a></div>
+</div></section>
+
+<!-- 7. CALL FLOW DIAGRAM -->
+<section class="call-flow" id="call-flow"><div class="container">
+  <div class="call-flow__header reveal"><p class="eyebrow">CALL HANDLING</p><h2 class="section-headline">How Sera Handles Every Scenario</h2><p class="section-sub mx-auto">From appointment requests to urgent transfers, Sera routes every call intelligently.</p></div>
+  <div class="call-flow__tabs reveal">
+    <button class="flow-tab active" data-flow="inbound">Inbound Calls</button>
+    <button class="flow-tab" data-flow="outbound">Outbound Calls <span class="flow-tab__soon">Soon</span></button>
+  </div>
+  <div id="flowContent">
+    <!-- Populated by JS -->
+  </div>
+</div></section>
+
+<div class="wave-divider"><svg viewBox="0 0 1200 24" preserveAspectRatio="none"><path d="M0 0C300 24 900 24 1200 0L1200 24 0 24Z" fill="#FFFFFF"/></svg></div>
+
+<!-- 8. FEATURE CARDS WITH UI MOCKUPS -->
+<section class="features" id="features"><div class="container">
+  <div class="features__header reveal"><p class="eyebrow">PLATFORM</p><h2 class="section-headline">Every Feature Your Practice Needs</h2><p class="section-sub mx-auto">Enterprise-grade AI call coverage with real product interfaces — not vaporware.</p></div>
+  <div class="features__grid">
+    <!-- Card 1: Instant Call Answering -->
+    <div class="feature-card reveal">
+      <div class="feature-card__mockup" style="background:linear-gradient(135deg,#1a1a2e,#2d2b55)">
+        <div class="mockup-phone">
+          <div class="mockup-phone__label">Incoming Call</div>
+          <div class="mockup-phone__clinic">Summit Physical Therapy</div>
+          <div class="mockup-phone__caller">Maria Garcia</div>
+          <div class="mockup-phone__buttons">
+            <div class="mockup-phone__btn mockup-phone__btn--decline">&#x1F4F5;</div>
+            <div class="mockup-phone__btn mockup-phone__btn--answer">&#x1F4DE;</div>
+          </div>
+          <div class="mockup-phone__status">Sera answering in 2s...</div>
+        </div>
+      </div>
+      <div class="feature-card__text"><div class="feature-card__title">Instant Call Answering</div><div class="feature-card__desc">Every call picked up in under 30 seconds, 24/7. No voicemail, no hold music — patients talk to Sera immediately.</div></div>
+    </div>
+    <!-- Card 2: Smart Call Routing -->
+    <div class="feature-card reveal">
+      <div class="feature-card__mockup" style="background:linear-gradient(135deg,#F0FDF4,#DCFCE7)">
+        <div class="mockup-flow">
+          <div class="mockup-flow__box">&#x1F4DE; Patient Call</div>
+          <div class="mockup-flow__arrow">&darr;</div>
+          <div class="mockup-flow__diamond">Staff Available?</div>
+          <div class="mockup-flow__arrow">&darr;</div>
+          <div class="mockup-flow__branches">
+            <div class="mockup-flow__branch">&rarr; Connect to Staff</div>
+            <div class="mockup-flow__branch" style="background:var(--green-light);color:var(--green);font-weight:600">&rarr; Sera Answers</div>
+          </div>
+        </div>
+      </div>
+      <div class="feature-card__text"><div class="feature-card__title">Smart Call Routing</div><div class="feature-card__desc">Sera knows when to handle it and when to transfer. Complex cases get warm-transferred with full context.</div></div>
+    </div>
+    <!-- Card 3: Structured Intake -->
+    <div class="feature-card reveal">
+      <div class="feature-card__mockup" style="background:var(--bg-green-tint)">
+        <div class="mockup-chat">
+          <div style="display:flex;align-items:flex-start;gap:5px"><span style="width:18px;height:18px;border-radius:50%;background:var(--green);color:#fff;font-size:0.45rem;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-weight:700">S</span><div class="chat-bubble chat-bubble--sera">How can I help you today?</div></div>
+          <div style="display:flex;align-items:flex-start;gap:5px;flex-direction:row-reverse"><span style="width:18px;height:18px;border-radius:50%;background:#E4E4E7;color:#52525B;font-size:0.45rem;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-weight:700">P</span><div class="chat-bubble chat-bubble--patient">I need to schedule for knee pain</div></div>
+          <div style="display:flex;align-items:flex-start;gap:5px"><span style="width:18px;height:18px;border-radius:50%;background:var(--green);color:#fff;font-size:0.45rem;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-weight:700">S</span><div class="chat-bubble chat-bubble--sera">Of course. Can I get your insurance?</div></div>
+          <div style="display:flex;align-items:flex-start;gap:5px;flex-direction:row-reverse"><span style="width:18px;height:18px;border-radius:50%;background:#E4E4E7;color:#52525B;font-size:0.45rem;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-weight:700">P</span><div class="chat-bubble chat-bubble--patient">Blue Cross Blue Shield</div></div>
+          <div style="display:flex;align-items:flex-start;gap:5px"><span style="width:18px;height:18px;border-radius:50%;background:var(--green);color:#fff;font-size:0.45rem;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-weight:700">S</span><div class="chat-bubble chat-bubble--sera">Got it! Any preferred times?</div></div>
+        </div>
+      </div>
+      <div class="feature-card__text"><div class="feature-card__title">Structured Intake</div><div class="feature-card__desc">AI-driven conversation captures name, insurance, reason, and preferences — structured and ready for your team.</div></div>
+    </div>
+    <!-- Card 4: Automated Scheduling -->
+    <div class="feature-card reveal">
+      <div class="feature-card__mockup">
+        <div class="mockup-cal">
+          <div class="mockup-cal__header"><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span></div>
+          <div class="mockup-cal__grid">
+            <div class="mockup-cal__slot"></div><div class="mockup-cal__slot mockup-cal__slot--busy"></div><div class="mockup-cal__slot"></div><div class="mockup-cal__slot mockup-cal__slot--busy"></div><div class="mockup-cal__slot"></div>
+            <div class="mockup-cal__slot mockup-cal__slot--busy"></div><div class="mockup-cal__slot"></div><div class="mockup-cal__slot mockup-cal__slot--busy"></div><div class="mockup-cal__slot"></div><div class="mockup-cal__slot mockup-cal__slot--busy"></div>
+            <div class="mockup-cal__slot"></div><div class="mockup-cal__slot"></div><div class="mockup-cal__slot mockup-cal__slot--new"></div><div class="mockup-cal__slot mockup-cal__slot--busy"></div><div class="mockup-cal__slot"></div>
+            <div class="mockup-cal__slot mockup-cal__slot--busy"></div><div class="mockup-cal__slot"></div><div class="mockup-cal__slot"></div><div class="mockup-cal__slot"></div><div class="mockup-cal__slot mockup-cal__slot--busy"></div>
+          </div>
+          <div class="mockup-cal__booked">&#x2713; Booked by Sera &middot; Wed 2:30PM</div>
+        </div>
+      </div>
+      <div class="feature-card__text"><div class="feature-card__title">Automated Scheduling</div><div class="feature-card__desc">Sera checks availability and books appointments directly into your calendar. No double-booking, no manual entry.</div></div>
+    </div>
+    <!-- Card 5: Call Summaries -->
+    <div class="feature-card reveal">
+      <div class="feature-card__mockup" style="background:var(--bg-green-tint)">
+        <div style="width:200px;background:#fff;border-radius:10px;border:1px solid var(--border);overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.06)">
+          <div style="display:flex;align-items:center;gap:4px;padding:0.35rem 0.6rem;background:#F7F7F8;border-bottom:1px solid var(--border-light)"><span style="width:6px;height:6px;border-radius:50%;background:#FF5F57"></span><span style="width:6px;height:6px;border-radius:50%;background:#FEBC2E"></span><span style="width:6px;height:6px;border-radius:50%;background:#28C840"></span><span style="margin-left:auto;font-size:0.4rem;font-family:var(--font-mono);color:var(--text-muted)">app.joinsera.us</span></div>
+          <div style="padding:0.6rem">
+            <div style="display:flex;align-items:center;gap:4px;margin-bottom:6px"><span style="width:6px;height:6px;border-radius:50%;background:var(--green)"></span><span style="font-size:0.5rem;font-weight:700;color:var(--green);text-transform:uppercase">Call Summary</span></div>
+            <div class="mockup-summary__row"><span class="mockup-summary__label">Patient</span><span class="mockup-summary__val">Maria G.</span></div>
+            <div class="mockup-summary__row"><span class="mockup-summary__label">Reason</span><span class="mockup-summary__val">Knee pain</span></div>
+            <div class="mockup-summary__row"><span class="mockup-summary__label">Insurance</span><span class="mockup-summary__val">BCBS</span></div>
+            <div class="mockup-summary__row"><span class="mockup-summary__label">Preferred</span><span class="mockup-summary__val">Mornings</span></div>
+            <div style="text-align:center;margin-top:6px"><span class="badge badge--green" style="font-size:0.5rem">&check; Delivered</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="feature-card__text"><div class="feature-card__title">Call Summaries &amp; Transcripts</div><div class="feature-card__desc">Every call produces a structured summary with recording, transcript, and extracted data — delivered to your team instantly.</div></div>
+    </div>
+    <!-- Card 6: Proactive Outreach (Coming Soon) -->
+    <div class="feature-card reveal">
+      <div class="feature-card__mockup" style="background:#F8FAFC;position:relative">
+        <span class="feature-card__soon">Coming Soon</span>
+        <div class="mockup-notify">
+          <div class="mockup-notify__header">&#x1F514; Appointment Reminder</div>
+          <div class="mockup-notify__msg">Hi Maria, this is Sera from Summit PT. Your appointment is tomorrow at 2:30 PM. Would you like to confirm?</div>
+          <div class="mockup-notify__actions">
+            <div class="mockup-notify__action mockup-notify__action--confirm">&check; Confirm</div>
+            <div class="mockup-notify__action mockup-notify__action--reschedule">&#x21BB; Reschedule</div>
+            <div class="mockup-notify__action mockup-notify__action--cancel">&times; Cancel</div>
+          </div>
+          <div class="mockup-notify__status">Confirmed &check;</div>
+        </div>
+      </div>
+      <div class="feature-card__text"><div class="feature-card__title">Proactive Patient Outreach</div><div class="feature-card__desc">Automated appointment confirmations, rescheduling, and waitlist management — reducing no-shows by up to 35%.</div></div>
+    </div>
+  </div>
+</div></section>
+
+<!-- 9. COMPARISON TABLE -->
+<section class="comparison-table" id="compare"><div class="container">
+  <div class="comparison-table__header reveal"><p class="eyebrow">WHY SERA</p><h2 class="section-headline">How Sera Compares</h2><p class="section-sub mx-auto">See how AI-powered call coverage stacks up against traditional approaches.</p></div>
+  <div class="comp-table reveal">
+    <div class="comp-table__head">
+      <div class="comp-table__head-cell">Feature</div>
+      <div class="comp-table__head-cell">Sera</div>
+      <div class="comp-table__head-cell">Traditional Solutions</div>
+    </div>
+    <div class="comp-table__row"><div class="comp-table__cell">Answer Speed</div><div class="comp-table__cell"><span class="comp-check">&check;</span> Under 30 seconds, 24/7</div><div class="comp-table__cell"><span class="comp-x">&times;</span> Hold times, voicemail after hours</div></div>
+    <div class="comp-table__row"><div class="comp-table__cell">Patient Intake</div><div class="comp-table__cell"><span class="comp-check">&check;</span> AI captures name, insurance, reason automatically</div><div class="comp-table__cell"><span class="comp-x">&times;</span> Manual data entry by staff</div></div>
+    <div class="comp-table__row"><div class="comp-table__cell">Call Summaries</div><div class="comp-table__cell"><span class="comp-check">&check;</span> Instant structured summaries delivered to team</div><div class="comp-table__cell"><span class="comp-x">&times;</span> Handwritten notes, voicemail transcription</div></div>
+    <div class="comp-table__row"><div class="comp-table__cell">Channels</div><div class="comp-table__cell"><span class="comp-check">&check;</span> Voice + SMS + missed call text-back</div><div class="comp-table__cell"><span class="comp-x">&times;</span> Phone only</div></div>
+    <div class="comp-table__row"><div class="comp-table__cell">After Hours</div><div class="comp-table__cell"><span class="comp-check">&check;</span> Full coverage nights, weekends, holidays</div><div class="comp-table__cell"><span class="comp-x">&times;</span> Voicemail or expensive answering service</div></div>
+    <div class="comp-table__row"><div class="comp-table__cell">EHR Integration</div><div class="comp-table__cell"><span class="comp-check">&check;</span> athenahealth, eClinicalWorks, NextGen &amp; more</div><div class="comp-table__cell"><span class="comp-x">&times;</span> Manual data transfer</div></div>
+    <div class="comp-table__row"><div class="comp-table__cell">Setup Time</div><div class="comp-table__cell"><span class="comp-check">&check;</span> Live in 48 hours</div><div class="comp-table__cell"><span class="comp-x">&times;</span> Weeks of training and configuration</div></div>
+    <div class="comp-table__row"><div class="comp-table__cell">Contracts</div><div class="comp-table__cell"><span class="comp-check">&check;</span> Month-to-month, cancel anytime</div><div class="comp-table__cell"><span class="comp-x">&times;</span> Annual contracts typical</div></div>
+  </div>
+</div></section>
+
+<div class="wave-divider"><svg viewBox="0 0 1200 24" preserveAspectRatio="none"><path d="M0 24C300 0 900 0 1200 24L1200 24 0 24Z" fill="#F0FDF4"/></svg></div>
+
+<!-- 10. SHOWCASE -->
+<section class="showcase" id="showcase"><div class="container"><div class="showcase__inner">
+  <div class="showcase__left reveal">
+    <h2 class="section-headline">Everything Your Front Desk Needs — Delivered Automatically</h2>
+    <p class="section-sub">Sera captures patient data, generates structured summaries, and sends them to your team in real time. No extra software. No training required.</p>
+    <div class="showcase__checklist">
+      <div class="showcase__check-item"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#DCFCE7"/><path d="M6 10l3 3 5-5" stroke="#16A34A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Patient name &amp; contact info</div>
+      <div class="showcase__check-item"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#DCFCE7"/><path d="M6 10l3 3 5-5" stroke="#16A34A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Reason for calling</div>
+      <div class="showcase__check-item"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#DCFCE7"/><path d="M6 10l3 3 5-5" stroke="#16A34A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Insurance details</div>
+      <div class="showcase__check-item"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#DCFCE7"/><path d="M6 10l3 3 5-5" stroke="#16A34A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Appointment preferences</div>
+      <div class="showcase__check-item"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#DCFCE7"/><path d="M6 10l3 3 5-5" stroke="#16A34A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Call recording &amp; transcript</div>
+    </div>
+    <a href="#" class="green-link">Explore the Product &rarr;</a>
+  </div>
+  <div class="showcase__right reveal"><div class="showcase-browser"><div class="fake-browser">
+    <div class="fake-browser__chrome"><span class="fake-browser__dot fake-browser__dot--r"></span><span class="fake-browser__dot fake-browser__dot--y"></span><span class="fake-browser__dot fake-browser__dot--g"></span><span class="fake-browser__url">app.joinsera.us/call/284</span></div>
+    <div class="summary-card" id="showcaseSummary">
+      <div class="summary-card__header"><span class="summary-card__dot"></span><span class="summary-card__label">CALL SUMMARY</span><span class="summary-card__time">2 min ago</span></div>
+      <div class="summary-card__row" data-reveal-row><span class="summary-card__row-label">Patient</span><span class="summary-card__row-value">John D. &middot; (555) 123-4567</span></div>
+      <div class="summary-card__row" data-reveal-row><span class="summary-card__row-label">Reason</span><span class="summary-card__row-value">Knee pain evaluation</span></div>
+      <div class="summary-card__row" data-reveal-row><span class="summary-card__row-label">Insurance</span><span class="summary-card__row-value">Blue Cross Blue Shield</span></div>
+      <div class="summary-card__row" data-reveal-row><span class="summary-card__row-label">Preferred</span><span class="summary-card__row-value">Mornings, Mon-Wed</span></div>
+      <div class="summary-card__row" data-reveal-row><span class="summary-card__row-label">Notes</span><span class="summary-card__row-value notes">"Previous ACL surgery in 2022. Prefers early AM before work."</span></div>
+      <div class="summary-card__row" data-reveal-row><span class="summary-card__row-label">Duration</span><span class="summary-card__row-value">2m 34s <span class="mini-waveform"><span class="mini-waveform__bar active" style="--h:8px"></span><span class="mini-waveform__bar active" style="--h:14px"></span><span class="mini-waveform__bar active" style="--h:6px"></span><span class="mini-waveform__bar active" style="--h:12px"></span><span class="mini-waveform__bar active" style="--h:10px"></span><span class="mini-waveform__bar active" style="--h:8px"></span></span></span></div>
+      <div class="summary-card__badges"><span class="badge badge--green">&check; Captured</span><span class="badge badge--teal">&check; Delivered</span></div>
+    </div>
+  </div></div></div>
+</div></div></section>
+
+<!-- 11. TRUST BAR -->
+<section class="trust-bar reveal"><div class="trust-bar__inner">
+  <div class="trust-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>HIPAA Compliant</div>
+  <div class="trust-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>End-to-End Encrypted</div>
+  <div class="trust-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>24/7 Coverage</div>
+  <div class="trust-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>No Contracts</div>
+  <div class="trust-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>SOC 2 Type II</div>
+</div></section>
+
+<!-- 12. INDUSTRIES -->
+<section class="industries" id="industries"><div class="container">
+  <div class="industries__header reveal"><p class="eyebrow">INDUSTRIES</p><h2 class="section-headline">Built for Businesses That Can't Miss Calls</h2><p class="section-sub mx-auto">From healthcare practices to home service businesses, Sera keeps your phones covered so you never lose another lead.</p></div>
+  <div class="industries__grid">
+    <div class="industry-card reveal"><div class="industry-card__icon">&#x1F9B4;</div><div class="industry-card__title">Physical Therapy Clinics</div><div class="industry-card__desc">Answers every patient call, verifies insurance info, books into your EMR, and reduces front-desk workload by 15-20 hours per week.</div></div>
+    <div class="industry-card reveal"><div class="industry-card__icon">&#x1F9B7;</div><div class="industry-card__title">Dental Practices</div><div class="industry-card__desc">Never miss a new patient inquiry. Capture appointments around the clock with automated voice AI scheduling and missed call text back.</div></div>
+    <div class="industry-card reveal"><div class="industry-card__icon">&#x2728;</div><div class="industry-card__title">Med Spas</div><div class="industry-card__desc">Convert every inbound inquiry into a booked consultation. Sera handles after-hours calls and automated appointment scheduling seamlessly.</div></div>
+    <div class="industry-card reveal"><div class="industry-card__icon">&#x1F527;</div><div class="industry-card__title">Chiropractors</div><div class="industry-card__desc">Handle high call volumes during peak hours with intelligent AI call answering and automatic lead nurturing for no-shows.</div></div>
+    <div class="industry-card reveal"><div class="industry-card__icon">&#x1F3E0;</div><div class="industry-card__title">Home Services &amp; Contractors</div><div class="industry-card__desc">Stop losing jobs to missed calls. Sera answers, captures job details, and schedules estimates — even after hours and on weekends.</div></div>
+    <div class="industry-card reveal"><div class="industry-card__icon">&#x1F3E2;</div><div class="industry-card__title">Any Appointment-Based Business</div><div class="industry-card__desc">If your practice relies on scheduled visits and your front desk is the first point of contact, Sera can help.</div></div>
+  </div>
+</div></section>
+
+<!-- 13. TESTIMONIALS -->
+<section class="testimonials" id="testimonials"><div class="container">
+  <div class="testimonials__header reveal"><p class="eyebrow">SOCIAL PROOF</p><h2 class="section-headline">Trusted by Healthcare Leaders</h2></div>
+  <div class="testimonials__grid">
+    <div class="testimonial-card reveal"><span class="testimonial-card__quote-mark">&ldquo;</span><div class="testimonial-card__stars"><svg class="testimonial-card__star" viewBox="0 0 16 16" fill="#FBBF24"><polygon points="8,1 10,6 16,6.5 11.5,10.5 13,16 8,13 3,16 4.5,10.5 0,6.5 6,6"/></svg><svg class="testimonial-card__star" viewBox="0 0 16 16" fill="#FBBF24"><polygon points="8,1 10,6 16,6.5 11.5,10.5 13,16 8,13 3,16 4.5,10.5 0,6.5 6,6"/></svg><svg class="testimonial-card__star" viewBox="0 0 16 16" fill="#FBBF24"><polygon points="8,1 10,6 16,6.5 11.5,10.5 13,16 8,13 3,16 4.5,10.5 0,6.5 6,6"/></svg><svg class="testimonial-card__star" viewBox="0 0 16 16" fill="#FBBF24"><polygon points="8,1 10,6 16,6.5 11.5,10.5 13,16 8,13 3,16 4.5,10.5 0,6.5 6,6"/></svg><svg class="testimonial-card__star" viewBox="0 0 16 16" fill="#FBBF24"><polygon points="8,1 10,6 16,6.5 11.5,10.5 13,16 8,13 3,16 4.5,10.5 0,6.5 6,6"/></svg></div><p class="testimonial-card__text">"Sera answered 100% of our after-hours calls in the first month. We booked 23 new patients that would have gone to voicemail. The ROI was immediate."</p><div class="testimonial-card__author">Office Manager</div><div class="testimonial-card__role">12-Location PT Practice</div></div>
+    <div class="testimonial-card reveal"><span class="testimonial-card__quote-mark">&ldquo;</span><div class="testimonial-card__stars"><svg class="testimonial-card__star" viewBox="0 0 16 16" fill="#FBBF24"><polygon points="8,1 10,6 16,6.5 11.5,10.5 13,16 8,13 3,16 4.5,10.5 0,6.5 6,6"/></svg><svg class="testimonial-card__star" viewBox="0 0 16 16" fill="#FBBF24"><polygon points="8,1 10,6 16,6.5 11.5,10.5 13,16 8,13 3,16 4.5,10.5 0,6.5 6,6"/></svg><svg class="testimonial-card__star" viewBox="0 0 16 16" fill="#FBBF24"><polygon points="8,1 10,6 16,6.5 11.5,10.5 13,16 8,13 3,16 4.5,10.5 0,6.5 6,6"/></svg><svg class="testimonial-card__star" viewBox="0 0 16 16" fill="#FBBF24"><polygon points="8,1 10,6 16,6.5 11.5,10.5 13,16 8,13 3,16 4.5,10.5 0,6.5 6,6"/></svg><svg class="testimonial-card__star" viewBox="0 0 16 16" fill="#FBBF24"><polygon points="8,1 10,6 16,6.5 11.5,10.5 13,16 8,13 3,16 4.5,10.5 0,6.5 6,6"/></svg></div><p class="testimonial-card__text">"Our front desk was drowning. Now they focus on patients in the office while Sera handles every incoming call. Setup took less than 48 hours."</p><div class="testimonial-card__author">CEO</div><div class="testimonial-card__role">Multi-Site Dental Group</div></div>
+    <div class="testimonial-card reveal"><span class="testimonial-card__quote-mark">&ldquo;</span><div class="testimonial-card__stars"><svg class="testimonial-card__star" viewBox="0 0 16 16" fill="#FBBF24"><polygon points="8,1 10,6 16,6.5 11.5,10.5 13,16 8,13 3,16 4.5,10.5 0,6.5 6,6"/></svg><svg class="testimonial-card__star" viewBox="0 0 16 16" fill="#FBBF24"><polygon points="8,1 10,6 16,6.5 11.5,10.5 13,16 8,13 3,16 4.5,10.5 0,6.5 6,6"/></svg><svg class="testimonial-card__star" viewBox="0 0 16 16" fill="#FBBF24"><polygon points="8,1 10,6 16,6.5 11.5,10.5 13,16 8,13 3,16 4.5,10.5 0,6.5 6,6"/></svg><svg class="testimonial-card__star" viewBox="0 0 16 16" fill="#FBBF24"><polygon points="8,1 10,6 16,6.5 11.5,10.5 13,16 8,13 3,16 4.5,10.5 0,6.5 6,6"/></svg><svg class="testimonial-card__star" viewBox="0 0 16 16" fill="#FBBF24"><polygon points="8,1 10,6 16,6.5 11.5,10.5 13,16 8,13 3,16 4.5,10.5 0,6.5 6,6"/></svg></div><p class="testimonial-card__text">"I was skeptical about AI answering our phones. After hearing the first call recording, I was sold. Patients can't tell it's not a person."</p><div class="testimonial-card__author">Front Desk Lead</div><div class="testimonial-card__role">Orthopedic Clinic</div></div>
+  </div>
+</div></section>
+
+<!-- 14. CASE STUDIES -->
+<section class="case-studies"><div class="container">
+  <div class="case-studies__header reveal"><p class="eyebrow">RESULTS</p><h2 class="section-headline">Real Clients. Real Impact.</h2></div>
+  <div class="case-studies__grid">
+    <div class="case-card reveal">
+      <div class="case-card__image case-card__image--blue"><div class="case-card__image-mockup"><div class="mockup-summary" style="transform:scale(0.9)"><div style="display:flex;align-items:center;gap:4px;margin-bottom:6px"><span style="width:6px;height:6px;border-radius:50%;background:var(--green)"></span><span style="font-size:0.5rem;font-weight:700;color:var(--green)">CALL SUMMARY</span></div><div class="mockup-summary__row"><span class="mockup-summary__label">Patient</span><span class="mockup-summary__val">T. Rivera</span></div><div class="mockup-summary__row"><span class="mockup-summary__label">Reason</span><span class="mockup-summary__val">Back pain</span></div><div class="mockup-summary__row"><span class="mockup-summary__label">Status</span><span class="mockup-summary__val" style="color:var(--green)">&check; Booked</span></div></div></div></div>
+      <div class="case-card__body"><div class="case-card__tags"><span class="case-card__tag">Healthcare</span><span class="case-card__tag">Case Study</span></div><div class="case-card__title">How a 12-Location PT Practice Recovered $47K in Lost Revenue</div><a href="#" class="green-link">Read More &rarr;</a></div>
+    </div>
+    <div class="case-card reveal">
+      <div class="case-card__image case-card__image--green"><div class="case-card__image-mockup"><div style="display:flex;gap:8px;align-items:center"><div style="width:32px;height:32px;border-radius:50%;background:var(--green-light);display:flex;align-items:center;justify-content:center;font-size:0.7rem">&#x1F465;</div><div style="font-size:0.6rem;color:var(--text-heading);font-weight:600">Staff Dashboard<br><span style="color:var(--text-muted);font-weight:400">4 active, 2 on break</span></div></div></div></div>
+      <div class="case-card__body"><div class="case-card__tags"><span class="case-card__tag">Dental</span><span class="case-card__tag">Case Study</span></div><div class="case-card__title">Dental Group Cuts No-Shows by 35% With AI Reminders</div><a href="#" class="green-link">Read More &rarr;</a></div>
+    </div>
+    <div class="case-card reveal">
+      <div class="case-card__image case-card__image--purple"><div class="case-card__image-mockup"><div class="mockup-cal" style="transform:scale(0.85);width:180px"><div class="mockup-cal__header"><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span></div><div class="mockup-cal__grid"><div class="mockup-cal__slot mockup-cal__slot--busy"></div><div class="mockup-cal__slot mockup-cal__slot--busy"></div><div class="mockup-cal__slot mockup-cal__slot--busy"></div><div class="mockup-cal__slot mockup-cal__slot--busy"></div><div class="mockup-cal__slot mockup-cal__slot--busy"></div><div class="mockup-cal__slot mockup-cal__slot--busy"></div><div class="mockup-cal__slot mockup-cal__slot--busy"></div><div class="mockup-cal__slot mockup-cal__slot--busy"></div><div class="mockup-cal__slot mockup-cal__slot--busy"></div><div class="mockup-cal__slot mockup-cal__slot--busy"></div></div><div class="mockup-cal__booked">100% Booked</div></div></div></div>
+      <div class="case-card__body"><div class="case-card__tags"><span class="case-card__tag">Orthopedics</span><span class="case-card__tag">Case Study</span></div><div class="case-card__title">From 40% Missed Calls to Zero: An Orthopedic Clinic's Story</div><a href="#" class="green-link">Read More &rarr;</a></div>
+    </div>
+  </div>
+</div></section>
+
+<!-- 15. BEFORE & AFTER -->
+<section class="comparison"><div class="container">
+  <div class="comparison__header reveal"><h2 class="section-headline">Before &amp; After</h2></div>
+  <div class="comparison__grid">
+    <div class="comparison__vs">VS</div>
+    <div class="comparison__card comparison__card--without reveal">
+      <div class="comparison__card-title"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#FECACA"/><path d="M7 7l6 6M13 7l-6 6" stroke="#DC2626" stroke-width="1.5" stroke-linecap="round"/></svg>Without Call Coverage</div>
+      <div class="comparison__item"><div class="comparison__item-main"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 4l8 8M12 4l-8 8" stroke="#DC2626" stroke-width="1.5" stroke-linecap="round"/></svg>Missed calls during busy hours</div><div class="comparison__item-sub">Patients hang up and call a competitor</div></div>
+      <div class="comparison__item"><div class="comparison__item-main"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 4l8 8M12 4l-8 8" stroke="#DC2626" stroke-width="1.5" stroke-linecap="round"/></svg>Voicemails pile up</div><div class="comparison__item-sub">Staff spends hours playing phone tag</div></div>
+      <div class="comparison__item"><div class="comparison__item-main"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 4l8 8M12 4l-8 8" stroke="#DC2626" stroke-width="1.5" stroke-linecap="round"/></svg>Lost new patient opportunities</div><div class="comparison__item-sub">You never even know they called</div></div>
+      <div class="comparison__item"><div class="comparison__item-main"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 4l8 8M12 4l-8 8" stroke="#DC2626" stroke-width="1.5" stroke-linecap="round"/></svg>Staff overwhelmed</div><div class="comparison__item-sub">Juggling phones, check-ins, and paperwork</div></div>
+      <div class="comparison__item"><div class="comparison__item-main"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 4l8 8M12 4l-8 8" stroke="#DC2626" stroke-width="1.5" stroke-linecap="round"/></svg>No data from missed calls</div><div class="comparison__item-sub">Can't recover what you can't measure</div></div>
+    </div>
+    <div class="comparison__card comparison__card--with reveal">
+      <div class="comparison__card-title"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#DCFCE7"/><path d="M6 10l3 3 5-5" stroke="#16A34A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>With Sera</div>
+      <div class="comparison__item"><div class="comparison__item-main"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="#DCFCE7"/><path d="M5 8l2 2 4-4" stroke="#16A34A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Every call answered in under 30 seconds</div><div class="comparison__item-sub">No busy signal or voicemail ever</div></div>
+      <div class="comparison__item"><div class="comparison__item-main"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="#DCFCE7"/><path d="M5 8l2 2 4-4" stroke="#16A34A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Structured summaries delivered instantly</div><div class="comparison__item-sub">Staff just follows up and books</div></div>
+      <div class="comparison__item"><div class="comparison__item-main"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="#DCFCE7"/><path d="M5 8l2 2 4-4" stroke="#16A34A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>New patients captured 24/7</div><div class="comparison__item-sub">Nights, weekends, holidays, lunch breaks</div></div>
+      <div class="comparison__item"><div class="comparison__item-main"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="#DCFCE7"/><path d="M5 8l2 2 4-4" stroke="#16A34A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Staff focuses on in-office care</div><div class="comparison__item-sub">Phone coverage handled automatically</div></div>
+      <div class="comparison__item"><div class="comparison__item-main"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="#DCFCE7"/><path d="M5 8l2 2 4-4" stroke="#16A34A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Full call data and analytics</div><div class="comparison__item-sub">See exactly what patients need, when</div></div>
+    </div>
+  </div>
+</div></section>
+
+<div class="wave-divider"><svg viewBox="0 0 1200 24" preserveAspectRatio="none"><path d="M0 24C300 0 900 0 1200 24L1200 24 0 24Z" fill="#FAFAF9"/></svg></div>
+
+<!-- 16. PRICING -->
+<section class="pricing" id="pricing"><div class="container">
+  <div class="pricing__header reveal"><p class="eyebrow">PRICING</p><h2 class="section-headline">Transparent, Coverage-Based Pricing</h2><p class="section-sub mx-auto">Enterprise-grade call coverage designed for healthcare practices. No hidden fees. No long-term contracts. Cancel anytime.</p></div>
+  <div class="pricing__grid">
+    <div class="pricing-card reveal"><div class="pricing-card__name">Starter</div><div class="pricing-card__subtitle">Call Coverage</div><div class="pricing-card__price">$497<span>/mo</span></div><div class="pricing-card__desc">Solo practices and small clinics with straightforward call coverage needs.</div><div class="pricing-card__features"><div class="pricing-card__feature"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="#DCFCE7"/><path d="M5 8l2 2 4-4" stroke="#16A34A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>24/7 inbound call answering</div><div class="pricing-card__feature"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="#DCFCE7"/><path d="M5 8l2 2 4-4" stroke="#16A34A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Patient intake &amp; summaries</div><div class="pricing-card__feature"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="#DCFCE7"/><path d="M5 8l2 2 4-4" stroke="#16A34A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Staff notifications (email + SMS)</div><div class="pricing-card__feature"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="#DCFCE7"/><path d="M5 8l2 2 4-4" stroke="#16A34A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Call recordings &amp; transcripts</div><div class="pricing-card__feature"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="#DCFCE7"/><path d="M5 8l2 2 4-4" stroke="#16A34A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>HIPAA-compliant portal</div><div class="pricing-card__feature"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="#DCFCE7"/><path d="M5 8l2 2 4-4" stroke="#16A34A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Ongoing system monitoring</div></div><a href="#dark-cta" class="btn btn--green-outline btn--full">Get Started &rarr;</a></div>
+    <div class="pricing-card pricing-card--pro reveal"><div class="pricing-card__badge-rec">Recommended &middot; Best Value</div><div class="pricing-card__name">Pro</div><div class="pricing-card__subtitle">Full Intake System</div><div class="pricing-card__price">$997<span>/mo</span></div><span class="pricing-card__save">Save $35K+/year vs. hiring a full-time receptionist</span><div class="pricing-card__desc">Growing practices that want automation, follow-ups, and patient pipeline visibility.</div><div class="pricing-card__features"><div class="pricing-card__feature"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="#DCFCE7"/><path d="M5 8l2 2 4-4" stroke="#16A34A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Everything in Starter</div><div class="pricing-card__feature"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="#DCFCE7"/><path d="M5 8l2 2 4-4" stroke="#16A34A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Missed-call text-back</div><div class="pricing-card__feature"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="#DCFCE7"/><path d="M5 8l2 2 4-4" stroke="#16A34A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Automated follow-up sequences</div><div class="pricing-card__feature"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="#DCFCE7"/><path d="M5 8l2 2 4-4" stroke="#16A34A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>CRM &amp; patient pipeline</div><div class="pricing-card__feature"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="#DCFCE7"/><path d="M5 8l2 2 4-4" stroke="#16A34A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Analytics dashboard</div><div class="pricing-card__feature"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="#DCFCE7"/><path d="M5 8l2 2 4-4" stroke="#16A34A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Priority support</div></div><a href="#dark-cta" class="btn btn--primary btn--full">Get Started &rarr;</a></div>
+    <div class="pricing-card reveal"><div class="pricing-card__name">Enterprise</div><div class="pricing-card__subtitle">Custom Deployment</div><div class="pricing-card__price">Custom</div><div class="pricing-card__desc">Multi-location practices and healthcare groups needing tailored solutions.</div><div class="pricing-card__features"><div class="pricing-card__feature"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="#DCFCE7"/><path d="M5 8l2 2 4-4" stroke="#16A34A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Everything in Pro</div><div class="pricing-card__feature"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="#DCFCE7"/><path d="M5 8l2 2 4-4" stroke="#16A34A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Multi-location support</div><div class="pricing-card__feature"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="#DCFCE7"/><path d="M5 8l2 2 4-4" stroke="#16A34A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Advanced call routing</div><div class="pricing-card__feature"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="#DCFCE7"/><path d="M5 8l2 2 4-4" stroke="#16A34A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Custom integrations</div><div class="pricing-card__feature"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="#DCFCE7"/><path d="M5 8l2 2 4-4" stroke="#16A34A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Dedicated account manager</div><div class="pricing-card__feature"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="#DCFCE7"/><path d="M5 8l2 2 4-4" stroke="#16A34A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Custom reporting</div></div><a href="#dark-cta" class="btn btn--green-outline btn--full">Contact Sales &rarr;</a></div>
+  </div>
+</div></section>
+
+<!-- 17. FAQ -->
+<section class="faq" id="faq"><div class="container">
+  <div class="faq__header reveal"><p class="eyebrow">FAQ</p><h2 class="section-headline">Questions From Practice Managers</h2></div>
+  <div class="faq__list reveal">
+    <div class="faq-item open"><button class="faq-item__question" aria-expanded="true"><span class="faq-item__question-text">How long does setup take?</span><span class="faq-item__chevron">&#x25BC;</span></button><div class="faq-item__answer" style="max-height:500px"><p class="faq-item__answer-text">Most practices are live within 48 hours. We handle the configuration, call routing setup, and intake flow customization. Your team doesn't need to install anything.</p></div></div>
+    <div class="faq-item"><button class="faq-item__question" aria-expanded="false"><span class="faq-item__question-text">Is it really HIPAA-compliant?</span><span class="faq-item__chevron">&#x25BC;</span></button><div class="faq-item__answer"><p class="faq-item__answer-text">Yes. Sera is built on HIPAA-compliant infrastructure with end-to-end encryption, strict access controls, BAAs with every client, and comprehensive audit logging.</p></div></div>
+    <div class="faq-item"><button class="faq-item__question" aria-expanded="false"><span class="faq-item__question-text">What happens if the AI can't understand a caller?</span><span class="faq-item__chevron">&#x25BC;</span></button><div class="faq-item__answer"><p class="faq-item__answer-text">Sera handles the vast majority of calls naturally. If human intervention is needed, the call is immediately flagged and routed to your team with full context.</p></div></div>
+    <div class="faq-item"><button class="faq-item__question" aria-expanded="false"><span class="faq-item__question-text">Is there a contract or can I cancel anytime?</span><span class="faq-item__chevron">&#x25BC;</span></button><div class="faq-item__answer"><p class="faq-item__answer-text">No long-term contracts. All plans are month-to-month. Cancel anytime from your account settings.</p></div></div>
+    <div class="faq-item"><button class="faq-item__question" aria-expanded="false"><span class="faq-item__question-text">Does it integrate with my EMR?</span><span class="faq-item__chevron">&#x25BC;</span></button><div class="faq-item__answer"><p class="faq-item__answer-text">Sera integrates with most major EMR systems and can deliver summaries via email, SMS, or our portal. Custom integrations available on Enterprise.</p></div></div>
+    <div class="faq-item"><button class="faq-item__question" aria-expanded="false"><span class="faq-item__question-text">What happens during off-hours?</span><span class="faq-item__chevron">&#x25BC;</span></button><div class="faq-item__answer"><p class="faq-item__answer-text">That's where Sera shines most. Nights, weekends, holidays — Sera answers every call and captures full intake data so your team can follow up first thing.</p></div></div>
+    <div class="faq-item"><button class="faq-item__question" aria-expanded="false"><span class="faq-item__question-text">Will my patients know they're talking to AI?</span><span class="faq-item__chevron">&#x25BC;</span></button><div class="faq-item__answer"><p class="faq-item__answer-text">Sera sounds natural and professional. Most patients won't realize they're talking to AI — they'll just notice that someone actually answered the phone and helped them.</p></div></div>
+    <div class="faq-item"><button class="faq-item__question" aria-expanded="false"><span class="faq-item__question-text">What if a patient has an emergency?</span><span class="faq-item__chevron">&#x25BC;</span></button><div class="faq-item__answer"><p class="faq-item__answer-text">Sera is trained to detect urgent language and immediately directs patients to call 911 for emergencies. Non-emergency urgent calls are flagged and routed to your on-call staff with full context.</p></div></div>
+    <div class="faq-item"><button class="faq-item__question" aria-expanded="false"><span class="faq-item__question-text">How does Sera work with my existing phone number?</span><span class="faq-item__chevron">&#x25BC;</span></button><div class="faq-item__answer"><p class="faq-item__answer-text">We set up call forwarding from your existing number — no need to change your phone number or provider. When calls aren't answered by your staff within a set number of rings, they forward to Sera automatically.</p></div></div>
+    <div class="faq-item"><button class="faq-item__question" aria-expanded="false"><span class="faq-item__question-text">Can I customize what Sera asks callers?</span><span class="faq-item__chevron">&#x25BC;</span></button><div class="faq-item__answer"><p class="faq-item__answer-text">Yes. We configure Sera's intake flow to match your practice's exact workflow — the questions asked, the data collected, the tone used, and how summaries are formatted.</p></div></div>
+  </div>
+  <div class="faq__link reveal"><a href="#" class="green-link">See all questions &rarr;</a></div>
+</div></section>
+
+<!-- DARK CTA -->
+<section class="dark-cta" id="dark-cta"><div class="container"><div class="dark-cta__content reveal">
+  <h2 class="dark-cta__headline">Your Staff Handles Patients.<br>Sera Handles the Phones.</h2>
+  <p class="dark-cta__sub">Book a 15-minute demo and hear Sera handle real patient calls through your clinic's workflow.</p>
+  <p style="color:rgba(255,255,255,0.5);font-size:0.88rem;margin-bottom:2rem">Or try it now: <a href="tel:3476531170" style="color:var(--teal);font-weight:600">(347) 653-1170</a></p>
+  <div class="dark-cta__buttons"><a href="#" class="btn btn--white">Get Started &rarr;</a><a href="#audio-demo" class="btn btn--ghost">Watch Demo</a></div>
+</div></div></section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer__inner">
+    <div>
+      <a href="index.html" class="footer__logo">sera</a>
+      <p class="footer__brand-desc">AI-powered call coverage that answers every patient call, captures intake data, and delivers structured summaries — 24/7.</p>
+      <div class="footer__hipaa"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>HIPAA-Compliant Infrastructure</div>
+      <div class="footer__social">
+        <a href="#" aria-label="Twitter"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+        <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452z"/></svg></a>
+        <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+      </div>
+    </div>
+    <div>
+      <div class="footer__col-title">Product</div>
+      <div class="footer__col-links">
+        <a href="product.html">AI Call Coverage</a>
+        <a href="product.html">Voice AI Booking</a>
+        <a href="product.html">Call Summaries</a>
+        <a href="product.html">CRM Integration</a>
+        <a href="product.html">After-Hours Coverage</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer__col-title">Industries</div>
+      <div class="footer__col-links">
+        <a href="solutions.html">Physical Therapy</a>
+        <a href="solutions.html">Dental Practices</a>
+        <a href="solutions.html">Med Spas</a>
+        <a href="solutions.html">Chiropractors</a>
+        <a href="solutions.html">Home Services</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer__col-title">Company</div>
+      <div class="footer__col-links">
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="security.html">Security</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <p>&copy; 2026 Sera AI. All rights reserved.</p>
+    <p>hello@joinsera.us &middot; (347) 653-1170</p>
+  </div>
+</footer>
+
+<a href="#dark-cta" class="floating-cta" id="floatingCta">Book a Demo &rarr;</a>
+
+<script src="js/main.js"></script>
+<script>
+// Floating CTA
+const floatingCta=document.getElementById('floatingCta');
+const heroEl=document.querySelector('.hero');
+if(floatingCta&&heroEl){new IntersectionObserver(([e])=>{floatingCta.classList.toggle('show',!e.isIntersecting)},{threshold:0}).observe(heroEl)}
+
+// Showcase row reveal
+const showcaseEl=document.getElementById('showcase');
+if(showcaseEl){let scRevealed=false;
+new IntersectionObserver(([e])=>{if(e.isIntersecting&&!scRevealed){scRevealed=true;document.querySelectorAll('#showcaseSummary [data-reveal-row]').forEach((r,i)=>{setTimeout(()=>r.classList.add('visible'),i*150)})}},{threshold:0.3}).observe(showcaseEl)}
+
+// Steps animation
+const stepsC=document.getElementById('stepsContainer');
+if(stepsC){let stepsA=false;
+new IntersectionObserver(([e])=>{if(e.isIntersecting&&!stepsA){stepsA=true;stepsC.querySelectorAll('.step-badge').forEach((b,i)=>{setTimeout(()=>b.classList.add('visible'),i*400)});stepsC.querySelectorAll('.step-connector__dot').forEach((d,i)=>{setTimeout(()=>d.classList.add('animate'),i*400+200)})}},{threshold:0.3}).observe(stepsC)}
+
+// Call flow tabs
+const flowData={
+  inbound:[
+    {icon:'\u{1F4C5}',title:'Appointment',steps:['Patient calls to schedule an appointment','Sera collects insurance & preferred times'],result:'Appointment Booked \u2713'},
+    {icon:'\u{1F4AC}',title:'Medical Inquiry',steps:['Patient asks about services or hours','Sera answers from your clinic\'s FAQ database'],result:'Question Answered \u2713'},
+    {icon:'\u{26A0}',title:'Requires Staff',steps:['Call needs human intervention','Sera transfers to staff with full context'],result:'Warm Transfer \u2713'}
+  ],
+  outbound:[
+    {icon:'\u{1F514}',title:'Reminder',steps:['Sera calls patient 24hrs before appointment','Patient confirms, reschedules, or cancels'],result:'Confirmed \u2713'},
+    {icon:'\u{1F504}',title:'Reschedule',steps:['Patient can\'t make original time','Sera offers alternative slots from your calendar'],result:'Rescheduled \u2713'},
+    {icon:'\u{1F4CB}',title:'Waitlist',steps:['Cancellation opens a slot','Sera calls next patient on waitlist'],result:'Slot Filled \u2713'}
+  ]
+};
+function renderFlow(type){
+  const cols=flowData[type];
+  let h='<div class="call-flow__grid reveal visible">';
+  cols.forEach(c=>{
+    h+='<div class="flow-column"><div class="flow-column__header"><span class="flow-column__header-icon">'+c.icon+'</span>'+c.title+'</div><div class="flow-column__body">';
+    c.steps.forEach((s,i)=>{h+='<div class="flow-step">'+s+'</div>';if(i<c.steps.length-1)h+='<div class="flow-arrow">&darr;</div>';});
+    h+='<div class="flow-arrow">&darr;</div><div class="flow-result"><span class="badge badge--green">'+c.result+'</span></div></div></div>';
+  });
+  h+='</div>';
+  document.getElementById('flowContent').innerHTML=h;
+}
+renderFlow('inbound');
+document.querySelectorAll('.flow-tab').forEach(t=>{t.addEventListener('click',()=>{document.querySelectorAll('.flow-tab').forEach(x=>x.classList.remove('active'));t.classList.add('active');renderFlow(t.dataset.flow)})});
+
+// Audio demo
+const tabData={
+  dental:{duration:47,rows:[{time:2,label:'Caller',value:'Maria Garcia'},{time:4,label:'Reason',value:'Possible cavity'},{time:6,label:'Insurance',value:'Delta Dental'},{time:8,label:'Preferred',value:'Mornings, Tue/Wed'},{time:10,label:'',value:'\u2713 Summary complete',complete:true}],
+    dashboard:[{name:'Maria Garcia',type:'New Patient',time:'Just now',dur:'1:47',expanded:true,reason:'Possible cavity',insurance:'Delta Dental',pref:'Mornings, Tue/Wed'},{name:'James Lee',type:'Follow-up',time:'12 min ago',dur:'0:58'},{name:'Sarah Thompson',type:'New Patient',time:'34 min ago',dur:'2:12'},{name:'Robert Kim',type:'Insurance Q',time:'1 hr ago',dur:'1:05'}]},
+  pt:{duration:52,rows:[{time:2,label:'Caller',value:'James Wilson'},{time:4,label:'Reason',value:'Shoulder rehab'},{time:6,label:'Insurance',value:'United Healthcare'},{time:8,label:'Preferred',value:'Afternoons, Thu/Fri'},{time:10,label:'',value:'\u2713 Summary complete',complete:true}],
+    dashboard:[{name:'James Wilson',type:'Follow-up',time:'Just now',dur:'2:12',expanded:true,reason:'Shoulder rehab',insurance:'United Healthcare',pref:'Afternoons, Thu/Fri'},{name:'Emily Chen',type:'New Patient',time:'8 min ago',dur:'1:34'},{name:'Michael Brown',type:'New Patient',time:'22 min ago',dur:'2:47'},{name:'Lisa Park',type:'Reschedule',time:'45 min ago',dur:'0:42'}]},
+  chiro:{duration:44,rows:[{time:2,label:'Caller',value:'Emily Chen'},{time:4,label:'Reason',value:'Lower back pain'},{time:6,label:'Insurance',value:'Cigna'},{time:8,label:'Preferred',value:'Any morning slot'},{time:10,label:'',value:'\u2713 Summary complete',complete:true}],
+    dashboard:[{name:'Emily Chen',type:'New Patient',time:'Just now',dur:'1:24',expanded:true,reason:'Lower back pain',insurance:'Cigna',pref:'Any morning slot'},{name:'David Martinez',type:'Follow-up',time:'15 min ago',dur:'1:08'},{name:'Anna Johnson',type:'New Patient',time:'28 min ago',dur:'2:01'},{name:'Tom Wright',type:'Reschedule',time:'1 hr ago',dur:'0:35'}]}
+};
+let curTab='dental',isPlaying=false,audioCtx=null,audioSrc=null,audioStart=0,paused=0,sumTOs=[],afId=null;
+const playBtn=document.getElementById('playPauseBtn'),playIc=document.getElementById('playIcon'),pauseIc=document.getElementById('pauseIcon'),
+  pulseR=document.getElementById('pulseRing'),progFill=document.getElementById('progressFill'),progBar=document.getElementById('progressBar'),
+  timeDisp=document.getElementById('timeDisplay'),sumRows=document.getElementById('summaryRows'),
+  waveBars=document.querySelectorAll('.audio-waveform__bar'),fakeMain=document.getElementById('fakeMain');
+
+function fmt(s){const m=Math.floor(s/60),sec=Math.floor(s%60);return m+':'+(sec<10?'0':'')+sec}
+function dur(){return tabData[curTab].duration}
+function renderDash(tab){
+  const d=tabData[tab];let h='<div class="fake-main__header">Recent Calls <span class="fake-main__badge">'+d.dashboard.length+' today</span></div>';
+  d.dashboard.forEach(c=>{
+    if(c.expanded)h+='<div class="fake-call-row expanded"><span class="fake-call-dot"></span><span class="fake-call-name">'+c.name+'</span><span class="fake-call-type">'+c.type+'</span><span class="fake-call-time">'+c.time+'</span><span class="fake-call-dur">'+c.dur+'</span><dl class="fake-call-expanded"><dt>Reason</dt><dd>'+c.reason+'</dd><dt>Insurance</dt><dd>'+c.insurance+'</dd><dt>Preferred</dt><dd>'+c.pref+'</dd><dt>Status</dt><dd style="color:var(--green)">\u2713 Delivered</dd></dl></div>';
+    else h+='<div class="fake-call-row"><span class="fake-call-dot"></span><span class="fake-call-name">'+c.name+'</span><span class="fake-call-type">'+c.type+'</span><span class="fake-call-time">'+c.time+'</span><span class="fake-call-dur">'+c.dur+'</span></div>';
+  });fakeMain.innerHTML=h;
+}
+function genTone(d){
+  if(!audioCtx)audioCtx=new(window.AudioContext||window.webkitAudioContext)();
+  const sr=audioCtx.sampleRate,len=sr*d,buf=audioCtx.createBuffer(1,len,sr),data=buf.getChannelData(0);
+  for(let i=0;i<len;i++){const t=i/sr;const env=Math.min(t/0.5,1)*Math.min((d-t)/0.5,1);data[i]=env*0.06*Math.sin(2*Math.PI*440*(1+0.002*Math.sin(2*Math.PI*5*t))*t)}
+  return buf;
+}
+function showSkel(){let h='';for(let i=0;i<4;i++)h+='<div class="skeleton-row"><div class="skeleton-bar skeleton-bar--label"></div><div class="skeleton-bar skeleton-bar--value"></div></div>';sumRows.innerHTML=h}
+function resetSum(){sumTOs.forEach(clearTimeout);sumTOs=[];showSkel()}
+function buildRows(){
+  const d=tabData[curTab];let h='';
+  d.rows.forEach((r,i)=>{
+    if(r.complete)h+='<div class="live-summary__row complete" data-row="'+i+'"><span class="live-summary__row-value" style="color:var(--green);font-weight:700;width:100%">'+r.value+'</span></div>';
+    else h+='<div class="live-summary__row" data-row="'+i+'"><span class="live-summary__row-label">'+r.label+'</span><span class="live-summary__row-value"><span class="typing-dots"><span></span><span></span><span></span></span></span></div>';
+  });sumRows.innerHTML=h;
+}
+function startSumAnim(){
+  buildRows();const d=tabData[curTab];
+  d.rows.forEach((r,i)=>{
+    const delay=Math.max(0,(r.time-paused)*1000);
+    sumTOs.push(setTimeout(()=>{const el=sumRows.querySelector('[data-row="'+i+'"]');if(el)el.classList.add('visible')},delay));
+    if(!r.complete)sumTOs.push(setTimeout(()=>{const el=sumRows.querySelector('[data-row="'+i+'"] .live-summary__row-value');if(el)el.innerHTML=r.value},delay+600));
+    if(r.complete)sumTOs.push(setTimeout(()=>{const c=document.querySelector('.confetti-container');for(let j=0;j<10;j++){const dot=document.createElement('div');dot.className='confetti-dot';const a=Math.PI*2*j/10,dist=40+Math.random()*30;dot.style.cssText='left:50%;bottom:10px;background:'+(j%2?'#0D9488':'#16A34A')+';transition:all .6s cubic-bezier(.22,1,.36,1);opacity:1';c.appendChild(dot);requestAnimationFrame(()=>{dot.style.transform='translate('+Math.cos(a)*dist+'px,'+Math.sin(a)*dist+'px)';dot.style.opacity='0'});setTimeout(()=>dot.remove(),700)}},delay+200));
+  });
+}
+function setWave(a){waveBars.forEach(b=>b.classList.toggle('active',a));pulseR.classList.toggle('active',a)}
+function stopAudio(){if(audioSrc){try{audioSrc.stop()}catch(e){}audioSrc=null}if(afId){cancelAnimationFrame(afId);afId=null}sumTOs.forEach(clearTimeout);sumTOs=[];isPlaying=false;playIc.style.display='';pauseIc.style.display='none';setWave(false)}
+function updateProg(){
+  if(!isPlaying||!audioCtx)return;
+  const el=audioCtx.currentTime-audioStart+paused,d=dur(),pct=Math.min(el/d*100,100);
+  progFill.style.width=pct+'%';timeDisp.textContent=fmt(el)+' / '+fmt(d);
+  if(el>=d){stopAudio();paused=0;progFill.style.width='100%';return}
+  afId=requestAnimationFrame(updateProg);
+}
+playBtn.addEventListener('click',()=>{
+  if(!audioCtx)audioCtx=new(window.AudioContext||window.webkitAudioContext)();
+  if(audioCtx.state==='suspended')audioCtx.resume();
+  if(isPlaying){paused+=audioCtx.currentTime-audioStart;stopAudio()}
+  else{const d=dur();if(paused>=d)paused=0;const buf=genTone(d);audioSrc=audioCtx.createBufferSource();audioSrc.buffer=buf;audioSrc.connect(audioCtx.destination);audioSrc.start(0,paused);audioStart=audioCtx.currentTime;isPlaying=true;playIc.style.display='none';pauseIc.style.display='';setWave(true);startSumAnim();updateProg()}
+});
+progBar.addEventListener('click',e=>{const r=progBar.getBoundingClientRect(),pct=(e.clientX-r.left)/r.width,d=dur(),s=pct*d,wp=isPlaying;stopAudio();paused=s;progFill.style.width=pct*100+'%';timeDisp.textContent=fmt(s)+' / '+fmt(d);resetSum();if(wp)playBtn.click()});
+document.querySelectorAll('.audio-tab').forEach(t=>{t.addEventListener('click',()=>{document.querySelectorAll('.audio-tab').forEach(x=>x.classList.remove('active'));t.classList.add('active');curTab=t.dataset.tab;stopAudio();paused=0;progFill.style.width='0%';timeDisp.textContent='0:00 / '+fmt(dur());resetSum();renderDash(curTab)})});
+resetSum();renderDash('dental');
+
+// Smooth scroll
+document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',e=>{const h=a.getAttribute('href');if(h==='#')return;const t=document.querySelector(h);if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'})}})});
+
+// Stat counters
+let statsAnim=false;
+new IntersectionObserver(([e])=>{if(e.isIntersecting&&!statsAnim){statsAnim=true;document.querySelectorAll('.stat__number').forEach(el=>{
+  if(el.dataset.display)return;const tgt=parseInt(el.dataset.target),pre=el.dataset.prefix||'',suf=el.dataset.suffix||'';
+  if(tgt===0){let v=47;const s=()=>{v--;el.textContent=v;if(v>0)requestAnimationFrame(s);else el.textContent='0'};requestAnimationFrame(s)}
+  else{let c=0;const inc=Math.max(1,Math.floor(tgt/30)),s=()=>{c+=inc;if(c>=tgt){el.textContent=pre+tgt+suf;return}el.textContent=pre+c+suf;requestAnimationFrame(s)};requestAnimationFrame(s)}
+})}},{threshold:0.3}).observe(document.querySelector('.stats'));
+</script>
+</body>
+</html>

@@ -1,0 +1,1574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pricing — Sera | Plans from $497/month | No Contracts</title>
+<meta name="description" content="Transparent, coverage-based pricing. Starter $497/mo, Pro $997/mo, Enterprise custom. No setup fees, no contracts, cancel anytime.">
+<meta property="og:title" content="Pricing — Sera | AI Call Coverage for Healthcare">
+<meta property="og:description" content="Enterprise-grade AI call coverage starting at $499/month. No hidden fees. Cancel anytime.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://joinsera.us/pricing">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://joinsera.us/pricing">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@400,500,700,800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+<style>
+:root {
+  --green: #16A34A;
+  --green-hover: #15803D;
+  --green-light: #DCFCE7;
+  --green-dark: #064E3B;
+  --teal: #0D9488;
+  --text-heading: #111111;
+  --text-body: #52525B;
+  --text-muted: #A1A1AA;
+  --border: #E4E4E7;
+  --bg-warm: #FAFAF9;
+  --bg-green-tint: #F0FDF4;
+  --font-heading: 'Cabinet Grotesk', system-ui, sans-serif;
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+  --shadow-card: 0 1px 2px rgba(0,0,0,0.03), 0 4px 12px rgba(0,0,0,0.04), 0 16px 40px rgba(0,0,0,0.06);
+  --shadow-card-hover: 0 2px 4px rgba(0,0,0,0.04), 0 8px 24px rgba(0,0,0,0.06), 0 24px 48px rgba(0,0,0,0.08);
+  --radius-card: 20px;
+  --radius-pill: 100px;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1,h2,h3,h4,h5,h6 { font-family: var(--font-heading); }
+
+body {
+  font-family: var(--font-sans);
+  color: var(--text-body);
+  line-height: 1.65;
+  letter-spacing: -0.01em;
+  background-color: #fff;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.018'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Gradient top bar ── */
+.top-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--green), var(--teal), var(--green));
+  background-size: 200% 100%;
+  animation: gradientShift 4s ease infinite;
+  z-index: 200;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ── Scroll progress bar ── */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: linear-gradient(90deg, var(--green), var(--teal));
+  z-index: 201;
+  transition: width 0.1s linear;
+}
+
+/* ── Nav ── */
+.nav {
+  position: sticky;
+  top: 3px;
+  background: rgba(255,255,255,0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid transparent;
+  z-index: 100;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.nav.scrolled {
+  border-bottom-color: var(--border);
+  box-shadow: 0 1px 12px rgba(0,0,0,0.06);
+}
+
+.nav-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-logo {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--text-heading);
+  text-decoration: none;
+  letter-spacing: -0.5px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-body);
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: color 0.2s;
+  position: relative;
+}
+
+.nav-links a:hover {
+  color: var(--text-heading);
+}
+
+.nav-links a.active {
+  color: var(--green);
+  font-weight: 700;
+}
+
+.nav-links a.active::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--green);
+  border-radius: 2px;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav-login {
+  text-decoration: none;
+  color: var(--text-body);
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.nav-login:hover {
+  color: var(--text-heading);
+}
+
+.nav-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.55rem 1.3rem;
+  background: var(--green);
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 100px;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.nav-cta:hover {
+  background: var(--green-hover);
+  transform: translateY(-1px);
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 4px;
+}
+
+.hamburger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--text-heading);
+  border-radius: 2px;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.hamburger.open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 67px;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  border-bottom: 1px solid var(--border);
+  padding: 1.5rem 2rem;
+  z-index: 99;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+
+.mobile-menu.open {
+  display: block;
+}
+
+.mobile-menu a {
+  display: block;
+  padding: 0.7rem 0;
+  text-decoration: none;
+  color: var(--text-body);
+  font-weight: 500;
+  font-size: 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.mobile-menu a.active {
+  color: var(--green);
+  font-weight: 700;
+}
+
+.mobile-menu a:last-child {
+  border-bottom: none;
+}
+
+.mobile-menu .mobile-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  margin-top: 1rem;
+  padding: 0.6rem 1.4rem;
+  background: var(--green);
+  color: #fff;
+  font-weight: 600;
+  border-radius: 100px;
+  text-decoration: none;
+}
+
+/* ── Hero ── */
+.hero {
+  background: #fff;
+  text-align: center;
+  padding: 6rem 2rem 3rem;
+}
+
+.hero .eyebrow {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+  color: var(--green);
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.hero h1 {
+  font-family: var(--font-heading);
+  font-size: clamp(2.8rem, 5vw, 4rem);
+  font-weight: 800;
+  color: var(--text-heading);
+  line-height: 1.1;
+  letter-spacing: -1.5px;
+  margin-bottom: 1.2rem;
+}
+
+.hero .sub {
+  font-size: 1.1rem;
+  color: var(--text-body);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* ── Pricing cards section ── */
+.pricing-section {
+  background: var(--bg-warm);
+  padding: 4rem 2rem 6rem;
+}
+
+.pricing-grid {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.pricing-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 2.2rem;
+  position: relative;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.pricing-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card-hover);
+}
+
+.pricing-card.featured {
+  border: 2px solid var(--green);
+  transform: scale(1.04);
+  box-shadow: 0 16px 48px rgba(22,163,74,0.12);
+  overflow: hidden;
+}
+
+.pricing-card.featured:hover {
+  transform: scale(1.04) translateY(-4px);
+  box-shadow: var(--shadow-card-hover);
+}
+
+.pricing-card.featured::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background: linear-gradient(135deg, var(--green), var(--teal));
+  border-radius: 18px 18px 0 0;
+}
+
+.featured-badge {
+  position: absolute;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff;
+  color: var(--green);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.3rem 1rem;
+  border-radius: 100px;
+  white-space: nowrap;
+  z-index: 2;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.pricing-card.featured .card-content {
+  position: relative;
+  z-index: 1;
+  padding-top: 2rem;
+}
+
+.card-title {
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text-heading);
+  margin-bottom: 0.15rem;
+}
+
+.card-subtitle {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 1.2rem;
+}
+
+.card-price {
+  margin-bottom: 0.5rem;
+}
+
+.card-price .amount {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--text-heading);
+  letter-spacing: -1px;
+}
+
+.card-price .period {
+  font-size: 1rem;
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
+.card-savings {
+  font-size: 0.82rem;
+  color: var(--green);
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.card-ideal {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  font-style: italic;
+  margin-bottom: 0.8rem;
+  line-height: 1.5;
+}
+
+.card-desc {
+  font-size: 0.92rem;
+  color: var(--text-body);
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.card-features {
+  list-style: none;
+  margin-bottom: 1.8rem;
+}
+
+.card-features li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  padding: 0.35rem 0;
+  font-size: 0.88rem;
+  color: var(--text-body);
+}
+
+.card-features li svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.card-features .section-label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding-top: 0.6rem;
+  padding-bottom: 0.2rem;
+  display: block;
+}
+
+.btn-outline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  width: 100%;
+  padding: 0.75rem 1.5rem;
+  border: 2px solid var(--green);
+  color: var(--green);
+  background: transparent;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 100px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+  font-family: var(--font-sans);
+}
+
+.btn-outline:hover {
+  background: var(--green);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+.btn-filled {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  width: 100%;
+  padding: 0.75rem 1.5rem;
+  border: 2px solid var(--green);
+  background: var(--green);
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 100px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s, transform 0.2s;
+  font-family: var(--font-sans);
+}
+
+.btn-filled:hover {
+  background: var(--green-hover);
+  border-color: var(--green-hover);
+  transform: translateY(-1px);
+}
+
+/* ── Every Plan Includes ── */
+.includes-section {
+  background: #fff;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.includes-section h2 {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--text-heading);
+  margin-bottom: 2rem;
+  letter-spacing: -0.5px;
+}
+
+.includes-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.includes-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--text-body);
+}
+
+.includes-item svg {
+  flex-shrink: 0;
+}
+
+/* ── Compare Plans ── */
+.compare-section {
+  background: var(--bg-warm);
+  padding: 5rem 2rem;
+}
+
+.compare-section h2 {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--text-heading);
+  text-align: center;
+  margin-bottom: 2.5rem;
+  letter-spacing: -0.5px;
+}
+
+.compare-table-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: #fff;
+}
+
+.compare-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.compare-table thead th {
+  padding: 1rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-heading);
+  text-align: center;
+  background: #fff;
+  border-bottom: 2px solid var(--border);
+}
+
+.compare-table thead th:first-child {
+  text-align: left;
+  width: 40%;
+  padding-left: 1.5rem;
+}
+
+.compare-table thead th:nth-child(2),
+.compare-table thead th:nth-child(4) {
+  width: 20%;
+}
+
+.compare-table thead th.pro-header {
+  background: var(--green);
+  color: #fff;
+  width: 20%;
+}
+
+.compare-table tbody tr {
+  border-bottom: 1px solid var(--border);
+}
+
+.compare-table tbody tr:nth-child(even) {
+  background: var(--bg-warm);
+}
+
+.compare-table tbody tr:nth-child(odd) {
+  background: #fff;
+}
+
+.compare-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.compare-table tbody td {
+  padding: 0.9rem 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.compare-table tbody td:first-child {
+  text-align: left;
+  padding-left: 1.5rem;
+  font-weight: 500;
+  color: var(--text-heading);
+}
+
+.check {
+  color: var(--green);
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.dash {
+  color: var(--border);
+  font-size: 1.1rem;
+}
+
+/* Mobile compare cards */
+.compare-cards {
+  display: none;
+  max-width: 500px;
+  margin: 0 auto;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.compare-card-item {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1rem 1.2rem;
+}
+
+.compare-card-feature {
+  font-weight: 600;
+  color: var(--text-heading);
+  font-size: 0.92rem;
+  margin-bottom: 0.6rem;
+}
+
+.compare-card-values {
+  display: flex;
+  gap: 0;
+}
+
+.compare-card-values > div {
+  flex: 1;
+  text-align: center;
+  padding: 0.4rem 0;
+}
+
+.compare-card-values .plan-label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.2rem;
+}
+
+/* ── FAQ ── */
+.faq-section {
+  background: #fff;
+  padding: 6rem 2rem;
+}
+
+.faq-section h2 {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--text-heading);
+  text-align: center;
+  margin-bottom: 2.5rem;
+  letter-spacing: -0.5px;
+}
+
+.faq-list {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  border-bottom: 1px solid var(--border);
+}
+
+.faq-item:first-child {
+  border-top: 1px solid var(--border);
+}
+
+.faq-question {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.2rem 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-heading);
+  text-align: left;
+  gap: 1rem;
+  transition: color 0.2s;
+}
+
+.faq-question:hover {
+  color: var(--green);
+}
+
+.faq-chevron {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  transition: transform 0.3s ease;
+}
+
+.faq-item.open .faq-chevron {
+  transform: rotate(180deg);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease, padding 0.35s ease;
+}
+
+.faq-answer-inner {
+  padding: 0 0 1.2rem;
+  font-size: 0.92rem;
+  color: var(--text-body);
+  line-height: 1.7;
+}
+
+/* ── Still Have Questions ── */
+.questions-cta {
+  background: var(--bg-green-tint);
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.questions-cta h2 {
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--text-heading);
+  margin-bottom: 0.8rem;
+  letter-spacing: -0.5px;
+}
+
+.questions-cta p {
+  font-size: 1.05rem;
+  color: var(--text-body);
+  margin-bottom: 1.8rem;
+}
+
+.questions-cta .btn-filled {
+  display: inline-flex;
+  width: auto;
+  padding: 0.75rem 2rem;
+}
+
+/* ── Footer ── */
+.footer {
+  background: #fff;
+  border-top: 1px solid var(--border);
+  padding: 4rem 2rem 2rem;
+}
+
+/* ── Scroll reveal ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.5s cubic-bezier(0.22,1,0.36,1), transform 0.5s cubic-bezier(0.22,1,0.36,1);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .nav-links,
+  .nav-right {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .hero {
+    padding: 4rem 1.5rem 2rem;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+    letter-spacing: -1px;
+  }
+
+  .pricing-grid {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+  }
+
+  .pricing-card.featured {
+    transform: none;
+  }
+
+  .pricing-card.featured:hover {
+    transform: translateY(-4px);
+  }
+
+  .compare-table-wrapper {
+    display: none;
+  }
+
+  .compare-cards {
+    display: flex;
+  }
+
+  .includes-grid {
+    gap: 1rem;
+  }
+
+  .faq-section {
+    padding: 4rem 1.5rem;
+  }
+
+  .footer-inner,
+  .footer div[style*="grid-template-columns"] {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 2rem !important;
+  }
+
+  .footer-bottom,
+  .footer div[style*="justify-content:space-between"] {
+    flex-direction: column !important;
+    gap: 0.5rem !important;
+    text-align: center !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-inner,
+  .footer div[style*="grid-template-columns"] {
+    grid-template-columns: 1fr !important;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- Gradient top bar -->
+<div class="top-bar"></div>
+
+<!-- Scroll progress bar -->
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- Nav -->
+<nav class="nav" id="nav"><div class="nav__inner">
+  <a href="index.html" class="nav__logo">sera</a>
+  <div class="nav__links">
+    <div class="nav__dropdown">
+      <a href="product.html" class="nav__link">Product</a>
+      <div class="nav__dropdown-menu">
+        <a href="product.html#features" class="nav__dropdown-item">AI Call Coverage</a>
+        <a href="product.html#features" class="nav__dropdown-item">Voice AI Booking</a>
+        <a href="product.html#features" class="nav__dropdown-item">Call Summaries & Transcripts</a>
+        <a href="product.html#features" class="nav__dropdown-item">Missed Call Text-Back</a>
+        <a href="product.html#features" class="nav__dropdown-item">CRM & Patient Pipeline</a>
+        <a href="product.html#features" class="nav__dropdown-item">After-Hours Coverage</a>
+      </div>
+    </div>
+    <div class="nav__dropdown">
+      <a href="solutions.html" class="nav__link">Solutions</a>
+      <div class="nav__dropdown-menu">
+        <a href="solutions.html#industry-1" class="nav__dropdown-item">Physical Therapy</a>
+        <a href="solutions.html#industry-2" class="nav__dropdown-item">Dental Practices</a>
+        <a href="solutions.html#industry-3" class="nav__dropdown-item">Med Spas & Aesthetics</a>
+        <a href="solutions.html#industry-4" class="nav__dropdown-item">Chiropractors</a>
+        <a href="solutions.html#industry-5" class="nav__dropdown-item">Home Services</a>
+        <a href="solutions.html#industry-6" class="nav__dropdown-item">Real Estate</a>
+      </div>
+    </div>
+    <a href="pricing.html" class="nav__link active">Pricing</a>
+    <a href="security.html" class="nav__link">Security</a>
+  </div>
+  <div class="nav__right"><a href="#" class="nav__login">Login</a><a href="#" class="nav__cta">Book a Demo &rarr;</a></div>
+  <button class="nav__hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+</div>
+<div class="nav__mobile-menu" id="mobileMenu">
+  <a href="product.html">Product</a>
+  <a href="solutions.html">Solutions</a>
+  <a href="pricing.html" class="active">Pricing</a>
+  <a href="security.html">Security</a>
+  <a href="#">Login</a>
+  <a href="#" class="btn btn--primary" style="text-align:center;justify-content:center">Book a Demo &rarr;</a>
+</div>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="reveal">
+    <p class="eyebrow">Pricing</p>
+    <h1>Transparent, Coverage-Based Pricing</h1>
+    <p class="sub">Enterprise-grade call coverage designed for healthcare practices. No hidden fees. No long-term contracts. Cancel anytime.</p>
+  </div>
+</section>
+
+<!-- Pricing Cards -->
+<section class="pricing-section">
+  <div class="pricing-grid">
+
+    <!-- Starter -->
+    <div class="pricing-card reveal">
+      <div class="card-title">Starter</div>
+      <div class="card-subtitle">Call Coverage</div>
+      <div class="card-price">
+        <span class="amount">$497</span><span class="period">/mo</span>
+      </div>
+      <p class="card-ideal">Ideal for: Solo practices, 1-2 providers, under 100 calls/month</p>
+      <p class="card-desc">Straightforward AI call coverage for practices that need every call answered.</p>
+      <ul class="card-features">
+        <li>
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3.75 9L7.5 12.75L14.25 6" stroke="#16A34A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          24/7 inbound call answering
+        </li>
+        <li>
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3.75 9L7.5 12.75L14.25 6" stroke="#16A34A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Patient intake &amp; structured summaries
+        </li>
+        <li>
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3.75 9L7.5 12.75L14.25 6" stroke="#16A34A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Staff notifications (email + SMS)
+        </li>
+        <li>
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3.75 9L7.5 12.75L14.25 6" stroke="#16A34A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Call recordings &amp; transcripts
+        </li>
+        <li>
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3.75 9L7.5 12.75L14.25 6" stroke="#16A34A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          HIPAA-compliant portal access
+        </li>
+        <li>
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3.75 9L7.5 12.75L14.25 6" stroke="#16A34A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Ongoing system monitoring
+        </li>
+        <li>
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3.75 9L7.5 12.75L14.25 6" stroke="#16A34A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Custom intake flow configuration
+        </li>
+        <li>
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3.75 9L7.5 12.75L14.25 6" stroke="#16A34A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Onboarding &amp; setup included
+        </li>
+      </ul>
+      <a href="#" class="btn-outline">Get Started &rarr;</a>
+    </div>
+
+    <!-- Pro (Featured) -->
+    <div class="pricing-card featured reveal">
+      <span class="featured-badge">Recommended &middot; Best Value</span>
+      <div class="card-content">
+        <div class="card-title">Pro</div>
+        <div class="card-subtitle">Full Intake System</div>
+        <div class="card-price">
+          <span class="amount">$997</span><span class="period">/mo</span>
+        </div>
+        <p class="card-savings">Save $35K+/year vs. hiring a full-time receptionist</p>
+        <p class="card-ideal">Ideal for: Growing practices, 2-10 providers, 100-500 calls/month</p>
+        <p class="card-desc">Complete automation with follow-ups, pipeline visibility, and analytics.</p>
+        <ul class="card-features">
+          <li><span class="section-label">Everything in Starter, plus:</span></li>
+          <li>
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3.75 9L7.5 12.75L14.25 6" stroke="#16A34A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Missed-call text-back
+          </li>
+          <li>
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3.75 9L7.5 12.75L14.25 6" stroke="#16A34A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Automated follow-up sequences
+          </li>
+          <li>
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3.75 9L7.5 12.75L14.25 6" stroke="#16A34A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            CRM &amp; patient pipeline
+          </li>
+          <li>
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3.75 9L7.5 12.75L14.25 6" stroke="#16A34A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Analytics dashboard
+          </li>
+          <li>
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3.75 9L7.5 12.75L14.25 6" stroke="#16A34A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Priority support
+          </li>
+          <li>
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3.75 9L7.5 12.75L14.25 6" stroke="#16A34A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Custom reporting
+          </li>
+        </ul>
+        <a href="#" class="btn-filled">Get Started &rarr;</a>
+      </div>
+    </div>
+
+    <!-- Enterprise -->
+    <div class="pricing-card reveal">
+      <div class="card-title">Enterprise</div>
+      <div class="card-subtitle">Custom Deployment</div>
+      <div class="card-price">
+        <span class="amount">Custom</span>
+      </div>
+      <p class="card-ideal">Ideal for: Multi-location groups, 10+ providers, 500+ calls/month</p>
+      <p class="card-desc">Tailored solutions for healthcare groups needing multi-location support.</p>
+      <ul class="card-features">
+        <li><span class="section-label">Everything in Pro, plus:</span></li>
+        <li>
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3.75 9L7.5 12.75L14.25 6" stroke="#16A34A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Multi-location support
+        </li>
+        <li>
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3.75 9L7.5 12.75L14.25 6" stroke="#16A34A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Advanced call routing
+        </li>
+        <li>
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3.75 9L7.5 12.75L14.25 6" stroke="#16A34A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Custom integrations
+        </li>
+        <li>
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3.75 9L7.5 12.75L14.25 6" stroke="#16A34A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Dedicated account manager
+        </li>
+        <li>
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3.75 9L7.5 12.75L14.25 6" stroke="#16A34A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          SLA guarantees
+        </li>
+        <li>
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3.75 9L7.5 12.75L14.25 6" stroke="#16A34A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          White-label options
+        </li>
+      </ul>
+      <a href="#" class="btn-outline">Contact Sales &rarr;</a>
+    </div>
+
+  </div>
+  <p style="text-align:center;margin-top:2rem;font-size:0.92rem;color:var(--text-muted);font-weight:500">30-Day Money-Back Guarantee &bull; No Setup Fees &bull; Cancel Anytime</p>
+</section>
+
+<!-- Every Plan Includes -->
+<section class="includes-section">
+  <div class="reveal">
+    <h2>Every Plan Includes</h2>
+    <div class="includes-grid">
+      <div class="includes-item">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3.75 9L7.5 12.75L14.25 6" stroke="#16A34A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        24/7 Coverage
+      </div>
+      <div class="includes-item">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3.75 9L7.5 12.75L14.25 6" stroke="#16A34A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        HIPAA Compliance
+      </div>
+      <div class="includes-item">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3.75 9L7.5 12.75L14.25 6" stroke="#16A34A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Call Recordings
+      </div>
+      <div class="includes-item">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3.75 9L7.5 12.75L14.25 6" stroke="#16A34A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Custom Intake Flows
+      </div>
+      <div class="includes-item">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3.75 9L7.5 12.75L14.25 6" stroke="#16A34A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Email + SMS Delivery
+      </div>
+      <div class="includes-item">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3.75 9L7.5 12.75L14.25 6" stroke="#16A34A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Onboarding &amp; Setup
+      </div>
+      <div class="includes-item">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3.75 9L7.5 12.75L14.25 6" stroke="#16A34A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Ongoing Monitoring
+      </div>
+      <div class="includes-item">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3.75 9L7.5 12.75L14.25 6" stroke="#16A34A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        No Contracts
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Compare Plans -->
+<section class="compare-section">
+  <div class="reveal">
+    <h2>Compare Plans</h2>
+
+    <!-- Desktop table -->
+    <div class="compare-table-wrapper">
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th>Feature</th>
+            <th>Starter</th>
+            <th class="pro-header">Pro</th>
+            <th>Enterprise</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>24/7 Call Answering</td>
+            <td><span class="check">&#10003;</span></td>
+            <td><span class="check">&#10003;</span></td>
+            <td><span class="check">&#10003;</span></td>
+          </tr>
+          <tr>
+            <td>Patient Intake &amp; Summaries</td>
+            <td><span class="check">&#10003;</span></td>
+            <td><span class="check">&#10003;</span></td>
+            <td><span class="check">&#10003;</span></td>
+          </tr>
+          <tr>
+            <td>Staff Notifications</td>
+            <td><span class="check">&#10003;</span></td>
+            <td><span class="check">&#10003;</span></td>
+            <td><span class="check">&#10003;</span></td>
+          </tr>
+          <tr>
+            <td>Call Recordings</td>
+            <td><span class="check">&#10003;</span></td>
+            <td><span class="check">&#10003;</span></td>
+            <td><span class="check">&#10003;</span></td>
+          </tr>
+          <tr>
+            <td>HIPAA Portal</td>
+            <td><span class="check">&#10003;</span></td>
+            <td><span class="check">&#10003;</span></td>
+            <td><span class="check">&#10003;</span></td>
+          </tr>
+          <tr>
+            <td>Missed-Call Text-Back</td>
+            <td><span class="dash">&mdash;</span></td>
+            <td><span class="check">&#10003;</span></td>
+            <td><span class="check">&#10003;</span></td>
+          </tr>
+          <tr>
+            <td>Follow-Up Sequences</td>
+            <td><span class="dash">&mdash;</span></td>
+            <td><span class="check">&#10003;</span></td>
+            <td><span class="check">&#10003;</span></td>
+          </tr>
+          <tr>
+            <td>CRM Pipeline</td>
+            <td><span class="dash">&mdash;</span></td>
+            <td><span class="check">&#10003;</span></td>
+            <td><span class="check">&#10003;</span></td>
+          </tr>
+          <tr>
+            <td>Analytics Dashboard</td>
+            <td><span class="dash">&mdash;</span></td>
+            <td><span class="check">&#10003;</span></td>
+            <td><span class="check">&#10003;</span></td>
+          </tr>
+          <tr>
+            <td>Multi-Location Support</td>
+            <td><span class="dash">&mdash;</span></td>
+            <td><span class="dash">&mdash;</span></td>
+            <td><span class="check">&#10003;</span></td>
+          </tr>
+          <tr>
+            <td>Custom Call Routing</td>
+            <td><span class="dash">&mdash;</span></td>
+            <td><span class="dash">&mdash;</span></td>
+            <td><span class="check">&#10003;</span></td>
+          </tr>
+          <tr>
+            <td>Custom Integrations</td>
+            <td><span class="dash">&mdash;</span></td>
+            <td><span class="dash">&mdash;</span></td>
+            <td><span class="check">&#10003;</span></td>
+          </tr>
+          <tr>
+            <td>Dedicated Account Manager</td>
+            <td><span class="dash">&mdash;</span></td>
+            <td><span class="dash">&mdash;</span></td>
+            <td><span class="check">&#10003;</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Mobile cards -->
+    <div class="compare-cards">
+      <div class="compare-card-item">
+        <div class="compare-card-feature">24/7 Call Answering</div>
+        <div class="compare-card-values">
+          <div><div class="plan-label">Starter</div><span class="check">&#10003;</span></div>
+          <div><div class="plan-label">Pro</div><span class="check">&#10003;</span></div>
+          <div><div class="plan-label">Enterprise</div><span class="check">&#10003;</span></div>
+        </div>
+      </div>
+      <div class="compare-card-item">
+        <div class="compare-card-feature">Patient Intake &amp; Summaries</div>
+        <div class="compare-card-values">
+          <div><div class="plan-label">Starter</div><span class="check">&#10003;</span></div>
+          <div><div class="plan-label">Pro</div><span class="check">&#10003;</span></div>
+          <div><div class="plan-label">Enterprise</div><span class="check">&#10003;</span></div>
+        </div>
+      </div>
+      <div class="compare-card-item">
+        <div class="compare-card-feature">Staff Notifications</div>
+        <div class="compare-card-values">
+          <div><div class="plan-label">Starter</div><span class="check">&#10003;</span></div>
+          <div><div class="plan-label">Pro</div><span class="check">&#10003;</span></div>
+          <div><div class="plan-label">Enterprise</div><span class="check">&#10003;</span></div>
+        </div>
+      </div>
+      <div class="compare-card-item">
+        <div class="compare-card-feature">Call Recordings</div>
+        <div class="compare-card-values">
+          <div><div class="plan-label">Starter</div><span class="check">&#10003;</span></div>
+          <div><div class="plan-label">Pro</div><span class="check">&#10003;</span></div>
+          <div><div class="plan-label">Enterprise</div><span class="check">&#10003;</span></div>
+        </div>
+      </div>
+      <div class="compare-card-item">
+        <div class="compare-card-feature">HIPAA Portal</div>
+        <div class="compare-card-values">
+          <div><div class="plan-label">Starter</div><span class="check">&#10003;</span></div>
+          <div><div class="plan-label">Pro</div><span class="check">&#10003;</span></div>
+          <div><div class="plan-label">Enterprise</div><span class="check">&#10003;</span></div>
+        </div>
+      </div>
+      <div class="compare-card-item">
+        <div class="compare-card-feature">Missed-Call Text-Back</div>
+        <div class="compare-card-values">
+          <div><div class="plan-label">Starter</div><span class="dash">&mdash;</span></div>
+          <div><div class="plan-label">Pro</div><span class="check">&#10003;</span></div>
+          <div><div class="plan-label">Enterprise</div><span class="check">&#10003;</span></div>
+        </div>
+      </div>
+      <div class="compare-card-item">
+        <div class="compare-card-feature">Follow-Up Sequences</div>
+        <div class="compare-card-values">
+          <div><div class="plan-label">Starter</div><span class="dash">&mdash;</span></div>
+          <div><div class="plan-label">Pro</div><span class="check">&#10003;</span></div>
+          <div><div class="plan-label">Enterprise</div><span class="check">&#10003;</span></div>
+        </div>
+      </div>
+      <div class="compare-card-item">
+        <div class="compare-card-feature">CRM Pipeline</div>
+        <div class="compare-card-values">
+          <div><div class="plan-label">Starter</div><span class="dash">&mdash;</span></div>
+          <div><div class="plan-label">Pro</div><span class="check">&#10003;</span></div>
+          <div><div class="plan-label">Enterprise</div><span class="check">&#10003;</span></div>
+        </div>
+      </div>
+      <div class="compare-card-item">
+        <div class="compare-card-feature">Analytics Dashboard</div>
+        <div class="compare-card-values">
+          <div><div class="plan-label">Starter</div><span class="dash">&mdash;</span></div>
+          <div><div class="plan-label">Pro</div><span class="check">&#10003;</span></div>
+          <div><div class="plan-label">Enterprise</div><span class="check">&#10003;</span></div>
+        </div>
+      </div>
+      <div class="compare-card-item">
+        <div class="compare-card-feature">Multi-Location Support</div>
+        <div class="compare-card-values">
+          <div><div class="plan-label">Starter</div><span class="dash">&mdash;</span></div>
+          <div><div class="plan-label">Pro</div><span class="dash">&mdash;</span></div>
+          <div><div class="plan-label">Enterprise</div><span class="check">&#10003;</span></div>
+        </div>
+      </div>
+      <div class="compare-card-item">
+        <div class="compare-card-feature">Custom Call Routing</div>
+        <div class="compare-card-values">
+          <div><div class="plan-label">Starter</div><span class="dash">&mdash;</span></div>
+          <div><div class="plan-label">Pro</div><span class="dash">&mdash;</span></div>
+          <div><div class="plan-label">Enterprise</div><span class="check">&#10003;</span></div>
+        </div>
+      </div>
+      <div class="compare-card-item">
+        <div class="compare-card-feature">Custom Integrations</div>
+        <div class="compare-card-values">
+          <div><div class="plan-label">Starter</div><span class="dash">&mdash;</span></div>
+          <div><div class="plan-label">Pro</div><span class="dash">&mdash;</span></div>
+          <div><div class="plan-label">Enterprise</div><span class="check">&#10003;</span></div>
+        </div>
+      </div>
+      <div class="compare-card-item">
+        <div class="compare-card-feature">Dedicated Account Manager</div>
+        <div class="compare-card-values">
+          <div><div class="plan-label">Starter</div><span class="dash">&mdash;</span></div>
+          <div><div class="plan-label">Pro</div><span class="dash">&mdash;</span></div>
+          <div><div class="plan-label">Enterprise</div><span class="check">&#10003;</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section">
+  <div class="reveal">
+    <h2>Pricing Questions</h2>
+    <div class="faq-list">
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          Is there a setup fee?
+          <svg class="faq-chevron" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="#52525B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">No. Setup, onboarding, and configuration are included in every plan at no additional cost. We handle everything — call routing, intake flow customization, and system testing.</div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          Is there a per-call charge?
+          <svg class="faq-chevron" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="#52525B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">No. All plans include unlimited calls. Your monthly fee covers everything regardless of call volume.</div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          Can I switch plans later?
+          <svg class="faq-chevron" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="#52525B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">Yes. You can upgrade or downgrade at any time. Changes take effect at your next billing cycle.</div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          Is there a contract?
+          <svg class="faq-chevron" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="#52525B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">No long-term contracts. All plans are month-to-month. Cancel anytime from your account settings — no penalties, no questions.</div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          What if I have multiple locations?
+          <svg class="faq-chevron" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="#52525B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">Our Enterprise plan is designed for multi-location practices. Each location gets its own intake flow, call routing, and reporting. Contact sales for custom pricing.</div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          Do you offer a free trial?
+          <svg class="faq-chevron" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="#52525B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">We offer a free 15-minute demo where we run test calls through your actual clinic workflow. This lets you hear Sera in action before committing. Book a demo to get started.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Still Have Questions CTA -->
+<section class="questions-cta">
+  <div class="reveal">
+    <h2>Still Have Questions?</h2>
+    <p>Our team is here to help you find the right plan for your practice.</p>
+    <a href="#" class="btn-filled">Book a Demo &rarr;</a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer__inner">
+    <div>
+      <a href="index.html" class="footer__logo">sera</a>
+      <p class="footer__brand-desc">AI-powered call coverage that answers every patient call, captures intake data, and delivers structured summaries — 24/7.</p>
+      <div class="footer__hipaa"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>HIPAA-Compliant Infrastructure</div>
+      <div class="footer__social">
+        <a href="#" aria-label="Twitter"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+        <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452z"/></svg></a>
+        <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+      </div>
+    </div>
+    <div>
+      <div class="footer__col-title">Product</div>
+      <div class="footer__col-links">
+        <a href="product.html">AI Call Coverage</a>
+        <a href="product.html">Voice AI Booking</a>
+        <a href="product.html">Call Summaries</a>
+        <a href="product.html">CRM Integration</a>
+        <a href="product.html">After-Hours Coverage</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer__col-title">Industries</div>
+      <div class="footer__col-links">
+        <a href="solutions.html">Physical Therapy</a>
+        <a href="solutions.html">Dental Practices</a>
+        <a href="solutions.html">Med Spas</a>
+        <a href="solutions.html">Chiropractors</a>
+        <a href="solutions.html">Home Services</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer__col-title">Company</div>
+      <div class="footer__col-links">
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="security.html">Security</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <p>&copy; 2026 Sera AI. All rights reserved.</p>
+    <p>hello@joinsera.us &middot; (347) 653-1170</p>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+(function() {
+  'use strict';
+
+  // ── Nav scroll shadow ──
+  const nav = document.getElementById('nav');
+  let lastScroll = 0;
+  function handleNavScroll() {
+    const scrollY = window.scrollY;
+    if (scrollY > 10) {
+      nav.classList.add('scrolled');
+    } else {
+      nav.classList.remove('scrolled');
+    }
+    lastScroll = scrollY;
+  }
+  window.addEventListener('scroll', handleNavScroll, { passive: true });
+
+  // ── Scroll progress bar ──
+  const scrollProgress = document.getElementById('scrollProgress');
+  function updateProgress() {
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    scrollProgress.style.width = progress + '%';
+  }
+  window.addEventListener('scroll', updateProgress, { passive: true });
+
+  // ── Hamburger menu ──
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  hamburger.addEventListener('click', function() {
+    hamburger.classList.toggle('open');
+    mobileMenu.classList.toggle('open');
+  });
+
+  // Close mobile menu on link click
+  mobileMenu.querySelectorAll('a').forEach(function(link) {
+    link.addEventListener('click', function() {
+      hamburger.classList.remove('open');
+      mobileMenu.classList.remove('open');
+    });
+  });
+
+  // ── Scroll reveal ──
+  const reveals = document.querySelectorAll('.reveal');
+  const revealObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry, index) {
+      if (entry.isIntersecting) {
+        // Stagger delay
+        const siblings = Array.from(entry.target.parentElement.querySelectorAll('.reveal'));
+        const siblingIndex = siblings.indexOf(entry.target);
+        const delay = siblingIndex * 0.05;
+        entry.target.style.transitionDelay = delay + 's';
+        entry.target.classList.add('visible');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.1,
+    rootMargin: '0px 0px -40px 0px'
+  });
+
+  reveals.forEach(function(el) {
+    revealObserver.observe(el);
+  });
+
+  // ── FAQ accordion ──
+  const faqItems = document.querySelectorAll('.faq-item');
+  faqItems.forEach(function(item) {
+    const question = item.querySelector('.faq-question');
+    const answer = item.querySelector('.faq-answer');
+
+    question.addEventListener('click', function() {
+      const isOpen = item.classList.contains('open');
+
+      // Close all others
+      faqItems.forEach(function(otherItem) {
+        if (otherItem !== item) {
+          otherItem.classList.remove('open');
+          otherItem.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+          otherItem.querySelector('.faq-answer').style.maxHeight = '0';
+        }
+      });
+
+      // Toggle current
+      if (isOpen) {
+        item.classList.remove('open');
+        question.setAttribute('aria-expanded', 'false');
+        answer.style.maxHeight = '0';
+      } else {
+        item.classList.add('open');
+        question.setAttribute('aria-expanded', 'true');
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+      }
+    });
+  });
+
+})();
+</script>
+</body>
+</html>

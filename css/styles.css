@@ -5,34 +5,53 @@
 
 /* --- CSS Variables --- */
 :root {
-  --green: #0D9B6A;
-  --green-hover: #0B8A5E;
-  --green-light: #ECFDF5;
-  --green-glow: rgba(13, 155, 106, 0.12);
-  --green-dark: #064E3B;
-  --teal: #10B981;
-  --dark: #0A1A14;
-  --dark-mid: #0D1F17;
-  --dark-gradient: linear-gradient(180deg, #0A1A14 0%, #0D1F17 100%);
+  /* ── Brand palette (DESIGN.md target) ─────────────────────────── */
+  --charcoal: #1a1a1a;
+  --charcoal-soft: #2a2a2a;
+  --healthcare-green: #2d7d5f;
+  --healthcare-green-deep: #225f48;
+  --healthcare-green-tint: #e9f1ec;
+  --clinical-blue: #0066cc;
+  --clinical-blue-tint: #e6f0fa;
+  --terracotta: #c85a2a;
 
-  --text-primary: #111827;
-  --text-secondary: #6B7280;
-  --text-muted: #9CA3AF;
-  --bg-white: #FFFFFF;
-  --bg-off-white: #F9FAFB;
-  --bg-green-tint: #F0FDF4;
+  /* ── Neutrals (warm-tinted; pure values forbidden) ───────────── */
+  --ivory: #fbf9f3;
+  --paper: #f5f2ea;
+  --rule: #e6e3da;
+  --rule-soft: #ece8de;
+  --graphite: #5a5a5a;
+  --slate: #7a7a7a;
 
-  --border: rgba(0, 0, 0, 0.06);
-  --border-light: rgba(0, 0, 0, 0.04);
+  /* ── Legacy aliases (preserve cascade across existing rules) ── */
+  --green: var(--healthcare-green);
+  --green-hover: var(--healthcare-green-deep);
+  --green-light: var(--healthcare-green-tint);
+  --green-glow: rgba(45, 125, 95, 0.18);
+  --green-dark: var(--healthcare-green-deep);
+  --teal: var(--healthcare-green);
+  --dark: var(--charcoal);
+  --dark-mid: var(--charcoal-soft);
+  --dark-gradient: linear-gradient(180deg, #1a1a1a 0%, #2a2a2a 100%);
 
-  --shadow-sm: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
-  --shadow-md: 0 4px 12px rgba(0,0,0,0.06), 0 1px 3px rgba(0,0,0,0.04);
-  --shadow-lg: 0 8px 24px rgba(0,0,0,0.08), 0 2px 6px rgba(0,0,0,0.04);
-  --shadow-glow: 0 0 60px var(--green-glow);
+  --text-primary: var(--charcoal);
+  --text-secondary: var(--graphite);
+  --text-muted: var(--slate);
+  --bg-white: var(--ivory);
+  --bg-off-white: var(--paper);
+  --bg-green-tint: var(--healthcare-green-tint);
 
-  --radius-sm: 8px;
-  --radius-md: 12px;
-  --radius-lg: 16px;
+  --border: var(--rule);
+  --border-light: var(--rule-soft);
+
+  --shadow-sm: 0 1px 3px rgba(26,26,26,0.04), 0 1px 2px rgba(26,26,26,0.03);
+  --shadow-md: 0 4px 12px rgba(26,26,26,0.05), 0 1px 3px rgba(26,26,26,0.03);
+  --shadow-lg: 0 8px 24px rgba(26,26,26,0.06), 0 2px 6px rgba(26,26,26,0.03);
+  --shadow-glow: 0 0 0 3px rgba(45,125,95,0.20);
+
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
   --radius-pill: 100px;
 
   --font-display: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
@@ -40,9 +59,9 @@
   --font-body: 'Instrument Sans', system-ui, sans-serif;
   --font-mono: 'Space Grotesk', 'IBM Plex Mono', monospace;
 
-  --positive: #0D9B6A;
-  --negative: #DC2626;
-  --yellow: #F59E0B;
+  --positive: var(--healthcare-green);
+  --negative: #a83838;
+  --yellow: #c89028;
 }
 
 /* --- Reset --- */

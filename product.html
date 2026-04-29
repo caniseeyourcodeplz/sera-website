@@ -928,6 +928,55 @@ body::before {
   color: #92400E;
 }
 
+/* Outbound waitlist form */
+.waitlist-form {
+  display: flex;
+  gap: 8px;
+  margin-top: 1.25rem;
+  flex-wrap: wrap;
+}
+.waitlist-form input {
+  flex: 1;
+  min-width: 180px;
+  padding: 10px 14px;
+  border: 1.5px solid var(--rule);
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-family: var(--font-body);
+  background: var(--ivory);
+  color: var(--charcoal);
+  outline: none;
+}
+.waitlist-form input:focus {
+  border-color: var(--healthcare-green);
+  box-shadow: 0 0 0 3px rgba(45,125,95,0.12);
+}
+.waitlist-form button {
+  background: var(--healthcare-green);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.875rem;
+  cursor: pointer;
+  white-space: nowrap;
+  font-family: var(--font-body);
+  transition: background 0.2s;
+}
+.waitlist-form button:hover {
+  background: var(--healthcare-green-deep);
+}
+.waitlist-thanks {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--healthcare-green);
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
 /* Mini mockups inside feature cards */
 .mini-phone {
   width: 120px;
@@ -1776,7 +1825,7 @@ body::before {
     <a href="pricing.html" class="nav__link">Pricing</a>
     <a href="security.html" class="nav__link">Security</a>
   </div>
-  <div class="nav__right"><a href="#" class="nav__login">Login</a><a href="#dark-cta" class="nav__cta">Book a Demo &rarr;</a></div>
+  <div class="nav__right"><a href="login.html" class="nav__login">Login</a><a href="https://calendly.com/sera-ai/demo" target="_blank" rel="noopener" class="nav__cta">Book a Demo &rarr;</a></div>
   <button class="nav__hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
 </div>
 <div class="nav__mobile-menu" id="mobileMenu">
@@ -1784,8 +1833,8 @@ body::before {
   <a href="solutions.html">Solutions</a>
   <a href="pricing.html">Pricing</a>
   <a href="security.html">Security</a>
-  <a href="#">Login</a>
-  <a href="#dark-cta" class="btn btn--primary" style="text-align:center;justify-content:center">Book a Demo &rarr;</a>
+  <a href="login.html">Login</a>
+  <a href="https://calendly.com/sera-ai/demo" target="_blank" rel="noopener" class="btn btn--primary" style="text-align:center;justify-content:center">Book a Demo &rarr;</a>
 </div>
 </nav>
 
@@ -1798,7 +1847,7 @@ body::before {
         <h1 class="hero-headline">The Complete AI Call Coverage Platform</h1>
         <p class="hero-sub">From the moment a patient calls to the moment your staff follows up &mdash; Sera handles everything automatically.</p>
         <div class="hero-buttons">
-          <a href="#dark-cta" class="btn-primary">Book a Demo &rarr;</a>
+          <a href="https://calendly.com/sera-ai/demo" target="_blank" rel="noopener" class="btn-primary">Book a Demo &rarr;</a>
           <a href="pricing.html" class="btn-outline">See Pricing</a>
         </div>
       </div>
@@ -2186,6 +2235,14 @@ body::before {
         <div class="feature-card-body">
           <div class="feature-card-title">Outbound Calls <span class="badge-soon">Coming Soon</span></div>
           <p class="feature-card-desc">Sera will proactively call patients for reminders, rescheduling, and waitlist notifications.</p>
+          <form class="waitlist-form" onsubmit="seraWaitlist(event)">
+            <input type="email" placeholder="Enter your email" required autocomplete="email" aria-label="Email for waitlist">
+            <button type="submit">Join Waitlist</button>
+          </form>
+          <p class="waitlist-thanks" style="display:none;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            You're on the list. We'll email you at launch.
+          </p>
         </div>
       </div>
     </div>
@@ -2608,8 +2665,8 @@ body::before {
     <h2 class="dark-cta-headline">AI That Picks Up So Your Team Doesn't Have To</h2>
     <p class="dark-cta-sub">Book a 15-minute demo and see how Sera can transform your practice's call handling overnight.</p>
     <div class="dark-cta-buttons">
-      <a href="#dark-cta" class="btn-white">Get Started &rarr;</a>
-      <a href="index.html#audio-demo" class="btn-ghost">Watch Demo</a>
+      <a href="https://calendly.com/sera-ai/demo" target="_blank" rel="noopener" class="btn-white">Get Started &rarr;</a>
+      <a href="tel:3476531170" class="btn-ghost">Try It Now: (347) 653-1170</a>
     </div>
   </div>
 </section>
@@ -2622,9 +2679,8 @@ body::before {
       <p class="footer__brand-desc">AI-powered call coverage that answers every patient call, captures intake data, and delivers structured summaries — 24/7.</p>
       <div class="footer__hipaa"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>HIPAA-Compliant Infrastructure</div>
       <div class="footer__social">
-        <a href="#" aria-label="Twitter"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
-        <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452z"/></svg></a>
-        <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+        <a href="https://twitter.com/joinsera" target="_blank" rel="noopener" aria-label="Twitter"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+        <a href="https://linkedin.com/company/joinsera" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452z"/></svg></a>
       </div>
     </div>
     <div>
@@ -2637,13 +2693,21 @@ body::before {
     </div>
     <div>
       <div class="footer__col-title">Company</div>
-      <div class="footer__col-links"><a href="#">About</a><a href="#">Contact</a><a href="pricing.html">Pricing</a><a href="security.html">Security</a><a href="#">Privacy Policy</a><a href="#">Terms</a></div>
+      <div class="footer__col-links"><a href="about.html">About</a><a href="mailto:hello@joinsera.us">Contact</a><a href="pricing.html">Pricing</a><a href="security.html">Security</a><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms</a></div>
     </div>
   </div>
   <div class="footer__bottom"><p>&copy; 2026 Sera AI. All rights reserved.</p><p>hello@joinsera.us &middot; (347) 653-1170</p></div>
 </footer>
 
 <script src="js/main.js"></script>
+<script>
+function seraWaitlist(e) {
+  e.preventDefault();
+  var form = e.target;
+  form.style.display = 'none';
+  form.nextElementSibling.style.display = 'flex';
+}
+</script>
 <script>
 (function() {
   // Nav scroll shadow

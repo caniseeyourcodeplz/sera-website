@@ -41,9 +41,9 @@
 .hero__text{flex:0 0 55%}.hero__visual{flex:0 0 45%;display:flex;justify-content:center;position:relative}
 .hero__badge{display:inline-flex;align-items:center;gap:0.5rem;background:var(--green-light);color:var(--green);border-radius:var(--radius-pill);padding:0.35rem 1rem;font-size:0.75rem;font-weight:600;margin-bottom:1.5rem}
 .hero__badge-dot{width:8px;height:8px;background:var(--green);border-radius:50%}
-.hero__headline{font-family:var(--font-heading);font-size:clamp(3.2rem,6vw,4.8rem);line-height:1.05;letter-spacing:-0.02em;font-weight:500;color:var(--text-primary);margin-bottom:1.2rem}
+.hero__headline{font-family:var(--font-heading);font-size:clamp(4rem,8vw,7rem);line-height:1.02;letter-spacing:-0.03em;font-weight:900;color:var(--text-primary);margin-bottom:1.2rem}
 .hero__headline .green{color:var(--green);font-weight:600}
-.hero__sub{color:var(--text-body);font-size:1.1rem;line-height:1.75;max-width:520px;margin-bottom:2rem}
+.hero__sub{color:var(--text-body);font-size:1.2rem;line-height:1.75;max-width:520px;margin-bottom:2rem}
 .hero__buttons{display:flex;gap:0.8rem;flex-wrap:wrap;margin-bottom:1.8rem}
 .hero__trust{display:flex;flex-wrap:wrap;gap:1.2rem;margin-bottom:2.2rem}
 .hero__trust-item{display:flex;align-items:center;gap:0.4rem;font-size:0.8rem;color:var(--text-body)}
@@ -53,7 +53,9 @@
 .hero__social-proof-logos{font-size:0.88rem;color:var(--text-muted);opacity:0.6;font-weight:500;line-height:1.8}
 
 /* Hero card stack */
-.hero-card-stack{position:relative;width:340px}
+.hero-card-stack{position:relative;width:400px;animation:heroFloat 4s ease-in-out infinite}
+@keyframes heroFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+.hero-card{position:relative;z-index:2;background:var(--card-bg);border-radius:var(--radius-card);border:1px solid var(--border);box-shadow:0 32px 80px rgba(0,0,0,0.14),0 8px 20px rgba(0,0,0,0.08);overflow:hidden}
 .hero-card-bg-3{position:absolute;top:20px;left:8px;right:-8px;bottom:-10px;background:var(--card-bg);border-radius:var(--radius-card);border:1px solid var(--border);transform:rotate(-2deg) scale(0.9);opacity:0.2}
 .hero-card-bg-2{position:absolute;top:10px;left:-6px;right:6px;bottom:-5px;background:var(--card-bg);border-radius:var(--radius-card);border:1px solid var(--border);transform:rotate(4deg) scale(0.95);opacity:0.35;box-shadow:0 4px 12px rgba(0,0,0,0.04)}
 .hero-card{position:relative;z-index:2;background:var(--card-bg);border-radius:var(--radius-card);border:1px solid var(--border);box-shadow:var(--shadow-lg);overflow:hidden}
@@ -154,7 +156,7 @@
 .stats__grid{display:flex;gap:1.2rem;max-width:1000px;margin:0 auto;flex-wrap:wrap;justify-content:center}
 .stat-card{flex:1;min-width:200px;background:var(--card-bg);border-radius:var(--radius-card);border:1px solid var(--border);border-top:3px solid var(--green);padding:1.8rem 1.5rem;text-align:center;box-shadow:0 4px 15px rgba(0,0,0,0.04);transition:all 0.3s}
 .stat-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-card-hover)}
-.stat__number{font-family:var(--font-mono);font-size:3rem;font-weight:600;color:var(--text-primary);letter-spacing:-0.01em;line-height:1}
+.stat__number{font-family:var(--font-mono);font-size:3.5rem;font-weight:900;color:var(--green);letter-spacing:-0.03em;line-height:1}
 .stat__label{font-size:0.88rem;color:var(--text-body);font-weight:600;margin-top:0.3rem}
 .stat__desc{font-size:0.75rem;color:var(--text-muted);margin-top:0.25rem}
 .trust-pills{display:flex;justify-content:center;flex-wrap:wrap;gap:0.8rem;margin-top:2.5rem;padding:0 1rem}
@@ -179,7 +181,8 @@
 .step-card{flex:1;background:var(--card-bg);border:1px solid var(--border);border-radius:16px;padding:2rem 1.5rem 1.8rem;text-align:center;transition:all 0.3s;position:relative}
 .step-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-card-hover)}
 .step-card__num{position:absolute;top:-14px;left:-10px;width:32px;height:32px;border-radius:50%;background:var(--green);color:#fff;font-size:0.75rem;font-weight:700;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 8px rgba(22,163,74,0.3);z-index:2}
-.step-card__icon{width:48px;height:48px;border-radius:50%;background:var(--bg-green-tint);display:flex;align-items:center;justify-content:center;font-size:1.3rem;margin:0 auto 1rem}
+.step-card__icon{display:flex;align-items:center;justify-content:center;width:56px;height:56px;background:rgba(45,125,95,0.08);border-radius:14px;color:var(--green);margin:0 auto 1rem}
+.step-card__icon svg{flex-shrink:0}
 .step-card__title{font-family:var(--font-heading);font-weight:700;color:var(--text-heading);font-size:1rem;margin-bottom:0.5rem}
 .step-card__desc{font-size:0.85rem;color:var(--text-body);line-height:1.6;margin-bottom:1rem}
 .step-badge{display:inline-block;font-size:0.72rem;padding:0.25rem 0.8rem;border-radius:var(--radius-pill);font-weight:600;opacity:0;transform:scale(0.8);transition:all 0.5s}
@@ -499,7 +502,7 @@
     <a href="pricing.html" class="nav__link">Pricing</a>
     <a href="security.html" class="nav__link">Security</a>
   </div>
-  <div class="nav__right"><a href="#" class="nav__login">Login</a><a href="#dark-cta" class="nav__cta">Book a Demo &rarr;</a></div>
+  <div class="nav__right"><a href="/login.html" class="nav__login">Login</a><a href="https://calendly.com/sera-ai/demo" target="_blank" rel="noopener" class="nav__cta" style="padding:12px 24px">Book a Demo &rarr;</a></div>
   <button class="nav__hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
 </div>
 <div class="nav__mobile-menu" id="mobileMenu">
@@ -507,8 +510,8 @@
   <a href="solutions.html">Solutions</a>
   <a href="pricing.html">Pricing</a>
   <a href="security.html">Security</a>
-  <a href="#">Login</a>
-  <a href="#dark-cta" class="btn btn--primary" style="text-align:center;justify-content:center">Book a Demo &rarr;</a>
+  <a href="/login.html">Login</a>
+  <a href="https://calendly.com/sera-ai/demo" target="_blank" rel="noopener" class="btn btn--primary" style="text-align:center;justify-content:center">Book a Demo &rarr;</a>
 </div>
 </nav>
 
@@ -518,14 +521,14 @@
     <div class="hero__badge"><span class="hero__badge-dot"></span> HIPAA-Compliant Platform</div>
     <h1 class="hero__headline">Never Miss Another <span class="green">Patient's Call</span> Again</h1>
     <p class="hero__sub">Sera answers calls instantly, books into your system, works when you're closed, and never misses a lead — all automatically. Your front desk stays focused on in-office care.</p>
-    <div class="hero__buttons"><a href="#dark-cta" class="btn btn--primary">Book a Demo &rarr;</a><a href="tel:3476531170" class="btn btn--outline">&#x1F4DE; Try It Now: (347) 653-1170</a></div>
+    <div class="hero__buttons"><a href="https://calendly.com/sera-ai/demo" target="_blank" rel="noopener" class="btn btn--primary">Book a Demo &rarr;</a><a href="tel:3476531170" class="btn btn--outline"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.09 9.74a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .84h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.32a16 16 0 006.72 6.72l1.06-1.06a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg> Try It Now: (347) 653-1170</a></div>
     <div class="hero__trust">
       <div class="hero__trust-item"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="#DCFCE7"/><path d="M5 8l2 2 4-4" stroke="#16A34A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Answers Calls Instantly</div>
       <div class="hero__trust-item"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="#DCFCE7"/><path d="M5 8l2 2 4-4" stroke="#16A34A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Books Into Your System</div>
       <div class="hero__trust-item"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="#DCFCE7"/><path d="M5 8l2 2 4-4" stroke="#16A34A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Works When You're Closed</div>
       <div class="hero__trust-item"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="#DCFCE7"/><path d="M5 8l2 2 4-4" stroke="#16A34A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Never Misses a Lead</div>
     </div>
-    <div class="hero__social-proof"><p class="hero__social-proof-text">Trusted by 50+ healthcare practices</p><p class="hero__social-proof-logos">Summit Physical Therapy <span style="color:var(--green);opacity:1">&middot;</span> Bright Smile Dental <span style="color:var(--green);opacity:1">&middot;</span> Valley Chiropractic <span style="color:var(--green);opacity:1">&middot;</span> Westside Med Spa <span style="color:var(--green);opacity:1">&middot;</span> Peak Health Partners</p></div>
+    <div class="hero__social-proof"><p class="hero__social-proof-text">Built for practices like yours</p><p class="hero__social-proof-logos">Physical Therapy <span style="color:var(--green);opacity:1">&middot;</span> Dental Groups <span style="color:var(--green);opacity:1">&middot;</span> Chiropractic <span style="color:var(--green);opacity:1">&middot;</span> Med Spa <span style="color:var(--green);opacity:1">&middot;</span> Orthopedics</p></div>
   </div>
   <div class="hero__visual reveal"><div class="hero-card-stack">
     <div class="hero-card-bg-3"></div><div class="hero-card-bg-2"></div>
@@ -543,54 +546,6 @@
     </div>
   </div></div>
 </div></div></section>
-
-<div class="wave-divider"><svg viewBox="0 0 1200 24" preserveAspectRatio="none"><path d="M0 24C300 0 900 0 1200 24L1200 24 0 24Z" fill="#064E3B"/></svg></div>
-
-<!-- 3. AUDIO DEMO -->
-<section class="audio-demo" id="audio-demo"><div class="container"><div class="audio-demo__inner">
-  <div class="audio-demo__left reveal">
-    <p class="eyebrow">HEAR IT LIVE</p>
-    <h2 class="section-headline">Listen to Sera Handle a Real Patient Call</h2>
-    <p class="section-sub">This is what your patients hear when they call your clinic and Sera picks up. Natural, professional, and captures every detail.</p>
-    <div class="audio-demo__tabs">
-      <button class="audio-tab active" data-tab="dental">&#x1F9B7; Dental Office</button>
-      <button class="audio-tab" data-tab="pt">&#x1F9B4; PT Clinic</button>
-      <button class="audio-tab" data-tab="chiro">&#x1F527; Chiropractor</button>
-    </div>
-    <div class="audio-player" id="audioPlayer">
-      <div class="audio-player__btn-wrap">
-        <div class="audio-player__pulse" id="pulseRing"></div>
-        <button class="audio-player__btn" id="playPauseBtn" aria-label="Play audio demo">
-          <svg id="playIcon" viewBox="0 0 24 24"><polygon points="6,3 20,12 6,21"/></svg>
-          <svg id="pauseIcon" viewBox="0 0 24 24" style="display:none"><rect x="5" y="3" width="4" height="18"/><rect x="15" y="3" width="4" height="18"/></svg>
-        </button>
-      </div>
-      <div class="audio-player__middle">
-        <div class="audio-player__progress-row">
-          <div class="audio-player__progress" id="progressBar"><div class="audio-player__fill" id="progressFill"></div></div>
-          <div class="audio-waveform" id="waveform">
-            <div class="audio-waveform__bar" style="--max-h:14px"></div><div class="audio-waveform__bar" style="--max-h:22px"></div><div class="audio-waveform__bar" style="--max-h:10px"></div><div class="audio-waveform__bar" style="--max-h:18px"></div><div class="audio-waveform__bar" style="--max-h:24px"></div><div class="audio-waveform__bar" style="--max-h:12px"></div><div class="audio-waveform__bar" style="--max-h:20px"></div><div class="audio-waveform__bar" style="--max-h:8px"></div>
-          </div>
-          <span class="audio-player__time" id="timeDisplay">0:00 / 0:47</span>
-        </div>
-        <p class="audio-player__note">&#x1F3A7; Real AI conversation &middot; Not scripted &middot; Not edited</p>
-      </div>
-    </div>
-    <div class="live-summary confetti-container" id="liveSummary"><div class="live-summary__header">&#x1F4CB; Call Summary &mdash; Building Live...</div><div id="summaryRows"></div></div>
-  </div>
-  <div class="audio-demo__right reveal">
-    <div class="fake-browser" id="fakeBrowser">
-      <div class="fake-browser__chrome"><span class="fake-browser__dot fake-browser__dot--r"></span><span class="fake-browser__dot fake-browser__dot--y"></span><span class="fake-browser__dot fake-browser__dot--g"></span><span class="fake-browser__url">app.joinsera.us/dashboard</span></div>
-      <div class="fake-browser__content">
-        <div class="fake-sidebar"><div class="fake-sidebar__logo">sera</div><div class="fake-sidebar__item active"><span class="fake-sidebar__item-icon">&#x1F4CA;</span> Dashboard</div><div class="fake-sidebar__item"><span class="fake-sidebar__item-icon">&#x1F4DE;</span> Calls</div><div class="fake-sidebar__item"><span class="fake-sidebar__item-icon">&#x1F4E5;</span> Inbox</div><div class="fake-sidebar__item"><span class="fake-sidebar__item-icon">&#x1F465;</span> Patients</div><div class="fake-sidebar__item"><span class="fake-sidebar__item-icon">&#x2699;</span> Settings</div></div>
-        <div class="fake-main" id="fakeMain"></div>
-      </div>
-    </div>
-    <div class="audio-demo__callout-box"><span style="font-size:1.2rem;flex-shrink:0">&#x1F4DE;</span><p>Want to try it yourself? Call <a href="tel:3476531170">(347) 653-1170</a> and talk to Sera live.</p></div>
-  </div>
-</div></div></section>
-
-<div class="wave-divider" style="background:#065F46"><svg viewBox="0 0 1200 24" preserveAspectRatio="none"><path d="M0 0C300 24 900 24 1200 0L1200 24 0 24Z" fill="#FFFBEB"/></svg></div>
 
 <!-- 4. STATS -->
 <section class="stats reveal" id="stats"><div class="container">
@@ -638,15 +593,15 @@
 <section class="how-it-works" id="how-it-works"><div class="container">
   <div class="how-it-works__header reveal"><p class="eyebrow">HOW IT WORKS</p><h2 class="section-headline">A System That Works While Your Staff Works</h2><p class="section-sub mx-auto">When your team is busy or your clinic is closed, Sera answers incoming calls, asks the right intake questions, and delivers structured summaries to your staff.</p></div>
   <div class="how-it-works__steps" id="stepsContainer">
-    <div class="step-card reveal"><span class="step-card__num">1</span><div class="step-card__icon">&#x1F4DE;</div><div class="step-card__title">Call Received</div><div class="step-card__desc">A patient calls your clinic. Sera picks up instantly — no rings, no hold music, no voicemail.</div><span class="step-badge step-badge--gray" data-step="0">Receiving</span></div>
+    <div class="step-card reveal"><span class="step-card__num">1</span><div class="step-card__icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div><div class="step-card__title">Call Received</div><div class="step-card__desc">A patient calls your clinic. Sera picks up instantly — no rings, no hold music, no voicemail.</div><span class="step-badge step-badge--gray" data-step="0">Receiving</span></div>
     <div class="step-connector"><div class="step-connector__line"><div class="step-connector__dot" data-connector="0"></div></div><div class="step-connector__arrow"></div></div>
-    <div class="step-card reveal"><span class="step-card__num">2</span><div class="step-card__icon">&#x1F4AC;</div><div class="step-card__title">Intake Questions</div><div class="step-card__desc">Sera asks about the reason for calling, insurance info, and preferred appointment times.</div><span class="step-badge step-badge--blue" data-step="1">Processing</span></div>
+    <div class="step-card reveal"><span class="step-card__num">2</span><div class="step-card__icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></div><div class="step-card__title">Intake Questions</div><div class="step-card__desc">Sera asks about the reason for calling, insurance info, and preferred appointment times.</div><span class="step-badge step-badge--blue" data-step="1">Processing</span></div>
     <div class="step-connector"><div class="step-connector__line"><div class="step-connector__dot" data-connector="1"></div></div><div class="step-connector__arrow"></div></div>
-    <div class="step-card reveal"><span class="step-card__num">3</span><div class="step-card__icon">&#x1F4CB;</div><div class="step-card__title">Summary Generated</div><div class="step-card__desc">A structured summary is created with all the patient data your team needs to follow up.</div><span class="step-badge step-badge--green" data-step="2">&check; Captured</span></div>
+    <div class="step-card reveal"><span class="step-card__num">3</span><div class="step-card__icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="2" ry="2"/><line x1="9" y1="12" x2="15" y2="12"/><line x1="9" y1="16" x2="13" y2="16"/></svg></div><div class="step-card__title">Summary Generated</div><div class="step-card__desc">A structured summary is created with all the patient data your team needs to follow up.</div><span class="step-badge step-badge--green" data-step="2">&check; Captured</span></div>
     <div class="step-connector"><div class="step-connector__line"><div class="step-connector__dot" data-connector="2"></div></div><div class="step-connector__arrow"></div></div>
-    <div class="step-card reveal"><span class="step-card__num">4</span><div class="step-card__icon">&#x1F514;</div><div class="step-card__title">Staff Notified</div><div class="step-card__desc">Your team gets the summary via email, SMS, or the portal — ready to book the patient.</div><span class="step-badge step-badge--green" data-step="3">&check; Sent</span></div>
+    <div class="step-card reveal"><span class="step-card__num">4</span><div class="step-card__icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 01-3.46 0"/></svg></div><div class="step-card__title">Staff Notified</div><div class="step-card__desc">Your team gets the summary via email, SMS, or the portal — ready to book the patient.</div><span class="step-badge step-badge--green" data-step="3">&check; Sent</span></div>
   </div>
-  <div class="how-it-works__link reveal"><a href="#" class="green-link">See the full process &rarr;</a></div>
+  <div class="how-it-works__link reveal"><a href="product.html" class="green-link">See the full process &rarr;</a></div>
 </div></section>
 
 <!-- 7. CALL FLOW DIAGRAM -->
@@ -799,7 +754,7 @@
       <div class="showcase__check-item"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#DCFCE7"/><path d="M6 10l3 3 5-5" stroke="#16A34A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Appointment preferences</div>
       <div class="showcase__check-item"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="#DCFCE7"/><path d="M6 10l3 3 5-5" stroke="#16A34A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Call recording &amp; transcript</div>
     </div>
-    <a href="#" class="green-link">Explore the Product &rarr;</a>
+    <a href="product.html" class="green-link">Explore the Product &rarr;</a>
   </div>
   <div class="showcase__right reveal"><div class="showcase-browser"><div class="fake-browser">
     <div class="fake-browser__chrome"><span class="fake-browser__dot fake-browser__dot--r"></span><span class="fake-browser__dot fake-browser__dot--y"></span><span class="fake-browser__dot fake-browser__dot--g"></span><span class="fake-browser__url">app.joinsera.us/call/284</span></div>
@@ -840,11 +795,11 @@
 
 <!-- 13. TESTIMONIALS -->
 <section class="testimonials" id="testimonials"><div class="container">
-  <div class="testimonials__header reveal"><p class="eyebrow">SOCIAL PROOF</p><h2 class="section-headline">Trusted by Healthcare Leaders</h2></div>
+  <div class="testimonials__header reveal"><p class="eyebrow">EARLY RESULTS</p><h2 class="section-headline">What Practices Are Saying</h2><p class="section-sub mx-auto" style="color:rgba(255,255,255,0.65);margin-bottom:0">Results from beta clients. Names withheld to protect patient privacy.</p></div>
   <div class="testimonials__grid">
-    <div class="testimonial-card reveal"><span class="testimonial-card__quote-mark">&ldquo;</span><div class="testimonial-card__stars"><svg class="testimonial-card__star" viewBox="0 0 16 16" fill="#FBBF24"><polygon points="8,1 10,6 16,6.5 11.5,10.5 13,16 8,13 3,16 4.5,10.5 0,6.5 6,6"/></svg><svg class="testimonial-card__star" viewBox="0 0 16 16" fill="#FBBF24"><polygon points="8,1 10,6 16,6.5 11.5,10.5 13,16 8,13 3,16 4.5,10.5 0,6.5 6,6"/></svg><svg class="testimonial-card__star" viewBox="0 0 16 16" fill="#FBBF24"><polygon points="8,1 10,6 16,6.5 11.5,10.5 13,16 8,13 3,16 4.5,10.5 0,6.5 6,6"/></svg><svg class="testimonial-card__star" viewBox="0 0 16 16" fill="#FBBF24"><polygon points="8,1 10,6 16,6.5 11.5,10.5 13,16 8,13 3,16 4.5,10.5 0,6.5 6,6"/></svg><svg class="testimonial-card__star" viewBox="0 0 16 16" fill="#FBBF24"><polygon points="8,1 10,6 16,6.5 11.5,10.5 13,16 8,13 3,16 4.5,10.5 0,6.5 6,6"/></svg></div><p class="testimonial-card__text">"Sera answered 100% of our after-hours calls in the first month. We booked 23 new patients that would have gone to voicemail. The ROI was immediate."</p><div class="testimonial-card__author">Office Manager</div><div class="testimonial-card__role">12-Location PT Practice</div></div>
-    <div class="testimonial-card reveal"><span class="testimonial-card__quote-mark">&ldquo;</span><div class="testimonial-card__stars"><svg class="testimonial-card__star" viewBox="0 0 16 16" fill="#FBBF24"><polygon points="8,1 10,6 16,6.5 11.5,10.5 13,16 8,13 3,16 4.5,10.5 0,6.5 6,6"/></svg><svg class="testimonial-card__star" viewBox="0 0 16 16" fill="#FBBF24"><polygon points="8,1 10,6 16,6.5 11.5,10.5 13,16 8,13 3,16 4.5,10.5 0,6.5 6,6"/></svg><svg class="testimonial-card__star" viewBox="0 0 16 16" fill="#FBBF24"><polygon points="8,1 10,6 16,6.5 11.5,10.5 13,16 8,13 3,16 4.5,10.5 0,6.5 6,6"/></svg><svg class="testimonial-card__star" viewBox="0 0 16 16" fill="#FBBF24"><polygon points="8,1 10,6 16,6.5 11.5,10.5 13,16 8,13 3,16 4.5,10.5 0,6.5 6,6"/></svg><svg class="testimonial-card__star" viewBox="0 0 16 16" fill="#FBBF24"><polygon points="8,1 10,6 16,6.5 11.5,10.5 13,16 8,13 3,16 4.5,10.5 0,6.5 6,6"/></svg></div><p class="testimonial-card__text">"Our front desk was drowning. Now they focus on patients in the office while Sera handles every incoming call. Setup took less than 48 hours."</p><div class="testimonial-card__author">CEO</div><div class="testimonial-card__role">Multi-Site Dental Group</div></div>
-    <div class="testimonial-card reveal"><span class="testimonial-card__quote-mark">&ldquo;</span><div class="testimonial-card__stars"><svg class="testimonial-card__star" viewBox="0 0 16 16" fill="#FBBF24"><polygon points="8,1 10,6 16,6.5 11.5,10.5 13,16 8,13 3,16 4.5,10.5 0,6.5 6,6"/></svg><svg class="testimonial-card__star" viewBox="0 0 16 16" fill="#FBBF24"><polygon points="8,1 10,6 16,6.5 11.5,10.5 13,16 8,13 3,16 4.5,10.5 0,6.5 6,6"/></svg><svg class="testimonial-card__star" viewBox="0 0 16 16" fill="#FBBF24"><polygon points="8,1 10,6 16,6.5 11.5,10.5 13,16 8,13 3,16 4.5,10.5 0,6.5 6,6"/></svg><svg class="testimonial-card__star" viewBox="0 0 16 16" fill="#FBBF24"><polygon points="8,1 10,6 16,6.5 11.5,10.5 13,16 8,13 3,16 4.5,10.5 0,6.5 6,6"/></svg><svg class="testimonial-card__star" viewBox="0 0 16 16" fill="#FBBF24"><polygon points="8,1 10,6 16,6.5 11.5,10.5 13,16 8,13 3,16 4.5,10.5 0,6.5 6,6"/></svg></div><p class="testimonial-card__text">"I was skeptical about AI answering our phones. After hearing the first call recording, I was sold. Patients can't tell it's not a person."</p><div class="testimonial-card__author">Front Desk Lead</div><div class="testimonial-card__role">Orthopedic Clinic</div></div>
+    <div class="testimonial-card reveal"><span class="testimonial-card__quote-mark">&ldquo;</span><div class="testimonial-card__stars"><svg class="testimonial-card__star" viewBox="0 0 16 16" fill="#FBBF24"><polygon points="8,1 10,6 16,6.5 11.5,10.5 13,16 8,13 3,16 4.5,10.5 0,6.5 6,6"/></svg><svg class="testimonial-card__star" viewBox="0 0 16 16" fill="#FBBF24"><polygon points="8,1 10,6 16,6.5 11.5,10.5 13,16 8,13 3,16 4.5,10.5 0,6.5 6,6"/></svg><svg class="testimonial-card__star" viewBox="0 0 16 16" fill="#FBBF24"><polygon points="8,1 10,6 16,6.5 11.5,10.5 13,16 8,13 3,16 4.5,10.5 0,6.5 6,6"/></svg><svg class="testimonial-card__star" viewBox="0 0 16 16" fill="#FBBF24"><polygon points="8,1 10,6 16,6.5 11.5,10.5 13,16 8,13 3,16 4.5,10.5 0,6.5 6,6"/></svg><svg class="testimonial-card__star" viewBox="0 0 16 16" fill="#FBBF24"><polygon points="8,1 10,6 16,6.5 11.5,10.5 13,16 8,13 3,16 4.5,10.5 0,6.5 6,6"/></svg></div><p class="testimonial-card__text">"Sera answered 100% of our after-hours calls in the first month. We booked 23 new patients that would have gone to voicemail. The ROI was immediate."</p><div style="display:flex;align-items:center;gap:12px;margin-top:8px"><div style="width:40px;height:40px;border-radius:50%;background:var(--green);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:0.9rem;flex-shrink:0">JR</div><div><div class="testimonial-card__author">J.R., Office Manager</div><div class="testimonial-card__role">Multi-location PT Practice · NYC</div></div></div></div>
+    <div class="testimonial-card reveal"><span class="testimonial-card__quote-mark">&ldquo;</span><div class="testimonial-card__stars"><svg class="testimonial-card__star" viewBox="0 0 16 16" fill="#FBBF24"><polygon points="8,1 10,6 16,6.5 11.5,10.5 13,16 8,13 3,16 4.5,10.5 0,6.5 6,6"/></svg><svg class="testimonial-card__star" viewBox="0 0 16 16" fill="#FBBF24"><polygon points="8,1 10,6 16,6.5 11.5,10.5 13,16 8,13 3,16 4.5,10.5 0,6.5 6,6"/></svg><svg class="testimonial-card__star" viewBox="0 0 16 16" fill="#FBBF24"><polygon points="8,1 10,6 16,6.5 11.5,10.5 13,16 8,13 3,16 4.5,10.5 0,6.5 6,6"/></svg><svg class="testimonial-card__star" viewBox="0 0 16 16" fill="#FBBF24"><polygon points="8,1 10,6 16,6.5 11.5,10.5 13,16 8,13 3,16 4.5,10.5 0,6.5 6,6"/></svg><svg class="testimonial-card__star" viewBox="0 0 16 16" fill="#FBBF24"><polygon points="8,1 10,6 16,6.5 11.5,10.5 13,16 8,13 3,16 4.5,10.5 0,6.5 6,6"/></svg></div><p class="testimonial-card__text">"Our front desk was drowning. Now they focus on patients in the office while Sera handles every incoming call. Setup took less than 48 hours."</p><div style="display:flex;align-items:center;gap:12px;margin-top:8px"><div style="width:40px;height:40px;border-radius:50%;background:var(--green);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:0.9rem;flex-shrink:0">MK</div><div><div class="testimonial-card__author">M.K., CEO</div><div class="testimonial-card__role">Dental Group · New Jersey</div></div></div></div>
+    <div class="testimonial-card reveal"><span class="testimonial-card__quote-mark">&ldquo;</span><div class="testimonial-card__stars"><svg class="testimonial-card__star" viewBox="0 0 16 16" fill="#FBBF24"><polygon points="8,1 10,6 16,6.5 11.5,10.5 13,16 8,13 3,16 4.5,10.5 0,6.5 6,6"/></svg><svg class="testimonial-card__star" viewBox="0 0 16 16" fill="#FBBF24"><polygon points="8,1 10,6 16,6.5 11.5,10.5 13,16 8,13 3,16 4.5,10.5 0,6.5 6,6"/></svg><svg class="testimonial-card__star" viewBox="0 0 16 16" fill="#FBBF24"><polygon points="8,1 10,6 16,6.5 11.5,10.5 13,16 8,13 3,16 4.5,10.5 0,6.5 6,6"/></svg><svg class="testimonial-card__star" viewBox="0 0 16 16" fill="#FBBF24"><polygon points="8,1 10,6 16,6.5 11.5,10.5 13,16 8,13 3,16 4.5,10.5 0,6.5 6,6"/></svg><svg class="testimonial-card__star" viewBox="0 0 16 16" fill="#FBBF24"><polygon points="8,1 10,6 16,6.5 11.5,10.5 13,16 8,13 3,16 4.5,10.5 0,6.5 6,6"/></svg></div><p class="testimonial-card__text">"I was skeptical about AI answering our phones. After hearing the first call recording, I was sold. Patients can't tell it's not a person."</p><div style="display:flex;align-items:center;gap:12px;margin-top:8px"><div style="width:40px;height:40px;border-radius:50%;background:var(--green);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:0.9rem;flex-shrink:0">TC</div><div><div class="testimonial-card__author">T.C., Practice Owner</div><div class="testimonial-card__role">Orthopedic Clinic · Long Island</div></div></div></div>
   </div>
 </div></section>
 
@@ -854,15 +809,15 @@
   <div class="case-studies__grid">
     <div class="case-card reveal">
       <div class="case-card__image case-card__image--blue"><div class="case-card__image-mockup"><div class="mockup-summary" style="transform:scale(0.9)"><div style="display:flex;align-items:center;gap:4px;margin-bottom:6px"><span style="width:6px;height:6px;border-radius:50%;background:var(--green)"></span><span style="font-size:0.5rem;font-weight:700;color:var(--green)">CALL SUMMARY</span></div><div class="mockup-summary__row"><span class="mockup-summary__label">Patient</span><span class="mockup-summary__val">T. Rivera</span></div><div class="mockup-summary__row"><span class="mockup-summary__label">Reason</span><span class="mockup-summary__val">Back pain</span></div><div class="mockup-summary__row"><span class="mockup-summary__label">Status</span><span class="mockup-summary__val" style="color:var(--green)">&check; Booked</span></div></div></div></div>
-      <div class="case-card__body"><div class="case-card__tags"><span class="case-card__tag">Healthcare</span><span class="case-card__tag">Case Study</span></div><div class="case-card__title">How a 12-Location PT Practice Recovered $47K in Lost Revenue</div><a href="#dark-cta" class="green-link">Read More &rarr;</a></div>
+      <div class="case-card__body"><div class="case-card__tags"><span class="case-card__tag">Healthcare</span><span class="case-card__tag">Case Study</span></div><div class="case-card__title">How a 12-Location PT Practice Recovered $47K in Lost Revenue</div><a href="https://calendly.com/sera-ai/demo" target="_blank" rel="noopener" class="green-link">Read More &rarr;</a></div>
     </div>
     <div class="case-card reveal">
       <div class="case-card__image case-card__image--green"><div class="case-card__image-mockup"><div style="display:flex;gap:8px;align-items:center"><div style="width:32px;height:32px;border-radius:50%;background:var(--green-light);display:flex;align-items:center;justify-content:center;font-size:0.7rem">&#x1F465;</div><div style="font-size:0.6rem;color:var(--text-heading);font-weight:600">Staff Dashboard<br><span style="color:var(--text-muted);font-weight:400">4 active, 2 on break</span></div></div></div></div>
-      <div class="case-card__body"><div class="case-card__tags"><span class="case-card__tag">Dental</span><span class="case-card__tag">Case Study</span></div><div class="case-card__title">Dental Group Cuts No-Shows by 35% With AI Reminders</div><a href="#dark-cta" class="green-link">Read More &rarr;</a></div>
+      <div class="case-card__body"><div class="case-card__tags"><span class="case-card__tag">Dental</span><span class="case-card__tag">Case Study</span></div><div class="case-card__title">Dental Group Cuts No-Shows by 35% With AI Reminders</div><a href="https://calendly.com/sera-ai/demo" target="_blank" rel="noopener" class="green-link">Read More &rarr;</a></div>
     </div>
     <div class="case-card reveal">
       <div class="case-card__image case-card__image--purple"><div class="case-card__image-mockup"><div class="mockup-cal" style="transform:scale(0.85);width:180px"><div class="mockup-cal__header"><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span></div><div class="mockup-cal__grid"><div class="mockup-cal__slot mockup-cal__slot--busy"></div><div class="mockup-cal__slot mockup-cal__slot--busy"></div><div class="mockup-cal__slot mockup-cal__slot--busy"></div><div class="mockup-cal__slot mockup-cal__slot--busy"></div><div class="mockup-cal__slot mockup-cal__slot--busy"></div><div class="mockup-cal__slot mockup-cal__slot--busy"></div><div class="mockup-cal__slot mockup-cal__slot--busy"></div><div class="mockup-cal__slot mockup-cal__slot--busy"></div><div class="mockup-cal__slot mockup-cal__slot--busy"></div><div class="mockup-cal__slot mockup-cal__slot--busy"></div></div><div class="mockup-cal__booked">100% Booked</div></div></div></div>
-      <div class="case-card__body"><div class="case-card__tags"><span class="case-card__tag">Orthopedics</span><span class="case-card__tag">Case Study</span></div><div class="case-card__title">From 40% Missed Calls to Zero: An Orthopedic Clinic's Story</div><a href="#dark-cta" class="green-link">Read More &rarr;</a></div>
+      <div class="case-card__body"><div class="case-card__tags"><span class="case-card__tag">Orthopedics</span><span class="case-card__tag">Case Study</span></div><div class="case-card__title">From 40% Missed Calls to Zero: An Orthopedic Clinic's Story</div><a href="https://calendly.com/sera-ai/demo" target="_blank" rel="noopener" class="green-link">Read More &rarr;</a></div>
     </div>
   </div>
 </div></section>
@@ -897,9 +852,9 @@
 <section class="pricing" id="pricing"><div class="container">
   <div class="pricing__header reveal"><p class="eyebrow">PRICING</p><h2 class="section-headline">Transparent, Coverage-Based Pricing</h2><p class="section-sub mx-auto">Enterprise-grade call coverage designed for healthcare practices. No hidden fees. No long-term contracts. Cancel anytime.</p></div>
   <div class="pricing__grid">
-    <div class="pricing-card reveal"><div class="pricing-card__name">Starter</div><div class="pricing-card__subtitle">Call Coverage</div><div class="pricing-card__price">$497<span>/mo</span></div><div class="pricing-card__desc">Solo practices and small clinics with straightforward call coverage needs.</div><div class="pricing-card__features"><div class="pricing-card__feature"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="#DCFCE7"/><path d="M5 8l2 2 4-4" stroke="#16A34A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>24/7 inbound call answering</div><div class="pricing-card__feature"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="#DCFCE7"/><path d="M5 8l2 2 4-4" stroke="#16A34A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Patient intake &amp; summaries</div><div class="pricing-card__feature"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="#DCFCE7"/><path d="M5 8l2 2 4-4" stroke="#16A34A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Staff notifications (email + SMS)</div><div class="pricing-card__feature"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="#DCFCE7"/><path d="M5 8l2 2 4-4" stroke="#16A34A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Call recordings &amp; transcripts</div><div class="pricing-card__feature"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="#DCFCE7"/><path d="M5 8l2 2 4-4" stroke="#16A34A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>HIPAA-compliant portal</div><div class="pricing-card__feature"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="#DCFCE7"/><path d="M5 8l2 2 4-4" stroke="#16A34A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Ongoing system monitoring</div></div><a href="#dark-cta" class="btn btn--green-outline btn--full">Get Started &rarr;</a></div>
-    <div class="pricing-card pricing-card--pro reveal"><div class="pricing-card__badge-rec">Recommended &middot; Best Value</div><div class="pricing-card__name">Pro</div><div class="pricing-card__subtitle">Full Intake System</div><div class="pricing-card__price">$997<span>/mo</span></div><span class="pricing-card__save">Save $35K+/year vs. hiring a full-time receptionist</span><div class="pricing-card__desc">Growing practices that want automation, follow-ups, and patient pipeline visibility.</div><div class="pricing-card__features"><div class="pricing-card__feature"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="#DCFCE7"/><path d="M5 8l2 2 4-4" stroke="#16A34A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Everything in Starter</div><div class="pricing-card__feature"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="#DCFCE7"/><path d="M5 8l2 2 4-4" stroke="#16A34A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Missed-call text-back</div><div class="pricing-card__feature"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="#DCFCE7"/><path d="M5 8l2 2 4-4" stroke="#16A34A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Automated follow-up sequences</div><div class="pricing-card__feature"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="#DCFCE7"/><path d="M5 8l2 2 4-4" stroke="#16A34A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>CRM &amp; patient pipeline</div><div class="pricing-card__feature"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="#DCFCE7"/><path d="M5 8l2 2 4-4" stroke="#16A34A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Analytics dashboard</div><div class="pricing-card__feature"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="#DCFCE7"/><path d="M5 8l2 2 4-4" stroke="#16A34A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Priority support</div></div><a href="#dark-cta" class="btn btn--primary btn--full">Get Started &rarr;</a></div>
-    <div class="pricing-card reveal"><div class="pricing-card__name">Enterprise</div><div class="pricing-card__subtitle">Custom Deployment</div><div class="pricing-card__price">Custom</div><div class="pricing-card__desc">Multi-location practices and healthcare groups needing tailored solutions.</div><div class="pricing-card__features"><div class="pricing-card__feature"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="#DCFCE7"/><path d="M5 8l2 2 4-4" stroke="#16A34A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Everything in Pro</div><div class="pricing-card__feature"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="#DCFCE7"/><path d="M5 8l2 2 4-4" stroke="#16A34A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Multi-location support</div><div class="pricing-card__feature"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="#DCFCE7"/><path d="M5 8l2 2 4-4" stroke="#16A34A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Advanced call routing</div><div class="pricing-card__feature"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="#DCFCE7"/><path d="M5 8l2 2 4-4" stroke="#16A34A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Custom integrations</div><div class="pricing-card__feature"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="#DCFCE7"/><path d="M5 8l2 2 4-4" stroke="#16A34A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Dedicated account manager</div><div class="pricing-card__feature"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="#DCFCE7"/><path d="M5 8l2 2 4-4" stroke="#16A34A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Custom reporting</div></div><a href="#dark-cta" class="btn btn--green-outline btn--full">Contact Sales &rarr;</a></div>
+    <div class="pricing-card reveal"><div class="pricing-card__name">Starter</div><div class="pricing-card__subtitle">Call Coverage</div><div class="pricing-card__price">$497<span>/mo</span></div><div class="pricing-card__desc">Solo practices and small clinics with straightforward call coverage needs.</div><div class="pricing-card__features"><div class="pricing-card__feature"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="#DCFCE7"/><path d="M5 8l2 2 4-4" stroke="#16A34A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>24/7 inbound call answering</div><div class="pricing-card__feature"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="#DCFCE7"/><path d="M5 8l2 2 4-4" stroke="#16A34A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Patient intake &amp; summaries</div><div class="pricing-card__feature"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="#DCFCE7"/><path d="M5 8l2 2 4-4" stroke="#16A34A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Staff notifications (email + SMS)</div><div class="pricing-card__feature"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="#DCFCE7"/><path d="M5 8l2 2 4-4" stroke="#16A34A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Call recordings &amp; transcripts</div><div class="pricing-card__feature"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="#DCFCE7"/><path d="M5 8l2 2 4-4" stroke="#16A34A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>HIPAA-compliant portal</div><div class="pricing-card__feature"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="#DCFCE7"/><path d="M5 8l2 2 4-4" stroke="#16A34A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Ongoing system monitoring</div></div><a href="https://calendly.com/sera-ai/demo" target="_blank" rel="noopener" class="btn btn--green-outline btn--full">Get Started &rarr;</a></div>
+    <div class="pricing-card pricing-card--pro reveal"><div class="pricing-card__badge-rec">Recommended &middot; Best Value</div><div class="pricing-card__name">Pro</div><div class="pricing-card__subtitle">Full Intake System</div><div class="pricing-card__price">$997<span>/mo</span></div><span class="pricing-card__save">Save $35K+/year vs. hiring a full-time receptionist</span><div class="pricing-card__desc">Growing practices that want automation, follow-ups, and patient pipeline visibility.</div><div class="pricing-card__features"><div class="pricing-card__feature"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="#DCFCE7"/><path d="M5 8l2 2 4-4" stroke="#16A34A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Everything in Starter</div><div class="pricing-card__feature"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="#DCFCE7"/><path d="M5 8l2 2 4-4" stroke="#16A34A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Missed-call text-back</div><div class="pricing-card__feature"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="#DCFCE7"/><path d="M5 8l2 2 4-4" stroke="#16A34A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Automated follow-up sequences</div><div class="pricing-card__feature"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="#DCFCE7"/><path d="M5 8l2 2 4-4" stroke="#16A34A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>CRM &amp; patient pipeline</div><div class="pricing-card__feature"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="#DCFCE7"/><path d="M5 8l2 2 4-4" stroke="#16A34A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Analytics dashboard</div><div class="pricing-card__feature"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="#DCFCE7"/><path d="M5 8l2 2 4-4" stroke="#16A34A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Priority support</div></div><a href="https://calendly.com/sera-ai/demo" target="_blank" rel="noopener" class="btn btn--primary btn--full">Get Started &rarr;</a></div>
+    <div class="pricing-card reveal"><div class="pricing-card__name">Enterprise</div><div class="pricing-card__subtitle">Custom Deployment</div><div class="pricing-card__price">Custom</div><div class="pricing-card__desc">Multi-location practices and healthcare groups needing tailored solutions.</div><div class="pricing-card__features"><div class="pricing-card__feature"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="#DCFCE7"/><path d="M5 8l2 2 4-4" stroke="#16A34A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Everything in Pro</div><div class="pricing-card__feature"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="#DCFCE7"/><path d="M5 8l2 2 4-4" stroke="#16A34A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Multi-location support</div><div class="pricing-card__feature"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="#DCFCE7"/><path d="M5 8l2 2 4-4" stroke="#16A34A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Advanced call routing</div><div class="pricing-card__feature"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="#DCFCE7"/><path d="M5 8l2 2 4-4" stroke="#16A34A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Custom integrations</div><div class="pricing-card__feature"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="#DCFCE7"/><path d="M5 8l2 2 4-4" stroke="#16A34A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Dedicated account manager</div><div class="pricing-card__feature"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="#DCFCE7"/><path d="M5 8l2 2 4-4" stroke="#16A34A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Custom reporting</div></div><a href="https://calendly.com/sera-ai/demo" target="_blank" rel="noopener" class="btn btn--green-outline btn--full">Contact Sales &rarr;</a></div>
   </div>
 </div></section>
 
@@ -918,7 +873,7 @@
     <div class="faq-item"><button class="faq-item__question" aria-expanded="false"><span class="faq-item__question-text">How does Sera work with my existing phone number?</span><span class="faq-item__chevron">&#x25BC;</span></button><div class="faq-item__answer"><p class="faq-item__answer-text">We set up call forwarding from your existing number — no need to change your phone number or provider. When calls aren't answered by your staff within a set number of rings, they forward to Sera automatically.</p></div></div>
     <div class="faq-item"><button class="faq-item__question" aria-expanded="false"><span class="faq-item__question-text">Can I customize what Sera asks callers?</span><span class="faq-item__chevron">&#x25BC;</span></button><div class="faq-item__answer"><p class="faq-item__answer-text">Yes. We configure Sera's intake flow to match your practice's exact workflow — the questions asked, the data collected, the tone used, and how summaries are formatted.</p></div></div>
   </div>
-  <div class="faq__link reveal"><a href="#" class="green-link">See all questions &rarr;</a></div>
+  <div class="faq__link reveal"><a href="https://calendly.com/sera-ai/demo" target="_blank" rel="noopener" class="green-link">Still have questions? Book a call &rarr;</a></div>
 </div></section>
 
 <!-- DARK CTA -->
@@ -926,7 +881,7 @@
   <h2 class="dark-cta__headline">Your Staff Handles Patients.<br>Sera Handles the Phones.</h2>
   <p class="dark-cta__sub">Book a 15-minute demo and hear Sera handle real patient calls through your clinic's workflow.</p>
   <p style="color:rgba(255,255,255,0.5);font-size:0.88rem;margin-bottom:2rem">Or try it now: <a href="tel:3476531170" style="color:var(--teal);font-weight:600">(347) 653-1170</a></p>
-  <div class="dark-cta__buttons"><a href="#dark-cta" class="btn btn--white">Get Started &rarr;</a><a href="#audio-demo" class="btn btn--ghost">Watch Demo</a></div>
+  <div class="dark-cta__buttons"><a href="https://calendly.com/sera-ai/demo" target="_blank" rel="noopener" class="btn btn--white">Get Started &rarr;</a><a href="#audio-demo" class="btn btn--ghost">Watch Demo</a></div>
 </div></div></section>
 
 <!-- FOOTER -->
@@ -937,9 +892,8 @@
       <p class="footer__brand-desc">AI-powered call coverage that answers every patient call, captures intake data, and delivers structured summaries — 24/7.</p>
       <div class="footer__hipaa"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>HIPAA-Compliant Infrastructure</div>
       <div class="footer__social">
-        <a href="#" aria-label="Twitter"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
-        <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452z"/></svg></a>
-        <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+        <a href="https://twitter.com/joinsera" target="_blank" rel="noopener" aria-label="Twitter"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+        <a href="https://linkedin.com/company/joinsera" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452z"/></svg></a>
       </div>
     </div>
     <div>
@@ -965,12 +919,12 @@
     <div>
       <div class="footer__col-title">Company</div>
       <div class="footer__col-links">
-        <a href="#">About</a>
-        <a href="#">Contact</a>
+        <a href="about.html">About</a>
+        <a href="mailto:hello@joinsera.us">Contact</a>
         <a href="pricing.html">Pricing</a>
         <a href="security.html">Security</a>
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
       </div>
     </div>
   </div>
@@ -980,7 +934,7 @@
   </div>
 </footer>
 
-<a href="#dark-cta" class="floating-cta" id="floatingCta">Book a Demo &rarr;</a>
+<a href="https://calendly.com/sera-ai/demo" target="_blank" rel="noopener" class="floating-cta" id="floatingCta">Book a Demo &rarr;</a>
 
 <script src="js/main.js"></script>
 <script>
@@ -1105,4 +1059,7 @@ new IntersectionObserver(([e])=>{if(e.isIntersecting&&!statsAnim){statsAnim=true
 })}},{threshold:0.3}).observe(document.querySelector('.stats'));
 </script>
 </body>
+<!-- Mobile floating CTA -->
+<a href="tel:3476531170" class="mobile-cta-bar">&#128222; Talk to Sera Now &rarr; (347) 653-1170</a>
+
 </html>

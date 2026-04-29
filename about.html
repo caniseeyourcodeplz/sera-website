@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — Sera AI | Built for the calls that never got answered</title>
+<meta name="description" content="Sera was built on the calls that never got answered. We're an operating system for the modern healthcare front desk — answering every call, booking every appointment, 24/7.">
+<meta property="og:title" content="About — Sera AI">
+<meta property="og:description" content="Built on the calls that never got answered. The operating system for the modern healthcare front desk.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://joinsera.us/about">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="canonical" href="https://joinsera.us/about">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Instrument+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+<style>
+/* ── About hero ── */
+.about-hero{background:var(--ivory);padding:8rem 2rem 5rem;text-align:center}
+.about-hero .eyebrow{font-family:var(--font-mono);font-size:0.8rem;font-weight:600;letter-spacing:0.16em;color:var(--healthcare-green);text-transform:uppercase;margin-bottom:1.25rem}
+.about-hero h1{font-family:var(--font-display);font-weight:700;font-size:clamp(3rem,6vw,5.5rem);line-height:1.04;letter-spacing:-0.02em;color:var(--charcoal);max-width:14ch;margin:0 auto 1.5rem}
+.about-hero p{font-family:var(--font-body);font-size:1.125rem;line-height:1.65;color:var(--graphite);max-width:60ch;margin:0 auto}
+
+/* ── Founding story ── */
+.about-story{background:var(--ivory);padding:5rem 2rem 6rem}
+.about-story__inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1.2fr 1fr;gap:4rem;align-items:center}
+.about-story__text .eyebrow{font-family:var(--font-mono);font-size:0.78rem;font-weight:600;letter-spacing:0.16em;color:var(--healthcare-green);text-transform:uppercase;margin-bottom:1rem}
+.about-story__text h2{font-family:var(--font-display);font-weight:600;font-size:clamp(2rem,3.6vw,2.75rem);line-height:1.1;letter-spacing:-0.01em;color:var(--charcoal);margin-bottom:1.75rem}
+.about-story__text p{font-family:var(--font-body);font-size:1.0625rem;line-height:1.75;color:var(--graphite);margin-bottom:1.25rem}
+.about-story__text p:last-child{margin-bottom:0}
+.about-story__metric{background:#1a3c34;color:#fff;border-radius:20px;padding:2.5rem 2rem;display:flex;flex-direction:column;gap:1.5rem}
+.about-story__metric-row{padding-bottom:1.25rem;border-bottom:1px solid rgba(255,255,255,0.12)}
+.about-story__metric-row:last-child{border-bottom:none;padding-bottom:0}
+.about-story__metric-value{font-family:var(--font-display);font-weight:700;font-size:2.25rem;line-height:1;color:#fff;margin-bottom:0.4rem}
+.about-story__metric-label{font-family:var(--font-body);font-size:0.875rem;line-height:1.5;color:rgba(255,255,255,0.7)}
+
+/* ── Values ── */
+.about-values{background:var(--paper);padding:6rem 2rem}
+.about-values__head{max-width:760px;margin:0 auto 3.5rem;text-align:center}
+.about-values__head .eyebrow{font-family:var(--font-mono);font-size:0.78rem;font-weight:600;letter-spacing:0.16em;color:var(--healthcare-green);text-transform:uppercase;margin-bottom:1rem}
+.about-values__head h2{font-family:var(--font-display);font-weight:600;font-size:clamp(2rem,3.6vw,2.75rem);line-height:1.1;letter-spacing:-0.01em;color:var(--charcoal)}
+.about-values__grid{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:1.75rem}
+.about-value-card{background:var(--ivory);border:1px solid var(--rule);border-radius:16px;padding:2rem 1.75rem}
+.about-value-card__icon{width:48px;height:48px;display:flex;align-items:center;justify-content:center;background:rgba(45,125,95,0.08);color:var(--healthcare-green);border-radius:12px;margin-bottom:1.25rem}
+.about-value-card h3{font-family:var(--font-body);font-weight:700;font-size:1.125rem;color:var(--charcoal);margin-bottom:0.6rem}
+.about-value-card p{font-family:var(--font-body);font-size:0.9375rem;line-height:1.65;color:var(--graphite)}
+
+/* ── Team ── */
+.about-team{background:var(--ivory);padding:6rem 2rem}
+.about-team__inner{max-width:760px;margin:0 auto;text-align:center}
+.about-team .eyebrow{font-family:var(--font-mono);font-size:0.78rem;font-weight:600;letter-spacing:0.16em;color:var(--healthcare-green);text-transform:uppercase;margin-bottom:1rem}
+.about-team h2{font-family:var(--font-display);font-weight:600;font-size:clamp(2rem,3.6vw,2.75rem);line-height:1.1;letter-spacing:-0.01em;color:var(--charcoal);margin-bottom:1.5rem}
+.about-team p{font-family:var(--font-body);font-size:1.0625rem;line-height:1.7;color:var(--graphite);margin-bottom:2rem}
+.about-team__hire{background:var(--paper);border:1px solid var(--rule);border-radius:16px;padding:1.75rem 2rem;font-family:var(--font-body);font-size:0.9375rem;color:var(--charcoal);line-height:1.65}
+.about-team__hire a{color:var(--healthcare-green);font-weight:600;text-decoration:none}
+.about-team__hire a:hover{text-decoration:underline}
+
+/* ── Closing CTA ── */
+.about-cta{background:#1a3c34;color:#fff;padding:6rem 2rem;text-align:center}
+.about-cta h2{font-family:var(--font-display);font-weight:700;font-size:clamp(2.25rem,4vw,3.25rem);line-height:1.1;color:#fff;max-width:18ch;margin:0 auto 2rem}
+.about-cta__btn{display:inline-flex;align-items:center;gap:0.5rem;background:#fff;color:#1a3c34;padding:0.95rem 2.25rem;border-radius:100px;font-family:var(--font-body);font-weight:600;font-size:0.95rem;text-decoration:none;transition:transform var(--duration-fast) var(--ease-out-quart),background var(--duration-fast) var(--ease-out-quart)}
+.about-cta__btn:hover{background:rgba(255,255,255,0.92);transform:translateY(-1px)}
+
+@media (max-width:768px){
+  .about-story__inner{grid-template-columns:1fr;gap:2.5rem}
+  .about-values__grid{grid-template-columns:1fr;gap:1rem}
+}
+
+/* Footer (matches privacy.html) */
+.footer{background:var(--charcoal);color:#fff;padding:4rem 0 0}
+.footer__container{max-width:1200px;margin:0 auto;padding:0 2rem}
+</style>
+</head>
+<body>
+<nav class="nav" id="nav">
+  <div class="nav__inner">
+    <a href="index.html" class="nav__logo">
+      <svg width="28" height="28" viewBox="0 0 100 100" fill="none"><path d="M27.5,5 L72.5,5 L95,50 L72.5,95 L27.5,95 L5,50 Z" fill="#1a3c34"/><path d="M20,20 L78,20 L78,37 L68,37 L52,63 L78,63 L78,80 L20,80 L20,63 L32,63 L48,37 L20,37 Z" fill="white"/></svg>
+      <span style="font-weight:800;font-size:1.1rem;color:var(--text-primary)">sera <span style="color:var(--green)">ai</span></span>
+    </a>
+    <div class="nav__right">
+      <a href="index.html" class="nav__login">Home</a>
+      <a href="https://calendly.com/sera-ai/demo" target="_blank" rel="noopener" class="nav__cta">Book a Demo &rarr;</a>
+    </div>
+  </div>
+</nav>
+
+<section class="about-hero">
+  <p class="eyebrow">OUR STORY</p>
+  <h1>Built on the calls that never got answered.</h1>
+  <p>Sera started with a simple observation: the most critical moment for a healthcare practice &mdash; a patient calling to book &mdash; was being lost to voicemail, hold times, and staff bandwidth. We built the system that should have existed.</p>
+</section>
+
+<section class="about-story">
+  <div class="about-story__inner">
+    <div class="about-story__text">
+      <p class="eyebrow">FOUNDING STORY</p>
+      <h2>Every clinic had the same story.</h2>
+      <p>Every clinic we talked to had the same story. A patient calls at 6:30pm. It goes to voicemail. They call a competitor at 6:31pm. That's not a staffing problem &mdash; it's an infrastructure problem.</p>
+      <p>We built Sera to be the perfect first voice a patient hears. Not a phone tree. Not a chatbot. A voice that sounds human, asks the right questions, and hands off a clean summary to staff &mdash; every time, at any hour.</p>
+      <p>We're not building a feature. We're building the operating system for the modern healthcare front desk.</p>
+    </div>
+    <div class="about-story__metric">
+      <div class="about-story__metric-row">
+        <div class="about-story__metric-value">$35K+</div>
+        <div class="about-story__metric-label">average annual savings per clinic</div>
+      </div>
+      <div class="about-story__metric-row">
+        <div class="about-story__metric-value">24 / 7</div>
+        <div class="about-story__metric-label">availability, 365 days a year</div>
+      </div>
+      <div class="about-story__metric-row">
+        <div class="about-story__metric-value">&lt; 2 sec</div>
+        <div class="about-story__metric-label">average call answer time</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about-values">
+  <div class="about-values__head">
+    <p class="eyebrow">WHAT DRIVES US</p>
+    <h2>Three principles behind every decision.</h2>
+  </div>
+  <div class="about-values__grid">
+    <div class="about-value-card">
+      <div class="about-value-card__icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+      </div>
+      <h3>Patient First</h3>
+      <p>Every design decision starts with the patient's experience. If it doesn't make the call better, we don't build it.</p>
+    </div>
+    <div class="about-value-card">
+      <div class="about-value-card__icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      </div>
+      <h3>Always On</h3>
+      <p>Healthcare doesn't have business hours. Sera doesn't either. 24/7/365 is a floor, not a ceiling.</p>
+    </div>
+    <div class="about-value-card">
+      <div class="about-value-card__icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      </div>
+      <h3>Privacy by Default</h3>
+      <p>HIPAA compliance isn't a checkbox for us. It's a design constraint baked into every line of infrastructure.</p>
+    </div>
+  </div>
+</section>
+
+<section class="about-team">
+  <div class="about-team__inner">
+    <p class="eyebrow">THE TEAM</p>
+    <h2>Small team. Big ambitions.</h2>
+    <p>We're a lean team of engineers and healthcare operators who've seen these problems from the inside. We ship fast, listen closely, and obsess over call quality.</p>
+    <div class="about-team__hire">
+      We're hiring &mdash; if you believe AI can fix healthcare operations, reach out at <a href="mailto:team@joinsera.us">team@joinsera.us</a>.
+    </div>
+  </div>
+</section>
+
+<section class="about-cta">
+  <h2>See what Sera can do for your practice.</h2>
+  <a href="https://calendly.com/sera-ai/demo" target="_blank" rel="noopener" class="about-cta__btn">Book a Demo &rarr;</a>
+</section>
+
+<footer class="footer">
+  <div class="footer__container">
+    <div style="display:flex;justify-content:space-between;align-items:center;padding:24px 0;border-top:1px solid rgba(255,255,255,0.1);flex-wrap:wrap;gap:12px">
+      <p style="color:rgba(255,255,255,0.5);font-size:0.83rem">&copy; 2026 Sera AI. All rights reserved.</p>
+      <div style="display:flex;gap:24px;font-size:0.83rem">
+        <a href="privacy.html" style="color:rgba(255,255,255,0.6)">Privacy Policy</a>
+        <a href="terms.html" style="color:rgba(255,255,255,0.6)">Terms</a>
+        <a href="security.html" style="color:rgba(255,255,255,0.6)">Security</a>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',window.scrollY>20)});
+</script>
+</body>
+</html>

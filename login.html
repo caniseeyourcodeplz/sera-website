@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login — Sera AI</title>
+<meta name="description" content="Sign in to your Sera AI account.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Instrument+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+<style>
+.login-page{
+  min-height:100vh;
+  background:var(--ivory);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:2rem 1rem;
+}
+.login-card{
+  background:#fff;
+  border-radius:20px;
+  padding:3rem 2.5rem;
+  max-width:420px;
+  width:100%;
+  box-shadow:0 8px 40px rgba(26,26,26,0.08);
+  text-align:center;
+}
+.login-card__brand{
+  display:inline-flex;
+  align-items:center;
+  gap:0.55rem;
+  margin-bottom:2rem;
+  text-decoration:none;
+}
+.login-card__brand-mark{flex-shrink:0}
+.login-card__brand-text{
+  font-family:var(--font-display);
+  font-weight:700;
+  font-size:1.35rem;
+  color:var(--charcoal);
+  letter-spacing:-0.01em;
+}
+.login-card__brand-text span{color:var(--healthcare-green)}
+
+.login-card h1{
+  font-family:var(--font-body);
+  font-weight:700;
+  font-size:1.5rem;
+  color:var(--charcoal);
+  margin-bottom:0.65rem;
+}
+.login-card .sub{
+  font-family:var(--font-body);
+  font-size:0.95rem;
+  color:var(--graphite);
+  margin-bottom:2rem;
+  line-height:1.55;
+}
+.login-spinner{
+  width:32px;
+  height:32px;
+  margin:0 auto 2rem;
+  border:3px solid rgba(45,125,95,0.18);
+  border-top-color:var(--healthcare-green);
+  border-radius:50%;
+  animation:loginSpin 0.9s linear infinite;
+}
+@keyframes loginSpin{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion: reduce){
+  .login-spinner{animation:none;border-top-color:rgba(45,125,95,0.4)}
+}
+
+.login-divider{
+  height:1px;
+  background:var(--rule);
+  margin:1.75rem 0;
+}
+.login-card__manual{
+  font-family:var(--font-body);
+  font-size:0.875rem;
+  color:var(--graphite);
+}
+.login-card__manual a{
+  color:var(--healthcare-green);
+  font-weight:600;
+  text-decoration:none;
+}
+.login-card__manual a:hover{text-decoration:underline}
+</style>
+</head>
+<body>
+<main class="login-page">
+  <div class="login-card">
+    <a href="index.html" class="login-card__brand" aria-label="Sera AI home">
+      <svg class="login-card__brand-mark" width="32" height="32" viewBox="0 0 100 100" fill="none">
+        <path d="M27.5,5 L72.5,5 L95,50 L72.5,95 L27.5,95 L5,50 Z" fill="#1a3c34"/>
+        <path d="M20,20 L78,20 L78,37 L68,37 L52,63 L78,63 L78,80 L20,80 L20,63 L32,63 L48,37 L20,37 Z" fill="white"/>
+      </svg>
+      <span class="login-card__brand-text">sera <span>ai</span></span>
+    </a>
+
+    <h1>Welcome back</h1>
+    <p class="sub">Redirecting you to the app&hellip;</p>
+    <div class="login-spinner" role="status" aria-label="Loading"></div>
+
+    <div class="login-divider"></div>
+    <p class="login-card__manual">
+      Not redirecting? <a href="https://app.joinsera.us">Open the app &rarr;</a>
+    </p>
+  </div>
+</main>
+
+<script>
+  setTimeout(function() {
+    window.location.href = 'https://app.joinsera.us';
+  }, 2200);
+</script>
+</body>
+</html>

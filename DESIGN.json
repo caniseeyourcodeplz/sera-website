@@ -1,0 +1,222 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-04-28T17:57:35Z",
+  "title": "Design System: Sera",
+  "extensions": {
+    "colorMeta": {
+      "charcoal": {
+        "role": "primary",
+        "displayName": "Console Charcoal",
+        "canonical": "oklch(20% 0.005 60)",
+        "tonalRamp": ["#0d0d0d", "#1a1a1a", "#2a2a2a", "#3a3a3a", "#5a5a5a", "#7a7a7a", "#a8a5a0", "#d0cdc6"]
+      },
+      "healthcare-green": {
+        "role": "secondary",
+        "displayName": "Healthcare Green",
+        "canonical": "oklch(50% 0.10 155)",
+        "tonalRamp": ["#0f3024", "#1a4a36", "#225f48", "#2d7d5f", "#4a9a7c", "#79b8a0", "#bbd9cc", "#e9f1ec"]
+      },
+      "clinical-blue": {
+        "role": "tertiary",
+        "displayName": "Clinical Blue",
+        "canonical": "oklch(50% 0.18 250)",
+        "tonalRamp": ["#001a33", "#003366", "#0050a3", "#0066cc", "#3382d6", "#6699e0", "#b3ccef", "#e6f0fa"]
+      },
+      "terracotta": {
+        "role": "accent-rare",
+        "displayName": "Human Terracotta",
+        "canonical": "oklch(58% 0.12 40)",
+        "tonalRamp": ["#3d1908", "#6b2c12", "#a3471f", "#c85a2a", "#d97f55", "#e3a486", "#eecbb6", "#f6e8e0"]
+      },
+      "ivory": {
+        "role": "neutral",
+        "displayName": "Document Ivory",
+        "canonical": "oklch(97% 0.005 80)",
+        "tonalRamp": ["#1a1815", "#3a3833", "#7a7770", "#b3afa6", "#d8d4ca", "#ece8de", "#f5f2ea", "#fbf9f3"]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Paper",
+        "canonical": "oklch(94% 0.005 80)",
+        "tonalRamp": ["#16140f", "#332f27", "#6b6557", "#a39d8e", "#cdc8b9", "#e6e3da", "#efece4", "#f5f2ea"]
+      },
+      "rule": {
+        "role": "neutral",
+        "displayName": "Hairline Rule",
+        "canonical": "oklch(89% 0.005 80)"
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Hero and final-CTA headlines only. One per page maximum."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section headlines, pricing tier names, case-study titles."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Card titles, FAQ questions, table column headers."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Paragraph text. Capped at 65–75ch per line."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "ALL-CAPS Space Grotesk eyebrows above section headlines and on chips."
+      },
+      "metric": {
+        "displayName": "Metric",
+        "purpose": "Standalone statistics (dollar amounts, percentages). Always paired with a Body-Small caption."
+      }
+    },
+    "shadows": [
+      { "name": "state-hover", "value": "0 1px 2px rgba(26,26,26,0.04), 0 8px 24px rgba(26,26,26,0.06)", "purpose": "Cards and pricing tiers on hover. Charcoal-tinted, never pure black." },
+      { "name": "state-focus", "value": "0 0 0 3px rgba(45,125,95,0.20)", "purpose": "Focus ring on inputs and keyboard-focused interactive elements." },
+      { "name": "lift-nav", "value": "0 1px 0 rgba(26,26,26,0.06)", "purpose": "A single hairline under the sticky nav once scrolled past the hero." },
+      { "name": "lift-dialog", "value": "0 24px 64px rgba(26,26,26,0.18), 0 4px 12px rgba(26,26,26,0.08)", "purpose": "Modal dialogs and popovers only. Never on a card." }
+    ],
+    "motion": [
+      { "name": "ease-out-quart", "value": "cubic-bezier(0.165, 0.84, 0.44, 1)", "purpose": "Default state-transition easing. Used for hover, focus, and reveal." },
+      { "name": "duration-fast", "value": "150ms", "purpose": "Button hover, link color change, chip toggle." },
+      { "name": "duration-medium", "value": "300ms", "purpose": "Scroll-reveal fade-and-rise, section transitions." }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "480px" },
+      { "name": "md", "value": "768px" },
+      { "name": "lg", "value": "1024px" },
+      { "name": "xl", "value": "1200px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The default conversion CTA. Charcoal at rest; green on hover.",
+      "html": "<button class=\"ds-btn-primary\">Book a Demo &rarr;</button>",
+      "css": ".ds-btn-primary { background: #1a1a1a; color: #fbf9f3; padding: 14px 26px; border: none; border-radius: 4px; font-family: 'Instrument Sans', system-ui, sans-serif; font-weight: 600; font-size: 0.95rem; letter-spacing: -0.005em; cursor: pointer; transition: background 150ms cubic-bezier(0.165, 0.84, 0.44, 1), transform 150ms cubic-bezier(0.165, 0.84, 0.44, 1); } .ds-btn-primary:hover { background: #2d7d5f; transform: translateY(-1px); } .ds-btn-primary:focus-visible { outline: none; box-shadow: 0 0 0 3px rgba(45,125,95,0.20); }"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Outline-style alternate action. Always visually defers to Primary.",
+      "html": "<button class=\"ds-btn-secondary\">See How It Works</button>",
+      "css": ".ds-btn-secondary { background: #fbf9f3; color: #1a1a1a; padding: 14px 26px; border: 1px solid #e6e3da; border-radius: 4px; font-family: 'Instrument Sans', system-ui, sans-serif; font-weight: 600; font-size: 0.95rem; cursor: pointer; transition: background 150ms cubic-bezier(0.165, 0.84, 0.44, 1); } .ds-btn-secondary:hover { background: #f5f2ea; }"
+    },
+    {
+      "name": "Ghost on Dark",
+      "kind": "button",
+      "refersTo": "button-ghost-dark",
+      "description": "Used in the dark hero / final CTA section over charcoal.",
+      "html": "<button class=\"ds-btn-ghost\">See How It Works</button>",
+      "css": ".ds-btn-ghost { background: transparent; color: #fbf9f3; padding: 14px 26px; border: 1px solid rgba(251,249,243,0.25); border-radius: 4px; font-family: 'Instrument Sans', system-ui, sans-serif; font-weight: 600; font-size: 0.95rem; cursor: pointer; transition: background 150ms cubic-bezier(0.165, 0.84, 0.44, 1), border-color 150ms cubic-bezier(0.165, 0.84, 0.44, 1); } .ds-btn-ghost:hover { background: rgba(251,249,243,0.08); border-color: rgba(251,249,243,0.5); }"
+    },
+    {
+      "name": "Healthcare Green Chip",
+      "kind": "chip",
+      "refersTo": "chip-green",
+      "description": "Trust signals: HIPAA badge, Live indicator, success state.",
+      "html": "<span class=\"ds-chip-green\"><span class=\"ds-chip-dot\"></span>HIPAA-COMPLIANT</span>",
+      "css": ".ds-chip-green { display: inline-flex; align-items: center; gap: 6px; background: #e9f1ec; color: #225f48; padding: 6px 12px; border-radius: 999px; font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; } .ds-chip-dot { width: 6px; height: 6px; border-radius: 999px; background: #2d7d5f; }"
+    },
+    {
+      "name": "Standard Card",
+      "kind": "card",
+      "refersTo": "card-on-paper",
+      "description": "Default content surface. Pure-white over Paper sections; flat at rest.",
+      "html": "<div class=\"ds-card\"><div class=\"ds-card-eyebrow\">FEATURE</div><h3 class=\"ds-card-title\">Answers Calls Instantly</h3><p class=\"ds-card-body\">Sera picks up on the first ring, identifies the caller, and asks the right intake questions before your front desk hears anything.</p></div>",
+      "css": ".ds-card { background: #ffffff; color: #1a1a1a; padding: 32px; border: 1px solid #e6e3da; border-radius: 8px; transition: box-shadow 150ms cubic-bezier(0.165, 0.84, 0.44, 1), transform 150ms cubic-bezier(0.165, 0.84, 0.44, 1); } .ds-card:hover { box-shadow: 0 1px 2px rgba(26,26,26,0.04), 0 8px 24px rgba(26,26,26,0.06); transform: translateY(-1px); } .ds-card-eyebrow { font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; color: #2d7d5f; margin-bottom: 12px; } .ds-card-title { font-family: 'Instrument Sans', system-ui, sans-serif; font-weight: 600; font-size: 1.25rem; line-height: 1.3; letter-spacing: -0.005em; color: #1a1a1a; margin: 0 0 8px; } .ds-card-body { font-family: 'Instrument Sans', system-ui, sans-serif; font-size: 0.9375rem; line-height: 1.55; color: #5a5a5a; margin: 0; }"
+    },
+    {
+      "name": "Input Field",
+      "kind": "input",
+      "refersTo": "input-default",
+      "description": "Default form input. Healthcare-green focus ring is the only place green appears as a glow.",
+      "html": "<label class=\"ds-input-wrap\"><span class=\"ds-input-label\">Practice email</span><input class=\"ds-input\" type=\"email\" placeholder=\"you@yourclinic.com\"></label>",
+      "css": ".ds-input-wrap { display: block; } .ds-input-label { display: block; font-family: 'Instrument Sans', sans-serif; font-weight: 500; font-size: 0.875rem; color: #1a1a1a; margin-bottom: 6px; } .ds-input { width: 100%; background: #ffffff; color: #1a1a1a; padding: 12px 14px; border: 1px solid #e6e3da; border-radius: 4px; font-family: 'Instrument Sans', system-ui, sans-serif; font-size: 1rem; transition: border-color 150ms cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 150ms cubic-bezier(0.165, 0.84, 0.44, 1); } .ds-input::placeholder { color: #7a7a7a; } .ds-input:focus { outline: none; border-color: #2d7d5f; box-shadow: 0 0 0 3px rgba(45,125,95,0.20); }"
+    },
+    {
+      "name": "Nav Link (active)",
+      "kind": "nav",
+      "description": "Active top-nav link with healthcare-green underline.",
+      "html": "<a class=\"ds-nav-link active\" href=\"#\">Pricing</a>",
+      "css": ".ds-nav-link { font-family: 'Instrument Sans', system-ui, sans-serif; font-weight: 500; font-size: 0.9rem; color: #5a5a5a; text-decoration: none; padding: 4px 0; position: relative; transition: color 150ms cubic-bezier(0.165, 0.84, 0.44, 1); } .ds-nav-link:hover { color: #1a1a1a; } .ds-nav-link.active { color: #2d7d5f; font-weight: 600; } .ds-nav-link.active::after { content: ''; position: absolute; left: 0; right: 0; bottom: -4px; height: 2px; background: #2d7d5f; border-radius: 1px; }"
+    },
+    {
+      "name": "Pricing Tier (default)",
+      "kind": "card",
+      "refersTo": "pricing-tier-default",
+      "description": "Standard pricing card. Cormorant tier name, Space Grotesk price, Instrument body.",
+      "html": "<div class=\"ds-tier\"><div class=\"ds-tier-name\">Practice</div><div class=\"ds-tier-price\"><span class=\"ds-tier-amount\">$249</span><span class=\"ds-tier-cadence\">/ month</span></div><p class=\"ds-tier-desc\">For independent practices answering up to 400 calls a month.</p><div class=\"ds-tier-eyebrow\">WHAT'S INCLUDED</div><ul class=\"ds-tier-features\"><li><span class=\"ds-check\">✓</span>Unlimited after-hours coverage</li><li><span class=\"ds-check\">✓</span>Appointment booking into your scheduler</li><li><span class=\"ds-check\">✓</span>Call summaries and transcripts</li></ul><button class=\"ds-btn-primary ds-tier-cta\">Start a 14-Day Trial</button></div>",
+      "css": ".ds-tier { background: #fbf9f3; color: #1a1a1a; padding: 40px 32px; border: 1px solid #e6e3da; border-radius: 8px; display: flex; flex-direction: column; } .ds-tier-name { font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 500; font-size: 2rem; line-height: 1.1; letter-spacing: -0.015em; color: #1a1a1a; margin-bottom: 16px; } .ds-tier-price { display: flex; align-items: baseline; gap: 8px; margin-bottom: 12px; } .ds-tier-amount { font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 2.5rem; line-height: 1; letter-spacing: -0.01em; color: #1a1a1a; } .ds-tier-cadence { font-family: 'Space Grotesk', sans-serif; font-weight: 500; font-size: 1rem; color: #5a5a5a; } .ds-tier-desc { font-family: 'Instrument Sans', system-ui, sans-serif; font-size: 0.9375rem; line-height: 1.55; color: #5a5a5a; margin: 0 0 24px; } .ds-tier-eyebrow { font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; color: #5a5a5a; margin-bottom: 12px; } .ds-tier-features { list-style: none; padding: 0; margin: 0 0 32px; display: flex; flex-direction: column; gap: 10px; } .ds-tier-features li { display: flex; align-items: flex-start; gap: 10px; font-family: 'Instrument Sans', system-ui, sans-serif; font-size: 0.9375rem; line-height: 1.55; color: #1a1a1a; } .ds-check { color: #2d7d5f; font-weight: 600; flex-shrink: 0; } .ds-tier-cta { margin-top: auto; }"
+    },
+    {
+      "name": "Testimonial Card",
+      "kind": "custom",
+      "description": "Two-column metric + quote. Terracotta-underlined owner name is the system's only Terracotta moment.",
+      "html": "<figure class=\"ds-testimonial\"><div class=\"ds-testimonial-metric\"><div class=\"ds-metric-value\">$42K</div><div class=\"ds-metric-caption\">recovered in missed-appointment revenue, first 90 days</div></div><div class=\"ds-testimonial-body\"><div class=\"ds-quote-rule\"></div><blockquote class=\"ds-testimonial-quote\">Our front desk stopped triaging voicemail. Sera answers, books, and texts patients back while my team is in treatment rooms. We didn't add a person, we got a person back.</blockquote><div class=\"ds-quote-rule\"></div><figcaption class=\"ds-testimonial-sig\">— <span class=\"ds-sig-name\">Dr. Sarah Chen</span>, Owner / Summit Physical Therapy / Boulder, CO</figcaption></div></figure>",
+      "css": ".ds-testimonial { display: grid; grid-template-columns: 1fr 2fr; gap: 48px; align-items: start; padding: 40px; background: #f5f2ea; border: 1px solid #e6e3da; border-radius: 8px; margin: 0; } @media (max-width: 768px) { .ds-testimonial { grid-template-columns: 1fr; gap: 32px; } } .ds-metric-value { font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 3rem; line-height: 1; letter-spacing: -0.01em; color: #1a1a1a; margin-bottom: 8px; } .ds-metric-caption { font-family: 'Instrument Sans', system-ui, sans-serif; font-size: 0.875rem; line-height: 1.5; color: #5a5a5a; max-width: 240px; } .ds-quote-rule { width: 32px; height: 1px; background: #e6e3da; margin-bottom: 16px; } .ds-testimonial-quote { font-family: 'Instrument Sans', system-ui, sans-serif; font-size: 1.0625rem; line-height: 1.6; color: #1a1a1a; margin: 0; padding: 0; max-width: 65ch; } .ds-testimonial-quote + .ds-quote-rule { margin-top: 16px; } .ds-testimonial-sig { font-family: 'Instrument Sans', system-ui, sans-serif; font-size: 0.875rem; line-height: 1.55; color: #5a5a5a; margin-top: 16px; } .ds-sig-name { color: #1a1a1a; font-weight: 600; text-decoration: underline; text-decoration-color: #c85a2a; text-decoration-thickness: 1.5px; text-underline-offset: 3px; }"
+    },
+    {
+      "name": "Section Eyebrow",
+      "kind": "custom",
+      "description": "Small but signature: ALL-CAPS Space Grotesk in healthcare green opens every section.",
+      "html": "<div class=\"ds-section\"><p class=\"ds-eyebrow\">HOW IT WORKS</p><h2 class=\"ds-section-headline\">A system that works while your staff works</h2><p class=\"ds-section-sub\">When your team is busy or your clinic is closed, Sera answers calls, asks the right questions, and delivers structured summaries to your staff.</p></div>",
+      "css": ".ds-section { padding: 64px 0; max-width: 720px; } .ds-eyebrow { font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: #2d7d5f; margin: 0 0 16px; } .ds-section-headline { font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 500; font-size: clamp(1.875rem, 3.6vw, 2.75rem); line-height: 1.1; letter-spacing: -0.015em; color: #1a1a1a; margin: 0 0 16px; } .ds-section-sub { font-family: 'Instrument Sans', system-ui, sans-serif; font-size: 1.0625rem; line-height: 1.6; color: #5a5a5a; max-width: 65ch; margin: 0; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Operator's Console",
+    "overview": "Sera's surface reads like a console for someone who runs a business. A serious, calm, document-grade interface — closer to Stripe's restraint or a medical journal's gravity than to consumer SaaS. Trust is earned through precision: tight type, generous whitespace, restrained color, surgical use of green. The system is Restrained on the color-strategy axis: tinted neutrals carry the surface, with the healthcare green appearing on roughly 10% of any given screen. Surfaces are flat at rest; shadows appear only as a response to state. We explicitly reject generic SaaS landing patterns, AI-tool marketing aesthetics, and the category-reflex pull toward 'healthcare = teal-on-white-medical'.",
+    "keyCharacteristics": [
+      "Charcoal-dominant surface with cream/ivory neutrals, never pure white",
+      "One accent (healthcare green) used on ≤10% of any view",
+      "Editorial serif display + operational sans + technical mono",
+      "Flat by default; depth from layering and rule lines, not shadows",
+      "Type scale ratio ≥ 1.4 between major steps",
+      "Zero ornament — every glyph, line, and shape earns its place"
+    ],
+    "rules": [
+      { "name": "The 10% Green Rule", "body": "Healthcare Green appears on no more than 10% of any rendered viewport. Its rarity is the load-bearing trust signal.", "section": "colors" },
+      { "name": "The Terracotta Whisper Rule", "body": "Terracotta exists only for moments of human warmth — a testimonial signature, a pull-quote underline. Never used for buttons, badges, navigation, status, or charts.", "section": "colors" },
+      { "name": "The No-Pure Rule", "body": "Neither #000 nor #fff is allowed. The palette is tinted at every step.", "section": "colors" },
+      { "name": "The Category-Reflex Ban", "body": "No teal, no medical-aqua, no clinic-cyan, no white coats. Healthcare-by-cliché is forbidden.", "section": "colors" },
+      { "name": "The One Display Rule", "body": "Display type appears once per page maximum.", "section": "typography" },
+      { "name": "The Numeric Authority Rule", "body": "Numbers always render in Space Grotesk, never Cormorant or Instrument.", "section": "typography" },
+      { "name": "The 65-Char Rule", "body": "Body paragraphs are constrained to 65–75ch.", "section": "typography" },
+      { "name": "The Cap-Lock Eyebrow Rule", "body": "Eyebrow labels are ALL CAPS in Space Grotesk with 0.12em tracking.", "section": "typography" },
+      { "name": "The Flat-By-Default Rule", "body": "No surface carries a shadow at rest. If a card needs a shadow to look like a card, fix the border or surface tint instead.", "section": "elevation" },
+      { "name": "The Charcoal-Tinted Shadow Rule", "body": "Every shadow uses rgba(26,26,26, x) — never rgba(0,0,0, x).", "section": "elevation" },
+      { "name": "The Single-Hairline Rule", "body": "Borders and dividers use one color (#e6e3da) at one weight (1px).", "section": "elevation" }
+    ],
+    "dos": [
+      "Do keep Healthcare Green to ≤10% of any rendered viewport.",
+      "Do tint every neutral toward warm gray. Pure values are forbidden.",
+      "Do lead every section with an outcome, not a feature.",
+      "Do ship one and only one primary CTA per surface.",
+      "Do use Space Grotesk for every numeric value.",
+      "Do lock body paragraph measures at 65–75ch.",
+      "Do show specificity for trust — 'Recovered $42K at Summit PT in Boulder' beats 'Trusted by 150+ clinics'.",
+      "Do design for the operator scrolling at 7am between patients on a phone."
+    ],
+    "donts": [
+      "Don't use bento-box grids or identical icon-heading-paragraph card stacks.",
+      "Don't use purple gradients, glowing orbs, neon-on-black, or 'powered by GPT' badges.",
+      "Don't use generic clinic stock photos (smiling-receptionist, doctors fist-bumping).",
+      "Don't use the category-reflex healthcare palette: teal-on-white, medical aqua, clinical cyan.",
+      "Don't use vague CTAs ('Learn More', 'Click Here', 'Get Started', 'Sign Up', 'Choose Plan').",
+      "Don't present hidden or 'Contact Sales' pricing.",
+      "Don't use feature-language verbs ('supports', 'enables', 'leverages').",
+      "Don't use em dashes in body copy. Terracotta-underlined em dash in testimonial signatures is the only exception.",
+      "Don't use side-stripe borders as accents on cards or callouts.",
+      "Don't use gradient text or glassmorphism decoratively.",
+      "Don't use modals as a first thought.",
+      "Don't add shadows at rest.",
+      "Don't animate layout properties or use bounce/elastic easing."
+    ]
+  }
+}

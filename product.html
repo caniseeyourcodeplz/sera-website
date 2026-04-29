@@ -14,8 +14,7 @@
 <link rel="canonical" href="https://joinsera.us/product">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@400,500,700,800&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Instrument+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/styles.css">
 <style>
 :root {
@@ -30,9 +29,8 @@
   --border: #E4E4E7;
   --bg-warm: #FAFAF9;
   --bg-green-tint: #F0FDF4;
-  --font-heading: 'Cabinet Grotesk', system-ui, sans-serif;
-  --font-sans: 'Inter', system-ui, sans-serif;
-  --font-mono: 'IBM Plex Mono', monospace;
+  --font-sans: 'Instrument Sans', system-ui, sans-serif;
+  --font-mono: 'Space Grotesk', 'IBM Plex Mono', monospace;
   --radius-pill: 100px;
   --radius-card: 20px;
   --shadow-sm: 0 2px 4px rgba(0,0,0,0.02);
@@ -275,7 +273,7 @@ body::before {
 }
 
 .hero-eyebrow {
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: var(--font-mono);
   font-size: 0.8rem;
   font-weight: 500;
   color: var(--green);
@@ -351,7 +349,7 @@ body::before {
   border: 1px solid var(--border);
   border-radius: 6px;
   padding: 4px 12px;
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: var(--font-mono);
   font-size: 0.7rem;
   color: var(--text-muted);
 }
@@ -526,7 +524,7 @@ body::before {
 .section-green-tint { background: var(--bg-green-tint); }
 
 .section-eyebrow {
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: var(--font-mono);
   font-size: 0.8rem;
   font-weight: 500;
   color: var(--green);
@@ -653,7 +651,7 @@ body::before {
 .phone-btn.answer { background: var(--green); }
 
 .phone-status {
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: var(--font-mono);
   font-size: 0.7rem;
   color: var(--green);
 }
@@ -1956,7 +1954,7 @@ body::before {
         <div class="summary-mockup">
           <div class="summary-chrome">
             <div class="summary-dots"><span></span><span></span><span></span></div>
-            <span style="font-size:0.65rem;color:var(--text-muted);font-family:'IBM Plex Mono',monospace;">Call Summary</span>
+            <span style="font-size:0.65rem;color:var(--text-muted);font-family:var(--font-mono);">Call Summary</span>
           </div>
           <div class="summary-body">
             <div class="summary-title">Maria Garcia <span class="summary-badge">New Patient</span></div>

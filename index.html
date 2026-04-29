@@ -17,8 +17,7 @@
 <link rel="canonical" href="https://joinsera.us/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@400,500,700,800&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Instrument+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/styles.css">
 <style>
 /* Page-specific overrides — shared styles in css/styles.css */
@@ -42,9 +41,8 @@
 .hero__text{flex:0 0 55%}.hero__visual{flex:0 0 45%;display:flex;justify-content:center;position:relative}
 .hero__badge{display:inline-flex;align-items:center;gap:0.5rem;background:var(--green-light);color:var(--green);border-radius:var(--radius-pill);padding:0.35rem 1rem;font-size:0.75rem;font-weight:600;margin-bottom:1.5rem}
 .hero__badge-dot{width:8px;height:8px;background:var(--green);border-radius:50%}
-.hero__headline{font-family:var(--font-heading);font-size:clamp(3.2rem,6vw,4.8rem);line-height:1.08;letter-spacing:-0.035em;font-weight:800;color:var(--text-primary);margin-bottom:1.2rem}
-.hero__headline .green{background:linear-gradient(135deg,#0D9B6A,#10B981);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-@keyframes greenShift{0%{background-position:0% center}50%{background-position:100% center}100%{background-position:0% center}}
+.hero__headline{font-family:var(--font-heading);font-size:clamp(3.2rem,6vw,4.8rem);line-height:1.05;letter-spacing:-0.02em;font-weight:500;color:var(--text-primary);margin-bottom:1.2rem}
+.hero__headline .green{color:var(--green);font-weight:600}
 .hero__sub{color:var(--text-body);font-size:1.1rem;line-height:1.75;max-width:520px;margin-bottom:2rem}
 .hero__buttons{display:flex;gap:0.8rem;flex-wrap:wrap;margin-bottom:1.8rem}
 .hero__trust{display:flex;flex-wrap:wrap;gap:1.2rem;margin-bottom:2.2rem}
@@ -156,7 +154,7 @@
 .stats__grid{display:flex;gap:1.2rem;max-width:1000px;margin:0 auto;flex-wrap:wrap;justify-content:center}
 .stat-card{flex:1;min-width:200px;background:var(--card-bg);border-radius:var(--radius-card);border:1px solid var(--border);border-top:3px solid var(--green);padding:1.8rem 1.5rem;text-align:center;box-shadow:0 4px 15px rgba(0,0,0,0.04);transition:all 0.3s}
 .stat-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-card-hover)}
-.stat__number{font-family:var(--font-heading);font-size:3rem;font-weight:800;background:linear-gradient(135deg,var(--green),var(--teal));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1.1}
+.stat__number{font-family:var(--font-mono);font-size:3rem;font-weight:600;color:var(--text-primary);letter-spacing:-0.01em;line-height:1}
 .stat__label{font-size:0.88rem;color:var(--text-body);font-weight:600;margin-top:0.3rem}
 .stat__desc{font-size:0.75rem;color:var(--text-muted);margin-top:0.25rem}
 .trust-pills{display:flex;justify-content:center;flex-wrap:wrap;gap:0.8rem;margin-top:2.5rem;padding:0 1rem}

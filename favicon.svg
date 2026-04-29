@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Flat-top hexagon (pointy left/right sides) -->
+  <path d="M27.5,5 L72.5,5 L95,50 L72.5,95 L27.5,95 L5,50 Z" fill="#1B2340"/>
+  <!-- Geometric S mark (two full-width arms connected by diagonal band) -->
+  <path d="M20,20 L78,20 L78,37 L68,37 L52,63 L78,63 L78,80 L20,80 L20,63 L32,63 L48,37 L20,37 Z" fill="white"/>
+</svg>

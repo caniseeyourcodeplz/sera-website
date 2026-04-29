@@ -35,9 +35,10 @@
   --radius-lg: 16px;
   --radius-pill: 100px;
 
-  --font-heading: 'Cabinet Grotesk', system-ui, sans-serif;
-  --font-body: 'Inter', system-ui, sans-serif;
-  --font-mono: 'JetBrains Mono', 'IBM Plex Mono', monospace;
+  --font-display: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+  --font-heading: var(--font-display);
+  --font-body: 'Instrument Sans', system-ui, sans-serif;
+  --font-mono: 'Space Grotesk', 'IBM Plex Mono', monospace;
 
   --positive: #0D9B6A;
   --negative: #DC2626;
@@ -62,6 +63,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 ul { list-style: none; }
 img { max-width: 100%; display: block; }
 h1, h2, h3, h4, h5, h6 { font-family: var(--font-heading); color: var(--text-primary); }
+h3, h4, h5, h6 { font-family: var(--font-body); font-weight: 600; }
 
 /* --- Utilities --- */
 .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
@@ -83,9 +85,9 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-heading); color: var(--text-pri
   font-family: var(--font-heading);
   font-size: clamp(2rem, 4vw, 2.8rem);
   line-height: 1.1;
-  font-weight: 800;
+  font-weight: 500;
   color: var(--text-primary);
-  letter-spacing: -0.03em;
+  letter-spacing: -0.015em;
 }
 
 .section-sub {

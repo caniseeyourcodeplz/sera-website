@@ -50,11 +50,20 @@
     });
   });
 
-  // --- Stat counter animation ---
+  // --- Stat counter animation (respects prefers-reduced-motion) ---
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
   function animateCounter(el) {
     const target = parseInt(el.dataset.count, 10);
     const suffix = el.dataset.suffix || '';
     const prefix = el.dataset.prefix || '';
+
+    // Reduced motion: skip animation, set final value immediately
+    if (reduceMotion) {
+      el.textContent = prefix + target.toLocaleString() + suffix;
+      return;
+    }
+
     const duration = 1500;
     const start = performance.now();
 

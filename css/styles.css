@@ -81,6 +81,37 @@ a { color: inherit; text-decoration: none; }
 button { font-family: inherit; cursor: pointer; border: none; background: none; }
 ul { list-style: none; }
 img { max-width: 100%; display: block; }
+
+/* --- Global focus ring (WCAG 2.4.7) --- */
+:focus { outline: none; }
+:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(45,125,95,0.25);
+  border-radius: 4px;
+}
+a:focus-visible,
+button:focus-visible,
+.btn:focus-visible,
+.nav__link:focus-visible,
+.nav__cta:focus-visible {
+  box-shadow: 0 0 0 3px rgba(45,125,95,0.30);
+}
+
+/* --- Reduced motion (WCAG 2.3.3) --- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}
 h1, h2, h3, h4, h5, h6 { font-family: var(--font-heading); color: var(--text-primary); }
 h3, h4, h5, h6 { font-family: var(--font-body); font-weight: 600; }
 

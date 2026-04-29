@@ -201,7 +201,7 @@
 .call-flow__tabs{display:flex;justify-content:center;gap:0.5rem;margin-bottom:2.5rem}
 .flow-tab{font-size:0.88rem;padding:0.6rem 1.5rem;border-radius:var(--radius-pill);border:1px solid var(--border);background:#fff;color:var(--text-body);font-weight:600;transition:all 0.3s;position:relative}
 .flow-tab.active{background:var(--green);color:#fff;border-color:var(--green)}
-.flow-tab__soon{position:absolute;top:-8px;right:-8px;font-size:0.5rem;background:var(--yellow);color:#000;padding:0.15rem 0.4rem;border-radius:var(--radius-pill);font-weight:700;text-transform:uppercase}
+.flow-tab__soon{position:absolute;top:-8px;right:-8px;font-size:0.5rem;background:rgba(200,144,40,0.18);color:var(--charcoal);padding:0.15rem 0.4rem;border-radius:var(--radius-pill);font-weight:600;text-transform:uppercase;letter-spacing:0.06em}
 .call-flow__grid{display:flex;gap:1.5rem;max-width:1000px;margin:0 auto}
 .flow-column{flex:1;background:var(--card-bg);border-radius:16px;border:1px solid var(--border);overflow:hidden;box-shadow:0 4px 15px rgba(0,0,0,0.04)}
 .flow-column__header{background:var(--green-dark);color:#fff;padding:0.8rem 1.2rem;font-size:0.82rem;font-weight:700;display:flex;align-items:center;gap:0.5rem}
@@ -222,7 +222,7 @@
 .feature-card__text{padding:1.5rem}
 .feature-card__title{font-family:var(--font-heading);font-weight:700;color:var(--text-heading);font-size:1.05rem;margin-bottom:0.4rem}
 .feature-card__desc{font-size:0.85rem;color:var(--text-body);line-height:1.6}
-.feature-card__soon{position:absolute;top:0.8rem;right:0.8rem;background:var(--yellow);color:#000;font-size:0.55rem;font-weight:700;padding:0.2rem 0.6rem;border-radius:var(--radius-pill);text-transform:uppercase}
+.feature-card__soon{position:absolute;top:0.8rem;right:0.8rem;background:rgba(200,144,40,0.18);color:var(--charcoal);font-size:0.6rem;font-weight:600;padding:0.2rem 0.6rem;border-radius:var(--radius-pill);text-transform:uppercase;letter-spacing:0.08em}
 
 /* Mockup 1: Phone call UI */
 .mockup-phone{width:180px;background:#1a1a2e;border-radius:20px;padding:1.5rem 1rem;text-align:center;color:#fff;box-shadow:0 8px 24px rgba(0,0,0,0.15)}
@@ -444,7 +444,7 @@
 /* ========== RESPONSIVE ========== */
 @media(max-width:768px){
   .hero{padding:5rem 0 3rem}.hero__inner{flex-direction:column;text-align:center}.hero__sub{margin-left:auto;margin-right:auto}
-  .hero__buttons{justify-content:center}.hero__trust{justify-content:center}.hero__visual{margin-top:2rem}.hero-card-stack{width:300px;transform:none}
+  .hero__buttons{justify-content:center}.hero__trust{justify-content:center}.hero__visual{margin-top:2rem}.hero-card-stack{width:300px}
   .audio-demo__inner{flex-direction:column}.audio-demo__left,.audio-demo__right{flex:1}
   .fake-sidebar{width:140px;font-size:0.65rem}.fake-browser__content{min-height:260px}
   .stats__grid{flex-direction:column;max-width:400px}
@@ -538,7 +538,7 @@
         <div class="hero-card__row"><span class="hero-card__row-label">Reason</span><span class="hero-card__row-value">Back Pain</span></div>
         <div class="hero-card__row"><span class="hero-card__row-label">Insurance</span><span class="hero-card__row-value">Aetna</span></div>
         <div class="hero-card__row"><span class="hero-card__row-label">Preferred Time</span><span class="hero-card__row-value">Afternoons</span></div>
-        <div class="hero-card__badges"><span class="badge badge--green">&check; Captured</span><span class="badge badge--teal">&check; Delivered to Staff</span></div>
+        <div class="hero-card__badges"><span class="badge badge--green">&check; Captured</span><span class="badge badge--blue">&check; Delivered to Staff</span></div>
       </div>
     </div>
   </div></div>

@@ -49,6 +49,11 @@
   --shadow-lg: 0 8px 24px rgba(26,26,26,0.06), 0 2px 6px rgba(26,26,26,0.03);
   --shadow-glow: 0 0 0 3px rgba(45,125,95,0.20);
 
+  /* Motion (DESIGN.md §4 Elevation, §Motion law) */
+  --ease-out-quart: cubic-bezier(0.165, 0.84, 0.44, 1);
+  --duration-fast: 150ms;
+  --duration-medium: 300ms;
+
   --radius-sm: 4px;
   --radius-md: 8px;
   --radius-lg: 12px;
@@ -171,7 +176,7 @@ h3, h4, h5, h6 { font-family: var(--font-body); font-weight: 600; }
   font-weight: 600;
   font-size: 0.95rem;
   padding: 0.85rem 2rem;
-  transition: all 0.2s ease;
+  transition: background var(--duration-fast) var(--ease-out-quart), transform var(--duration-fast) var(--ease-out-quart), box-shadow var(--duration-fast) var(--ease-out-quart), border-color var(--duration-fast) var(--ease-out-quart), color var(--duration-fast) var(--ease-out-quart);
   white-space: nowrap;
   cursor: pointer;
 }
@@ -239,7 +244,7 @@ h3, h4, h5, h6 { font-family: var(--font-body); font-weight: 600; }
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-sm);
-  transition: all 0.3s ease;
+  transition: background var(--duration-medium) var(--ease-out-quart), transform var(--duration-medium) var(--ease-out-quart), box-shadow var(--duration-medium) var(--ease-out-quart), border-color var(--duration-medium) var(--ease-out-quart), color var(--duration-medium) var(--ease-out-quart);
 }
 .card:hover {
   transform: translateY(-2px);
@@ -254,7 +259,9 @@ h3, h4, h5, h6 { font-family: var(--font-body); font-weight: 600; }
   font-weight: 600;
 }
 .badge--green { background: var(--green-light); color: var(--green); }
-.badge--teal { background: #ECFDF5; color: var(--teal); }
+.badge--teal { background: var(--green-light); color: var(--green); }
+.badge--blue { background: var(--clinical-blue-tint); color: var(--clinical-blue); }
+.badge--soon { background: rgba(200,144,40,0.12); color: var(--charcoal); }
 
 /* ============================================================
    NAVIGATION
@@ -266,7 +273,7 @@ h3, h4, h5, h6 { font-family: var(--font-body); font-weight: 600; }
   right: 0;
   z-index: 1000;
   background: rgba(255, 255, 255, 0);
-  transition: all 0.3s ease;
+  transition: background var(--duration-medium) var(--ease-out-quart), transform var(--duration-medium) var(--ease-out-quart), box-shadow var(--duration-medium) var(--ease-out-quart), border-color var(--duration-medium) var(--ease-out-quart), color var(--duration-medium) var(--ease-out-quart);
 }
 .nav.scrolled {
   backdrop-filter: blur(12px);
@@ -354,7 +361,7 @@ h3, h4, h5, h6 { font-family: var(--font-body); font-weight: 600; }
   min-width: 220px;
   opacity: 0;
   visibility: hidden;
-  transition: all 0.2s ease;
+  transition: background var(--duration-fast) var(--ease-out-quart), transform var(--duration-fast) var(--ease-out-quart), box-shadow var(--duration-fast) var(--ease-out-quart), border-color var(--duration-fast) var(--ease-out-quart), color var(--duration-fast) var(--ease-out-quart);
   z-index: 100;
 }
 .nav__dropdown-menu::before {
@@ -377,7 +384,7 @@ h3, h4, h5, h6 { font-family: var(--font-body); font-weight: 600; }
   color: var(--text-secondary);
   font-weight: 500;
   border-radius: var(--radius-sm);
-  transition: all 0.15s ease;
+  transition: background var(--duration-fast) var(--ease-out-quart), color var(--duration-fast) var(--ease-out-quart), border-color var(--duration-fast) var(--ease-out-quart);
 }
 .nav__dropdown-item:hover {
   background: var(--bg-green-tint);
@@ -405,7 +412,7 @@ h3, h4, h5, h6 { font-family: var(--font-body); font-weight: 600; }
   padding: 0.55rem 1.5rem;
   font-weight: 600;
   font-size: 0.85rem;
-  transition: all 0.2s ease;
+  transition: background var(--duration-fast) var(--ease-out-quart), transform var(--duration-fast) var(--ease-out-quart), box-shadow var(--duration-fast) var(--ease-out-quart), border-color var(--duration-fast) var(--ease-out-quart), color var(--duration-fast) var(--ease-out-quart);
   box-shadow: 0 2px 8px rgba(13,155,106,0.2);
 }
 .nav__cta:hover {
@@ -428,7 +435,7 @@ h3, h4, h5, h6 { font-family: var(--font-body); font-weight: 600; }
   height: 2px;
   background: var(--text-primary);
   border-radius: 2px;
-  transition: all 0.3s;
+  transition: background var(--duration-medium) var(--ease-out-quart), transform var(--duration-medium) var(--ease-out-quart), box-shadow var(--duration-medium) var(--ease-out-quart), color var(--duration-medium) var(--ease-out-quart);
 }
 
 /* Mobile menu */
@@ -524,7 +531,7 @@ h3, h4, h5, h6 { font-family: var(--font-body); font-weight: 600; }
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.2s;
+  transition: background var(--duration-fast) var(--ease-out-quart), opacity var(--duration-fast) var(--ease-out-quart), transform var(--duration-fast) var(--ease-out-quart);
   color: rgba(255,255,255,0.5);
 }
 .footer__social a:hover {

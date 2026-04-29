@@ -10,6 +10,7 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://joinsera.us/solutions">
 <meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="canonical" href="https://joinsera.us/solutions">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -66,19 +67,6 @@ body {
   animation: gradientShift 3s ease infinite;
   z-index: 201;
   transition: width 0.05s linear;
-}
-
-/* Top gradient bar */
-.top-bar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, var(--green), var(--teal), var(--green), var(--teal));
-  background-size: 300% 100%;
-  animation: gradientShift 4s ease infinite;
-  z-index: 200;
 }
 
 @keyframes gradientShift {
@@ -1006,11 +994,10 @@ body {
 <div class="scroll-progress" id="scrollProgress"></div>
 
 <!-- Top Bar -->
-<div class="top-bar"></div>
 
 <!-- NAV -->
 <nav class="nav" id="nav"><div class="nav__inner">
-  <a href="index.html" class="nav__logo">sera</a>
+  <a href="index.html" class="nav__logo"><img src="assets/icons/sera-icon.svg" alt="Sera AI" class="nav__logo-icon"><span class="nav__logo-text">Sera <span class="nav__logo-ai">AI</span></span></a>
   <div class="nav__links">
     <div class="nav__dropdown">
       <a href="product.html" class="nav__link">Product</a>

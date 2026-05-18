@@ -59,10 +59,10 @@
   --radius-lg: 12px;
   --radius-pill: 100px;
 
-  --font-display: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
-  --font-heading: var(--font-display);
-  --font-body: 'Instrument Sans', system-ui, sans-serif;
-  --font-mono: 'Space Grotesk', 'IBM Plex Mono', monospace;
+  --font-display: 'DM Serif Display', Georgia, 'Times New Roman', serif;
+  --font-heading: 'DM Serif Display', Georgia, serif;
+  --font-body: 'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
 
   --positive: var(--healthcare-green);
   --negative: #a83838;

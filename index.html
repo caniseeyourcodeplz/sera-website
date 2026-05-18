@@ -19,7 +19,7 @@
 <link rel="canonical" href="https://joinsera.us/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Instrument+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/styles.css">
 <style>
 /* Page-specific overrides — shared styles in css/styles.css */
@@ -37,44 +37,50 @@
 .wave-divider{width:100%;overflow:hidden;line-height:0;position:relative;z-index:1}
 .wave-divider svg{display:block;width:100%;height:24px}
 
-/* ========== 2. HERO ========== */
-.hero{background:var(--bg-white);padding:6rem 0 4rem;position:relative;overflow:hidden}
-.hero__inner{display:flex;align-items:center;gap:3rem;position:relative;z-index:1}
-.hero__text{flex:0 0 55%}.hero__visual{flex:0 0 45%;display:flex;justify-content:center;position:relative}
-.hero__badge{display:inline-flex;align-items:center;gap:0.5rem;background:var(--green-light);color:var(--green);border-radius:var(--radius-pill);padding:0.35rem 1rem;font-size:0.75rem;font-weight:600;margin-bottom:1.5rem}
-.hero__badge-dot{width:8px;height:8px;background:var(--green);border-radius:50%}
-.hero__headline{font-family:var(--font-heading);font-size:clamp(4rem,8vw,7rem);line-height:1.02;letter-spacing:-0.03em;font-weight:900;color:var(--text-primary);margin-bottom:1.2rem}
-.hero__headline .green{color:var(--green);font-weight:600}
-.hero__sub{color:var(--text-body);font-size:1.2rem;line-height:1.75;max-width:520px;margin-bottom:2rem}
-.hero__buttons{display:flex;gap:0.8rem;flex-wrap:wrap;margin-bottom:1.8rem}
-.hero__trust{display:flex;flex-wrap:wrap;gap:1.2rem;margin-bottom:2.2rem}
-.hero__trust-item{display:flex;align-items:center;gap:0.4rem;font-size:0.8rem;color:var(--text-body)}
-.hero__trust-item svg{flex-shrink:0}
-.hero__social-proof{padding-top:0.5rem;border-top:1px solid var(--border-light)}
-.hero__social-proof-text{font-size:0.78rem;color:var(--text-muted);margin-bottom:0.5rem;font-weight:500}
-.hero__social-proof-logos{font-size:0.88rem;color:var(--text-muted);opacity:0.6;font-weight:500;line-height:1.8}
+/* ========== 2. HERO (dark full-bleed redesign) ========== */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden;background:#0A0A0A}
+.hero__bg{position:absolute;inset:0;background-image:url('https://images.unsplash.com/photo-1448375240586-882707db888b?w=1800&q=80');background-size:cover;background-position:center 40%;opacity:0.40;z-index:0}
+.hero__inner{position:relative;z-index:1;padding:120px 0 80px;max-width:760px;margin:0 auto;text-align:center}
+.hero__badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:100px;padding:6px 16px;font-size:11px;font-weight:600;letter-spacing:0.08em;color:rgba(255,255,255,0.7);text-transform:uppercase;margin-bottom:2rem}
+.hero__badge-dot{width:6px;height:6px;background:#3ECF8E;border-radius:50%;animation:badgePulse 2s infinite}
+@keyframes badgePulse{0%,100%{opacity:1}50%{opacity:0.4}}
+.hero__headline{font-family:'DM Serif Display',Georgia,serif;font-size:clamp(3.5rem,8vw,7rem);line-height:1.05;color:#ffffff;margin-bottom:1.5rem;letter-spacing:-0.02em}
+.hero__headline em{font-style:italic;color:rgba(255,255,255,0.70)}
+.hero__sub{font-size:1.15rem;line-height:1.75;color:rgba(255,255,255,0.55);max-width:520px;margin:0 auto 2rem}
+.hero__buttons{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:2rem}
+.btn--primary{background:#3ECF8E;color:#0A0A0A;font-weight:700;padding:14px 28px;border-radius:8px;font-size:15px;border:none;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:6px;transition:opacity 0.2s}
+.btn--primary:hover{opacity:0.88}
+.btn--ghost{background:rgba(255,255,255,0.08);color:rgba(255,255,255,0.85);border:1px solid rgba(255,255,255,0.15);padding:14px 24px;border-radius:8px;font-size:15px;font-weight:500;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:background 0.2s}
+.btn--ghost:hover{background:rgba(255,255,255,0.13)}
+.hero__trust{display:flex;gap:20px;justify-content:center;flex-wrap:wrap;font-size:13px;color:rgba(255,255,255,0.45);margin-bottom:1.5rem}
+.hero__specialties{font-size:11px;color:rgba(255,255,255,0.22);letter-spacing:0.08em;text-transform:uppercase}
 
-/* Hero card stack */
-.hero-card-stack{position:relative;width:400px;animation:heroFloat 4s ease-in-out infinite}
-@keyframes heroFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
-.hero-card{position:relative;z-index:2;background:var(--card-bg);border-radius:var(--radius-card);border:1px solid var(--border);box-shadow:0 32px 80px rgba(0,0,0,0.14),0 8px 20px rgba(0,0,0,0.08);overflow:hidden}
-.hero-card-bg-3{position:absolute;top:20px;left:8px;right:-8px;bottom:-10px;background:var(--card-bg);border-radius:var(--radius-card);border:1px solid var(--border);transform:rotate(-2deg) scale(0.9);opacity:0.2}
-.hero-card-bg-2{position:absolute;top:10px;left:-6px;right:6px;bottom:-5px;background:var(--card-bg);border-radius:var(--radius-card);border:1px solid var(--border);transform:rotate(4deg) scale(0.95);opacity:0.35;box-shadow:0 4px 12px rgba(0,0,0,0.04)}
-.hero-card{position:relative;z-index:2;background:var(--card-bg);border-radius:var(--radius-card);border:1px solid var(--border);box-shadow:var(--shadow-lg);overflow:hidden}
-.hero-card__chrome{display:flex;align-items:center;gap:6px;padding:0.6rem 1rem;background:var(--bg-warm);border-bottom:1px solid var(--border-light)}
-.chrome-dot{width:8px;height:8px;border-radius:50%}
-.chrome-dot--r{background:#FF5F57}.chrome-dot--y{background:#FEBC2E}.chrome-dot--g{background:#28C840}
-.chrome-label{margin-left:auto;font-size:0.6rem;font-family:var(--font-mono);color:var(--text-muted)}
-.hero-card__body{padding:1.4rem}
-.hero-card__header{display:flex;align-items:center;gap:0.5rem;margin-bottom:1rem}
-.hero-card__dot{width:8px;height:8px;background:var(--green);border-radius:50%}
-.hero-card__label{font-size:0.7rem;font-weight:600;text-transform:uppercase;letter-spacing:0.06em;color:var(--green)}
-.hero-card__time{margin-left:auto;font-size:0.7rem;color:var(--text-muted);font-family:var(--font-mono)}
-.hero-card__row{display:flex;justify-content:space-between;align-items:center;padding:0.55rem 0;border-bottom:1px solid var(--border-light)}
-.hero-card__row:last-of-type{border-bottom:none}
-.hero-card__row-label{font-size:0.78rem;color:var(--text-muted);font-weight:500}
-.hero-card__row-value{font-size:0.82rem;color:var(--text-heading);font-weight:600;font-family:var(--font-mono)}
-.hero-card__badges{display:flex;gap:0.5rem;margin-top:1rem}
+/* ========== DARK NAVBAR ========== */
+.nav,.navbar,nav,header{background:rgba(10,10,10,0.92)!important;border-bottom:1px solid rgba(255,255,255,0.07)!important;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.nav__link,nav a{color:rgba(255,255,255,0.7)!important}
+.nav__link:hover,nav a:hover{color:#ffffff!important}
+.nav__logo,.logo{color:#ffffff!important}
+.nav__logo-text{color:#ffffff!important}
+.nav__logo img{filter:brightness(10)}
+.nav__login{color:rgba(255,255,255,0.7)!important}
+
+/* ========== HOW IT WORKS (dark photo cards) ========== */
+.how-it-works{background:#0A0A0A;padding:120px 0}
+.how-it-works::before{display:none}
+.hiw__headline{font-family:'DM Serif Display',Georgia,serif;font-size:clamp(2.8rem,6vw,5.5rem);color:#ffffff;text-align:center;margin-bottom:1rem;letter-spacing:-0.02em}
+.hiw__headline em{font-style:italic}
+.hiw__sub{text-align:center;color:rgba(255,255,255,0.5);font-size:1.1rem;max-width:480px;margin:0 auto 4rem;line-height:1.7}
+.hiw__cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+@media(max-width:768px){.hiw__cards{grid-template-columns:1fr}}
+.hiw__card{border-radius:16px;overflow:hidden;background:#111;border:1px solid rgba(255,255,255,0.06);transition:transform 0.3s,border-color 0.3s}
+.hiw__card:hover{transform:translateY(-4px);border-color:rgba(255,255,255,0.12)}
+.hiw__card-photo{height:260px;background-size:cover;background-position:center;position:relative;overflow:hidden;transition:transform 0.4s ease}
+.hiw__card:hover .hiw__card-photo{transform:scale(1.03)}
+.hiw__card-photo::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,0.15),rgba(0,0,0,0.70))}
+.hiw__card-content{padding:24px}
+.hiw__card-label{font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#3ECF8E;margin-bottom:8px}
+.hiw__card-title{font-family:'DM Serif Display',Georgia,serif;font-size:1.5rem;color:#ffffff;margin-bottom:10px;line-height:1.2}
+.hiw__card-body{font-size:14px;color:rgba(255,255,255,0.5);line-height:1.65}
 
 /* ========== 3. AUDIO DEMO (dark green bg) ========== */
 .audio-demo{background:linear-gradient(135deg,#064E3B,#065F46);padding:6rem 0;color:#fff}
@@ -518,36 +524,33 @@
 </nav>
 
 <!-- HERO -->
-<section class="hero" style="padding-top:7rem"><div class="container"><div class="hero__inner">
-  <div class="hero__text reveal">
-    <div class="hero__badge"><span class="hero__badge-dot"></span> HIPAA-Compliant Platform</div>
-    <h1 class="hero__headline">Never Miss Another <span class="green">Patient's Call</span> Again</h1>
-    <p class="hero__sub">Sera answers calls instantly, books into your system, works when you're closed, and never misses a lead — all automatically. Your front desk stays focused on in-office care.</p>
-    <div class="hero__buttons"><a href="https://calendly.com/sera-ai/demo" target="_blank" rel="noopener" class="btn btn--primary">Book a Demo &rarr;</a><a href="tel:3476531170" class="btn btn--outline"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.09 9.74a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .84h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.32a16 16 0 006.72 6.72l1.06-1.06a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg> Try It Now: (347) 653-1170</a></div>
+<section class="hero">
+  <div class="hero__bg"></div>
+  <div class="container hero__inner">
+    <div class="hero__badge">
+      <span class="hero__badge-dot"></span>
+      HIPAA-Compliant · 24/7 · Setup in 48hrs
+    </div>
+    <h1 class="hero__headline">
+      <em>Never miss another</em><br>patient's call.
+    </h1>
+    <p class="hero__sub">Sera answers every call, books appointments, and sends structured summaries to your team — automatically. Your front desk focuses on in-person care.</p>
+    <div class="hero__buttons">
+      <a href="#demo" class="btn btn--primary">Book a Demo →</a>
+      <a href="tel:+15163633139" class="btn btn--ghost">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.79a16 16 0 0 0 6 6l.88-.88a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16z"/></svg>
+        Try it: (516) 363-3139
+      </a>
+    </div>
     <div class="hero__trust">
-      <div class="hero__trust-item"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="#DCFCE7"/><path d="M5 8l2 2 4-4" stroke="#16A34A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Answers Calls Instantly</div>
-      <div class="hero__trust-item"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="#DCFCE7"/><path d="M5 8l2 2 4-4" stroke="#16A34A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Books Into Your System</div>
-      <div class="hero__trust-item"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="#DCFCE7"/><path d="M5 8l2 2 4-4" stroke="#16A34A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Works When You're Closed</div>
-      <div class="hero__trust-item"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="8" fill="#DCFCE7"/><path d="M5 8l2 2 4-4" stroke="#16A34A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Never Misses a Lead</div>
+      <span>✓ Answers in under 2 rings</span>
+      <span>✓ Books into your system</span>
+      <span>✓ Works when you're closed</span>
+      <span>✓ Never misses a lead</span>
     </div>
-    <div class="hero__social-proof"><p class="hero__social-proof-text">Built for practices like yours</p><p class="hero__social-proof-logos">Physical Therapy <span style="color:var(--green);opacity:1">&middot;</span> Dental Groups <span style="color:var(--green);opacity:1">&middot;</span> Chiropractic <span style="color:var(--green);opacity:1">&middot;</span> Med Spa <span style="color:var(--green);opacity:1">&middot;</span> Orthopedics</p></div>
+    <p class="hero__specialties">Built for · Physical Therapy · Dental Groups · Chiropractic · Med Spa · Orthopedics</p>
   </div>
-  <div class="hero__visual reveal"><div class="hero-card-stack">
-    <div class="hero-card-bg-3"></div><div class="hero-card-bg-2"></div>
-    <div class="hero-card">
-      <div class="hero-card__chrome"><span class="chrome-dot chrome-dot--r"></span><span class="chrome-dot chrome-dot--y"></span><span class="chrome-dot chrome-dot--g"></span><span class="chrome-label">app.joinsera.us</span></div>
-      <div class="hero-card__body">
-        <div class="hero-card__header"><span class="hero-card__dot"></span><span class="hero-card__label">LIVE CALL SUMMARY</span><span class="hero-card__time">Just now</span></div>
-        <div class="hero-card__row"><span class="hero-card__row-label">Caller</span><span class="hero-card__row-value">Sarah M.</span></div>
-        <div class="hero-card__row"><span class="hero-card__row-label">Call Type</span><span class="hero-card__row-value">New Patient</span></div>
-        <div class="hero-card__row"><span class="hero-card__row-label">Reason</span><span class="hero-card__row-value">Back Pain</span></div>
-        <div class="hero-card__row"><span class="hero-card__row-label">Insurance</span><span class="hero-card__row-value">Aetna</span></div>
-        <div class="hero-card__row"><span class="hero-card__row-label">Preferred Time</span><span class="hero-card__row-value">Afternoons</span></div>
-        <div class="hero-card__badges"><span class="badge badge--green">&check; Captured</span><span class="badge badge--blue">&check; Delivered to Staff</span></div>
-      </div>
-    </div>
-  </div></div>
-</div></div></section>
+</section>
 
 <!-- 4. STATS -->
 <section class="stats reveal" id="stats"><div class="container">
@@ -592,19 +595,38 @@
 </section>
 
 <!-- 6. HOW IT WORKS -->
-<section class="how-it-works" id="how-it-works"><div class="container">
-  <div class="how-it-works__header reveal"><p class="eyebrow">HOW IT WORKS</p><h2 class="section-headline">A System That Works While Your Staff Works</h2><p class="section-sub mx-auto">When your team is busy or your clinic is closed, Sera answers incoming calls, asks the right intake questions, and delivers structured summaries to your staff.</p></div>
-  <div class="how-it-works__steps" id="stepsContainer">
-    <div class="step-card reveal"><span class="step-card__num">1</span><div class="step-card__icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div><div class="step-card__title">Call Received</div><div class="step-card__desc">A patient calls your clinic. Sera picks up instantly — no rings, no hold music, no voicemail.</div><span class="step-badge step-badge--gray" data-step="0">Receiving</span></div>
-    <div class="step-connector"><div class="step-connector__line"><div class="step-connector__dot" data-connector="0"></div></div><div class="step-connector__arrow"></div></div>
-    <div class="step-card reveal"><span class="step-card__num">2</span><div class="step-card__icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></div><div class="step-card__title">Intake Questions</div><div class="step-card__desc">Sera asks about the reason for calling, insurance info, and preferred appointment times.</div><span class="step-badge step-badge--blue" data-step="1">Processing</span></div>
-    <div class="step-connector"><div class="step-connector__line"><div class="step-connector__dot" data-connector="1"></div></div><div class="step-connector__arrow"></div></div>
-    <div class="step-card reveal"><span class="step-card__num">3</span><div class="step-card__icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="2" ry="2"/><line x1="9" y1="12" x2="15" y2="12"/><line x1="9" y1="16" x2="13" y2="16"/></svg></div><div class="step-card__title">Summary Generated</div><div class="step-card__desc">A structured summary is created with all the patient data your team needs to follow up.</div><span class="step-badge step-badge--green" data-step="2">&check; Captured</span></div>
-    <div class="step-connector"><div class="step-connector__line"><div class="step-connector__dot" data-connector="2"></div></div><div class="step-connector__arrow"></div></div>
-    <div class="step-card reveal"><span class="step-card__num">4</span><div class="step-card__icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 01-3.46 0"/></svg></div><div class="step-card__title">Staff Notified</div><div class="step-card__desc">Your team gets the summary via email, SMS, or the portal — ready to book the patient.</div><span class="step-badge step-badge--green" data-step="3">&check; Sent</span></div>
+<section class="how-it-works" id="how-it-works">
+  <div class="container">
+    <h2 class="hiw__headline"><em>How it works</em></h2>
+    <p class="hiw__sub">From the first ring to a confirmed appointment — Sera handles it all so your team doesn't have to.</p>
+    <div class="hiw__cards">
+      <div class="hiw__card reveal">
+        <div class="hiw__card-photo" style="background-image:url('https://images.unsplash.com/photo-1476610182048-b716b8518aae?w=800&q=80')"></div>
+        <div class="hiw__card-content">
+          <p class="hiw__card-label">Step 01</p>
+          <h3 class="hiw__card-title">Answers instantly</h3>
+          <p class="hiw__card-body">Sera picks up every call in under 2 rings — day, night, weekends. Patients never hit voicemail.</p>
+        </div>
+      </div>
+      <div class="hiw__card reveal">
+        <div class="hiw__card-photo" style="background-image:url('https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=800&q=80')"></div>
+        <div class="hiw__card-content">
+          <p class="hiw__card-label">Step 02</p>
+          <h3 class="hiw__card-title">Books the appointment</h3>
+          <p class="hiw__card-body">Sera collects intake info, checks availability, and confirms the booking — all on the call.</p>
+        </div>
+      </div>
+      <div class="hiw__card reveal">
+        <div class="hiw__card-photo" style="background-image:url('https://images.unsplash.com/photo-1536514498073-50e69d39c6cf?w=800&q=80')"></div>
+        <div class="hiw__card-content">
+          <p class="hiw__card-label">Step 03</p>
+          <h3 class="hiw__card-title">Delivers to your team</h3>
+          <p class="hiw__card-body">Every call gets a structured summary — name, reason, insurance, time — sent to your dashboard.</p>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="how-it-works__link reveal"><a href="product.html" class="green-link">See the full process &rarr;</a></div>
-</div></section>
+</section>
 
 <!-- 7. CALL FLOW DIAGRAM -->
 <section class="call-flow" id="call-flow"><div class="container">

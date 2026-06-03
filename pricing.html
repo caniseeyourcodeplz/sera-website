@@ -18,26 +18,26 @@
 <link rel="canonical" href="https://joinsera.us/pricing">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Instrument+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/styles.css">
 <style>
 :root {
-  --green: #2d7d5f;
-  --green-hover: #225f48;
-  --green-light: #e9f1ec;
-  --green-dark: #225f48;
-  --teal: #2d7d5f;
-  --text-heading: #1a1a1a;
-  --text-body: #5a5a5a;
-  --text-muted: #7a7a7a;
-  --border: #e6e3da;
-  --bg-warm: #f5f2ea;
-  --bg-green-tint: #e9f1ec;
-  --font-sans: 'Instrument Sans', system-ui, sans-serif;
-  --font-mono: 'Space Grotesk', 'IBM Plex Mono', monospace;
-  --shadow-card: 0 1px 2px rgba(0,0,0,0.03), 0 4px 12px rgba(0,0,0,0.04), 0 16px 40px rgba(0,0,0,0.06);
-  --shadow-card-hover: 0 2px 4px rgba(0,0,0,0.04), 0 8px 24px rgba(0,0,0,0.06), 0 24px 48px rgba(0,0,0,0.08);
-  --radius-card: 20px;
+  --green: #22C55E;
+  --green-hover: #16A34A;
+  --green-light: #F0FDF4;
+  --green-dark: #16A34A;
+  --teal: #22C55E;
+  --text-heading: #111111;
+  --text-body: #555555;
+  --text-muted: #999999;
+  --border: #E8E8E8;
+  --bg-warm: #F7F7F7;
+  --bg-green-tint: #F7F7F7;
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+  --shadow-card: 0 1px 3px rgba(0,0,0,0.06);
+  --shadow-card-hover: 0 4px 12px rgba(0,0,0,0.08);
+  --radius-card: 16px;
   --radius-pill: 100px;
 }
 
@@ -72,7 +72,7 @@ body {
   left: 0;
   height: 3px;
   width: 0%;
-  background: linear-gradient(90deg, var(--green), var(--teal));
+  background: #000;
   z-index: 201;
   transition: width 0.1s linear;
 }
@@ -134,7 +134,7 @@ body {
 }
 
 .nav-links a.active {
-  color: var(--green);
+  color: #000;
   font-weight: 700;
 }
 
@@ -145,7 +145,7 @@ body {
   left: 0;
   width: 100%;
   height: 2px;
-  background: var(--green);
+  background: #000;
   border-radius: 2px;
 }
 
@@ -172,17 +172,17 @@ body {
   align-items: center;
   gap: 0.3rem;
   padding: 0.55rem 1.3rem;
-  background: var(--green);
+  background: #000;
   color: #fff;
   font-size: 0.9rem;
   font-weight: 600;
-  border-radius: 100px;
+  border-radius: 8px;
   text-decoration: none;
   transition: background 0.2s, transform 0.2s;
 }
 
 .nav-cta:hover {
-  background: var(--green-hover);
+  background: #333;
   transform: translateY(-1px);
 }
 
@@ -246,7 +246,7 @@ body {
 }
 
 .mobile-menu a.active {
-  color: var(--green);
+  color: #000;
   font-weight: 700;
 }
 
@@ -260,10 +260,10 @@ body {
   gap: 0.3rem;
   margin-top: 1rem;
   padding: 0.6rem 1.4rem;
-  background: var(--green);
+  background: #000;
   color: #fff;
   font-weight: 600;
-  border-radius: 100px;
+  border-radius: 8px;
   text-decoration: none;
 }
 
@@ -279,7 +279,7 @@ body {
   font-size: 0.8rem;
   font-weight: 500;
   letter-spacing: 2px;
-  color: var(--green);
+  color: var(--text-muted);
   text-transform: uppercase;
   margin-bottom: 1rem;
 }
@@ -313,11 +313,11 @@ body {
   align-items: center;
   justify-content: center;
   gap: 10px;
-  background: rgba(45,125,95,0.07);
-  border: 1px solid rgba(45,125,95,0.2);
+  background: #F7F7F7;
+  border: 1px solid #E8E8E8;
   border-radius: 100px;
   padding: 12px 28px;
-  color: var(--healthcare-green);
+  color: var(--text-heading);
   font-size: 0.875rem;
   font-weight: 600;
   max-width: 560px;
@@ -329,7 +329,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: var(--healthcare-green);
+  background: #111;
   color: white;
   border-radius: 16px;
   padding: 1.5rem 2rem;
@@ -373,9 +373,9 @@ body {
 }
 
 .pricing-card.featured {
-  border: 2px solid var(--green);
+  border: 2px solid #000;
   transform: scale(1.04);
-  box-shadow: 0 16px 48px rgba(22,163,74,0.12);
+  box-shadow: none;
   overflow: hidden;
 }
 
@@ -391,8 +391,8 @@ body {
   left: 0;
   right: 0;
   height: 60px;
-  background: linear-gradient(135deg, var(--green), var(--teal));
-  border-radius: 18px 18px 0 0;
+  background: #000;
+  border-radius: 16px 16px 0 0;
 }
 
 .featured-badge {
@@ -401,14 +401,14 @@ body {
   left: 50%;
   transform: translateX(-50%);
   background: #fff;
-  color: var(--green);
+  color: #000;
   font-size: 0.75rem;
   font-weight: 700;
   padding: 0.3rem 1rem;
   border-radius: 100px;
   white-space: nowrap;
   z-index: 2;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
 
 .pricing-card.featured .card-content {
@@ -451,7 +451,7 @@ body {
 
 .card-savings {
   font-size: 0.82rem;
-  color: var(--green);
+  color: var(--text-muted);
   font-weight: 500;
   margin-bottom: 0.5rem;
 }
@@ -508,12 +508,12 @@ body {
   gap: 0.3rem;
   width: 100%;
   padding: 0.75rem 1.5rem;
-  border: 2px solid var(--green);
-  color: var(--green);
+  border: 2px solid #000;
+  color: #000;
   background: transparent;
   font-size: 0.95rem;
   font-weight: 600;
-  border-radius: 100px;
+  border-radius: 8px;
   text-decoration: none;
   cursor: pointer;
   transition: background 0.2s, color 0.2s, transform 0.2s;
@@ -521,7 +521,7 @@ body {
 }
 
 .btn-outline:hover {
-  background: var(--green);
+  background: #000;
   color: #fff;
   transform: translateY(-1px);
 }
@@ -533,12 +533,12 @@ body {
   gap: 0.3rem;
   width: 100%;
   padding: 0.75rem 1.5rem;
-  border: 2px solid var(--green);
-  background: var(--green);
+  border: 2px solid #000;
+  background: #000;
   color: #fff;
   font-size: 0.95rem;
   font-weight: 600;
-  border-radius: 100px;
+  border-radius: 8px;
   text-decoration: none;
   cursor: pointer;
   transition: background 0.2s, border-color 0.2s, transform 0.2s;
@@ -546,8 +546,8 @@ body {
 }
 
 .btn-filled:hover {
-  background: var(--green-hover);
-  border-color: var(--green-hover);
+  background: #333;
+  border-color: #333;
   transform: translateY(-1px);
 }
 
@@ -639,7 +639,7 @@ body {
 }
 
 .compare-table thead th.pro-header {
-  background: var(--green);
+  background: #000;
   color: #fff;
   width: 20%;
 }
@@ -674,7 +674,7 @@ body {
 }
 
 .check {
-  color: var(--green);
+  color: #111;
   font-weight: 700;
   font-size: 1.1rem;
 }
@@ -774,7 +774,7 @@ body {
 }
 
 .faq-question:hover {
-  color: var(--green);
+  color: #000;
 }
 
 .faq-chevron {
@@ -803,7 +803,7 @@ body {
 
 /* ── Still Have Questions ── */
 .questions-cta {
-  background: var(--bg-green-tint);
+  background: #F7F7F7;
   padding: 4rem 2rem;
   text-align: center;
 }

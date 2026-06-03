@@ -19,7 +19,7 @@
 <link rel="canonical" href="https://joinsera.us/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/styles.css">
 <style>
 /* Page-specific overrides — shared styles in css/styles.css */
@@ -32,55 +32,45 @@
 }
 
 /* Scroll progress */
-.scroll-progress{height:3px;position:fixed;top:0;left:0;z-index:9999;background:linear-gradient(90deg,var(--green),var(--teal));width:0%;transition:width 0.05s linear;pointer-events:none}
+.scroll-progress{height:3px;position:fixed;top:0;left:0;z-index:9999;background:#000;width:0%;transition:width 0.05s linear;pointer-events:none}
 /* Wave dividers */
 .wave-divider{width:100%;overflow:hidden;line-height:0;position:relative;z-index:1}
 .wave-divider svg{display:block;width:100%;height:24px}
 
 /* ========== 2. HERO (dark full-bleed redesign) ========== */
-.hero{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden;background:#0A0A0A}
-.hero__bg{position:absolute;inset:0;background-image:url('https://images.unsplash.com/photo-1448375240586-882707db888b?w=1800&q=80');background-size:cover;background-position:center 40%;opacity:0.40;z-index:0}
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden;background:linear-gradient(160deg,#0a0f1e 0%,#0f1f3d 40%,#0a1628 100%)}
+.hero__bg{position:absolute;inset:0;background-image:url('https://images.unsplash.com/photo-1448375240586-882707db888b?w=1800&q=80');background-size:cover;background-position:center 40%;opacity:0.22;z-index:0}
 .hero__inner{position:relative;z-index:1;padding:120px 0 80px;max-width:760px;margin:0 auto;text-align:center}
-.hero__badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:100px;padding:6px 16px;font-size:11px;font-weight:600;letter-spacing:0.08em;color:rgba(255,255,255,0.7);text-transform:uppercase;margin-bottom:2rem}
-.hero__badge-dot{width:6px;height:6px;background:#3ECF8E;border-radius:50%;animation:badgePulse 2s infinite}
-@keyframes badgePulse{0%,100%{opacity:1}50%{opacity:0.4}}
-.hero__headline{font-family:'DM Serif Display',Georgia,serif;font-size:clamp(3.5rem,8vw,7rem);line-height:1.05;color:#ffffff;margin-bottom:1.5rem;letter-spacing:-0.02em}
+.hero__badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);border-radius:100px;padding:6px 16px;font-size:11px;font-weight:600;letter-spacing:0.08em;color:rgba(255,255,255,0.6);text-transform:uppercase;margin-bottom:2rem}
+.hero__badge-dot{width:6px;height:6px;background:#fff;border-radius:50%;opacity:0.7}
+.hero__headline{font-family:'Playfair Display',Georgia,serif;font-size:clamp(3.5rem,8vw,7rem);line-height:1.05;color:#ffffff;margin-bottom:1.5rem;letter-spacing:-0.02em}
 .hero__headline em{font-style:italic;color:rgba(255,255,255,0.70)}
 .hero__sub{font-size:1.15rem;line-height:1.75;color:rgba(255,255,255,0.55);max-width:520px;margin:0 auto 2rem}
 .hero__buttons{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:2rem}
-.btn--primary{background:#3ECF8E;color:#0A0A0A;font-weight:700;padding:14px 28px;border-radius:8px;font-size:15px;border:none;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:6px;transition:opacity 0.2s}
-.btn--primary:hover{opacity:0.88}
+.btn--primary{background:#fff;color:#000;font-weight:700;padding:14px 28px;border-radius:8px;font-size:15px;border:none;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:6px;transition:background 0.2s,color 0.2s}
+.btn--primary:hover{background:#F7F7F7}
 .btn--ghost{background:rgba(255,255,255,0.08);color:rgba(255,255,255,0.85);border:1px solid rgba(255,255,255,0.15);padding:14px 24px;border-radius:8px;font-size:15px;font-weight:500;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:background 0.2s}
 .btn--ghost:hover{background:rgba(255,255,255,0.13)}
 .hero__trust{display:flex;gap:20px;justify-content:center;flex-wrap:wrap;font-size:13px;color:rgba(255,255,255,0.65);margin-bottom:1.5rem}
 .hero__specialties{font-size:11px;color:rgba(255,255,255,0.50);letter-spacing:0.08em;text-transform:uppercase}
 
-/* ========== DARK NAVBAR ========== */
-.nav,.navbar,nav,header{background:rgba(10,10,10,0.92)!important;border-bottom:1px solid rgba(255,255,255,0.07)!important;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
-.nav__link,nav a{color:rgba(255,255,255,0.7)!important}
-.nav__link:hover,nav a:hover{color:#ffffff!important}
-.nav__logo,.logo{color:#ffffff!important}
-.nav__logo-text{color:#ffffff!important}
-.nav__logo img{filter:brightness(10)}
-.nav__login{color:rgba(255,255,255,0.7)!important}
+/* ========== NAV — inherits light styles from styles.css ========== */
 
-/* ========== HOW IT WORKS (dark photo cards) ========== */
-.how-it-works{background:#0A0A0A;padding:120px 0}
-.how-it-works::before{display:none}
-.hiw__headline{font-family:'DM Serif Display',Georgia,serif;font-size:clamp(2.8rem,6vw,5.5rem);color:#ffffff;text-align:center;margin-bottom:1rem;letter-spacing:-0.02em}
+/* ========== HOW IT WORKS (dark cards) ========== */
+.how-it-works{background:#0A0A0A!important;padding:120px 0}
+.how-it-works::before{display:none!important}
+.hiw__headline{font-family:'Playfair Display',Georgia,serif;font-size:clamp(2.8rem,6vw,5.5rem);color:#ffffff;text-align:center;margin-bottom:1rem;letter-spacing:-0.02em}
 .hiw__headline em{font-style:italic}
 .hiw__sub{text-align:center;color:rgba(255,255,255,0.5);font-size:1.1rem;max-width:480px;margin:0 auto 4rem;line-height:1.7}
 .hiw__cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 @media(max-width:768px){.hiw__cards{grid-template-columns:1fr}}
 .hiw__card{border-radius:16px;overflow:hidden;background:#111;border:1px solid rgba(255,255,255,0.06);transition:transform 0.3s,border-color 0.3s}
-.hiw__card:hover{transform:translateY(-4px);border-color:rgba(255,255,255,0.12)}
-.hiw__card-photo{height:260px;background-size:cover;background-position:center;position:relative;overflow:hidden;transition:transform 0.4s ease}
-.hiw__card:hover .hiw__card-photo{transform:scale(1.03)}
-.hiw__card-photo::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,0.15),rgba(0,0,0,0.70))}
-.hiw__card-content{padding:24px}
-.hiw__card-label{font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#3ECF8E;margin-bottom:8px}
-.hiw__card-title{font-family:'DM Serif Display',Georgia,serif;font-size:1.5rem;color:#ffffff;margin-bottom:10px;line-height:1.2}
-.hiw__card-body{font-size:14px;color:rgba(255,255,255,0.5);line-height:1.65}
+.hiw__card:hover{transform:translateY(-4px);border-color:rgba(255,255,255,0.14)}
+.hiw__card-icon{width:44px;height:44px;border-radius:12px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+.hiw__card-content{padding:32px 28px}
+.hiw__card-label{font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:12px}
+.hiw__card-title{font-family:'Playfair Display',Georgia,serif;font-size:1.6rem;color:#ffffff;margin-bottom:12px;line-height:1.2}
+.hiw__card-body{font-size:14px;color:rgba(255,255,255,0.5);line-height:1.7}
 
 /* ========== 3. AUDIO DEMO (dark green bg) ========== */
 .audio-demo{background:linear-gradient(135deg,#064E3B,#065F46);padding:6rem 0;color:#fff}
@@ -162,13 +152,13 @@
 /* ========== 4. STATS ========== */
 .stats{background:#FFFBEB;padding:4rem 0 2rem}
 .stats__grid{display:flex;gap:1.2rem;max-width:1000px;margin:0 auto;flex-wrap:wrap;justify-content:center}
-.stat-card{flex:1;min-width:200px;background:var(--card-bg);border-radius:var(--radius-card);border:1px solid var(--border);border-top:3px solid var(--green);padding:1.8rem 1.5rem;text-align:center;box-shadow:0 4px 15px rgba(0,0,0,0.04);transition:all 0.3s}
-.stat-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-card-hover)}
-.stat__number{font-family:var(--font-mono);font-size:3.5rem;font-weight:900;color:var(--green);letter-spacing:-0.03em;line-height:1}
+.stat-card{flex:1;min-width:200px;background:var(--card-bg);border-radius:var(--radius-card);border:1px solid var(--border);border-top:3px solid #000;padding:1.8rem 1.5rem;text-align:center;box-shadow:none;transition:all 0.3s}
+.stat-card:hover{transform:translateY(-4px);border-color:#aaa}
+.stat__number{font-family:var(--font-mono);font-size:3.5rem;font-weight:900;color:#111;letter-spacing:-0.03em;line-height:1}
 .stat__label{font-size:0.88rem;color:var(--text-body);font-weight:600;margin-top:0.3rem}
 .stat__desc{font-size:0.75rem;color:var(--text-muted);margin-top:0.25rem}
 .trust-pills{display:flex;justify-content:center;flex-wrap:wrap;gap:0.8rem;margin-top:2.5rem;padding:0 1rem}
-.trust-pill{display:inline-flex;align-items:center;gap:0.4rem;background:rgba(62,207,142,0.12);color:#3ECF8E;border:1px solid rgba(62,207,142,0.25);font-size:0.72rem;font-weight:600;padding:0.35rem 0.9rem;border-radius:var(--radius-pill)}
+.trust-pill{display:inline-flex;align-items:center;gap:0.4rem;background:#F7F7F7;color:#555;border:1px solid #E8E8E8;font-size:0.72rem;font-weight:600;padding:0.35rem 0.9rem;border-radius:var(--radius-pill)}
 .trust-pill svg{flex-shrink:0}
 
 /* ========== 5. INTEGRATIONS — SCROLLING MARQUEE ========== */
@@ -182,15 +172,14 @@
 .marquee-logo:hover{color:rgba(255,255,255,0.85)!important}
 .integrations__note{text-align:center;font-size:0.75rem;color:rgba(255,255,255,0.25);margin-top:1.2rem}
 
-/* ========== 6. HOW IT WORKS ========== */
-.how-it-works{background:var(--bg-white);padding:6rem 0;position:relative}
-.how-it-works::before{content:'';position:absolute;top:50%;left:50%;width:800px;height:400px;transform:translate(-50%,-50%);background:radial-gradient(ellipse,rgba(240,253,244,0.6) 0%,transparent 70%);pointer-events:none}
+/* ========== 6. HOW IT WORKS (legacy classes — layout only, no bg override) ========== */
+.how-it-works{position:relative}
 .how-it-works__header{text-align:center;max-width:650px;margin:0 auto 3.5rem;position:relative;z-index:1}
 .how-it-works__steps{display:flex;gap:0.6rem;max-width:1050px;margin:0 auto;position:relative;z-index:1}
 .step-card{flex:1;background:var(--card-bg);border:1px solid var(--border);border-radius:16px;padding:2rem 1.5rem 1.8rem;text-align:center;transition:all 0.3s;position:relative}
 .step-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-card-hover)}
-.step-card__num{position:absolute;top:-14px;left:-10px;width:32px;height:32px;border-radius:50%;background:var(--green);color:#fff;font-size:0.75rem;font-weight:700;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 8px rgba(22,163,74,0.3);z-index:2}
-.step-card__icon{display:flex;align-items:center;justify-content:center;width:56px;height:56px;background:rgba(45,125,95,0.08);border-radius:14px;color:var(--green);margin:0 auto 1rem}
+.step-card__num{position:absolute;top:-14px;left:-10px;width:32px;height:32px;border-radius:50%;background:#000;color:#fff;font-size:0.75rem;font-weight:700;display:flex;align-items:center;justify-content:center;box-shadow:none;z-index:2}
+.step-card__icon{display:flex;align-items:center;justify-content:center;width:56px;height:56px;background:#F7F7F7;border-radius:14px;color:#111;margin:0 auto 1rem}
 .step-card__icon svg{flex-shrink:0}
 .step-card__title{font-family:var(--font-heading);font-weight:700;color:var(--text-heading);font-size:1rem;margin-bottom:0.5rem}
 .step-card__desc{font-size:0.85rem;color:var(--text-body);line-height:1.6;margin-bottom:1rem}
@@ -201,8 +190,8 @@
 .step-badge--green{background:var(--green-light);color:var(--green)}
 .step-connector{display:flex;align-items:center;flex-shrink:0;width:30px;position:relative}
 .step-connector__line{height:2px;flex:1;background:var(--border);position:relative;overflow:visible}
-.step-connector__arrow{width:0;height:0;border-top:5px solid transparent;border-bottom:5px solid transparent;border-left:7px solid var(--green);flex-shrink:0}
-.step-connector__dot{position:absolute;top:-3px;left:0;width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 6px rgba(22,163,74,0.5);opacity:0}
+.step-connector__arrow{width:0;height:0;border-top:5px solid transparent;border-bottom:5px solid transparent;border-left:7px solid #999;flex-shrink:0}
+.step-connector__dot{position:absolute;top:-3px;left:0;width:8px;height:8px;border-radius:50%;background:#000;box-shadow:none;opacity:0}
 .step-connector__dot.animate{animation:travelDot 1.2s ease forwards}
 @keyframes travelDot{0%{left:0;opacity:1}100%{left:calc(100% - 8px);opacity:1}}
 .how-it-works__link{text-align:center;margin-top:2.5rem;position:relative;z-index:1}
@@ -212,15 +201,15 @@
 .call-flow__header{text-align:center;max-width:650px;margin:0 auto 2rem}
 .call-flow__tabs{display:flex;justify-content:center;gap:0.5rem;margin-bottom:2.5rem}
 .flow-tab{font-size:0.88rem;padding:0.6rem 1.5rem;border-radius:var(--radius-pill);border:1px solid var(--border);background:#fff;color:var(--text-body);font-weight:600;transition:all 0.3s;position:relative}
-.flow-tab.active{background:var(--green);color:#fff;border-color:var(--green)}
+.flow-tab.active{background:#000;color:#fff;border-color:#000}
 .flow-tab__soon{position:absolute;top:-8px;right:-8px;font-size:0.5rem;background:rgba(200,144,40,0.18);color:var(--charcoal);padding:0.15rem 0.4rem;border-radius:var(--radius-pill);font-weight:600;text-transform:uppercase;letter-spacing:0.06em}
 .call-flow__grid{display:flex;gap:1.5rem;max-width:1000px;margin:0 auto}
 .flow-column{flex:1;background:var(--card-bg);border-radius:16px;border:1px solid var(--border);overflow:hidden;box-shadow:0 4px 15px rgba(0,0,0,0.04)}
-.flow-column__header{background:var(--green-dark);color:#fff;padding:0.8rem 1.2rem;font-size:0.82rem;font-weight:700;display:flex;align-items:center;gap:0.5rem}
+.flow-column__header{background:#111;color:#fff;padding:0.8rem 1.2rem;font-size:0.82rem;font-weight:700;display:flex;align-items:center;gap:0.5rem}
 .flow-column__header-icon{font-size:1rem}
 .flow-column__body{padding:1.5rem}
 .flow-step{text-align:center;font-size:0.82rem;color:var(--text-body);line-height:1.5;padding:0.6rem 0}
-.flow-arrow{text-align:center;color:var(--green);font-size:1.2rem;padding:0.3rem 0;opacity:0.5}
+.flow-arrow{text-align:center;color:#999;font-size:1.2rem;padding:0.3rem 0;opacity:0.5}
 .flow-result{text-align:center;margin-top:0.5rem}
 .flow-result .badge{font-size:0.72rem}
 
@@ -243,7 +232,7 @@
 .mockup-phone__caller{font-size:0.65rem;color:rgba(255,255,255,0.6);margin-bottom:1rem}
 .mockup-phone__buttons{display:flex;justify-content:center;gap:1rem;margin-bottom:0.6rem}
 .mockup-phone__btn{width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.8rem}
-.mockup-phone__btn--decline{background:#DC2626}.mockup-phone__btn--answer{background:var(--green)}
+.mockup-phone__btn--decline{background:#DC2626}.mockup-phone__btn--answer{background:#111}
 .mockup-phone__status{font-size:0.55rem;color:var(--green);font-weight:600}
 
 /* Mockup 2: Flow diagram */
@@ -295,7 +284,7 @@
 .comp-table__head{display:flex}
 .comp-table__head-cell{padding:1rem 1.5rem;font-weight:700;font-size:0.88rem}
 .comp-table__head-cell:first-child{flex:0 0 40%;background:var(--bg-warm);color:var(--text-heading)}
-.comp-table__head-cell:nth-child(2){flex:0 0 30%;background:var(--green);color:#fff;text-align:center}
+.comp-table__head-cell:nth-child(2){flex:0 0 30%;background:#000;color:#fff;text-align:center}
 .comp-table__head-cell:nth-child(3){flex:0 0 30%;background:#F4F4F5;color:var(--text-muted);text-align:center}
 .comp-table__row{display:flex;border-top:1px solid var(--border)}
 .comp-table__row:nth-child(even){background:var(--bg-warm)}
@@ -307,7 +296,7 @@
 .comp-x{color:var(--text-muted);font-weight:700;flex-shrink:0;font-size:1rem;line-height:1.3}
 
 /* ========== 10. SHOWCASE ========== */
-.showcase{background:var(--bg-green-tint);padding:6rem 0}
+.showcase{background:#F7F7F7;padding:6rem 0}
 .showcase__inner{display:flex;gap:3rem;align-items:center}
 .showcase__left{flex:1}.showcase__right{flex:1;display:flex;justify-content:center}
 .showcase__checklist{margin:2rem 0;display:flex;flex-direction:column;gap:0.8rem}
@@ -347,8 +336,8 @@
 .industry-card__title{font-family:var(--font-heading);font-weight:700;color:var(--text-heading);font-size:1.05rem;margin-bottom:0.5rem}
 .industry-card__desc{font-size:0.88rem;color:var(--text-body);line-height:1.65}
 
-/* ========== 13. TESTIMONIALS (teal bg) ========== */
-.testimonials{background:#0F766E;padding:6rem 0;color:#fff}
+/* ========== 13. TESTIMONIALS ========== */
+.testimonials{background:#0a0a0a;padding:6rem 0;color:#fff}
 .testimonials .eyebrow{color:rgba(255,255,255,0.6)}
 .testimonials .section-headline{color:#fff}
 .testimonials__header{text-align:center;margin-bottom:3rem}
@@ -382,7 +371,7 @@
 .comparison{background:var(--bg-white);padding:6rem 0}
 .comparison__header{text-align:center;margin-bottom:3rem}
 .comparison__grid{display:flex;gap:1.5rem;max-width:900px;margin:0 auto;position:relative}
-.comparison__vs{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:5;width:44px;height:44px;border-radius:50%;background:#fff;border:2px solid var(--green);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:0.75rem;color:var(--green);box-shadow:0 4px 12px rgba(0,0,0,0.1)}
+.comparison__vs{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:5;width:44px;height:44px;border-radius:50%;background:#fff;border:2px solid #111;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:0.75rem;color:#111;box-shadow:0 4px 12px rgba(0,0,0,0.1)}
 .comparison__card{flex:1;border-radius:var(--radius-card);padding:2rem}
 .comparison__card--without{background:#FEF2F2;border:1px solid #FECACA;border-left:4px solid var(--negative)}
 .comparison__card--with{background:var(--bg-green-tint);border:1px solid #BBF7D0;border-left:4px solid var(--positive)}
@@ -400,10 +389,10 @@
 .pricing__grid{display:flex;gap:1.5rem;max-width:1000px;margin:0 auto;align-items:flex-start}
 .pricing-card{flex:1;background:var(--card-bg);border:1px solid var(--border);border-radius:var(--radius-card);padding:2.2rem;position:relative;transition:all 0.3s;overflow:hidden}
 .pricing-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-card-hover)}
-.pricing-card--pro{border:2px solid var(--green);transform:scale(1.04);box-shadow:0 8px 30px rgba(22,163,74,0.12);z-index:2}
+.pricing-card--pro{border:2px solid #000;transform:scale(1.04);box-shadow:none;z-index:2}
 .pricing-card--pro:hover{transform:scale(1.04) translateY(-3px)}
-.pricing-card--pro::before{content:'';position:absolute;top:0;left:0;right:0;height:60px;background:linear-gradient(180deg,rgba(22,163,74,0.08) 0%,transparent 100%);pointer-events:none}
-.pricing-card__badge-rec{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--green);color:#fff;font-size:0.68rem;font-weight:700;padding:0.3rem 1rem;border-radius:var(--radius-pill);text-transform:uppercase;white-space:nowrap}
+.pricing-card--pro::before{content:'';position:absolute;top:0;left:0;right:0;height:60px;background:linear-gradient(180deg,rgba(0,0,0,0.03) 0%,transparent 100%);pointer-events:none}
+.pricing-card__badge-rec{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:#000;color:#fff;font-size:0.68rem;font-weight:700;padding:0.3rem 1rem;border-radius:var(--radius-pill);text-transform:uppercase;white-space:nowrap}
 .pricing-card__name{font-family:var(--font-heading);font-size:1.3rem;font-weight:700;color:var(--text-heading)}
 .pricing-card__subtitle{font-size:0.82rem;color:var(--text-muted);margin-bottom:1rem}
 .pricing-card__price{font-family:var(--font-heading);font-size:2.5rem;font-weight:800;color:var(--text-heading);margin-bottom:0.2rem}
@@ -433,7 +422,7 @@
   background:var(--dark-gradient);
   position:relative;overflow:hidden;padding:6.5rem 0;text-align:center;
 }
-.dark-cta::before{content:'';position:absolute;top:50%;left:50%;width:600px;height:600px;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(13,155,106,0.15) 0%,transparent 70%);pointer-events:none}
+.dark-cta::before{content:'';position:absolute;top:50%;left:50%;width:600px;height:600px;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(255,255,255,0.04) 0%,transparent 70%);pointer-events:none}
 /* Animated diagonal lines */
 .dark-cta::after{
   content:'';position:absolute;inset:0;
@@ -449,9 +438,9 @@
 /* Footer uses shared css/styles.css */
 
 /* Floating CTA */
-.floating-cta{position:fixed;bottom:1.5rem;right:1.5rem;z-index:90;background:var(--green);color:#fff;border-radius:var(--radius-pill);padding:0.7rem 1.5rem;font-weight:600;font-size:0.85rem;box-shadow:0 4px 20px rgba(22,163,74,0.35);transition:all 0.4s cubic-bezier(0.22,1,0.36,1);opacity:0;transform:translateX(100px);pointer-events:none}
+.floating-cta{position:fixed;bottom:1.5rem;right:1.5rem;z-index:90;background:#000;color:#fff;border-radius:var(--radius-pill);padding:0.7rem 1.5rem;font-weight:600;font-size:0.85rem;box-shadow:0 4px 20px rgba(0,0,0,0.2);transition:all 0.4s cubic-bezier(0.22,1,0.36,1);opacity:0;transform:translateX(100px);pointer-events:none}
 .floating-cta.show{opacity:1;transform:translateX(0);pointer-events:auto}
-.floating-cta:hover{background:var(--green-hover);transform:translateY(-2px);box-shadow:0 6px 24px rgba(22,163,74,0.45)}
+.floating-cta:hover{background:#333;transform:translateY(-2px);box-shadow:0 6px 24px rgba(0,0,0,0.25)}
 
 /* ========== RESPONSIVE ========== */
 @media(max-width:768px){
@@ -602,24 +591,30 @@
     <p class="hiw__sub">From the first ring to a confirmed appointment — Sera handles it all so your team doesn't have to.</p>
     <div class="hiw__cards">
       <div class="hiw__card reveal">
-        <div class="hiw__card-photo" style="background-image:url('https://images.unsplash.com/photo-1476610182048-b716b8518aae?w=800&q=80')"></div>
         <div class="hiw__card-content">
+          <div class="hiw__card-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#111111" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.79a16 16 0 0 0 6 6l.88-.88a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16z"/></svg>
+          </div>
           <p class="hiw__card-label">Step 01</p>
           <h3 class="hiw__card-title">Answers instantly</h3>
           <p class="hiw__card-body">Sera picks up every call in under 2 rings — day, night, weekends. Patients never hit voicemail.</p>
         </div>
       </div>
       <div class="hiw__card reveal">
-        <div class="hiw__card-photo" style="background-image:url('https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=800&q=80')"></div>
         <div class="hiw__card-content">
+          <div class="hiw__card-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#111111" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          </div>
           <p class="hiw__card-label">Step 02</p>
           <h3 class="hiw__card-title">Books the appointment</h3>
           <p class="hiw__card-body">Sera collects intake info, checks availability, and confirms the booking — all on the call.</p>
         </div>
       </div>
       <div class="hiw__card reveal">
-        <div class="hiw__card-photo" style="background-image:url('https://images.unsplash.com/photo-1536514498073-50e69d39c6cf?w=800&q=80')"></div>
         <div class="hiw__card-content">
+          <div class="hiw__card-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#111111" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+          </div>
           <p class="hiw__card-label">Step 03</p>
           <h3 class="hiw__card-title">Delivers to your team</h3>
           <p class="hiw__card-body">Every call gets a structured summary — name, reason, insurance, time — sent to your dashboard.</p>
